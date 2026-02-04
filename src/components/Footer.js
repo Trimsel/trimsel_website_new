@@ -1,0 +1,196 @@
+import Link from "next/link";
+import Image from "next/image";
+
+
+const serviceLinks = [
+    { href: "/mobile-app-development-chennai", label: "Mobile App Development" },
+    { href: "/web-development-company-chennai", label: "Web Development" },
+    { href: "/cloud-consulting-services", label: "Cloud Consulting" },
+    { href: "/devops-consulting-services", label: "DevOps Consulting" },
+    { href: "/digital-marketing-company-chennai", label: "Digital Marketing" },
+    { href: "/ai-development-company", label: "AI/ML Development" },
+];
+
+const companyLinks = [
+    { href: "/aboutus", label: "About Us" },
+    { href: "/contact-us", label: "Contact Us" },
+];
+
+export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="mt-20 bg-white text-black">
+            {/* Top Section */}
+            <div className="relative overflow-hidden bg-white px-6 py-10 sm:px-8 lg:px-12">
+
+                {/* India Flag */}
+                <div className="mb-10 flex items-center gap-3">
+                    <Image
+                        src="/IndiaFlag.svg"
+                        width={77}
+                        height={40}
+                        alt="India flag"
+                        className="h-10 w-auto"
+                    />
+                    <p className="text-4xl font-semibold">INDIA</p>
+                </div>
+
+                {/* Locations */}
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <h2 className="inline-flex items-center text-xl font-semibold">
+                            <Image
+                                src="/location.svg"
+                                alt="Location icon"
+                                width={20}
+                                height={20}
+                                className="mr-2"
+                            />
+                            Chennai
+                        </h2>
+                        <div className="mt-2 text-sm">
+                            <a
+                                href="https://maps.app.goo.gl/nX3ZD9gEBCxwdTPg7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cursor-pointer"
+                            >
+                                21B 5th Cross Street, South Phase Thiru VI <br />
+                                KA Industrial Estate, Guindy, Chennai, <br />
+                                Tamil Nadu - 600032.
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h2 className="inline-flex items-center text-xl font-semibold">
+                            <Image
+                                src="/location.svg"
+                                alt="Location icon"
+                                width={20}
+                                height={20}
+                                className="mr-2"
+                            />
+                            Tirunelveli
+                        </h2>
+                        <div className="mt-2 text-sm">
+                            <a
+                                href="https://maps.app.goo.gl/9iQU8XDKzWtNaQ1T8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cursor-pointer"
+                            >
+                                1st Floor, Crystal Plaza State Bank, 138/2, <br />
+                                NGO B Colony, New Colony, Tirunelveli, <br />
+                                Tamil Nadu - 627007.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right Image */}
+                <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 lg:block">
+                    <Image
+                        src="/temple.svg"
+                        alt="Temple illustration"
+                        width={540}
+                        height={580}
+                    />
+                </div>
+
+                {/* Contact */}
+                <div className="mt-8 space-y-4">
+                    <p className="text-lg font-semibold tracking-widest">CONTACT</p>
+
+                    <div className="space-y-3 text-sm">
+                        <div className="flex items-center gap-3">
+                            <Image src="/email.svg" alt="Mail" width={20} height={20} />
+                            <a href="mailto:contact@trimsel.com">contact@trimsel.com</a>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <Image src="/Phone.svg" alt="Phone" width={20} height={20} />
+                            <a href="tel:+917200841581">+91 72008 41581</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom Black Section */}
+            <div className="bg-black text-white">
+                <div className="mx-auto max-w-6xl px-4 py-8">
+                    <div className="grid gap-10 lg:grid-cols-[1.2fr_1.4fr_1.4fr]">
+
+                        {/* Logo + Socials */}
+                        <div className="space-y-4">
+                            <Image
+                                src="/trimsel-logo-white.svg"
+                                width={283}
+                                height={96}
+                                alt="Trimsel Softwares"
+                                className="h-16 w-auto"
+                            />
+
+                            <nav aria-label="Social media">
+                                <ul className="flex gap-4">
+                                    {[
+                                        { href: "https://www.linkedin.com/company/trimsel/", icon: "/linkedin.svg", label: "LinkedIn" },
+                                        { href: "https://www.facebook.com/share/1CSq6QDAbp/", icon: "/facebook.svg", label: "Facebook" },
+                                        { href: "https://www.instagram.com/trimsel_softwares", icon: "/instagram.svg", label: "Instagram" },
+                                        { href: "https://in.pinterest.com/Trimsel_Softwares/", icon: "/pinterest.svg", label: "Pinterest" },
+                                    ].map((social) => (
+                                        <li key={social.href}>
+                                            <a
+                                                href={social.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer nofollow"
+                                                aria-label={social.label}
+                                            >
+                                                <Image src={social.icon} width={30} height={30} alt="" />
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </nav>
+                        </div>
+
+                        {/* Services */}
+                        <div>
+                            <p className="mb-4 text-lg font-semibold tracking-widest">
+                                SERVICES
+                            </p>
+                            <ul className="space-y-3 text-md text-gray-400">
+                                {serviceLinks.map((link) => (
+                                    <li key={link.href}>
+                                        <Link href={link.href}>{link.label}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Company */}
+                        <div className="-ml-20">
+                            <p className="mb-4 text-lg font-semibold tracking-widest">
+                                COMPANY
+                            </p>
+                            <ul className="space-y-3 text-md text-gray-400">
+                                {companyLinks.map((link) => (
+                                    <li key={link.href}>
+                                        <Link href={link.href}>{link.label}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Copyright */}
+                    <div className="mt-8 border-t border-white/20 pt-6 text-center text-md text-gray-400">
+                        © {currentYear} Trimsel Softwares. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
