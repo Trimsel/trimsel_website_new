@@ -10,35 +10,35 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white border-b">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-24 items-center justify-between">
+                <div className="flex h-20 items-center justify-between">
 
                     {/* Logo as Image */}
-                    <Link href="/" className="flex items-center gap-4">
+                    <Link href="/" className="flex items-center gap-4 ml-4">
                         <Image
                             src="/trimsel-logo.svg"     // 👈 your logo path
                             alt="Trimsel Logo"
                             width={140}
-                            height={40}
+                            height={35}
                             priority
-                            className="h-auto w-auto"
+
                         />
                     </Link>
 
                     {/* Desktop Menu */}
                     <nav className="hidden md:flex items-center gap-8">
-                        <Link href="/" className="text-md font-medium hover:text-gray-600 text-black">
+                        <Link href="/" className="text-lg font-medium hover:text-gray-600 text-black">
                             Home
                         </Link>
-                        <Link href="/about" className="text-md font-medium hover:text-gray-600 text-black">
+                        <Link href="/about" className="text-lg font-medium hover:text-gray-600 text-black">
                             About Us
                         </Link>
-                        <Link href="/services" className="text-md font-medium hover:text-gray-600 text-black">
+                        <Link href="/services" className="text-lg font-medium hover:text-gray-600 text-black">
                             Services
                         </Link>
-                        <Link href="/portfolio" className="text-md font-medium hover:text-gray-600 text-black">
+                        <Link href="/portfolio" className="text-lg font-medium hover:text-gray-600 text-black">
                             Portfolio
                         </Link>
-                        <Link href="/blog" className="text-md font-medium hover:text-gray-600 text-black">
+                        <Link href="/blog" className="text-lg font-medium hover:text-gray-600 text-black">
                             Blog
                         </Link>
                     </nav>
@@ -47,7 +47,7 @@ export default function Header() {
                     <div className="hidden md:block">
                         <Link
                             href="/contact"
-                            className="rounded-md bg-[#01AAEC] px-4 py-2 text-md font-medium text-white hover:bg-gray-800"
+                            className="rounded-md bg-[#27AAE1] px-4 py-2 text-lg font-medium text-white hover:bg-gray-800"
                         >
                             Contact Us
                         </Link>

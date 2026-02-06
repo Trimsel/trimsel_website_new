@@ -49,7 +49,7 @@ export default function Footer() {
                             />
                             Chennai
                         </h2>
-                        <div className="mt-2 text-sm">
+                        <div className="mt-2 text-lg font-medium">
                             <a
                                 href="https://maps.app.goo.gl/nX3ZD9gEBCxwdTPg7"
                                 target="_blank"
@@ -75,7 +75,7 @@ export default function Footer() {
                             />
                             Tirunelveli
                         </h2>
-                        <div className="mt-2 text-sm">
+                        <div className="mt-2 text-lg font-medium">
                             <a
                                 href="https://maps.app.goo.gl/9iQU8XDKzWtNaQ1T8"
                                 target="_blank"
@@ -105,12 +105,12 @@ export default function Footer() {
                     <p className="text-lg font-semibold tracking-widest">CONTACT</p>
 
                     <div className="space-y-3 text-sm">
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 font-medium">
                             <Image src="/email.svg" alt="Mail" width={20} height={20} />
                             <a href="mailto:contact@trimsel.com">contact@trimsel.com</a>
                         </div>
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 font-medium">
                             <Image src="/Phone.svg" alt="Phone" width={20} height={20} />
                             <a href="tel:+917200841581">+91 72008 41581</a>
                         </div>
@@ -124,7 +124,7 @@ export default function Footer() {
                     <div className="grid gap-10 lg:grid-cols-[1.2fr_1.4fr_1.4fr]">
 
                         {/* Logo + Socials */}
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             <Image
                                 src="/trimsel-logo-white.svg"
                                 width={283}
@@ -132,6 +132,15 @@ export default function Footer() {
                                 alt="Trimsel Softwares"
                                 className="h-16 w-auto"
                             />
+
+                            <p className="max-w-xs text-md text-white/80 leading-relaxed">
+                                At Trimsel, we focus on providing digital solutions built with cutting-edge technology, so our clients are always ahead of the curve.
+                            </p>
+
+                            {/* Follow Us */}
+                            <span className="block text-2xl font-semibold text-white">
+                                Follow us
+                            </span>
 
                             <nav aria-label="Social media">
                                 <ul className="flex gap-4">
@@ -161,7 +170,7 @@ export default function Footer() {
                             <p className="mb-4 text-lg font-semibold tracking-widest">
                                 SERVICES
                             </p>
-                            <ul className="space-y-3 text-md text-gray-400">
+                            <ul className="space-y-2 text-md font-medium text-white">
                                 {serviceLinks.map((link) => (
                                     <li key={link.href}>
                                         <Link href={link.href}>{link.label}</Link>
@@ -175,7 +184,7 @@ export default function Footer() {
                             <p className="mb-4 text-lg font-semibold tracking-widest">
                                 COMPANY
                             </p>
-                            <ul className="space-y-3 text-md text-gray-400">
+                            <ul className="space-y-3 text-md font-medium text-white">
                                 {companyLinks.map((link) => (
                                     <li key={link.href}>
                                         <Link href={link.href}>{link.label}</Link>
@@ -186,7 +195,7 @@ export default function Footer() {
                     </div>
 
                     {/* Copyright */}
-                    <div className="mt-8 border-t border-white/20 pt-6 text-center text-md text-gray-400">
+                    <div className="mt-8 border-t border-white/20 pt-6 text-center text-md font-medium text-white">
                         © {currentYear} Trimsel Softwares. All rights reserved.
                     </div>
                 </div>
