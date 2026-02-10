@@ -8,7 +8,7 @@ export default function Clients() {
             <div className="container mx-auto px-6">
 
                 {/* Heading */}
-                <h3 className="text-center text-2xl font-semibold tracking-widest">
+                <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
                     WHO WE ARE
                 </h3>
 
@@ -34,7 +34,7 @@ export default function Clients() {
                             height={40}
                         />
                         <div className="text-3xl sm:text-4xl font-bold">30+</div>
-                        <p className="mt-2 text-sm font-medium text-gray-600">
+                        <p className="mt-2 text-sm font-medium text-black">
                             Web & Mobile Products
                         </p>
                     </div>
@@ -46,7 +46,7 @@ export default function Clients() {
                             height={40}
                         />
                         <div className="text-3xl sm:text-4xl font-bold">2000+</div>
-                        <p className="mt-2 text-sm font-medium text-gray-600">
+                        <p className="mt-2 text-sm font-medium text-black">
                             Million Users Touched
                         </p>
                     </div>
@@ -58,7 +58,7 @@ export default function Clients() {
                             height={40}
                         />
                         <div className="text-3xl sm:text-4xl font-bold">110+</div>
-                        <p className="mt-2 text-sm font-medium text-gray-600">
+                        <p className="mt-2 text-sm font-medium text-black">
                             Project Launched
                         </p>
                     </div>
@@ -70,7 +70,7 @@ export default function Clients() {
                             height={40}
                         />
                         <div className="text-3xl sm:text-4xl font-bold">99%</div>
-                        <p className="mt-2 text-sm font-medium text-gray-600">
+                        <p className="mt-2 text-sm font-medium text-black">
                             customer satisfaction
                         </p>
                     </div>
