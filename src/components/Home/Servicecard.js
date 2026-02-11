@@ -2,7 +2,7 @@
 
 export default function ServiceCard({ icon, title, description }) {
     return (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm flex flex-col w-full max-w-[380px] min-h-[360px]">
+        <div className="bg-white rounded-xl p-6 shadow-xl flex flex-col w-full max-w-[380px] min-h-[360px]">
             <div className="mb-4">
                 <img src={icon} alt={title} className="w-12 h-12" />
             </div>

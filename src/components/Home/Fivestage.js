@@ -13,8 +13,8 @@ export default function Fivestage() {
 
     if (!mounted) return null;
     return (
-        <section className="bg-white text-black py-16">
-            <div className="container mx-auto px-6">
+        <section className="bg-[url('/Home/Fivestagebg.svg')] bg-contain bg-center bg-no-repeat text-black py-16">
+            <div className="container mx-auto px-6 relative">
                 <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
                     FIVE STAGE
                 </h3>
@@ -28,7 +28,7 @@ export default function Fivestage() {
                     dolore eu fugiat nulla pariatur.
                 </p>
 
-                <div className="relative grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20 mt-12 left-2">
+                <div className="relative grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20 mt-12 left-8">
                     {/* Stage 01 */}
                     <div
                         className="relative bg-[#44ABD3] text-white p-10
@@ -138,30 +138,6 @@ export default function Fivestage() {
                         </p>
                     </div>
                 </div>
-                {/* ================= ARROWS ROW 1 =================
-                <img
-                    src="/icons/arrow-right.svg"
-                    width={60}
-                    height={60}
-                    className="hidden md:block absolute top-[240px] left-[360px] w-16"
-                    alt="arrow"
-                />
-
-                <img
-                    src="/icons/arrow-right.svg"
-                    width={60}
-                    height={60}
-                    className="hidden md:block absolute top-[240px] left-[720px] w-16"
-                    alt="arrow"
-                />
-
-                <img
-                    src="/icons/arrow-down.svg"
-                    width={60}
-                    height={60}
-                    className="hidden md:block absolute top-[460px] left-[860px] h-20"
-                    alt="arrow"
-                /> */}
 
                 {/* ================= ROW 2 ================= */}
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 mt-32 ml-14">
@@ -208,7 +184,7 @@ export default function Fivestage() {
 
                     {/* Stage 04 */}
                     <div
-                        className="relative bg-[#E16DB4] text-white p-10
+                        className="relative bg-[#A576C2] text-white p-10
   rounded-2xl rounded-bl-none
   min-h-[380px] w-[420px]
   flex flex-col justify-between left-12"
@@ -233,15 +209,8 @@ export default function Fivestage() {
                             We understand that for a successful web app development both backend and frontend processes are integral. We have an expert backend team that looks at integrating third-party servers, cloud servers based on the nature of the project. For existing businesses.
                         </p>
                     </div>
-                    {/* ================= ARROW ROW 2 =================
-                    <img
-                        src="/icons/stagearrow4.svg"
-                        width={60}
-                        height={60}
-                        className="hidden md:block absolute top-[760px] left-[620px] w-16"
-                        alt="arrow"
-                    /> */}
                 </div>
+
             </div>
         </section>
     );

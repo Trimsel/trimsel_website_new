@@ -7,7 +7,7 @@ import { clientsData1, clientsData2 } from "@/data/clientlogo";
 export default function Clients() {
     return (
         <section className="bg-white text-black py-16">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto">
 
                 {/* Heading */}
                 <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">

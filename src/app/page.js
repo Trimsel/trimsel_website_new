@@ -6,6 +6,7 @@ import Works from "@/components/Home/Works";
 import Getintouch from "@/components/Home/Getintouch";
 import Whatwedo from "@/components/Home/Whatwedo";
 import Fivestage from "@/components/Home/Fivestage";
+import Testimonial from "@/components/Home/testimonial";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Getintouch />
       <Whatwedo />
       <Fivestage />
+      <Testimonial />
       <Footer />
     </main>
   );

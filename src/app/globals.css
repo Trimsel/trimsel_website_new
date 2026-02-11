@@ -41,3 +41,146 @@
 * {
     font-family: "Gilroy", system-ui, sans-serif;
 }
+
+
+.marquee {
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* -----------------------------
+   1️⃣ Reset & Base Fix
+------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    scroll-behavior: smooth;
+}
+
+/* Remove unwanted default spacing */
+body {
+    line-height: 1.6;
+}
+
+/* -----------------------------
+   2️⃣ Media & Image Stability
+------------------------------ */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* -----------------------------
+   3️⃣ Global Container System
+------------------------------ */
+
+.container-custom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* -----------------------------
+   4️⃣ Global Section Spacing
+------------------------------ */
+
+.section-spacing {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .section-spacing {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/* -----------------------------
+   5️⃣ Typography Scaling
+------------------------------ */
+
+h1 {
+    font-size: clamp(28px, 4vw, 48px);
+}
+
+h2 {
+    font-size: clamp(22px, 3vw, 36px);
+}
+
+h3 {
+    font-size: clamp(18px, 2.5vw, 28px);
+}
+
+p {
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* -----------------------------
+   6️⃣ Marquee / Slider Stability
+------------------------------ */
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* -----------------------------
+   7️⃣ Prevent Layout Breaking
+------------------------------ */
+
+/* Prevent long text breaking layout */
+p,
+h1,
+h2,
+h3,
+h4 {
+    word-wrap: break-word;
+}
+
+/* Buttons & Links */
+button,
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
