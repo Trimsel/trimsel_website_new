@@ -69,118 +69,88 @@
     }
 }
 
-/* -----------------------------
-   1️⃣ Reset & Base Fix
------------------------------- */
+/* ----------------------------- */
+/* 1. RESET + STABILITY */
+/* ----------------------------- */
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html,
-body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    /* Prevent horizontal scroll */
+html {
+    font-size: clamp(14px, 1.2vw, 18px);
     scroll-behavior: smooth;
 }
 
-/* Remove unwanted default spacing */
 body {
-    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* -----------------------------
-   2️⃣ Media & Image Stability
------------------------------- */
+/* ----------------------------- */
+/* 2. RESPONSIVE MEDIA */
+/* ----------------------------- */
 
 img,
-picture,
 video,
 canvas,
 svg {
-    display: block;
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
-/* -----------------------------
-   3️⃣ Global Container System
------------------------------- */
+/* ----------------------------- */
+/* 3. SAFE CONTAINER SYSTEM */
+/* ----------------------------- */
 
-.container-custom {
+.container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* -----------------------------
-   4️⃣ Global Section Spacing
------------------------------- */
+/* ----------------------------- */
+/* 4. AUTO RESPONSIVE GRID */
+/* Use className="auto-grid" */
+/* ----------------------------- */
 
-.section-spacing {
-    padding-top: 80px;
-    padding-bottom: 80px;
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-/* Smaller screens */
-@media (max-width: 768px) {
-    .section-spacing {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
+/* ----------------------------- */
+/* 5. CARD FIX (Optional) */
+/* ----------------------------- */
 
-/* -----------------------------
-   5️⃣ Typography Scaling
------------------------------- */
-
-h1 {
-    font-size: clamp(28px, 4vw, 48px);
-}
-
-h2 {
-    font-size: clamp(22px, 3vw, 36px);
-}
-
-h3 {
-    font-size: clamp(18px, 2.5vw, 28px);
-}
-
-p {
-    font-size: clamp(14px, 1.2vw, 18px);
-}
-
-/* -----------------------------
-   6️⃣ Marquee / Slider Stability
------------------------------- */
-
-.marquee-wrapper {
+.card {
     width: 100%;
-    overflow: hidden;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* -----------------------------
-   7️⃣ Prevent Layout Breaking
------------------------------- */
+/* ----------------------------- */
+/* 6. PREVENT TEXT BREAK ISSUES */
+/* ----------------------------- */
 
-/* Prevent long text breaking layout */
-p,
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6,
+p {
     word-wrap: break-word;
-}
-
-/* Buttons & Links */
-button,
-a {
-    cursor: pointer;
-    text-decoration: none;
 }

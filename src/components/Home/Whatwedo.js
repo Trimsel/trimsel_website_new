@@ -27,7 +27,7 @@ export default function Whatwedo() {
                     We envision, design, build and support solutions that transform and elevate your digital presence. Our expertise extends to clients worldwide enabling them to achieve global recognition and standard.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 ml-8">
                     {services.map((service) => (
                         <ServiceCard
                             key={service.title}

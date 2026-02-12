@@ -36,6 +36,15 @@ export default function Fivestage() {
   min-h-[380px] w-[320px]
   flex flex-col justify-between"
                     >
+                        {/* Arrow → */}
+                        <Image
+                            src="/icons/arrowstage1.svg"
+                            alt="arrow"
+                            width={100}
+                            height={40}
+                            className="hidden md:block absolute -right-28 top-1/2 -translate-y-1/2 opacity-60"
+                        />
+
                         {/* Top Image */}
                         <div className="absolute -top-8 left-10 flex items-center justify-center">
                             <img
@@ -81,6 +90,15 @@ export default function Fivestage() {
                             ></span>
                         </div>
 
+                        {/* Arrow → */}
+                        <Image
+                            src="/icons/arrowstage2.svg"
+                            alt="arrow"
+                            width={90}
+                            height={40}
+                            className="hidden md:block absolute -right-28 top-1/2 -translate-y-1/2 opacity-60"
+                        />
+
                         {/* Top Image */}
                         <div className="absolute -top-8 left-10 flex items-center justify-center">
                             <img
@@ -113,6 +131,16 @@ export default function Fivestage() {
   min-h-[380px] w-[320px]
   flex flex-col justify-between"
                     >
+
+                        {/* Arrow → */}
+                        <Image
+                            src="/icons/arrowstage3.svg"
+                            alt="arrow"
+                            width={120}
+                            height={160}
+                            className="hidden md:block absolute left-1/2 -bottom-32 -translate-x-1/2 opacity-60"
+                        />
+
                         {/* Top Image */}
                         <div className="absolute -top-8 left-10 flex items-center justify-center">
                             <img
@@ -140,9 +168,9 @@ export default function Fivestage() {
                 </div>
 
                 {/* ================= ROW 2 ================= */}
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 mt-32 ml-14">
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 mt-40 ml-14">
                     {/* Stage 05 */}
-                    <div className="relative flex flex-col justify-center p-4 max-w-xs top-20 left-12">
+                    <div className="relative flex flex-col justify-center p-4 max-w-xs top-20 left-24">
                         {/* Top-right partial border */}
                         <div className="pointer-events-none absolute top-0 right-0 w-[60%] h-[60%] rounded-2xl">
                             {/* Top gradient stroke (rounded ends) */}
@@ -189,6 +217,16 @@ export default function Fivestage() {
   min-h-[380px] w-[420px]
   flex flex-col justify-between left-12"
                     >
+
+                        {/* Arrow ← */}
+                        <Image
+                            src="/icons/arrowstage4.svg"
+                            alt="arrow"
+                            width={120}
+                            height={60}
+                            className="hidden md:block absolute -left-36 top-1/2 -translate-y-1/2 opacity-60"
+                        />
+
                         {/* Top Image */}
                         <div className="absolute -top-8 left-10 flex items-center justify-center">
                             <img

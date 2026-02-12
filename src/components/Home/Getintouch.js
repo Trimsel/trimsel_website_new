@@ -3,59 +3,62 @@ import Link from "next/link";
 
 export default function Getintouch() {
     return (
-        <section className="bg-white text-black py-20">
-            <div
-                className="relative container mx-auto py-6 px-6 rounded-xl
-  bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white
-  shadow-md
-  min-h-[55vh] max-w-6xl overflow-visible"
-            >
+        <section className="bg-white py-20">
+            <div className="flex justify-center">
+                <div
+                    className="
+            relative
+            w-full
+            max-w-6xl
+            px-8 py-10
+            rounded-xl
+            bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white
+            shadow-md
+            min-h-[55vh]
+          "
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    {/* Your content here */}
-                    <div className="mt-2 ml-8">
-                        <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
-                            GET IN TOUCH
-                        </h3>
+                        {/* LEFT CONTENT */}
+                        <div>
+                            <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                                GET IN TOUCH
+                            </h3>
 
-                        <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
-                            Have a project? We would love to help.
-                        </h2>
+                            <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
+                                Have a project? We would love to help.
+                            </h2>
 
-                        <p className="mt-4 max-w-5xl mx-auto text-black font-medium">
-                            Reach out to us to identify business challenges and get efficient digital solutions.
-                        </p>
+                            <p className="mt-4 text-black font-medium">
+                                Reach out to us to identify business challenges and get efficient digital solutions.
+                            </p>
 
-                        <button
-                            className="mt-6 inline-flex items-center gap-2
-          bg-[#27AAE1]
-          text-white font-semibold
-          px-6 py-3 rounded-lg transition"
-                        >
-                            Get Started →
-                        </button>
+                            <button
+                                className="
+                  mt-6 inline-flex items-center gap-2
+                  bg-[#27AAE1]
+                  text-white font-semibold
+                  px-6 py-3 rounded-lg
+                "
+                            >
+                                Get Started →
+                            </button>
+                        </div>
+
+                        {/* RIGHT IMAGE */}
+                        <div className="relative flex justify-center md:justify-end">
+                            <Image
+                                src="/Home/getintouch.svg"
+                                alt="Contact illustration"
+                                width={700}
+                                height={700}
+                                className="w-full max-w-md md:absolute md:-bottom-44 md:right-0"
+                            />
+                        </div>
+
                     </div>
-                    {/* RIGHT IMAGE */}
-                    <div className="relative">
-                        <img
-                            src="/Home/getintouch.svg"
-                            alt="Contact illustration"
-                            className="
-      relative
-      md:absolute
-      md:-bottom-48
-      md:right-0
-      w-full
-      max-w-md
-    "
-                        />
-                    </div>
-
-
                 </div>
-
-
             </div>
         </section>
-    )
+    );
 }

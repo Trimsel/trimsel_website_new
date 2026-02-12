@@ -120,11 +120,11 @@ export default function Footer() {
 
             {/* Bottom Black Section */}
             <div className="bg-black text-white">
-                <div className="mx-auto max-w-6xl px-4 py-8">
+                <div className="mx-auto max-w-6xl px-4 py-6">
                     <div className="grid gap-10 lg:grid-cols-[1.2fr_1.4fr_1.4fr]">
 
                         {/* Logo + Socials */}
-                        <div className="space-y-3">
+                        <div className="relative space-y-3 lg:-ml-10">
                             <Image
                                 src="/trimsel-logo-white.svg"
                                 width={283}
@@ -166,7 +166,7 @@ export default function Footer() {
                         </div>
 
                         {/* Services */}
-                        <div>
+                        <div className="relative top-2">
                             <p className="mb-4 text-lg font-semibold tracking-widest">
                                 SERVICES
                             </p>
@@ -180,7 +180,7 @@ export default function Footer() {
                         </div>
 
                         {/* Company */}
-                        <div className="-ml-20">
+                        <div className="relative top-2 -ml-20">
                             <p className="mb-4 text-lg font-semibold tracking-widest">
                                 COMPANY
                             </p>
@@ -195,7 +195,7 @@ export default function Footer() {
                     </div>
 
                     {/* Copyright */}
-                    <div className="mt-8 border-t border-white/20 pt-6 text-center text-md font-medium text-white">
+                    <div className="mt-14 border-t border-white/40 pt-4 text-center text-md font-medium text-white">
                         © {currentYear} Trimsel Softwares. All rights reserved.
                     </div>
                 </div>
