@@ -18,7 +18,7 @@ export default function Clients() {
                     We’re a Trusted Growth Partner
                 </h2>
 
-                <p className="mt-4 max-w-3xl mx-auto text-center text-gray-700 font-medium">
+                <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
                     At Trimsel, there is continuous learning that happens as we work on various projects. We also love to update and upgrade with the latest innovations in the field of technology and apps.
                 </p>
 
