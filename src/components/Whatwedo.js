@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const ServiceCard = dynamic(() => import("./Servicecard"), {
+const ServiceCard = dynamic(() => import("../data/Servicecard"), {
     ssr: false,
 });
 

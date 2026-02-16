@@ -3,12 +3,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import { useState, useRef, useEffect } from "react";
 import { OurPartner1 } from "@/data/OurPartner";
 import { OurPartner2 } from "@/data/OurPartner";
 
 export default function Contactform() {
+    const countries = [
+        { name: "India", code: "IN", flag: "🇮🇳" },
+        { name: "United States", code: "US", flag: "🇺🇸" },
+        { name: "United Kingdom", code: "GB", flag: "🇬🇧" },
+        { name: "Canada", code: "CA", flag: "🇨🇦" },
+        { name: "Australia", code: "AU", flag: "🇦🇺" },
+        { name: "Germany", code: "DE", flag: "🇩🇪" },
+        { name: "Singapore", code: "SG", flag: "🇸🇬" },
+    ];
+
+    const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+    const [open, setOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    // close when clicking outside
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+                setOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
     return (
-        <section className="bg-white text-black pt-8 pb-16">
+        <section className="bg-[#F3FBFF] text-black pt-8 pb-16">
             <div className="container mx-auto px-4">
 
                 {/* TOP HEADING SECTION */}
@@ -30,10 +55,10 @@ export default function Contactform() {
                 </div>
 
                 {/* TWO COLUMN SECTION */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
                     {/* LEFT COLUMN */}
-                    <div>
+                    <div className="mt-24">
                         <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-transparent text-center text-2xl font-semibold tracking-widest">
                             OUR PARTNERSHIP
                         </h4>
@@ -45,7 +70,7 @@ export default function Contactform() {
                         </p>
 
                         {/* Row 1 */}
-                        <div className="mt-10">
+                        <div className="mt-12">
                             <Marquee
                                 speed={40}
                                 direction="right"
@@ -61,8 +86,8 @@ export default function Contactform() {
                                         <Image
                                             src={client.logo}
                                             alt={client.name}
-                                            width={60}
-                                            height={60}
+                                            width={80}
+                                            height={80}
                                             className="object-contain"
                                         />
                                     </div>
@@ -71,7 +96,7 @@ export default function Contactform() {
                         </div>
 
                         {/* Row 2 */}
-                        <div className="mt-6">
+                        <div className="mt-12">
                             <Marquee
                                 speed={40}
                                 direction="left"   // opposite direction looks better
@@ -87,8 +112,8 @@ export default function Contactform() {
                                         <Image
                                             src={client.logo}
                                             alt={client.name}
-                                            width={60}
-                                            height={60}
+                                            width={80}
+                                            height={80}
                                             className="object-contain"
                                         />
                                     </div>
@@ -146,11 +171,49 @@ export default function Contactform() {
                                         className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
                                     />
 
-                                    <input
-                                        type="text"
-                                        placeholder="Country"
-                                        className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
-                                    />
+                                    <div className="relative" ref={dropdownRef}>
+                                        {/* Selected Country */}
+                                        <div
+                                            onClick={() => setOpen(!open)}
+                                            className="flex items-center justify-between border-b border-black pb-2 cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-lg">{selectedCountry.flag}</span>
+                                                <span className="font-medium text-black">
+                                                    {selectedCountry.name}
+                                                </span>
+                                            </div>
+
+                                            <svg
+                                                className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+
+                                        {/* Dropdown */}
+                                        {open && (
+                                            <div className="absolute z-50 w-full bg-white shadow-lg rounded-lg mt-2 max-h-60 overflow-y-auto border">
+                                                {countries.map((country) => (
+                                                    <div
+                                                        key={country.code}
+                                                        onClick={() => {
+                                                            setSelectedCountry(country);
+                                                            setOpen(false);
+                                                        }}
+                                                        className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                    >
+                                                        <span className="text-lg">{country.flag}</span>
+                                                        <span>{country.name}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+
                                 </div>
 
                                 {/* Textarea */}
@@ -159,30 +222,33 @@ export default function Contactform() {
                                         Tell about your project
                                     </label>
                                     <textarea
-                                        rows={4}
+                                        rows={3}
                                         className="w-full border border-black rounded-lg p-3 focus:outline-none bg-white"
                                     ></textarea>
                                 </div>
 
                                 {/* Bottom Section */}
-                                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
-                                    <div className="space-y-3">
+                                    {/* LEFT SIDE */}
+                                    <div className="space-y-4">
+
+                                        {/* NDA Section */}
                                         <div className="text-sm text-black">
-
                                             <div className="flex items-center gap-2">
                                                 <Image
                                                     src="/icons/tick.svg"
                                                     alt="Tick Icon"
                                                     width={16}
                                                     height={16}
+                                                    className="shrink-0"
                                                 />
-                                                <span>
+                                                <p>
                                                     Your idea is 100% protected by our{" "}
                                                     <span className="font-semibold">
                                                         Non-Disclosure Agreement.
                                                     </span>
-                                                </span>
+                                                </p>
                                             </div>
 
                                             <p className="mt-1 ml-6">
@@ -190,34 +256,53 @@ export default function Contactform() {
                                             </p>
                                         </div>
 
-                                        <div className="flex items-center gap-3 text-lg">
-                                            <span>5</span>
-                                            <span>+</span>
-                                            <span>4</span>
-                                            <span>=</span>
-                                            <input
-                                                type="text"
-                                                className="w-14 border-b border-black bg-transparent focus:outline-none text-center"
-                                            />
+                                        {/* Captcha + Button Row */}
+                                        <div className="flex items-center justify-between gap-6 flex-wrap">
+
+                                            {/* Captcha */}
+                                            <div className="flex items-center gap-3 text-lg font-medium">
+                                                <span>5</span>
+                                                <span>+</span>
+                                                <span>4</span>
+                                                <span>=</span>
+                                                <input
+                                                    type="text"
+                                                    className="w-16 border-b border-black bg-transparent focus:outline-none text-center"
+                                                />
+                                            </div>
+
+                                            {/* Button */}
+                                            <button
+                                                type="submit"
+                                                className="bg-[#1C75BC] hover:bg-[#155d96] text-white px-6 py-2.5 rounded-md transition duration-300 whitespace-nowrap ml-28"
+                                            >
+                                                Get a Free Consultation
+                                            </button>
+
                                         </div>
                                     </div>
 
-                                    <button
-                                        type="submit"
-                                        className="bg-[#1C75BC] hover:bg-[#155d96] text-white px-6 py-2.5 rounded-md transition duration-300"
-                                    >
-                                        Get a Free Consultation
-                                    </button>
-
                                 </div>
-
                             </form>
 
                         </div>
                     </div>
 
                 </div>
+                <div className="mt-16">
+                    <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-transparent text-center text-2xl font-semibold tracking-widest">
+                        AWARDS & RECOGNITIONS
+                    </h4>
 
+                    {/* Images Row */}
+                    <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
+                        <Image src="/partner/award1.svg" alt="Award 1" width={150} height={80} className="object-contain" />
+                        <Image src="/partner/award2.svg" alt="Award 2" width={150} height={80} className="object-contain" />
+                        <Image src="/partner/award3.svg" alt="Award 3" width={150} height={80} className="object-contain" />
+                        <Image src="/partner/award4.svg" alt="Award 4" width={150} height={80} className="object-contain" />
+                        <Image src="/partner/award5.svg" alt="Award 5" width={140} height={80} className="object-contain" />
+                    </div>
+                </div>
             </div>
         </section>
     );
