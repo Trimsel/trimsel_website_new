@@ -20,7 +20,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="mt-20 bg-white text-black">
+        <footer className="mt-16 bg-white text-black">
             {/* Top Section */}
             <div className="relative overflow-hidden bg-white px-6 py-10 sm:px-8 lg:px-12">
 
@@ -91,12 +91,12 @@ export default function Footer() {
                 </div>
 
                 {/* Right Image */}
-                <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 lg:block">
+                <div className="absolute right-0 top-[53%] hidden -translate-y-1/2 lg:block">
                     <Image
                         src="/temple.svg"
                         alt="Temple illustration"
                         width={540}
-                        height={580}
+                        height={620}
                     />
                 </div>
 
@@ -184,13 +184,18 @@ export default function Footer() {
                             <p className="mb-4 text-lg font-semibold tracking-widest">
                                 COMPANY
                             </p>
-                            <ul className="space-y-3 text-md font-medium text-white">
+                            <ul className="space-y-3 text-md font-medium">
                                 {companyLinks.map((link) => (
                                     <li key={link.href}>
-                                        <Link href={link.href}>{link.label}</Link>
+                                        <Link
+                                            href={link.href}
+                                        >
+                                            {link.label}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
+
                         </div>
                     </div>
 

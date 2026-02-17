@@ -1,46 +1,194 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({ transparent = false }) {
     const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
+
+    const servicesRef = useRef(null);
+
+    /* ================= Scroll Detection ================= */
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 80);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    /* ================= Click Outside Detection ================= */
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                servicesRef.current &&
+                !servicesRef.current.contains(event.target)
+            ) {
+                setServicesOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const navLinkStyle = `
+        text-lg font-medium text-black
+        transition-all duration-300
+        hover:font-semibold
+        hover:bg-gradient-to-r 
+        hover:from-[#1C76BD] 
+        hover:to-[#02A89B]
+        hover:bg-clip-text 
+        hover:text-transparent
+    `;
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-white border-b">
+        <header
+            className={`fixed top-0 z-50 w-full transition-all duration-300
+            ${transparent && !scrolled
+                    ? "bg-transparent"
+                    : "bg-white border-b shadow-sm"
+                }`}
+        >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
 
-                    {/* Logo as Image */}
+                    {/* Logo */}
                     <Link href="/" className="flex items-center gap-4 ml-4">
                         <Image
-                            src="/trimsel-logo.svg"     // 👈 your logo path
+                            src="/trimsel-logo.svg"
                             alt="Trimsel Logo"
                             width={140}
                             height={35}
                             priority
-
                         />
                     </Link>
 
                     {/* Desktop Menu */}
                     <nav className="hidden md:flex items-center gap-8">
-                        <Link href="/" className="text-lg font-medium hover:text-gray-600 text-black">
-                            Home
-                        </Link>
-                        <Link href="/about" className="text-lg font-medium hover:text-gray-600 text-black">
-                            About Us
-                        </Link>
-                        <Link href="/services" className="text-lg font-medium hover:text-gray-600 text-black">
-                            Services
-                        </Link>
-                        <Link href="/portfolio" className="text-lg font-medium hover:text-gray-600 text-black">
-                            Portfolio
-                        </Link>
-                        <Link href="/blog" className="text-lg font-medium hover:text-gray-600 text-black">
-                            Blog
-                        </Link>
+
+                        <Link href="/" className={navLinkStyle}>Home</Link>
+                        <Link href="/about" className={navLinkStyle}>About Us</Link>
+
+                        {/* ================= Services Dropdown ================= */}
+                        <div ref={servicesRef} className="relative">
+
+                            <button
+                                onClick={() => setServicesOpen(!servicesOpen)}
+                                className="text-lg font-medium text-black transition-all duration-300 hover:font-semibold flex items-center gap-2"
+                            >
+                                <span className="hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent">
+                                    Services
+                                </span>
+                            </button>
+
+
+                            {servicesOpen && (
+                                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-6 
+                                w-[750px] bg-white shadow-2xl rounded-2xl p-8 z-50">
+
+                                    <div className="grid grid-cols-2 gap-6">
+
+                                        {/* 1 */}
+                                        <Link href="/services/mobile-apps"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-blue-50 hover:shadow-md transition">
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service1.svg" alt="Mobile" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="font-semibold">Mobile App Development</h4>
+                                                </div>
+                                            </div>
+
+                                            <span className="text-blue-500 text-xl">→</span>
+                                        </Link>
+
+                                        {/* 2 */}
+                                        <Link href="/services/devops"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-orange-50 hover:shadow-md transition">
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service4.svg" alt="DevOps" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="font-semibold">DevOps Consulting</h4>
+                                                </div>
+                                            </div>
+
+                                            <span className="text-orange-500 text-xl">→</span>
+                                        </Link>
+
+                                        {/* 3 */}
+                                        <Link href="/services/web-development"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-purple-50 hover:shadow-md transition">
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service2.svg" alt="Web" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="font-semibold">Web Development</h4>
+                                                </div>
+                                            </div>
+
+                                            <span className="text-purple-500 text-xl">→</span>
+                                        </Link>
+
+                                        {/* 4 */}
+                                        <Link href="/services/qa"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-pink-50 hover:shadow-md transition">
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service5.svg" alt="QA" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="font-semibold">AI & ML Development</h4>
+                                                </div>
+                                            </div>
+
+                                            <span className="text-pink-500 text-xl">→</span>
+                                        </Link>
+
+                                        {/* 5 */}
+                                        <Link href="/services/digital-marketing"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-red-50 hover:shadow-md transition">
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service3.svg" alt="Marketing" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="font-semibold">Digital Marketing</h4>
+                                                </div>
+                                            </div>
+
+                                            <span className="text-red-500 text-xl">→</span>
+                                        </Link>
+
+                                        {/* 6 */}
+                                        <Link
+                                            href="/services/cloud"
+                                            className="flex items-center justify-between 
+                                            p-3 rounded-xl bg-green-50 hover:shadow-md transition-all duration-300"
+                                        >
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service6.svg" alt="Cloud" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="font-semibold">Cloud Consulting</h4>
+                                                </div>
+                                            </div>
+
+                                            <span className="text-green-500 text-xl">→</span>
+                                        </Link>
+
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <Link href="/portfolio" className={navLinkStyle}>Portfolio</Link>
+                        <Link href="/blog" className={navLinkStyle}>Blog</Link>
+
                     </nav>
 
                     {/* Desktop Button */}
@@ -53,66 +201,8 @@ export default function Header() {
                         </Link>
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        onClick={() => setOpen(!open)}
-                        className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100"
-                        aria-label="Toggle Menu"
-                    >
-                        <svg
-                            className="h-6 w-6"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                        >
-                            {open ? (
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            ) : (
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            )}
-                        </svg>
-                    </button>
                 </div>
             </div>
-
-            {/* Mobile Menu */}
-            {open && (
-                <div className="md:hidden border-t bg-white">
-                    <div className="space-y-2 px-4 py-4">
-                        <Link onClick={() => setOpen(false)} href="/" className="block py-2">
-                            Home
-                        </Link>
-                        <Link onClick={() => setOpen(false)} href="/aboutus" className="block py-2">
-                            About Us
-                        </Link>
-                        <Link onClick={() => setOpen(false)} href="/services" className="block py-2">
-                            Services
-                        </Link>
-                        <Link onClick={() => setOpen(false)} href="/portfolio" className="block py-2">
-                            Portfolio
-                        </Link>
-                        <Link onClick={() => setOpen(false)} href="/blog" className="block py-2">
-                            Blog
-                        </Link>
-
-                        <Link
-                            href="/contact"
-                            className="mt-2 block rounded-md bg-black px-4 py-2 text-center text-white"
-                        >
-                            Contact Us
-                        </Link>
-                    </div>
-                </div>
-            )}
         </header>
     );
 }

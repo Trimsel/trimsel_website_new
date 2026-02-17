@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black overflow-hidden">
-        <div className="container mx-auto px-4 py-4 md:py-4 mt-8">
+        <div className="container mx-auto px-4 py-4 md:py-4 mt-28">
           <div className="relative grid md:grid-cols-2 gap-12 items-center ml-24 
                     -translate-y-8 md:-translate-y-10">
 

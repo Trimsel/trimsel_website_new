@@ -4,7 +4,7 @@ export default function ServiceCard({ icon, title, description }) {
     return (
         <div className="bg-white rounded-xl p-6 shadow-xl flex flex-col w-full max-w-[380px] min-h-[360px]">
             <div className="mb-4">
-                <img src={icon} alt={title} className="w-12 h-12" />
+                <img src={icon} alt={title} className="w-10 h-10" />
             </div>
 
             <h3 className="text-lg font-semibold text-black mb-3">
