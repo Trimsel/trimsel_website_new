@@ -23,15 +23,14 @@ export default function Home() {
 
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center md:text-left gap-4 mt-12">
-              <h1 className="text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-5xl font-bold mb-10 leading-tight">
                 Grow Your Business
                 With Trimsel – Your
                 No.1 Expert Digital Partner
               </h1>
 
-              <p className="max-w-xl mb-6 text-lg">
-                Trimsel is a digital product development company based in India.
-                We use the power of digital engineering to empower businesses with innovation.
+              <p className="max-w-xl mb-8 text-lg">
+                Trimsel is a digital product development company based in India. We use the power of digital engineering and empower businesses to execute their ideas with innovation.
               </p>
 
               <Link

@@ -80,7 +80,7 @@ export default function Header({ transparent = false }) {
 
                             <button
                                 onClick={() => setServicesOpen(!servicesOpen)}
-                                className="text-lg font-medium text-black transition-all duration-300 hover:font-semibold flex items-center gap-2"
+                                className={`${navLinkStyle} flex items-center gap-2`}
                             >
                                 <span className="hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent">
                                     Services
@@ -104,8 +104,6 @@ export default function Header({ transparent = false }) {
                                                     <h4 className="font-semibold">Mobile App Development</h4>
                                                 </div>
                                             </div>
-
-                                            <span className="text-blue-500 text-xl">→</span>
                                         </Link>
 
                                         {/* 2 */}
@@ -118,8 +116,6 @@ export default function Header({ transparent = false }) {
                                                     <h4 className="font-semibold">DevOps Consulting</h4>
                                                 </div>
                                             </div>
-
-                                            <span className="text-orange-500 text-xl">→</span>
                                         </Link>
 
                                         {/* 3 */}
@@ -132,8 +128,6 @@ export default function Header({ transparent = false }) {
                                                     <h4 className="font-semibold">Web Development</h4>
                                                 </div>
                                             </div>
-
-                                            <span className="text-purple-500 text-xl">→</span>
                                         </Link>
 
                                         {/* 4 */}
@@ -146,8 +140,6 @@ export default function Header({ transparent = false }) {
                                                     <h4 className="font-semibold">AI & ML Development</h4>
                                                 </div>
                                             </div>
-
-                                            <span className="text-pink-500 text-xl">→</span>
                                         </Link>
 
                                         {/* 5 */}
@@ -160,8 +152,6 @@ export default function Header({ transparent = false }) {
                                                     <h4 className="font-semibold">Digital Marketing</h4>
                                                 </div>
                                             </div>
-
-                                            <span className="text-red-500 text-xl">→</span>
                                         </Link>
 
                                         {/* 6 */}
@@ -177,8 +167,6 @@ export default function Header({ transparent = false }) {
                                                     <h4 className="font-semibold">Cloud Consulting</h4>
                                                 </div>
                                             </div>
-
-                                            <span className="text-green-500 text-xl">→</span>
                                         </Link>
 
                                     </div>
@@ -195,7 +183,7 @@ export default function Header({ transparent = false }) {
                     <div className="hidden md:block">
                         <Link
                             href="/contact"
-                            className="rounded-md bg-[#27AAE1] px-4 py-2 text-lg font-medium text-white hover:bg-gray-800"
+                            className="rounded-md bg-[#27AAE1] px-4 py-2 text-lg font-medium text-white"
                         >
                             Contact Us
                         </Link>
