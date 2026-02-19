@@ -11,7 +11,6 @@ export default function Header({ transparent = false }) {
 
     const servicesRef = useRef(null);
 
-    /* ================= Scroll Detection ================= */
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 80);
@@ -21,7 +20,7 @@ export default function Header({ transparent = false }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    /* ================= Click Outside Detection ================= */
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -36,16 +35,19 @@ export default function Header({ transparent = false }) {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
+    const linkColor = transparent && !scrolled ? "text-white" : "text-black";
+
     const navLinkStyle = `
-        text-lg font-medium text-black
-        transition-all duration-300
-        hover:font-semibold
-        hover:bg-gradient-to-r 
-        hover:from-[#1C76BD] 
-        hover:to-[#02A89B]
-        hover:bg-clip-text 
-        hover:text-transparent
-    `;
+    text-lg font-medium ${linkColor}
+    transition-all duration-300
+    hover:font-semibold
+    hover:bg-gradient-to-r 
+    hover:from-[#1C76BD] 
+    hover:to-[#02A89B]
+    hover:bg-clip-text 
+    hover:text-transparent
+`;
+
 
     return (
         <header
@@ -61,12 +63,13 @@ export default function Header({ transparent = false }) {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-4 ml-4">
                         <Image
-                            src="/trimsel-logo.svg"
+                            src={transparent && !scrolled ? "/trimsel-logo-white.svg" : "/trimsel-logo.svg"}
                             alt="Trimsel Logo"
                             width={140}
                             height={35}
                             priority
                         />
+
                     </Link>
 
                     {/* Desktop Menu */}
@@ -131,11 +134,11 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 4 */}
-                                        <Link href="/services/qa"
+                                        <Link href="/ai-development-company"
                                             className="flex items-start justify-between p-3 rounded-xl bg-pink-50 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
-                                                <Image src="/icons/service5.svg" alt="QA" width={32} height={32} />
+                                                <Image src="/icons/service5.svg" alt="AI" width={32} height={32} />
                                                 <div>
                                                     <h4 className="font-semibold">AI & ML Development</h4>
                                                 </div>

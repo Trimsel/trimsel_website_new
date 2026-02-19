@@ -170,3 +170,9 @@ p {
 .animate-fadeIn {
     animation: fadeIn 0.2s ease-out forwards;
 }
+
+:root {
+    --motion-fast: 0.25;
+    --motion-normal: 0.45;
+    --motion-slow: 0.7;
+}

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Client from "@/components/Client";
@@ -10,10 +9,11 @@ import Testimonial from "@/components/testimonial";
 import OurBlog from "@/components/OurBlog";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
+import MotionWrapper from "@/components/MotionWrapper";
 
 export default function Home() {
   return (
-    <main>
+    <MotionWrapper>
       <Header />
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black overflow-hidden">
@@ -290,7 +290,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-    </main>
+    </MotionWrapper>
   );
 }
 

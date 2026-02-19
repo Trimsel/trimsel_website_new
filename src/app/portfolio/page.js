@@ -1,40 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
+import dynamic from "next/dynamic";
 import { projects } from "@/data/projects";
+import Header from "@/components/Header";
+import Clients from "@/components/Client";
+import Contactform from "@/components/Contactform";
+import Footer from "@/components/Footer";
+
 
 export default function PortfolioPage() {
     const [active, setActive] = useState("ALL");
+    const [mounted, setMounted] = useState(false);
 
-    const getCategories = (project) => {
-        if (!project.category) return [];
-        return Array.isArray(project.category)
-            ? project.category
-            : project.category.split(" | ");
-    };
 
-    const categories = [
-        "ALL",
-        ...new Set(projects.flatMap((project) => project.category)),
-    ];
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+
+    const normalizedProjects = useMemo(() => {
+        return projects.map((p) => ({
+            ...p,
+            category: !p.category
+                ? []
+                : Array.isArray(p.category)
+                    ? p.category
+                    : p.category.split(" | "),
+        }));
+    }, []);
+
+
+    const categories = useMemo(() => {
+        const allCats = normalizedProjects.flatMap((p) => p.category);
+        return ["ALL", ...Array.from(new Set(allCats))];
+    }, [normalizedProjects]);
 
 
     const filteredProjects =
         active === "ALL"
-            ? projects
-            : projects.filter((project) =>
-                project.category.includes(active)
+            ? normalizedProjects
+            : normalizedProjects.filter((p) =>
+                p.category.includes(active)
             );
 
     const buttonStyle = (category) =>
         `px-6 py-2 rounded-lg border font-medium transition-all duration-300
-    ${active === category
+        ${active === category
             ? "bg-gradient-to-r from-[#1C76BD] to-[#02A89B] text-white border-none"
             : "border-gray-300 text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:text-white"
         }`;
+
+    if (!mounted) return null;
 
     return (
         <div>
@@ -52,7 +71,8 @@ export default function PortfolioPage() {
                     </h1>
 
                     <p className="max-w-xl mt-6 text-lg text-black">
-                        From innovative mobile apps to robust web platforms, we help businesses turn ideas into exceptional digital products. Our portfolio spans a range of solutions including Websites, Desktop and Mobile Applications for clients in diverse industries.
+                        From innovative mobile apps to robust web platforms,
+                        we help businesses turn ideas into exceptional digital products.
                     </p>
                 </div>
             </section>
@@ -61,6 +81,7 @@ export default function PortfolioPage() {
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-6">
 
+                    {/* Category Buttons */}
                     <div className="flex flex-wrap gap-4 mb-16 justify-center">
                         {categories.map((category) => (
                             <button
@@ -84,15 +105,15 @@ export default function PortfolioPage() {
                                     className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
                                         }`}
                                 >
-                                    {/* Content Section */}
+                                    {/* Content */}
                                     <div className="flex-1">
 
                                         {/* Categories */}
                                         <div className="mb-4 text-lg font-semibold text-[#02A89B]">
-                                            {project.category.map((cat, i) => (
+                                            {project.category.map((cat, i, arr) => (
                                                 <span key={i}>
                                                     {cat}
-                                                    {i !== project.category.length - 1 && (
+                                                    {i !== arr.length - 1 && (
                                                         <span className="mx-2 text-gray-400">|</span>
                                                     )}
                                                 </span>
@@ -107,7 +128,7 @@ export default function PortfolioPage() {
                                             {project.subtitle}
                                         </h3>
 
-                                        <p className="mb-8 max-w-3xl mx-auto text-black font-medium">
+                                        <p className="mb-8 max-w-3xl text-black font-medium">
                                             {project.description}
                                         </p>
 
@@ -117,10 +138,9 @@ export default function PortfolioPage() {
                                         >
                                             View Case Study
                                         </Link>
-
                                     </div>
 
-                                    {/* Image Section */}
+                                    {/* Image */}
                                     <div className="flex-1">
                                         <Image
                                             src={project.image}
@@ -134,9 +154,49 @@ export default function PortfolioPage() {
                             </div>
                         ))}
                     </div>
-
                 </div>
             </section>
+
+            {/* Get in Touch */}
+            <section className="bg-white py-20">
+                <div className="flex justify-center">
+                    <div className="relative w-full max-w-6xl px-8 py-10 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md min-h-[55vh]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                            <div>
+                                <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                                    GET IN TOUCH
+                                </h3>
+
+                                <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
+                                    Have a project? We would love to help.
+                                </h2>
+
+                                <p className="mt-4 text-black font-medium">
+                                    Reach out to us to identify business challenges and get efficient digital solutions.
+                                </p>
+
+                                <button className="mt-6 inline-flex items-center gap-2 bg-[#27AAE1] text-white font-semibold px-6 py-3 rounded-lg">
+                                    Get Started →
+                                </button>
+                            </div>
+
+                            <div className="relative flex justify-center md:justify-end">
+                                <Image
+                                    src="/getintouch1.svg"
+                                    alt="Contact illustration"
+                                    width={700}
+                                    height={700}
+                                    className="w-full max-w-md md:absolute md:-bottom-44 md:right-0"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Clients />
+            <Contactform />
+            <Footer />
         </div>
     );
 }
