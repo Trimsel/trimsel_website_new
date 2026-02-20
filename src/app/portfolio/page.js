@@ -133,7 +133,7 @@ export default function PortfolioPage() {
                                         </p>
 
                                         <Link
-                                            href={`/portfolio/${project.id}`}
+                                            href="/"
                                             className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-[#1C76BD] to-[#02A89B] text-white font-medium hover:opacity-90 transition duration-300"
                                         >
                                             View Case Study

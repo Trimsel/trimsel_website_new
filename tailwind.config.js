@@ -20,6 +20,17 @@ module.exports = {
       },
       animation: {
         shake: 'shake 2s ease-in-out infinite',
+        slowspin: "slowspin 15s linear infinite",
+      },
+      keyframes: {
+        slowspin: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        spinReverse: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(-360deg)" },
+        },
       },
     },
   },

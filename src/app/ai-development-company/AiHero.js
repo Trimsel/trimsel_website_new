@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function AIDevelopmentPage() {
     const mountRef = useRef(null);
@@ -29,7 +31,7 @@ export default function AIDevelopmentPage() {
         renderer.setPixelRatio(window.devicePixelRatio);
         container.appendChild(renderer.domElement);
 
-        // ---------------- PARTICLES ----------------
+
         const particlesCount = 120;
         const positions = new Float32Array(particlesCount * 3);
 
@@ -55,7 +57,7 @@ export default function AIDevelopmentPage() {
         const particles = new THREE.Points(particleGeometry, particleMaterial);
         scene.add(particles);
 
-        // ---------------- LINES ----------------
+
         const lineMaterial = new THREE.LineBasicMaterial({
             color: "#7aa2ff",
             transparent: true,
@@ -93,7 +95,7 @@ export default function AIDevelopmentPage() {
         const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
         scene.add(lines);
 
-        // ---------------- ANIMATION ----------------
+
         const animate = () => {
             requestAnimationFrame(animate);
 
@@ -105,7 +107,7 @@ export default function AIDevelopmentPage() {
 
         animate();
 
-        // ---------------- RESIZE ----------------
+
         const handleResize = () => {
             camera.aspect = container.clientWidth / container.clientHeight;
             camera.updateProjectionMatrix();
@@ -126,36 +128,67 @@ export default function AIDevelopmentPage() {
             {/* Three.js Canvas */}
             <div ref={mountRef} className="absolute inset-0 z-0" />
 
-            {/* Glow overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,120,255,0.25),transparent_60%)] z-0" />
+            <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 mt-4">
+                {/* Glow overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#] to-[#285BFB] z-0" />
 
-            {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 gap-4">
 
-                <motion.div className="mb-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur text-white text-sm">
-                    ⚡ Next-Gen AI Technology
-                </motion.div>
+                    <motion.div className="mb-6 flex items-center justify-center gap-4 px-5 py-2 rounded-full bg-white/10 backdrop-blur text-white text-sm">
 
-                <h1 className="text-2xl md:text-3xl text-white mt-2">
-                    Artificial Intelligence
-                </h1>
+                        {/* Left Image */}
+                        <Image
+                            src="/icons/aileftimage.svg"
+                            alt="AI Left"
+                            width={30}
+                            height={30}
+                        />
 
-                <h2 className="text-2xl md:text-3xl text-white mt-2">
-                    Development Platform
-                </h2>
+                        {/* Text */}
+                        <span className="text-lg font-medium">Next-Gen AI Technology</span>
 
-                <p className="text-gray-300 mt-6 max-w-2xl">
-                    Harness the power of neural networks and machine learning to build the future of intelligent applications
-                </p>
+                        {/* Right Image */}
+                        <Image
+                            src="/icons/airightimage.svg"
+                            alt="AI Right"
+                            width={30}
+                            height={30}
+                        />
 
-                <div className="flex gap-4 mt-8">
-                    <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium">
-                        Get Started
-                    </button>
+                    </motion.div>
 
-                    <button className="px-6 py-3 rounded-lg bg-white/10 backdrop-blur text-white">
-                        Learn More
-                    </button>
+
+
+                    <h1 className="text-4xl md:text-6xl font-bold text-white">
+                        Artificial Intelligence
+                    </h1>
+
+                    <h2 className="mt-2 text-white text-center text-2xl md:text-4xl font-semibold">
+                        Development Platform
+                    </h2>
+
+                    <p className="mt-4 max-w-5xl mx-auto text-center text-white font-medium">
+                        Harness the power of neural networks and machine learning to build the future of intelligent applications
+                    </p>
+
+                    <div className="flex gap-8 mt-8">
+                        <Link
+                            href="/"
+                            className="px-6 py-3 rounded-lg bg-gradient-to-r from-[#8F24FA] to-[#285BFB] text-white font-medium"
+                        >
+                            Get Started
+                        </Link>
+
+                        <Link
+                            href="/"
+                            className="px-6 py-3 rounded-lg bg-[#48327A] text-white border border-white/40 
+         hover:bg-[#7049B1] blur/10
+           transition-all duration-300 ease-in-out"
+                        >
+                            Learn More
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
