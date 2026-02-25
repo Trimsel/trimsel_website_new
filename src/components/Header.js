@@ -110,7 +110,7 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 2 */}
-                                        <Link href="/services/devops"
+                                        <Link href="/DevOps-Consulting"
                                             className="flex items-start justify-between p-3 rounded-xl bg-orange-50 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
@@ -159,7 +159,7 @@ export default function Header({ transparent = false }) {
 
                                         {/* 6 */}
                                         <Link
-                                            href="/services/cloud"
+                                            href="/Cloud-Consulting"
                                             className="flex items-center justify-between 
                                             p-3 rounded-xl bg-green-50 hover:shadow-md transition-all duration-300"
                                         >

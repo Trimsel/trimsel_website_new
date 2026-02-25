@@ -17,12 +17,6 @@ module.exports = {
           '50%': { transform: 'translate(-1px, 2px)' },
           '60%': { transform: 'translate(1px, -2px)' },
         },
-      },
-      animation: {
-        shake: 'shake 2s ease-in-out infinite',
-        slowspin: "slowspin 15s linear infinite",
-      },
-      keyframes: {
         slowspin: {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
@@ -32,8 +26,12 @@ module.exports = {
           to: { transform: "rotate(-360deg)" },
         },
       },
+      animation: {
+        shake: 'shake 2s ease-in-out infinite',
+        "spin-slow": "spin 25s linear infinite",
+        "spin-reverse": "spinReverse 25s linear infinite",
+      },
     },
   },
   plugins: [],
 }
-

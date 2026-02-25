@@ -4,16 +4,16 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Client from "@/components/Client";
 import Whatwedo from "@/components/Whatwedo";
-import Fivestage from "@/components/Fivestage";
+import Fivestage from "@/app/Home/Fivestage";
 import Testimonial from "@/components/testimonial";
 import OurBlog from "@/components/OurBlog";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
-import MotionWrapper from "@/components/MotionWrapper";
+import { ToolsSection } from "./Home/ToolsSection";
 
 export default function Home() {
   return (
-    <MotionWrapper>
+    <main>
       <Header />
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black overflow-hidden">
@@ -277,133 +277,7 @@ export default function Home() {
       </section>
 
       {/* Tools and Technologies */}
-      <section className="bg-[#f4f5f7] py-20">
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* Heading */}
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1C75BC]">
-              TOOLS AND TECHNOLOGIES
-            </h2>
-            <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-              Core technologies that power Trimsel's solutions — mobile, cloud,
-              web, AI & DevOps.
-            </p>
-          </div>
-
-          {/* Main Card */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-
-            {/* LEFT PANEL */}
-            <div className="md:w-1/2 bg-gradient-to-b from-[#2d6ea3] to-[#1f5f8b] p-8 space-y-5 text-white">
-              {[
-                "AI/ML",
-                "Frontend Programming Languages",
-                "Backend Programming Languages",
-                "Database",
-                "Digital Marketing",
-                "Cloud",
-                "DevOps",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center justify-between bg-white/10 px-5 py-4 rounded-xl hover:bg-white/20 transition duration-300 cursor-pointer"
-                >
-                  <span>{item}</span>
-                  <span>→</span>
-                </div>
-              ))}
-            </div>
-
-            {/* RIGHT PANEL */}
-            <div className="md:w-1/2 flex items-center justify-center p-12 relative">
-
-              <div className="relative w-[460px] h-[460px]">
-
-                {/* OUTER RING BORDER */}
-                <div className="absolute inset-0 rounded-full border-2 border-dashed border-black/50"></div>
-
-                {/* OUTER ROTATION */}
-                <div className="absolute inset-0 animate-spin [animation-duration:20s]">
-
-                  {/* TOP */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[22%] 
-                w-14 h-14 bg-white rounded-full shadow-md 
-                flex items-center justify-center">
-                    <Image src="/icons/icon1.svg" alt="Tech1" width={28} height={28} />
-                  </div>
-
-                  {/* BOTTOM */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[22%] 
-                w-14 h-14 bg-white rounded-full shadow-md 
-                flex items-center justify-center">
-                    <Image src="/icons/icon2.svg" alt="Tech2" width={28} height={28} />
-                  </div>
-
-                  {/* LEFT */}
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[22%] 
-                w-14 h-14 bg-white rounded-full shadow-md 
-                flex items-center justify-center">
-                    <Image src="/icons/icon3.svg" alt="Tech3" width={28} height={28} />
-                  </div>
-
-                  {/* RIGHT */}
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[22%] 
-                w-14 h-14 bg-white rounded-full shadow-md 
-                flex items-center justify-center">
-                    <Image src="/icons/icon4.svg" alt="Tech4" width={28} height={28} />
-                  </div>
-
-                </div>
-
-                {/* INNER RING BORDER */}
-                <div className="absolute inset-16 rounded-full border-2 border-dashed border-black/50"></div>
-
-                {/* INNER ROTATION */}
-                <div
-                  className="absolute inset-16 animate-spin"
-                  style={{
-                    animationDuration: "20s",
-                    animationDirection: "reverse",
-                  }}
-                >
-
-                  {/* TOP */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 
-                  w-12 h-12 bg-white rounded-full shadow-md 
-                  flex items-center justify-center">
-                    <Image src="/icons/icon5.svg" alt="Tech1" width={24} height={24} />
-                  </div>
-
-                  {/* LEFT */}
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/3 
-                  w-12 h-12 bg-white rounded-full shadow-md 
-                  flex items-center justify-center">
-                    <Image src="/icons/icon6.svg" alt="Tech2" width={24} height={24} />
-                  </div>
-
-                  {/* RIGHT */}
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 
-                  w-12 h-12 bg-white rounded-full shadow-md 
-                  flex items-center justify-center">
-                    <Image src="/icons/icon7.svg" alt="Tech3" width={24} height={24} />
-                  </div>
-
-                  {/* SMALL GRAY CIRCLE */}
-                  <div className="absolute bottom-0 left-1/2 
-                -translate-x-1/2 translate-y-1/2 
-                w-6 h-6 bg-[#05A798] rounded-full shadow-sm">
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <ToolsSection />
 
       {/* Testimonial */}
       <Testimonial />
@@ -419,7 +293,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-    </MotionWrapper>
+    </main>
   );
 }
 

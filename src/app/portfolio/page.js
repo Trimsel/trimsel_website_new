@@ -95,11 +95,11 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Projects */}
-                    <div className="space-y-16">
+                    <div className="space-y-16 pt-4">
                         {filteredProjects.map((project, index) => (
                             <div
                                 key={project.id}
-                                className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-8 md:p-12"
+                                className="bg-white rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)] transition-all duration-300 p-8 md:p-12"
                             >
                                 <div
                                     className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
@@ -159,7 +159,7 @@ export default function PortfolioPage() {
 
             {/* Get in Touch */}
             <section className="bg-white py-20">
-                <div className="flex justify-center">
+                <div className="flex justify-center pt-6">
                     <div className="relative w-full max-w-6xl px-8 py-10 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md min-h-[55vh]">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                             <div>

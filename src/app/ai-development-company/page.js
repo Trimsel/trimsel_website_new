@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 
 
-export default function Home() {
+export default function AI() {
     return (
         <main>
             <Header transparent />
