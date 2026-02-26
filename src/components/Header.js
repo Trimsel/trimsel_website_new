@@ -92,14 +92,14 @@ export default function Header({ transparent = false }) {
 
 
                             {servicesOpen && (
-                                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-6 
+                                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-8 
                                 w-[750px] bg-white shadow-2xl rounded-2xl p-8 z-50">
 
                                     <div className="grid grid-cols-2 gap-6">
 
                                         {/* 1 */}
-                                        <Link href="/services/mobile-apps"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-blue-50 hover:shadow-md transition">
+                                        <Link href="/MobileApp-Development"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-blue-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service1.svg" alt="Mobile" width={32} height={32} />
@@ -111,7 +111,7 @@ export default function Header({ transparent = false }) {
 
                                         {/* 2 */}
                                         <Link href="/DevOps-Consulting"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-orange-50 hover:shadow-md transition">
+                                            className="flex items-start justify-between p-3 rounded-xl bg-orange-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service4.svg" alt="DevOps" width={32} height={32} />
@@ -123,7 +123,7 @@ export default function Header({ transparent = false }) {
 
                                         {/* 3 */}
                                         <Link href="/services/web-development"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-purple-50 hover:shadow-md transition">
+                                            className="flex items-start justify-between p-3 rounded-xl bg-purple-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service2.svg" alt="Web" width={32} height={32} />
@@ -135,7 +135,7 @@ export default function Header({ transparent = false }) {
 
                                         {/* 4 */}
                                         <Link href="/ai-development-company"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-pink-50 hover:shadow-md transition">
+                                            className="flex items-start justify-between p-3 rounded-xl bg-pink-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service5.svg" alt="AI" width={32} height={32} />
@@ -146,8 +146,8 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 5 */}
-                                        <Link href="/services/digital-marketing"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-red-50 hover:shadow-md transition">
+                                        <Link href="/Digitalmarketing"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-red-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service3.svg" alt="Marketing" width={32} height={32} />
@@ -161,7 +161,7 @@ export default function Header({ transparent = false }) {
                                         <Link
                                             href="/Cloud-Consulting"
                                             className="flex items-center justify-between 
-                                            p-3 rounded-xl bg-green-50 hover:shadow-md transition-all duration-300"
+                                            p-3 rounded-xl bg-green-100 hover:shadow-md transition-all duration-300"
                                         >
 
                                             <div className="flex gap-4">

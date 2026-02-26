@@ -145,6 +145,21 @@ export default function OurBlog() {
                     </div>
                 </div>
             </div>
+            <div className="flex justify-center">
+                <Link
+                    href="/contact-us"
+                    className="inline-flex items-center gap-1 bg-[#27AAE1] 
+             text-white px-8 py-4 rounded font-medium"
+                >
+                    View All Blogs
+                    <Image
+                        src="/Home/right-arrow.svg"
+                        width={20}
+                        height={20}
+                        alt="RightArrow"
+                    />
+                </Link>
+            </div>
         </section>
     );
 }
