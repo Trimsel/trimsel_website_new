@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
@@ -10,8 +12,32 @@ import OurBlog from "@/components/OurBlog";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const words = [
+    "AI",
+    "Intelligent Automation",
+    "Cognitive Computing",
+    "Smart Technology",
+  ];
+
+  const [index, setIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [words.length]);
+
   return (
     <main>
       <Header />
@@ -24,9 +50,21 @@ export default function Home() {
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center md:text-left gap-4 mt-12">
               <h1 className="text-5xl font-bold mb-10 leading-tight">
-                Grow Your Business
-                With Trimsel – Your
-                No.1 Expert Digital Partner
+                Smarter Logistics,
+                <br />
+                Powered by{" "}
+                <span className="relative inline-block min-w-[220px] align-baseline mb-8">
+                  {mounted ? (
+                    <span
+                      key={index}
+                      className="absolute inset-0 text-[#1FA6A0] animate-rotate-word whitespace-nowrap font-semibold text-3xl lg:text-4xl"
+                    >
+                      {words[index]}
+                    </span>
+                  ) : (
+                    <span className="opacity-0">AI</span>
+                  )}
+                </span>
               </h1>
 
               <p className="max-w-xl mb-8 text-lg">
@@ -181,7 +219,8 @@ export default function Home() {
                   Reach out to us to identify business challenges and get efficient digital solutions.
                 </p>
 
-                <button
+                <Link
+                  href="/contact"
                   className="
                   mt-6 inline-flex items-center gap-2
                   bg-[#27AAE1]
@@ -190,7 +229,7 @@ export default function Home() {
                 "
                 >
                   Get Started →
-                </button>
+                </Link>
               </div>
 
               {/* RIGHT IMAGE */}

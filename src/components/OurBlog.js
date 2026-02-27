@@ -108,13 +108,13 @@ export default function OurBlog() {
                 <div className="max-w-3xl bg-white mr-8">
                     <div className="flex flex-col">
                         {/* TOP IMAGE */}
-                        <div className="relative w-full h-[200px] md:h-[250px] lg:h-[300px] overflow-hidden rounded-xl">
+                        <div className="overflow-hidden rounded-xl">
                             <Image
                                 src="/Home/Blog3.svg"
                                 alt="Blog Thumbnail"
-                                fill
-                                className="object-cover"
-                                priority
+                                width={600}
+                                height={300}
+                                className="w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover"
                             />
                         </div>
 

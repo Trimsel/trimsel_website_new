@@ -53,6 +53,7 @@ export default function Digitalmarketing() {
                             />
 
                             {/* Floating Image */}
+
                             <Image
                                 src="/digitalmarketing2.svg"
                                 alt="Marketing Analytics"
@@ -61,6 +62,66 @@ export default function Digitalmarketing() {
                                 className="absolute top-4 left-4 z-10 animate-shake"
                                 priority
                             />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Getintouch */}
+            <section className="bg-white py-20 mt-8">
+                <div className="flex justify-center">
+                    <div
+                        className="
+                        relative
+                        w-full
+                        max-w-6xl
+                        px-8 py-10
+                        rounded-xl
+                        bg-[#E1C8FF]
+                        shadow-md
+                        min-h-[55vh]
+                      "
+                    >
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                            {/* LEFT CONTENT */}
+                            <div>
+                                <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                                    GET IN TOUCH
+                                </h3>
+
+                                <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
+                                    Not Sure How to Start with Digital Marketing? Let’s Build a Strategy That Works for You.
+                                </h2>
+
+                                <p className="mt-2 text-black font-medium">
+                                    Whether you're a startup or scaling business, Trimsel's digital marketing experts in Chennai are ready to help. From SEO to social media and PPC, we’ll craft a custom strategy to grow your brand online.
+                                </p>
+
+                                <Link
+                                    href="/contact"
+                                    className="
+                                                              mt-6 inline-flex items-center gap-2
+                                                              bg-[#FE4F6C]
+                                                              text-white font-semibold
+                                                              px-6 py-3 rounded-lg
+                                                            "
+                                >
+                                    Contact Us <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
+                                </Link>
+                            </div>
+
+                            {/* RIGHT IMAGE */}
+                            <div className="relative flex justify-center md:justify-end">
+                                <Image
+                                    src="/getintouchdigitalmarketing.svg"
+                                    alt="Contact illustration"
+                                    width={350}
+                                    height={350}
+                                    className="w-[280px] md:w-[320px] lg:w-[350px] h-auto md:absolute md:-bottom-44 md:right-12"
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
