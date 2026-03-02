@@ -11,10 +11,10 @@ export default function Testimonial() {
 
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+                    <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                         TESTIMONIALS
                     </h3>
-                    <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+                    <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                         What Clients are Saying About Our Collaboration
                     </h2>
                 </div>
@@ -24,13 +24,12 @@ export default function Testimonial() {
                     speed={40}
                     pauseOnHover
                     gradient={false}
-                    autoFill={true}   // 🔥 makes it continuous smoothly
+                    autoFill={true}
                 >
                     {testimonialData?.map((item) => (
                         <div
                             key={item.id}
-                            className="relative mx-6 w-[350px] md:w-[450px] 
-                            min-h-[270px] bg-gray-100 px-6 py-8 rounded-lg shadow-lg overflow-hidden"
+                            className="relative mx-3 w-[280px] rounded-lg bg-gray-100 px-5 py-7 shadow-lg overflow-hidden sm:mx-6 sm:w-[340px] md:w-[420px]"
                         >
                             {/* LinkedIn Icon */}
                             <Image
@@ -38,7 +37,7 @@ export default function Testimonial() {
                                 alt="LinkedIn"
                                 width={25}
                                 height={25}
-                                className="absolute top-14 right-12 cursor-pointer hover:scale-110 transition"
+                                className="absolute right-6 top-8 cursor-pointer transition hover:scale-110 sm:right-8 sm:top-10"
                             />
 
                             {/* User Info */}
@@ -63,8 +62,8 @@ export default function Testimonial() {
                                 </div>
                             </div>
 
-                            {/* 🔥 Background Quote - ADD THIS HERE */}
-                            <span className="absolute left-8 top-26 text-[200px] font-serif text-[#01AAEC] opacity-10 leading-none select-none pointer-events-none">
+                            {/* Background quote */}
+                            <span className="pointer-events-none absolute left-6 top-14 select-none font-serif text-[140px] leading-none text-[#01AAEC] opacity-10 sm:left-8 sm:text-[170px]">
                                 “
                             </span>
 

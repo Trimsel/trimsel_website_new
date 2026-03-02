@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -13,12 +13,6 @@ import Footer from "@/components/Footer";
 
 export default function PortfolioPage() {
     const [active, setActive] = useState("ALL");
-    const [mounted, setMounted] = useState(false);
-
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
 
     const normalizedProjects = useMemo(() => {
@@ -53,16 +47,14 @@ export default function PortfolioPage() {
             : "border-gray-300 text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:text-white"
         }`;
 
-    if (!mounted) return null;
-
     return (
         <div>
             <Header transparent />
 
             {/* Hero Section */}
-            <section className="h-screen bg-[url('/portfolio.svg')] bg-cover bg-center flex items-center pt-20">
-                <div className="w-full pl-16 pb-4">
-                    <h1 className="text-black text-5xl font-bold leading-tight">
+            <section className="flex min-h-[70vh] items-center bg-[url('/portfolio.svg')] bg-cover bg-center pt-20">
+                <div className="mx-auto w-full max-w-7xl px-4 pb-8 sm:px-6">
+                    <h1 className="text-black text-4xl font-bold leading-tight sm:text-5xl">
                         We Create Successful Digital
                         <br />
                         Experiences, Turning Your Ideas Into
@@ -70,7 +62,7 @@ export default function PortfolioPage() {
                         Great Applications.
                     </h1>
 
-                    <p className="max-w-xl mt-6 text-lg text-black">
+                    <p className="mt-6 max-w-xl text-base text-black sm:text-lg">
                         From innovative mobile apps to robust web platforms,
                         we help businesses turn ideas into exceptional digital products.
                     </p>
@@ -79,7 +71,7 @@ export default function PortfolioPage() {
 
             {/* Filter Section */}
             <section className="py-20">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
                     {/* Category Buttons */}
                     <div className="flex flex-wrap gap-4 mb-16 justify-center">
@@ -120,7 +112,7 @@ export default function PortfolioPage() {
                                             ))}
                                         </div>
 
-                                        <h2 className="mb-4 text-2xl md:text-4xl font-semibold">
+                                        <h2 className="mb-4 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                                             {project.title}
                                         </h2>
 
@@ -159,15 +151,15 @@ export default function PortfolioPage() {
 
             {/* Get in Touch */}
             <section className="bg-white py-20">
-                <div className="flex justify-center pt-6">
-                    <div className="relative w-full max-w-6xl px-8 py-10 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md min-h-[55vh]">
+                <div className="flex justify-center px-4 pt-6 sm:px-6">
+                    <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-5 py-8 shadow-md sm:px-8 sm:py-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                             <div>
-                                <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                                <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                                     GET IN TOUCH
                                 </h3>
 
-                                <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
+                                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                                     Have a project? We would love to help.
                                 </h2>
 
@@ -175,9 +167,9 @@ export default function PortfolioPage() {
                                     Reach out to us to identify business challenges and get efficient digital solutions.
                                 </p>
 
-                                <button className="mt-6 inline-flex items-center gap-2 bg-[#27AAE1] text-white font-semibold px-6 py-3 rounded-lg">
+                                <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                                     Get Started →
-                                </button>
+                                </Link>
                             </div>
 
                             <div className="relative flex justify-center md:justify-end">
@@ -186,7 +178,7 @@ export default function PortfolioPage() {
                                     alt="Contact illustration"
                                     width={700}
                                     height={700}
-                                    className="w-full max-w-md md:absolute md:-bottom-44 md:right-0"
+                                    className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
                                 />
                             </div>
                         </div>

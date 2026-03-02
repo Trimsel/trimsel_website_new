@@ -16,19 +16,18 @@ export default function MobileAppDevelopment() {
             <Header />
 
             <section className="bg-gradient-to-b from-white via-slate-50 to-white">
-                <div className="container mx-auto px-4 py-4 md:py-4 mt-12">
-                    <div className="relative grid md:grid-cols-2 gap-12 items-center ml-20 
-                    -translate-y-8 md:-translate-y-10">
+                <div className="container mx-auto mt-16 px-4 py-8 sm:py-12">
+                    <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
 
                         {/* LEFT CONTENT */}
-                        <div className="relative z-20 text-center md:text-left gap-4 mt-12">
-                            <h1 className="text-5xl font-bold mb-10 leading-tight">
+                        <div className="relative z-20 text-center md:text-left">
+                            <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
                                 Mobile App Development
                                 <br />
                                 Company in Chennai
                             </h1>
 
-                            <p className="max-w-xl mb-8 text-lg">
+                            <p className="mb-8 max-w-xl text-base sm:text-lg">
                                 An AI-driven logistics optimization platform that revolutionizes how
                                 businesses plan, execute, and manage transportation. Real-time
                                 insights enable smarter decisions, while end-to-end visibility ensures
@@ -38,7 +37,7 @@ export default function MobileAppDevelopment() {
                             <div>
                                 <Link
                                     href="/contact-us"
-                                    className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-gradient-to-r from-[#29B375] to-[#2E70C3] text-white font-medium hover:scale-105 transition-all shadow-lg"
+                                    className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#29B375] to-[#2E70C3] px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
                                 >
                                     Get a Mobile App Consultation
                                     <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
@@ -49,40 +48,37 @@ export default function MobileAppDevelopment() {
                         {/* RIGHT IMAGES */}
                         <div className="relative flex justify-center">
                             {/* Background Glow */}
-                            <div className="absolute w-[380px] h-[380px] rounded-full bg-blue-200 blur-3xl opacity-50" />
+                            <div className="absolute h-[240px] w-[240px] rounded-full bg-blue-200 opacity-50 blur-3xl sm:h-[320px] sm:w-[320px] md:h-[380px] md:w-[380px]" />
 
-                            <div className="relative w-[420px] h-[520px] mt-8 flex items-center justify-center">
+                            <div className="relative mt-4 flex h-[360px] w-full max-w-[420px] items-center justify-center sm:h-[460px] md:h-[520px]">
 
                                 {/* Main Mobile */}
                                 <Image
-                                    src="/mobile1.svg"
+                                    src="/Mobile1.svg"
                                     alt="Main Mobile"
                                     width={520}
                                     height={520}
-                                    className="relative z-10"
+                                    className="relative z-10 h-auto w-[260px] sm:w-[320px] md:w-[380px]"
                                     priority
                                 />
 
                                 {/* Center UI */}
                                 <Image
-                                    src="/mobile3.svg"
+                                    src="/Mobile3.svg"
                                     alt="UI Screen"
                                     width={280}
                                     height={320}
-                                    className="absolute top-1/2 left-1/2 z-20 
-             -translate-x-1/2 
-             -translate-y-[40%] 
-             scale-[1.3] zoom-animation ml-6"
+                                    className="absolute left-1/2 top-1/2 z-20 h-auto w-[170px] -translate-x-1/2 -translate-y-[46%] zoom-animation sm:w-[210px] md:w-[250px]"
                                     priority
                                 />
 
                                 {/* Overlay Graphic */}
                                 <Image
-                                    src="/mobile2.svg"
+                                    src="/Mobile2.svg"
                                     alt="Overlay"
                                     width={280}
                                     height={340}
-                                    className="absolute z-30"
+                                    className="absolute z-30 h-auto w-[180px] sm:w-[220px] md:w-[260px]"
                                     priority
                                 />
 
@@ -95,28 +91,27 @@ export default function MobileAppDevelopment() {
 
             {/* Getintouch */}
             <section className="bg-white py-20">
-                <div className="flex justify-center">
+                <div className="flex justify-center px-4 sm:px-6">
                     <div
                         className="
                         relative
                         w-full
                         max-w-6xl
-                        px-8 py-10
+                        px-5 py-8 sm:px-8 sm:py-10
                         rounded-xl
                         bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC]
                         shadow-md
-                        min-h-[55vh]
                       "
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
                             {/* LEFT CONTENT */}
                             <div>
-                                <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                                <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                                     GET IN TOUCH
                                 </h3>
 
-                                <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
+                                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                                     Wanna Develop a Mobile Application? Contact us Now!
                                 </h2>
 
@@ -126,12 +121,7 @@ export default function MobileAppDevelopment() {
 
                                 <Link
                                     href="/contact"
-                                    className="
-                              mt-6 inline-flex items-center gap-2
-                              bg-[#FE4F6C]
-                              text-white font-semibold
-                              px-6 py-3 rounded-lg
-                            "
+                                    className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                                 >
                                     <Image src="/icons/mailbox.svg" width={20} height={20} alt="RightArrow" />Get in Touch
                                 </Link>
@@ -144,7 +134,7 @@ export default function MobileAppDevelopment() {
                                     alt="Contact illustration"
                                     width={700}
                                     height={700}
-                                    className="w-full max-w-md md:absolute md:-bottom-44 md:right-0"
+                                    className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
                                 />
                             </div>
 

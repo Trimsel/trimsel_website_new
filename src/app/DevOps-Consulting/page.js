@@ -12,28 +12,26 @@ export default function DevOpsConsulting() {
     return (
         <>
             <Header transparent />
-            <section className="h-screen bg-black relative overflow-hidden flex items-center pt-20">
+            <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-20">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#003b5c_0%,_transparent_30%)]"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#003b5c_0%,_transparent_30%)]"></div>
 
-                <div className="container text-white mx-auto px-4 py-4 md:py-4 mt-20">
-                    <div className="relative grid md:grid-cols-2 gap-12 items-center px-6 md:px-14 
-                                    -translate-y-8 md:-translate-y-10">
+                <div className="container mx-auto mt-14 px-4 py-8 text-white sm:py-12">
+                    <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-8">
 
                         {/* LEFT CONTENT */}
-                        <div className="relative z-20 text-center md:text-left gap-4 mt-12">
-                            <h1 className="text-5xl font-bold mb-10 leading-tight">
+                        <div className="relative z-20 text-center md:text-left">
+                            <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
                                 Leading DevOps Consulting Services
                             </h1>
 
-                            <p className="max-w-xl mb-8 text-lg">
+                            <p className="mb-8 max-w-xl text-base sm:text-lg">
                                 Trimsel is a top-rated DevOps company in India offering expert DevOps consulting services to businesses worldwide. We help teams build scalable CI/CD pipelines, leverage Kubernetes, and automate infrastructure for high-speed, secure, and reliable deployments.
                             </p>
 
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-3 bg-[#27AAE1] 
-                             text-white px-8 py-4 rounded font-medium"
+                                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
                             >
                                 Contact Our Cloud Expert <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
                             </Link>
@@ -46,7 +44,7 @@ export default function DevOpsConsulting() {
                                 alt="DevOps Illustration"
                                 width={750}
                                 height={750}
-                                className="w-full max-w-xl md:-ml-16"
+                                className="h-auto w-full max-w-[300px] sm:max-w-md md:max-w-xl"
                                 priority
                             />
                         </div>

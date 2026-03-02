@@ -15,11 +15,11 @@ export default function Whatwedo() {
 
     return (
         <section className="bg-white text-black py-16">
-            <div className="container mx-auto px-6">
-                <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+            <div className="container mx-auto px-4 sm:px-6">
+                <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                     WHAT WE DO
                 </h3>
-                <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+                <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                     We pride ourselves on being the one stop shop for all your needs
                 </h2>
 
@@ -27,7 +27,7 @@ export default function Whatwedo() {
                     We envision, design, build and support solutions that transform and elevate your digital presence. Our expertise extends to clients worldwide enabling them to achieve global recognition and standard.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 ml-8">
+                <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
                     {services.map((service) => (
                         <ServiceCard
                             key={service.title}

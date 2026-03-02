@@ -23,96 +23,109 @@ export default function Footer() {
         <footer className="mt-16 bg-white text-black">
             {/* Top Section */}
             <div className="relative overflow-hidden bg-white px-6 py-10 sm:px-8 lg:px-12">
+                <div className="mx-auto max-w-7xl">
 
-                {/* India Flag */}
-                <div className="mb-10 flex items-center gap-3">
-                    <Image
-                        src="/IndiaFlag.svg"
-                        width={77}
-                        height={40}
-                        alt="India flag"
-                        className="h-10 w-auto"
-                    />
-                    <p className="text-4xl font-semibold">INDIA</p>
-                </div>
-
-                {/* Locations */}
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <div>
-                        <h2 className="inline-flex items-center text-xl font-semibold">
-                            <Image
-                                src="/location.svg"
-                                alt="Location icon"
-                                width={20}
-                                height={20}
-                                className="mr-2"
-                            />
-                            Chennai
-                        </h2>
-                        <div className="mt-2 text-lg font-medium">
-                            <a
-                                href="https://maps.app.goo.gl/nX3ZD9gEBCxwdTPg7"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="cursor-pointer"
-                            >
-                                21B 5th Cross Street, South Phase Thiru VI <br />
-                                KA Industrial Estate, Guindy, Chennai, <br />
-                                Tamil Nadu - 600032.
-                            </a>
-                        </div>
-
+                    {/* India Flag */}
+                    <div className="mb-10 flex items-center gap-3">
+                        <Image
+                            src="/IndiaFlag.svg"
+                            width={77}
+                            height={40}
+                            alt="India flag"
+                            className="h-10 w-auto"
+                        />
+                        <p className="text-2xl font-semibold sm:text-3xl lg:text-4xl">INDIA</p>
                     </div>
 
-                    <div>
-                        <h2 className="inline-flex items-center text-xl font-semibold">
-                            <Image
-                                src="/location.svg"
-                                alt="Location icon"
-                                width={20}
-                                height={20}
-                                className="mr-2"
-                            />
-                            Tirunelveli
-                        </h2>
-                        <div className="mt-2 text-lg font-medium">
-                            <a
-                                href="https://maps.app.goo.gl/9iQU8XDKzWtNaQ1T8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="cursor-pointer"
-                            >
-                                1st Floor, Crystal Plaza State Bank, 138/2, <br />
-                                NGO B Colony, New Colony, Tirunelveli, <br />
-                                Tamil Nadu - 627007.
-                            </a>
+                    {/* Locations */}
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <div>
+                            <h2 className="inline-flex items-center text-xl font-semibold">
+                                <Image
+                                    src="/location.svg"
+                                    alt="Location icon"
+                                    width={20}
+                                    height={20}
+                                    className="mr-2"
+                                />
+                                Chennai
+                            </h2>
+                            <div className="mt-2 text-base font-medium sm:text-lg">
+                                <a
+                                    href="https://maps.app.goo.gl/nX3ZD9gEBCxwdTPg7"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="cursor-pointer"
+                                >
+                                    21B 5th Cross Street, South Phase Thiru VI <br />
+                                    KA Industrial Estate, Guindy, Chennai, <br />
+                                    Tamil Nadu - 600032.
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <h2 className="inline-flex items-center text-xl font-semibold">
+                                <Image
+                                    src="/location.svg"
+                                    alt="Location icon"
+                                    width={20}
+                                    height={20}
+                                    className="mr-2"
+                                />
+                                Tirunelveli
+                            </h2>
+                            <div className="mt-2 text-base font-medium sm:text-lg">
+                                <a
+                                    href="https://maps.app.goo.gl/9iQU8XDKzWtNaQ1T8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="cursor-pointer"
+                                >
+                                    1st Floor, Crystal Plaza State Bank, 138/2, <br />
+                                    NGO B Colony, New Colony, Tirunelveli, <br />
+                                    Tamil Nadu - 627007.
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Right Image */}
-                <div className="absolute right-0 top-[53%] hidden -translate-y-1/2 lg:block">
-                    <Image
-                        src="/temple.svg"
-                        alt="Temple illustration"
-                        width={540}
-                        height={620}
-                    />
-                </div>
+                    {/* Right Image */}
+                    <div className="absolute right-0 top-[53%] hidden -translate-y-1/2 lg:block">
+                        <Image
+                            src="/temple.svg"
+                            alt="Temple illustration"
+                            width={540}
+                            height={620}
+                        />
+                    </div>
 
-                {/* Contact */}
-                <div className="mt-8 space-y-4">
-                    <p className="text-lg font-semibold tracking-widest">CONTACT</p>
+                    {/* Mobile/Tablet Image */}
+                    <div className="mt-8 flex justify-center lg:hidden">
+                        <Image
+                            src="/temple.svg"
+                            alt="Temple illustration"
+                            width={420}
+                            height={260}
+                            className="h-auto w-full max-w-sm"
+                        />
+                    </div>
 
-                    <div className="space-y-3 text-sm">
-                        <div className="flex items-center gap-3 font-medium">
-                            <Image src="/email.svg" alt="Mail" width={20} height={20} />
-                            <a href="mailto:contact@trimsel.com">contact@trimsel.com</a>
-                        </div>
+                    {/* Contact */}
+                    <div className="mt-8 space-y-4">
+                        <p className="text-lg font-semibold tracking-widest">CONTACT</p>
 
-                        <div className="flex items-center gap-3 font-medium">
-                            <Image src="/Phone.svg" alt="Phone" width={20} height={20} />
-                            <a href="tel:+917200841581">+91 72008 41581</a>
+                        <div className="space-y-3 text-sm sm:text-base">
+                            <div className="flex items-center gap-3 font-medium">
+                                <Image src="/email.svg" alt="Mail" width={20} height={20} />
+                                <a href="mailto:contact@trimsel.com" className="transition-colors hover:text-[#1FA6A0]">contact@trimsel.com</a>
+                            </div>
+
+                            <div className="flex items-center gap-3 font-medium">
+                                <Image src="/Phone.svg" alt="Phone" width={20} height={20} />
+                                <a href="tel:+917200841581" className="transition-colors hover:text-[#1FA6A0]">+91 72008 41581</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,7 +137,7 @@ export default function Footer() {
                     <div className="grid gap-10 lg:grid-cols-[1.2fr_1.4fr_1.4fr]">
 
                         {/* Logo + Socials */}
-                        <div className="relative space-y-3 lg:-ml-10">
+                        <div className="relative space-y-3">
                             <Image
                                 src="/trimsel-logo-white.svg"
                                 width={283}
@@ -173,23 +186,21 @@ export default function Footer() {
                             <ul className="space-y-2 text-md font-medium text-white">
                                 {serviceLinks.map((link) => (
                                     <li key={link.href}>
-                                        <Link href={link.href}>{link.label}</Link>
+                                        <Link href={link.href} className="transition-colors hover:text-[#58D3CD]">{link.label}</Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
                         {/* Company */}
-                        <div className="relative top-2 -ml-20">
+                        <div className="relative top-2">
                             <p className="mb-4 text-lg font-semibold tracking-widest">
                                 COMPANY
                             </p>
                             <ul className="space-y-3 text-md font-medium">
                                 {companyLinks.map((link) => (
                                     <li key={link.href}>
-                                        <Link
-                                            href={link.href}
-                                        >
+                                        <Link href={link.href} className="transition-colors hover:text-[#58D3CD]">
                                             {link.label}
                                         </Link>
                                     </li>

@@ -7,69 +7,72 @@ import { clientsData1, clientsData2 } from "@/data/clientlogo";
 export default function Clients() {
     return (
         <section className="bg-white text-black py-16">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6">
 
                 {/* Heading */}
-                <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+                <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                     OUR CLIENTS
                 </h3>
 
-                <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+                <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                     We’re a Trusted Growth Partner
                 </h2>
 
                 <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
                     At Trimsel, there is continuous learning that happens as we work on various projects. We also love to update and upgrade with the latest innovations in the field of technology and apps.
                 </p>
+            </div>
 
-                {/* Row 1 */}
-                <div className="mt-10">
-                    <Marquee speed={40}
-                        direction="right"
-                        pauseOnHover gradient gradientColor={[255, 255, 255]}>
-                        {clientsData1.map((client, index) => (
-                            <div
-                                key={index}
-                                className="mx-10 flex items-center justify-center transition duration-300"
-                            >
-                                <Image
-                                    src={client.logo}
-                                    alt={client.name}
-                                    width={100}
-                                    height={60}
-                                    className="object-contain"
-                                />
-                            </div>
-                        ))}
-                    </Marquee>
-                </div>
+            {/* Row 1 */}
+            <div className="mt-10 w-full">
+                <Marquee
+                    speed={40}
+                    direction="right"
+                    pauseOnHover
+                    gradient={false}
+                    autoFill={true}
+                >
+                    {clientsData1.map((client, index) => (
+                        <div
+                            key={index}
+                            className="mx-8 flex items-center justify-center transition duration-300"
+                        >
+                            <Image
+                                src={client.logo}
+                                alt={client.name}
+                                width={110}
+                                height={66}
+                                className="h-auto object-contain"
+                            />
+                        </div>
+                    ))}
+                </Marquee>
+            </div>
 
-                {/* Row 2 (reverse direction) */}
-                <div className="mt-12">
-                    <Marquee
-                        speed={40}
-                        direction="left"
-                        pauseOnHover
-                        gradient
-                        gradientColor={[255, 255, 255]}
-                    >
-                        {clientsData2.map((client, index) => (
-                            <div
-                                key={index}
-                                className="mx-10 flex items-center justify-center transition duration-300"
-                            >
-                                <Image
-                                    src={client.logo}
-                                    alt={client.name}
-                                    width={100}
-                                    height={60}
-                                    className="object-contain"
-                                />
-                            </div>
-                        ))}
-                    </Marquee>
-                </div>
-
+            {/* Row 2 (reverse direction) */}
+            <div className="mt-12 w-full">
+                <Marquee
+                    speed={40}
+                    direction="left"
+                    pauseOnHover
+                    gradient={false}
+                    autoFill={true}
+                >
+                    {clientsData2.map((client, index) => (
+                        <div
+                            key={index}
+                            className="mx-8 flex items-center justify-center transition duration-300"
+                        >
+                            <Image
+                                src={client.logo}
+                                alt={client.name}
+                                width={110}
+                                height={66}
+                                className="h-auto object-contain"
+                            />
+                        </div>
+                    ))}
+                </Marquee>
             </div>
         </section>
     );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import orbitData from "@/data/orbitData";
 
 export function ToolsSection() {
@@ -9,7 +10,7 @@ export function ToolsSection() {
     { name: "Frontend Programming Languages", icon: "/icons/Tools/frontend.svg" },
     { name: "Backend Programming Languages", icon: "/icons/Tools/backend.svg" },
     { name: "Database", icon: "/icons/Tools/database.svg" },
-    { name: "Digital Marketing", icon: "/icons/Tools/marketing.svg" },
+    { name: "Digital Marketing", icon: "/icons/digitalmarketing.svg" },
     { name: "Cloud", icon: "/icons/Tools/cloud.svg" },
     { name: "DevOps", icon: "/icons/Tools/devops.svg" },
   ];
@@ -23,39 +24,41 @@ export function ToolsSection() {
 
   return (
     <section className="bg-[#f4f5f7] py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* HEADING */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#1C75BC] to-[#02A89B] bg-clip-text text-transparent">
+          <h2 className="bg-gradient-to-r from-[#1C75BC] to-[#02A89B] bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
             TOOLS AND TECHNOLOGIES
           </h2>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-            Core technologies that power Trimsel's solutions.
+            Core technologies that power Trimsel&apos;s solutions.
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+        <div className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-2xl md:flex-row">
 
           {/* LEFT PANEL */}
-          <div className="md:w-1/2 bg-gradient-to-b from-[#2d6ea3] to-[#1f5f8b] p-10 space-y-5 text-white">
+          <div className="space-y-4 bg-gradient-to-b from-[#2d6ea3] to-[#1f5f8b] p-6 text-white md:w-1/2 md:p-10">
             {categories.map((item) => (
               <div
                 key={item.name}
                 onClick={() => setActiveCategory(item.name)}
-                className={`flex items-center justify-between px-6 py-4 rounded-xl cursor-pointer transition-all duration-300
+                className={`cursor-pointer rounded-xl px-4 py-3 transition-all duration-300 sm:px-6 sm:py-4 flex items-center justify-between
   ${activeCategory === item.name
                     ? "bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.3)] border border-white/30"
                     : "bg-white/5 hover:bg-white/10 hover:translate-x-2"
                   }`}
               >
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src={item.icon}
                     alt={item.name}
-                    className="w-5 h-5"
+                    width={20}
+                    height={20}
+                    className="h-5 w-5"
                   />
-                  <span className="font-medium">{item.name}</span>
+                  <span className="text-sm font-medium sm:text-base">{item.name}</span>
                 </div>
 
                 <span>→</span>
@@ -64,8 +67,8 @@ export function ToolsSection() {
           </div>
 
           {/* RIGHT PANEL */}
-          <div className="flex items-center justify-center bg-[#efefef] p-10">
-            <div className="relative w-[500px] h-[500px]">
+          <div className="flex items-center justify-center bg-[#efefef] p-4 sm:p-8 md:p-10">
+            <div className="relative aspect-square w-full max-w-[500px]">
 
               <svg viewBox="0 0 600 600" className="w-full h-full">
 

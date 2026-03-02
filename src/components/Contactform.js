@@ -38,11 +38,11 @@ export default function Contactform() {
 
                 {/* TOP HEADING SECTION */}
                 <div className="text-center">
-                    <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                    <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                         GET INTO TOUCH
                     </h3>
 
-                    <h2 className="mt-4 text-2xl md:text-4xl font-semibold">
+                    <h2 className="mt-4 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                         Let’s Build Your Dream App — Get a Free Consultation!
                     </h2>
 
@@ -55,11 +55,11 @@ export default function Contactform() {
                 </div>
 
                 {/* TWO COLUMN SECTION */}
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 items-start">
 
                     {/* LEFT COLUMN */}
-                    <div className="mt-24">
-                        <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-transparent text-center text-2xl font-semibold tracking-widest">
+                    <div className="mt-4 md:mt-12">
+                        <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-center text-xl font-semibold tracking-[0.12em] text-transparent sm:text-2xl">
                             OUR PARTNERSHIP
                         </h4>
 
@@ -126,7 +126,7 @@ export default function Contactform() {
                     {/* RIGHT COLUMN (Example Placeholder) */}
                     <div>
                         <div className="w-full bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                            <h4 className="text-black text-center text-2xl font-semibold tracking-widest">
+                            <h4 className="text-center text-xl font-semibold tracking-[0.12em] text-black sm:text-2xl">
                                 Start Your Project Discussion
                             </h4>
 
@@ -138,13 +138,13 @@ export default function Contactform() {
                                     <input
                                         type="text"
                                         placeholder="Full Name"
-                                        className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
+                                        className="w-full border-b border-black bg-transparent pb-2 font-medium text-black placeholder:text-gray-500 focus:border-[#1C75BC] focus:outline-none"
                                     />
 
                                     <input
                                         type="text"
                                         placeholder="Phone Number"
-                                        className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
+                                        className="w-full border-b border-black bg-transparent pb-2 font-medium text-black placeholder:text-gray-500 focus:border-[#1C75BC] focus:outline-none"
                                     />
                                 </div>
 
@@ -153,13 +153,13 @@ export default function Contactform() {
                                     <input
                                         type="email"
                                         placeholder="Email"
-                                        className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
+                                        className="w-full border-b border-black bg-transparent pb-2 font-medium text-black placeholder:text-gray-500 focus:border-[#1C75BC] focus:outline-none"
                                     />
 
                                     <input
                                         type="text"
                                         placeholder="Company"
-                                        className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
+                                        className="w-full border-b border-black bg-transparent pb-2 font-medium text-black placeholder:text-gray-500 focus:border-[#1C75BC] focus:outline-none"
                                     />
                                 </div>
 
@@ -168,14 +168,14 @@ export default function Contactform() {
                                     <input
                                         type="text"
                                         placeholder="Where did you find us?*"
-                                        className="w-full bg-transparent border-b border-black text-black font-medium placeholder:text-gray-500 focus:outline-none pb-2"
+                                        className="w-full border-b border-black bg-transparent pb-2 font-medium text-black placeholder:text-gray-500 focus:border-[#1C75BC] focus:outline-none"
                                     />
 
                                     <div className="relative" ref={dropdownRef}>
                                         {/* Selected Country */}
                                         <div
                                             onClick={() => setOpen(!open)}
-                                            className="flex items-center justify-between border-b border-black pb-2 cursor-pointer"
+                                            className="flex cursor-pointer items-center justify-between border-b border-black pb-2"
                                         >
                                             <div className="flex items-center gap-3">
                                                 <span className="text-lg">{selectedCountry.flag}</span>
@@ -223,7 +223,7 @@ export default function Contactform() {
                                     </label>
                                     <textarea
                                         rows={3}
-                                        className="w-full border border-black rounded-lg p-3 focus:outline-none bg-white"
+                                        className="w-full rounded-lg border border-black bg-white p-3 focus:border-[#1C75BC] focus:outline-none"
                                     ></textarea>
                                 </div>
 
@@ -257,7 +257,7 @@ export default function Contactform() {
                                         </div>
 
                                         {/* Captcha + Button Row */}
-                                        <div className="flex items-center justify-between gap-6 flex-wrap">
+                                        <div className="flex flex-wrap items-center gap-6 md:justify-between">
 
                                             {/* Captcha */}
                                             <div className="flex items-center gap-3 text-lg font-medium">
@@ -274,7 +274,7 @@ export default function Contactform() {
                                             {/* Button */}
                                             <button
                                                 type="submit"
-                                                className="bg-[#1C75BC] hover:bg-[#155d96] text-white px-6 py-2.5 rounded-md transition duration-300 whitespace-nowrap ml-28"
+                                                className="whitespace-nowrap rounded-lg bg-[#1C75BC] px-6 py-2.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#155d96] hover:shadow-lg"
                                             >
                                                 Get a Free Consultation
                                             </button>
@@ -290,7 +290,7 @@ export default function Contactform() {
 
                 </div>
                 <div className="mt-16">
-                    <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-transparent text-center text-2xl font-semibold tracking-widest">
+                    <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-center text-xl font-semibold tracking-[0.12em] text-transparent sm:text-2xl">
                         AWARDS & RECOGNITIONS
                     </h4>
 

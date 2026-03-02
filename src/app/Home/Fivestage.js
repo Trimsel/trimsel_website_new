@@ -1,254 +1,91 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
+const stages = [
+    {
+        id: "01",
+        title: "Ideation and Analysis",
+        description:
+            "At Trimsel, we treat every idea with care. We evaluate existing solutions and shape future-ready product direction.",
+        icon: "/icons/stage1.svg",
+        bg: "bg-[#44ABD3]",
+    },
+    {
+        id: "02",
+        title: "Design Theory",
+        description:
+            "We create clear wireframes and strong UI/UX systems to deliver practical and polished digital experiences.",
+        icon: "/icons/stage2.svg",
+        bg: "bg-[#DFF3E5]",
+    },
+    {
+        id: "03",
+        title: "Architecture and DevOps",
+        description:
+            "Our team plans architecture with scalability and security in mind, then builds reliable deployment foundations.",
+        icon: "/icons/stage3.svg",
+        bg: "bg-[#E16DB4]",
+    },
+    {
+        id: "04",
+        title: "Backend and Frontend Development",
+        description:
+            "We build robust backend services and performant frontend interfaces with the integrations needed for growth.",
+        icon: "/icons/stage5.svg",
+        bg: "bg-[#A576C2]",
+    },
+    {
+        id: "05",
+        title: "24/7 Maintenance and Support",
+        description:
+            "Every project includes ongoing monitoring, maintenance, and support to keep systems healthy and responsive.",
+        icon: "/icons/stage4.svg",
+        bg: "bg-[#F2F7FD]",
+    },
+];
 
 export default function Fivestage() {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) return null;
     return (
-        <section className="bg-[url('/Home/Fivestagebg.svg')] bg-contain bg-center bg-no-repeat text-black py-16">
-            <div className="container mx-auto px-6 relative">
-                <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+        <section className="bg-[url('/Home/Fivestagebg.svg')] bg-contain bg-center bg-no-repeat py-16 text-black">
+            <div className="container mx-auto px-4 sm:px-6">
+                <h3 className="text-center text-2xl font-semibold tracking-widest text-[#1C75BC]">
                     FIVE STAGE
                 </h3>
 
-                <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+                <h2 className="mt-4 text-center text-2xl font-semibold md:text-4xl">
                     The 5-Stage Model We Work On
                 </h2>
 
-                <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur.
+                <p className="mx-auto mt-4 max-w-5xl text-center font-medium text-black">
+                    We follow a structured five-stage delivery cycle to move from concept to launch with clarity and quality.
                 </p>
 
-                <div className="relative grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20 mt-12 left-8">
-                    {/* Stage 01 */}
-                    <div
-                        className="relative bg-[#44ABD3] text-white p-10
-  rounded-2xl rounded-br-none
-  min-h-[380px] w-[320px]
-  flex flex-col justify-between"
-                    >
-                        {/* Arrow → */}
-                        <Image
-                            src="/icons/arrowstage1.svg"
-                            alt="arrow"
-                            width={100}
-                            height={40}
-                            className="hidden md:block absolute -right-28 top-1/2 -translate-y-1/2 opacity-60"
-                        />
+                <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                    {stages.map((stage) => (
+                        <article
+                            key={stage.id}
+                            className={`${stage.bg} relative flex min-h-[280px] flex-col rounded-2xl p-6 shadow-lg sm:min-h-[320px] sm:p-8`}
+                        >
+                            <span className="absolute right-5 top-4 text-5xl font-bold opacity-20 sm:text-6xl">
+                                {stage.id}
+                            </span>
 
-                        {/* Top Image */}
-                        <div className="absolute -top-8 left-10 flex items-center justify-center">
-                            <img
-                                src="/icons/stage1.svg" // replace with your image
-                                alt="Ideation"
-                                width={120}
-                                height={120}
-                                className="relative -top-6 -left-6"
+                            <Image
+                                src={stage.icon}
+                                alt={stage.title}
+                                width={84}
+                                height={84}
+                                className="mb-6 h-16 w-16 sm:h-20 sm:w-20"
                             />
-                        </div>
 
-                        {/* Number */}
-                        <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
-                            01
-                        </span>
-
-                        {/* Content */}
-                        <h3 className="text-2xl font-bold mt-24">Ideation and Analysis.</h3>
-
-                        <p className="text-black font-medium leading-relaxed opacity-90">
-                            At Trimsel, we work on every idea like it’s our first. We not only
-                            analyze existing solutions for the ones we work with but also
-                            create futuristic solutions.
-                        </p>
-                    </div>
-
-                    {/* Stage 02 */}
-                    <div className="relative flex flex-col justify-center p-4 max-w-xs top-24">
-                        {/* Top-right partial border */}
-                        <div className="pointer-events-none absolute top-0 right-0 w-[60%] h-[60%] rounded-2xl">
-                            {/* Top gradient stroke (rounded ends) */}
-                            <span
-                                className="absolute top-0 right-0 h-[4px] w-full
-               bg-gradient-to-r from-white via-[#5AC56B] to-[#5AC56B]
-               rounded-full"
-                            ></span>
-
-                            {/* Right gradient stroke (rounded ends) */}
-                            <span
-                                className="absolute top-0 right-0 w-[4px] h-full
-               bg-gradient-to-b from-[#5AC56B] via-[#5AC56B] to-white
-               rounded-full"
-                            ></span>
-                        </div>
-
-                        {/* Arrow → */}
-                        <Image
-                            src="/icons/arrowstage2.svg"
-                            alt="arrow"
-                            width={90}
-                            height={40}
-                            className="hidden md:block absolute -right-28 top-1/2 -translate-y-1/2 opacity-60"
-                        />
-
-                        {/* Top Image */}
-                        <div className="absolute -top-8 left-10 flex items-center justify-center">
-                            <img
-                                src="/icons/stage2.svg"
-                                alt="Ideation"
-                                width={120}
-                                height={120}
-                                className="relative -top-6 -left-6"
-                            />
-                        </div>
-
-                        <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
-                            02
-                        </span>
-
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">
-                            Design Theory.
-                        </h3>
-
-                        <p className="text-black font-medium leading-relaxed opacity-90">
-                            We have an excellent expertise of wireframing and design having
-                            delivered the best UI/UX experience to different businesses.
-                        </p>
-                    </div>
-
-                    {/* Stage 03 */}
-                    <div
-                        className="relative bg-[#E16DB4] text-white p-10
-  rounded-2xl rounded-bl-none
-  min-h-[380px] w-[320px]
-  flex flex-col justify-between"
-                    >
-
-                        {/* Arrow → */}
-                        <Image
-                            src="/icons/arrowstage3.svg"
-                            alt="arrow"
-                            width={120}
-                            height={160}
-                            className="hidden md:block absolute left-1/2 -bottom-32 -translate-x-1/2 opacity-60"
-                        />
-
-                        {/* Top Image */}
-                        <div className="absolute -top-8 left-10 flex items-center justify-center">
-                            <img
-                                src="/icons/stage3.svg" // replace with your image
-                                alt="Ideation"
-                                width={120}
-                                height={120}
-                                className="relative -top-6 -left-6"
-                            />
-                        </div>
-                        <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
-                            03
-                        </span>
-
-                        {/* Content */}
-                        <h3 className="text-2xl font-bold mt-24">
-                            Architecture and DevOps.
-                        </h3>
-                        <p className="text-black font-medium leading-relaxed opacity-90">
-                            Trimsel experts look at every project from a scalability and
-                            security point of view. Based on analysis, we set up the best
-                            architecture necessary.
-                        </p>
-                    </div>
+                            <h3 className="text-xl font-bold text-black sm:text-2xl">{stage.title}</h3>
+                            <p className="mt-4 text-sm font-medium leading-relaxed text-black/90 sm:text-base">
+                                {stage.description}
+                            </p>
+                        </article>
+                    ))}
                 </div>
-
-                {/* ================= ROW 2 ================= */}
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 mt-40 ml-14">
-                    {/* Stage 05 */}
-                    <div className="relative flex flex-col justify-center p-4 max-w-xs top-20 left-24">
-                        {/* Top-right partial border */}
-                        <div className="pointer-events-none absolute top-0 right-0 w-[60%] h-[60%] rounded-2xl">
-                            {/* Top gradient stroke (rounded ends) */}
-                            <span
-                                className="absolute top-0 right-0 h-[4px] w-full
-               bg-gradient-to-r from-white via-[#5AC56B] to-[#5AC56B]
-               rounded-full"
-                            ></span>
-
-                            {/* Right gradient stroke (rounded ends) */}
-                            <span
-                                className="absolute top-0 right-0 w-[4px] h-full
-               bg-gradient-to-b from-[#5AC56B] via-[#5AC56B] to-white
-               rounded-full"
-                            ></span>
-                        </div>
-
-                        {/* Top Image */}
-                        <div className="absolute -top-8 left-10 flex items-center justify-center">
-                            <img
-                                src="/icons/stage4.svg"
-                                alt="Ideation"
-                                width={120}
-                                height={120}
-                                className="relative -top-6 -left-6"
-                            />
-                        </div>
-                        <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
-                            05
-                        </span>
-                        <h3 className="text-xl font-bold text-gray-900 mt-16">
-                            24/7 Maintenance and Support
-                        </h3>
-                        <p className="text-black font-medium leading-relaxed opacity-90 mt-2">
-                            Every project comes with 24/7 maintenance and dedicated support
-                            teams.
-                        </p>
-                    </div>
-
-                    {/* Stage 04 */}
-                    <div
-                        className="relative bg-[#A576C2] text-white p-10
-  rounded-2xl rounded-bl-none
-  min-h-[380px] w-[420px]
-  flex flex-col justify-between left-12"
-                    >
-
-                        {/* Arrow ← */}
-                        <Image
-                            src="/icons/arrowstage4.svg"
-                            alt="arrow"
-                            width={120}
-                            height={60}
-                            className="hidden md:block absolute -left-36 top-1/2 -translate-y-1/2 opacity-60"
-                        />
-
-                        {/* Top Image */}
-                        <div className="absolute -top-8 left-10 flex items-center justify-center">
-                            <img
-                                src="/icons/stage5.svg" // replace with your image
-                                alt="Ideation"
-                                width={120}
-                                height={120}
-                                className="relative -top-6 -left-6"
-                            />
-                        </div>
-                        <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
-                            04
-                        </span>
-                        <h3 className="text-2xl font-bold mt-24">
-                            Backend & Frontend Development
-                        </h3>
-                        <p className="text-black font-medium leading-relaxed opacity-90">
-                            We understand that for a successful web app development both backend and frontend processes are integral. We have an expert backend team that looks at integrating third-party servers, cloud servers based on the nature of the project. For existing businesses.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </section>
     );

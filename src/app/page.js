@@ -24,11 +24,6 @@ export default function Home() {
   ];
 
   const [index, setIndex] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,55 +37,53 @@ export default function Home() {
     <main>
       <Header />
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black overflow-hidden">
-        <div className="container mx-auto px-4 py-4 md:py-4 mt-28">
-          <div className="relative grid md:grid-cols-2 gap-12 items-center ml-24 
-                    -translate-y-8 md:-translate-y-10">
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(147,197,253,0.55)_0%,transparent_35%),radial-gradient(circle_at_88%_78%,rgba(56,189,248,0.28)_0%,transparent_42%),linear-gradient(120deg,#dbeafe_0%,#e7f2ff_48%,#f8fcff_100%)]" />
+        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(28,117,188,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(28,117,188,0.12)_1px,transparent_1px)] [background-size:120px_120px]" />
+        <div className="absolute inset-0 hidden bg-[url('/Home/HomeImage.svg')] bg-[position:85%_52%] bg-no-repeat opacity-[0.08] md:block" style={{ backgroundSize: "52%" }} />
+
+        <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-28 sm:px-6 md:pt-24">
+          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-12">
 
             {/* LEFT CONTENT */}
-            <div className="relative z-20 text-center md:text-left gap-4 mt-12">
-              <h1 className="text-5xl font-bold mb-10 leading-tight">
+            <div className="relative z-20 mt-6 text-center md:mt-0 md:text-left">
+              <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
                 Smarter Logistics,
                 <br />
                 Powered by{" "}
-                <span className="relative inline-block min-w-[220px] align-baseline mb-8">
-                  {mounted ? (
-                    <span
-                      key={index}
-                      className="absolute inset-0 text-[#1FA6A0] animate-rotate-word whitespace-nowrap font-semibold text-3xl lg:text-4xl"
-                    >
-                      {words[index]}
-                    </span>
-                  ) : (
-                    <span className="opacity-0">AI</span>
-                  )}
+                <span className="relative mb-4 inline-block min-w-[160px] align-baseline sm:min-w-[220px]">
+                  <span className="opacity-0">AI</span>
+                  <span
+                    key={index}
+                    className="absolute inset-0 whitespace-nowrap text-2xl font-semibold text-[#1FA6A0] animate-rotate-word sm:text-3xl lg:text-4xl"
+                  >
+                    {words[index]}
+                  </span>
                 </span>
               </h1>
 
-              <p className="max-w-xl mb-8 text-lg">
+              <p className="mb-8 max-w-xl text-base sm:text-lg">
                 Trimsel is a digital product development company based in India. We use the power of digital engineering and empower businesses to execute their ideas with innovation.
               </p>
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 bg-[#27AAE1] 
-             text-white px-8 py-4 rounded font-medium"
+                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
               >
                 Get Started Today <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
               </Link>
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="relative w-[520px] h-[480px] flex items-center justify-center ml-6">
-              <div className="absolute w-[380px] h-[380px] rounded-full 
-                        bg-blue-200 blur-3xl opacity-60 z-0" />
+            <div className="relative mx-auto flex h-[340px] w-full max-w-[620px] items-center justify-center sm:h-[440px] md:h-[72vh] md:max-h-[620px]">
+              <div className="absolute z-0 h-[240px] w-[240px] rounded-full bg-blue-200 opacity-60 blur-3xl sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]" />
 
               <Image
                 src="/Home/HomeImage.svg"
                 alt="Home"
                 width={400}
                 height={380}
-                className="relative z-10 w-[380px] animate-shake"
+                className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[430px]"
                 priority
               />
 
@@ -101,7 +94,7 @@ export default function Home() {
                 height={200}
                 className="absolute top-1/2 left-1/2 
                      -translate-x-1/2 -translate-y-1/2 
-                     z-20 w-[200px] h-auto"
+                     z-20 h-auto w-[150px] sm:w-[190px] md:w-[225px]"
                 priority
               />
             </div>
@@ -115,14 +108,14 @@ export default function Home() {
 
       {/* Works */}
       <section className="bg-white text-black py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
 
           {/* Heading */}
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+          <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
             WHO WE ARE
           </h3>
 
-          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             We’re Experts At Helping Businesses Reach Their True Potential
           </h2>
 
@@ -190,28 +183,27 @@ export default function Home() {
 
       {/* Getintouch */}
       <section className="bg-white py-20">
-        <div className="flex justify-center">
+        <div className="flex justify-center px-4 sm:px-6">
           <div
             className="
             relative
             w-full
             max-w-6xl
-            px-8 py-10
+            px-5 py-8 sm:px-8 sm:py-10
             rounded-xl
             bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white
             shadow-md
-            min-h-[55vh]
           "
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
               {/* LEFT CONTENT */}
               <div>
-                <h3 className="text-[#1C75BC] text-2xl font-semibold tracking-widest">
+                <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                   GET IN TOUCH
                 </h3>
 
-                <h2 className="mt-2 text-2xl md:text-4xl font-semibold">
+                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                   Have a project? We would love to help.
                 </h2>
 
@@ -221,12 +213,7 @@ export default function Home() {
 
                 <Link
                   href="/contact"
-                  className="
-                  mt-6 inline-flex items-center gap-2
-                  bg-[#27AAE1]
-                  text-white font-semibold
-                  px-6 py-3 rounded-lg
-                "
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
                 >
                   Get Started →
                 </Link>
@@ -239,7 +226,7 @@ export default function Home() {
                   alt="Contact illustration"
                   width={700}
                   height={700}
-                  className="w-full max-w-md md:absolute md:-bottom-44 md:right-0"
+                  className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
                 />
               </div>
 
@@ -261,7 +248,7 @@ export default function Home() {
           {/* Heading Section */}
           <div className="flex flex-col items-center gap-4 text-center">
 
-            <h2 className="mt-4 text-[#1C75BC] text-center text-2xl md:text-4xl font-semibold">
+            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
               INDUSTRIES WE SERVE
             </h2>
 
@@ -335,4 +322,3 @@ export default function Home() {
     </main>
   );
 }
-

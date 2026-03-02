@@ -38,7 +38,7 @@ export default function Header({ transparent = false }) {
     const linkColor = transparent && !scrolled ? "text-white" : "text-black";
 
     const navLinkStyle = `
-    text-lg font-medium ${linkColor}
+    text-base lg:text-lg font-medium ${linkColor}
     transition-all duration-300
     hover:font-semibold
     hover:bg-gradient-to-r 
@@ -48,6 +48,7 @@ export default function Header({ transparent = false }) {
     hover:text-transparent
 `;
 
+    const mobileLinkStyle = "block rounded-md px-3 py-2 text-base font-medium text-black transition-colors hover:bg-slate-100";
 
     return (
         <header
@@ -61,7 +62,7 @@ export default function Header({ transparent = false }) {
                 <div className="flex h-20 items-center justify-between">
 
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-4 ml-4">
+                    <Link href="/" className="flex items-center gap-3">
                         <Image
                             src={transparent && !scrolled ? "/trimsel-logo-white.svg" : "/trimsel-logo.svg"}
                             alt="Trimsel Logo"
@@ -73,7 +74,7 @@ export default function Header({ transparent = false }) {
                     </Link>
 
                     {/* Desktop Menu */}
-                    <nav className="hidden md:flex items-center gap-8">
+                    <nav className="hidden md:flex items-center gap-6 lg:gap-8">
 
                         <Link href="/" className={navLinkStyle}>Home</Link>
                         <Link href="/about" className={navLinkStyle}>About Us</Link>
@@ -92,10 +93,9 @@ export default function Header({ transparent = false }) {
 
 
                             {servicesOpen && (
-                                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-8 
-                                w-[750px] bg-white shadow-2xl rounded-2xl p-8 z-50">
+                                <div className="absolute left-1/2 top-full z-50 mt-6 w-[min(92vw,44rem)] -translate-x-1/2 rounded-2xl bg-white p-4 shadow-2xl sm:p-6">
 
-                                    <div className="grid grid-cols-2 gap-6">
+                                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
 
                                         {/* 1 */}
                                         <Link href="/MobileApp-Development"
@@ -104,7 +104,7 @@ export default function Header({ transparent = false }) {
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service1.svg" alt="Mobile" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="font-semibold">Mobile App Development</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">Mobile App Development</h4>
                                                 </div>
                                             </div>
                                         </Link>
@@ -116,7 +116,7 @@ export default function Header({ transparent = false }) {
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service4.svg" alt="DevOps" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="font-semibold">DevOps Consulting</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">DevOps Consulting</h4>
                                                 </div>
                                             </div>
                                         </Link>
@@ -128,7 +128,7 @@ export default function Header({ transparent = false }) {
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service2.svg" alt="Web" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="font-semibold">Web Development</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">Web Development</h4>
                                                 </div>
                                             </div>
                                         </Link>
@@ -140,7 +140,7 @@ export default function Header({ transparent = false }) {
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service5.svg" alt="AI" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="font-semibold">AI & ML Development</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">AI & ML Development</h4>
                                                 </div>
                                             </div>
                                         </Link>
@@ -152,7 +152,7 @@ export default function Header({ transparent = false }) {
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service3.svg" alt="Marketing" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="font-semibold">Digital Marketing</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">Digital Marketing</h4>
                                                 </div>
                                             </div>
                                         </Link>
@@ -167,7 +167,7 @@ export default function Header({ transparent = false }) {
                                             <div className="flex gap-4">
                                                 <Image src="/icons/service6.svg" alt="Cloud" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="font-semibold">Cloud Consulting</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">Cloud Consulting</h4>
                                                 </div>
                                             </div>
                                         </Link>
@@ -186,13 +186,43 @@ export default function Header({ transparent = false }) {
                     <div className="hidden md:block">
                         <Link
                             href="/contact"
-                            className="rounded-md bg-[#27AAE1] px-4 py-2 text-lg font-medium text-white"
+                            className="rounded-lg bg-[#27AAE1] px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#27AAE1]/60 focus-visible:ring-offset-2"
                         >
                             Contact Us
                         </Link>
                     </div>
 
+                    {/* Mobile Toggle */}
+                    <button
+                        type="button"
+                        className={`md:hidden rounded-md border px-3 py-2 text-sm font-semibold transition-colors ${transparent && !scrolled ? "border-white text-white hover:bg-white/10" : "border-slate-300 text-slate-900 hover:bg-slate-100"}`}
+                        onClick={() => setOpen((prev) => !prev)}
+                        aria-label="Toggle menu"
+                        aria-expanded={open}
+                    >
+                        Menu
+                    </button>
+
                 </div>
+
+                {/* Mobile Menu */}
+                {open && (
+                    <nav className="animate-fadeIn rounded-b-xl border-t border-slate-200 bg-white py-4 shadow-lg md:hidden">
+                        <Link href="/" className={mobileLinkStyle} onClick={() => setOpen(false)}>Home</Link>
+                        <Link href="/about" className={mobileLinkStyle} onClick={() => setOpen(false)}>About Us</Link>
+                        <Link href="/MobileApp-Development" className={mobileLinkStyle} onClick={() => setOpen(false)}>Mobile App Development</Link>
+                        <Link href="/DevOps-Consulting" className={mobileLinkStyle} onClick={() => setOpen(false)}>DevOps Consulting</Link>
+                        <Link href="/services/web-development" className={mobileLinkStyle} onClick={() => setOpen(false)}>Web Development</Link>
+                        <Link href="/ai-development-company" className={mobileLinkStyle} onClick={() => setOpen(false)}>AI & ML Development</Link>
+                        <Link href="/Digitalmarketing" className={mobileLinkStyle} onClick={() => setOpen(false)}>Digital Marketing</Link>
+                        <Link href="/Cloud-Consulting" className={mobileLinkStyle} onClick={() => setOpen(false)}>Cloud Consulting</Link>
+                        <Link href="/portfolio" className={mobileLinkStyle} onClick={() => setOpen(false)}>Portfolio</Link>
+                        <Link href="/blog" className={mobileLinkStyle} onClick={() => setOpen(false)}>Blog</Link>
+                        <Link href="/contact" className="mt-2 inline-block rounded-lg bg-[#27AAE1] px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:bg-[#1896cd] hover:shadow-lg" onClick={() => setOpen(false)}>
+                            Contact Us
+                        </Link>
+                    </nav>
+                )}
             </div>
         </header>
     );
