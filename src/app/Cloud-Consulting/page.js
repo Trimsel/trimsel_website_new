@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function CloudConsulting() {
     return (
-        <>
+        <main>
             <Header transparent />
 
             <section className="flex min-h-screen items-center bg-[url('/CloudConsultingservice.svg')] bg-cover bg-center pt-20">
@@ -92,6 +92,6 @@ export default function CloudConsulting() {
 
             <Footer />
 
-        </>
+        </main>
     )
 }

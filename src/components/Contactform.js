@@ -38,7 +38,7 @@ export default function Contactform() {
 
                 {/* TOP HEADING SECTION */}
                 <div className="text-center">
-                    <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+                    <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
                         GET INTO TOUCH
                     </h3>
 

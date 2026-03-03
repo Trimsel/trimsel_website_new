@@ -14,67 +14,72 @@ import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
 import { useEffect, useState } from "react";
 
+const HERO_WORDS = [
+  "AI",
+  "Intelligent Automation",
+  "Cognitive Computing",
+  "Smart Technology",
+];
+
 export default function Home() {
-
-  const words = [
-    "AI",
-    "Intelligent Automation",
-    "Cognitive Computing",
-    "Smart Technology",
-  ];
-
   const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
+      setFade(false);
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % HERO_WORDS.length);
+        setFade(true);
+      }, 300);
     }, 2500);
 
     return () => clearInterval(interval);
-  }, [words.length]);
+  }, []);
 
   return (
     <main>
       <Header />
-      {/* Hero */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(147,197,253,0.55)_0%,transparent_35%),radial-gradient(circle_at_88%_78%,rgba(56,189,248,0.28)_0%,transparent_42%),linear-gradient(120deg,#dbeafe_0%,#e7f2ff_48%,#f8fcff_100%)]" />
-        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(28,117,188,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(28,117,188,0.12)_1px,transparent_1px)] [background-size:120px_120px]" />
-        <div className="absolute inset-0 hidden bg-[url('/Home/HomeImage.svg')] bg-[position:85%_52%] bg-no-repeat opacity-[0.08] md:block" style={{ backgroundSize: "52%" }} />
 
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
         <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-28 sm:px-6 md:pt-24">
           <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-12">
-
-            {/* LEFT CONTENT */}
             <div className="relative z-20 mt-6 text-center md:mt-0 md:text-left">
-              <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
+              <h1 className="mb-8 text-3xl font-bold leading-tight sm:text-5xl">
                 Smarter Logistics,
                 <br />
-                Powered by{" "}
-                <span className="relative mb-4 inline-block min-w-[160px] align-baseline sm:min-w-[220px]">
-                  <span className="opacity-0">AI</span>
+                <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
+                  <span>Powered by</span>
                   <span
-                    key={index}
-                    className="absolute inset-0 whitespace-nowrap text-2xl font-semibold text-[#1FA6A0] animate-rotate-word sm:text-3xl lg:text-4xl"
+                    className={`inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl ${fade ? "animate-rotate-word" : ""}`}
                   >
-                    {words[index]}
+                    {HERO_WORDS[index]}
                   </span>
                 </span>
               </h1>
 
               <p className="mb-8 max-w-xl text-base sm:text-lg">
-                Trimsel is a digital product development company based in India. We use the power of digital engineering and empower businesses to execute their ideas with innovation.
+                Trimsel is a digital product development company based in India.
+                We use the power of digital engineering and empower businesses
+                to execute their ideas with innovation.
               </p>
 
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
               >
-                Get Started Today <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
+                Get Started Today{" "}
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
               </Link>
             </div>
 
-            {/* RIGHT IMAGE */}
             <div className="relative mx-auto flex h-[340px] w-full max-w-[620px] items-center justify-center sm:h-[440px] md:h-[72vh] md:max-h-[620px]">
               <div className="absolute z-0 h-[240px] w-[240px] rounded-full bg-blue-200 opacity-60 blur-3xl sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]" />
 
@@ -92,13 +97,10 @@ export default function Home() {
                 alt="AI Robot"
                 width={200}
                 height={200}
-                className="absolute top-1/2 left-1/2 
-                     -translate-x-1/2 -translate-y-1/2 
-                     z-20 h-auto w-[150px] sm:w-[190px] md:w-[225px]"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-auto w-[150px] sm:w-[190px] md:w-[225px]"
                 priority
               />
             </div>
-
           </div>
         </div>
       </section>
@@ -109,14 +111,13 @@ export default function Home() {
       {/* Works */}
       <section className="bg-white text-black py-16">
         <div className="container mx-auto px-4 sm:px-6">
-
           {/* Heading */}
-          <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
             WHO WE ARE
           </h3>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            We’re Experts At Helping Businesses Reach Their True Potential
+            We&apos;re Experts At Helping Businesses Reach Their True Potential
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
@@ -196,7 +197,6 @@ export default function Home() {
           "
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
               {/* LEFT CONTENT */}
               <div>
                 <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
@@ -229,7 +229,6 @@ export default function Home() {
                   className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
                 />
               </div>
-
             </div>
           </div>
         </div>
@@ -244,10 +243,8 @@ export default function Home() {
       {/* Industries */}
       <section className="bg-[#F5F6FF]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-
           {/* Heading Section */}
           <div className="flex flex-col items-center gap-4 text-center">
-
             <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
               INDUSTRIES WE SERVE
             </h2>
@@ -263,7 +260,6 @@ export default function Home() {
 
           {/* Grid Section */}
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
-
             {[
               { name: "Healthcare", bg: "#CBE6FC", icon: "/icons/healthcare.svg" },
               { name: "On-Demand", bg: "#ACFFCE", icon: "/icons/on-demand.svg" },
@@ -296,9 +292,7 @@ export default function Home() {
                 </span>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 

@@ -283,3 +283,7 @@ p {
 .animate-rotate-word {
     animation: rotateWord 2.5s ease-in-out;
 }
+
+.orbit-center {
+    transform-origin: 300px 300px;
+}

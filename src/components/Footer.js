@@ -17,7 +17,7 @@ const companyLinks = [
 ];
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
+    const currentYear = 2026;
 
     return (
         <footer className="mt-16 bg-white text-black">
@@ -101,17 +101,6 @@ export default function Footer() {
                         />
                     </div>
 
-                    {/* Mobile/Tablet Image */}
-                    <div className="mt-8 flex justify-center lg:hidden">
-                        <Image
-                            src="/temple.svg"
-                            alt="Temple illustration"
-                            width={420}
-                            height={260}
-                            className="h-auto w-full max-w-sm"
-                        />
-                    </div>
-
                     {/* Contact */}
                     <div className="mt-8 space-y-4">
                         <p className="text-lg font-semibold tracking-widest">CONTACT</p>
@@ -128,6 +117,19 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
+
+                    {/* Mobile/Tablet Image */}
+                    {/* Mobile/Tablet Image */}
+{/* Mobile/Tablet Image */}
+<div className="flex justify-center lg:hidden mt-6 -mb-10 overflow-hidden">
+    <Image
+        src="/temple.svg"
+        alt="Temple illustration"
+        width={520}
+        height={480}
+        className="h-auto w-full max-w-lg"
+    />
+</div>
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
 import "./globals.css";
-import PageTransition from "@/components/PageTransition";
 
 export const metadata = {
   title: "Trimsel",
@@ -8,12 +7,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <div id="app-root">
-          <PageTransition>
-            {children}
-          </PageTransition>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <div id="app-root" suppressHydrationWarning>
+          {children}
         </div>
       </body>
     </html>

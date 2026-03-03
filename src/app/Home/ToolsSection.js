@@ -19,8 +19,8 @@ export function ToolsSection() {
   const data = orbitData[activeCategory] ?? { outer: [], inner: [] };
 
   const CENTER = 300;
-  const OUTER_RADIUS = 240; // slightly reduced
-  const INNER_RADIUS = 165; // slightly increased for breathing space
+  const OUTER_RADIUS = 260; // slightly larger orbit circle
+  const INNER_RADIUS = 185; // slightly larger inner circle
 
   return (
     <section className="bg-[#f4f5f7] py-20">
@@ -28,18 +28,18 @@ export function ToolsSection() {
 
         {/* HEADING */}
         <div className="text-center mb-14">
-          <h2 className="bg-gradient-to-r from-[#1C75BC] to-[#02A89B] bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
-            TOOLS AND TECHNOLOGIES
-          </h2>
+        <h3 className="text-4xl font-bold text-[#1C75BC]">
+          TOOLS AND TECHNOLOGIES
+         </h3>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
             Core technologies that power Trimsel&apos;s solutions.
           </p>
         </div>
 
-        <div className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-2xl md:flex-row">
+        <div className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-2xl md:flex-row md:items-stretch">
 
           {/* LEFT PANEL */}
-          <div className="space-y-4 bg-gradient-to-b from-[#2d6ea3] to-[#1f5f8b] p-6 text-white md:w-1/2 md:p-10">
+          <div className="space-y-6 bg-gradient-to-b from-[#2d6ea3] to-[#1f5f8b] p-6 text-white md:w-[45%] md:p-10">
             {categories.map((item) => (
               <div
                 key={item.name}
@@ -67,8 +67,8 @@ export function ToolsSection() {
           </div>
 
           {/* RIGHT PANEL */}
-          <div className="flex items-center justify-center bg-[#efefef] p-4 sm:p-8 md:p-10">
-            <div className="relative aspect-square w-full max-w-[500px]">
+          <div className="flex items-center justify-center bg-white p-4 sm:p-8 md:p-10 md:w-[45%]">
+            <div className="relative aspect-square w-full max-w-[580px] mx-auto">
 
               <svg viewBox="0 0 600 600" className="w-full h-full">
 
@@ -138,9 +138,9 @@ export function ToolsSection() {
                       <image
                         key={index}
                         href={logo}
-                        width="65"
-                        height="65"
-                        transform={`translate(${x} ${y}) translate(-32.5 -32.5)`}
+                        width="72"
+                        height="72"
+                        transform={`translate(${x} ${y}) translate(-36 -36)`}
                       />
                     );
                   })}
@@ -194,9 +194,9 @@ export function ToolsSection() {
                       <image
                         key={index}
                         href={logo}
-                        width="65"
-                        height="65"
-                        transform={`translate(${x} ${y}) translate(-32.5 -32.5)`}
+                        width="72"
+                        height="72"
+                        transform={`translate(${x} ${y}) translate(-36 -36)`}
                       />
                     );
                   })}

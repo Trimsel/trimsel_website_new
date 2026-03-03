@@ -10,7 +10,7 @@ import OurBlog from "@/components/OurBlog";
 
 export default function Digitalmarketing() {
     return (
-        <div>
+        <main>
             <Header />
 
             <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-20">
@@ -128,6 +128,6 @@ export default function Digitalmarketing() {
             <Faq />
 
             <Footer />
-        </div>
+        </main>
     )
 }

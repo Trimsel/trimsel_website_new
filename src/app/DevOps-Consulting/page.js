@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function DevOpsConsulting() {
     return (
-        <>
+        <main>
             <Header transparent />
             <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-20">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#003b5c_0%,_transparent_30%)]"></div>
@@ -61,6 +61,6 @@ export default function DevOpsConsulting() {
             <Faq />
 
             <Footer />
-        </>
+        </main>
     )
 }

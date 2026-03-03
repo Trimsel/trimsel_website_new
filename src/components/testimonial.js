@@ -11,7 +11,7 @@ export default function Testimonial() {
 
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+                    <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
                         TESTIMONIALS
                     </h3>
                     <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
