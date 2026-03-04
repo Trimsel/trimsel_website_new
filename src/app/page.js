@@ -12,7 +12,7 @@ import OurBlog from "@/components/OurBlog";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HERO_WORDS = [
   "AI",
@@ -22,8 +22,41 @@ const HERO_WORDS = [
 ];
 
 export default function Home() {
+
+
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    const section = scrollRef.current;
+    if (!section) return;
+
+    const cards = section.querySelector(".cards");
+    const rect = section.getBoundingClientRect();
+
+    const scrollProgress = Math.min(
+      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
+      1
+    );
+
+    const maxScroll = cards.scrollWidth - window.innerWidth;
+
+    cards.style.transform = `translateX(-${scrollProgress * maxScroll}px)`;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+  const caseStudies = [
+    { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
+    { img: "/Home/case-study-2.svg", btn: "bg-black text-white" },
+    { img: "/Home/case-study-3.svg", btn: "bg-black text-white" },
+    { img: "/Home/case-study-4.svg", btn: "bg-black text-white" },
+  ];
 
 
   useEffect(() => {
@@ -53,8 +86,7 @@ export default function Home() {
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
                   <span>Powered by</span>
                   <span
-                    className={`inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl ${fade ? "animate-rotate-word" : ""}`}
-                  >
+                    className={`inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl ${fade ? "animate-rotate-word" : ""}`}>
                     {HERO_WORDS[index]}
                   </span>
                 </span>
@@ -68,8 +100,7 @@ export default function Home() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-              >
+                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                 Get Started Today{" "}
                 <Image
                   src="/Home/right-arrow.svg"
@@ -122,10 +153,14 @@ export default function Home() {
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
             Transform your business processes by migrating from legacy solutions
-            to modern technology and developments that guarantee growth, optimization, and ROI for your business.
-            Trimsel was founded at the right moment to meet the challenges faced by businesses and enable them to meet their digital transformation goals.
-            Established in 2020 in Chennai, Trimsel and its robust team of developers and consultants have provided Product Engineering and
-            Digital Transformation services to Fortune 500 companies and start-up enterprises globally.
+            to modern technology and developments that guarantee growth,
+            optimization, and ROI for your business. Trimsel was founded at the
+            right moment to meet the challenges faced by businesses and enable
+            them to meet their digital transformation goals. Established in 2020
+            in Chennai, Trimsel and its robust team of developers and
+            consultants have provided Product Engineering and Digital
+            Transformation services to Fortune 500 companies and start-up
+            enterprises globally.
           </p>
 
           {/* Stats */}
@@ -185,17 +220,7 @@ export default function Home() {
       {/* Getintouch */}
       <section className="bg-white py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div
-            className="
-            relative
-            w-full
-            max-w-6xl
-            px-5 py-8 sm:px-8 sm:py-10
-            rounded-xl
-            bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white
-            shadow-md
-          "
-          >
+          <div className="relative w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-10 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* LEFT CONTENT */}
               <div>
@@ -208,13 +233,13 @@ export default function Home() {
                 </h2>
 
                 <p className="mt-4 text-black font-medium">
-                  Reach out to us to identify business challenges and get efficient digital solutions.
+                  Reach out to us to identify business challenges and get
+                  efficient digital solutions.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-                >
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                   Get Started →
                 </Link>
               </div>
@@ -237,6 +262,159 @@ export default function Home() {
       {/* Whatwedo */}
       <Whatwedo />
 
+      {/* Case Study */}
+      <section
+  ref={scrollRef}
+  className="relative h-[420vh] lg:h-[300vh] bg-white"
+>
+  <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+
+    <div className="cards flex w-max gap-12 px-10">
+
+      {caseStudies.map((item, index) => (
+        <div
+          key={index}
+          className="mt-12 relative min-w-[90vw] lg:min-w-[70vw] max-w-7xl rounded-lg overflow-hidden shadow-lg"
+        >
+          <Image
+            src={item.img}
+            alt="Project"
+            width={1400}
+            height={700}
+            className="w-full h-auto object-contain"
+            priority
+          />
+
+          <Link
+            href="/case-study"
+            className={`absolute bottom-[8%] left-[6%] font-semibold rounded-full flex items-center gap-2 px-4 py-2 text-sm hover:scale-105 transition ${item.btn}`}
+          >
+            View Case Study
+
+            <Image
+              src="/icons/case-study-arrow.svg"
+              alt="arrow"
+              width={20}
+              height={20}
+            />
+          </Link>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+      {/* Why Choose Us */}
+      <section className="bg-white text-black py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+            WHY TRIMSEL
+          </h3>
+
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            Empowering Businesses with 360° Digital Transformation
+          </h2>
+
+          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
+            At Trimsel, we don’t just build software—we build long-term
+            partnerships. As a full-cycle software development company in
+            Chennai, we deliver everything from mobile apps and cloud services
+            to DevOps automation and AI-powered solutions. Our client-first
+            approach means we start with your goals, not our tech stack, and
+            deliver solutions that make a measurable difference.
+          </p>
+
+          {/* Four Cards */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="p-4 mb-4">
+                <Image
+                  src="/icons/whytrimsel1.svg"
+                  alt="Client"
+                  width={60}
+                  height={40}
+                  className="rounded-2xl"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                Diverse Global Clientele
+              </h4>
+              <p className="max-w-lg text-base text-black sm:text-lg">
+                From startups and SMBs to Fortune 500 enterprises, Trimsel has
+                delivered custom software solutions tailored to unique business
+                models and challenges across industries.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="p-4 mb-4">
+                <Image
+                  src="/icons/whytrimsel2.svg"
+                  alt="Client"
+                  width={60}
+                  height={40}
+                  className="rounded-2xl"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                Domain & Tech Expertise
+              </h4>
+              <p className="max-w-xl text-base text-black sm:text-lg">
+                Our certified developers, DevOps engineers, and UI/UX designers
+                have deep expertise in cloud computing, full stack development,
+                and emerging tech like AI & automation.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="p-4 mb-4">
+                <Image
+                  src="/icons/whytrimsel3.svg"
+                  alt="Client"
+                  width={60}
+                  height={40}
+                  className="rounded-2xl"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                Flexible Engagement Models
+              </h4>
+              <p className="max-w-xl text-base text-black sm:text-lg">
+                Whether you need end-to-end product delivery, team augmentation,
+                or application development outsourcing, we adapt our approach to
+                your preferred engagement style.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="p-4 mb-4">
+                <Image
+                  src="/icons/whytrimsel4.svg"
+                  alt="Client"
+                  width={60}
+                  height={40}
+                  className="rounded-2xl"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                All-in-One IT Partner
+              </h4>
+              <p className="max-w-xl text-base text-black sm:text-lg">
+                We manage your entire digital journey in-house — design,
+                development, DevOps, QA, and support — ensuring seamless
+                collaboration and better cost control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Fivestage */}
       <Fivestage />
 
@@ -252,33 +430,63 @@ export default function Home() {
             <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
               Android App Solutions for Various Industries help businesses
               streamline operations, enhance customer engagement, and boost
-              efficiency. From healthcare and education to retail and
-              logistics, our tailored Android apps meet specific industry
-              needs.
+              efficiency. From healthcare and education to retail and logistics,
+              our tailored Android apps meet specific industry needs.
             </p>
           </div>
 
           {/* Grid Section */}
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
             {[
-              { name: "Healthcare", bg: "#CBE6FC", icon: "/icons/healthcare.svg" },
-              { name: "On-Demand", bg: "#ACFFCE", icon: "/icons/on-demand.svg" },
-              { name: "Entertainment", bg: "#EDAFF7", icon: "/icons/entertainment.svg" },
-              { name: "Logistics", bg: "#FAD4B6", icon: "/icons/logistics.svg" },
-              { name: "E-Commerce", bg: "#FDA8A6", icon: "/icons/ecommerce.svg" },
-              { name: "Real Estate", bg: "#F9DF89", icon: "/icons/real-estate.svg" },
-              { name: "Food Delivery", bg: "#FFCACE", icon: "/icons/food-delivery.svg" },
+              {
+                name: "Healthcare",
+                bg: "#CBE6FC",
+                icon: "/icons/healthcare.svg",
+              },
+              {
+                name: "On-Demand",
+                bg: "#ACFFCE",
+                icon: "/icons/on-demand.svg",
+              },
+              {
+                name: "Entertainment",
+                bg: "#EDAFF7",
+                icon: "/icons/entertainment.svg",
+              },
+              {
+                name: "Logistics",
+                bg: "#FAD4B6",
+                icon: "/icons/logistics.svg",
+              },
+              {
+                name: "E-Commerce",
+                bg: "#FDA8A6",
+                icon: "/icons/ecommerce.svg",
+              },
+              {
+                name: "Real Estate",
+                bg: "#F9DF89",
+                icon: "/icons/real-estate.svg",
+              },
+              {
+                name: "Food Delivery",
+                bg: "#FFCACE",
+                icon: "/icons/food-delivery.svg",
+              },
               { name: "Grocery", bg: "#DCCFCB", icon: "/icons/grocery.svg" },
               { name: "Travel", bg: "#A3D5FD", icon: "/icons/travel.svg" },
-              { name: "Restaurant", bg: "#D4F7AA", icon: "/icons/restaurant.svg" },
+              {
+                name: "Restaurant",
+                bg: "#D4F7AA",
+                icon: "/icons/restaurant.svg",
+              },
               { name: "Media", bg: "#E080F9", icon: "/icons/media.svg" },
               { name: "EduTech", bg: "#7AEE7F", icon: "/icons/edutech.svg" },
             ].map((item) => (
               <div
                 key={item.name}
                 className="flex h-[100px] w-[120px] sm:h-[110px] sm:w-[130px] flex-col items-center justify-center gap-2 rounded-xl border border-white/60 shadow-md transition-transform duration-300 hover:scale-105"
-                style={{ backgroundColor: item.bg }}
-              >
+                style={{ backgroundColor: item.bg }}>
                 <Image
                   src={item.icon}
                   alt={item.name}

@@ -18,7 +18,7 @@ export default function OurBlog() {
     return (
         <section className="bg-white py-16 text-black">
             <div className="container mx-auto px-4 sm:px-6">
-                <h3 className="text-center text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+            <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
                     OUR BLOGS
                 </h3>
 

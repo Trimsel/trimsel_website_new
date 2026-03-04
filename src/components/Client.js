@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import dynamic from "next/dynamic";
 import { clientsData1, clientsData2 } from "@/data/clientlogo";
+
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+    ssr: false,
+});
 
 export default function Clients() {
     return (

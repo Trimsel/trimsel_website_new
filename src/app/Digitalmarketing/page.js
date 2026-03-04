@@ -67,17 +67,9 @@ export default function Digitalmarketing() {
 
             {/* Getintouch */}
             <section className="bg-white py-20 mt-8">
-                <div className="flex justify-center px-4 sm:px-6">
+            <div className="flex justify-center px-4 sm:px-6">
                     <div
-                        className="
-                        relative
-                        w-full
-                        max-w-6xl
-                        px-5 py-8 sm:px-8 sm:py-10
-                        rounded-xl
-                        bg-[#E1C8FF]
-                        shadow-md
-                      "
+                        className="relative w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-10 rounded-xl bg-[#E1C8FF] shadow-md"
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 

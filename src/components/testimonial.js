@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import dynamic from "next/dynamic";
 import testimonialData from "@/data/testimonialdata";
+
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+    ssr: false,
+});
 
 export default function Testimonial() {
     return (
