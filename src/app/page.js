@@ -12,7 +12,12 @@ import OurBlog from "@/components/OurBlog";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
-import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+  ssr: false,
+});
 
 const HERO_WORDS = [
   "AI",
@@ -26,30 +31,6 @@ export default function Home() {
 
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-  const handleScroll = () => {
-    const section = scrollRef.current;
-    if (!section) return;
-
-    const cards = section.querySelector(".cards");
-    const rect = section.getBoundingClientRect();
-
-    const scrollProgress = Math.min(
-      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
-      1
-    );
-
-    const maxScroll = cards.scrollWidth - window.innerWidth;
-
-    cards.style.transform = `translateX(-${scrollProgress * maxScroll}px)`;
-  };
-
-  window.addEventListener("scroll", handleScroll);
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
 
   const caseStudies = [
     { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
@@ -263,48 +244,82 @@ export default function Home() {
       <Whatwedo />
 
       {/* Case Study */}
-      <section
-  ref={scrollRef}
-  className="relative h-[420vh] lg:h-[300vh] bg-white"
->
-  <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+            CASE STUDIES
+          </h3>
 
-    <div className="cards flex w-max gap-12 px-10">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            Real work. Real impact.
+          </h2>
 
-      {caseStudies.map((item, index) => (
-        <div
-          key={index}
-          className="mt-12 relative min-w-[90vw] lg:min-w-[70vw] max-w-7xl rounded-lg overflow-hidden shadow-lg"
-        >
-          <Image
-            src={item.img}
-            alt="Project"
-            width={1400}
-            height={700}
-            className="w-full h-auto object-contain"
-            priority
-          />
-
-          <Link
-            href="/case-study"
-            className={`absolute bottom-[8%] left-[6%] font-semibold rounded-full flex items-center gap-2 px-4 py-2 text-sm hover:scale-105 transition ${item.btn}`}
-          >
-            View Case Study
-
-            <Image
-              src="/icons/case-study-arrow.svg"
-              alt="arrow"
-              width={20}
-              height={20}
-            />
-          </Link>
+          <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
+            Explore a few highlights from projects we’ve delivered across
+            industries.
+          </p>
         </div>
-      ))}
 
+        <div className="mt-12 w-full">
+        <Marquee
+  speed={80}
+  direction="left"
+  pauseOnHover
+  gradient={false}
+  autoFill={true}
+  className="group"
+>
+            {caseStudies.map((item, i) => (
+  <div
+    key={`${item.img}-${i}`}
+    className="mx-6 sm:mx-8 flex items-center justify-center group"
+  >
+    <div
+      className="relative w-[88vw] sm:w-[72vw] lg:w-[58vw] max-w-6xl 
+      rounded-lg overflow-hidden shadow-lg 
+      transition-all duration-300 
+      group-hover:opacity-60 hover:!opacity-100 
+      hover:scale-105 hover:shadow-2xl"
+    >
+      <Image
+        src={item.img}
+        alt="Project"
+        width={1400}
+        height={700}
+        className="w-full h-auto object-contain"
+        priority
+      />
+
+<Link
+  href="/case-study"
+  className={`absolute 
+  bottom-[8%] left-[6%]
+  flex items-center 
+  gap-1 sm:gap-2 md:gap-2.5
+  rounded-full font-semibold
+  px-3 py-1.5 text-xs
+  sm:px-4 sm:py-2 sm:text-sm
+  md:px-5 md:py-2.5 md:text-base
+  transition-all duration-300
+  hover:scale-105 hover:shadow-md
+  ${item.btn}`}
+>
+  View Case Study
+
+  <Image
+    src="/icons/case-study-arrow.svg"
+    alt="arrow"
+    width={20}
+    height={20}
+    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"
+  />
+</Link>
     </div>
-
   </div>
-</section>
+))}
+          </Marquee>
+        </div>
+      </section>
 
       {/* Why Choose Us */}
       <section className="bg-white text-black py-16">
@@ -336,7 +351,6 @@ export default function Home() {
                   alt="Client"
                   width={60}
                   height={40}
-                  className="rounded-2xl"
                 />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -357,7 +371,6 @@ export default function Home() {
                   alt="Client"
                   width={60}
                   height={40}
-                  className="rounded-2xl"
                 />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -378,7 +391,6 @@ export default function Home() {
                   alt="Client"
                   width={60}
                   height={40}
-                  className="rounded-2xl"
                 />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -399,7 +411,6 @@ export default function Home() {
                   alt="Client"
                   width={60}
                   height={40}
-                  className="rounded-2xl"
                 />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
