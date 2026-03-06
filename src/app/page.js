@@ -12,12 +12,7 @@ import OurBlog from "@/components/OurBlog";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
-import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-
-const Marquee = dynamic(() => import("react-fast-marquee"), {
-  ssr: false,
-});
 
 const HERO_WORDS = [
   "AI",
@@ -31,6 +26,7 @@ export default function Home() {
 
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
   const caseStudies = [
     { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
@@ -52,6 +48,14 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (caseStudies.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [caseStudies.length]);
 
   return (
     <main>
@@ -244,7 +248,7 @@ export default function Home() {
       <Whatwedo />
 
       {/* Case Study */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
             CASE STUDIES
@@ -260,64 +264,85 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-12 w-full">
-        <Marquee
-  speed={80}
-  direction="left"
-  pauseOnHover
-  gradient={false}
-  autoFill={true}
-  className="group"
->
+        {/* Mobile: separate layout so image resizes to device, same UI */}
+        <div className="mt-6 w-full overflow-hidden md:hidden">
+          <div
+            className="flex w-full transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
+          >
             {caseStudies.map((item, i) => (
-  <div
-    key={`${item.img}-${i}`}
-    className="mx-6 sm:mx-8 flex items-center justify-center group"
-  >
-    <div
-      className="relative w-[88vw] sm:w-[72vw] lg:w-[58vw] max-w-6xl 
-      rounded-lg overflow-hidden shadow-lg 
-      transition-all duration-300 
-      group-hover:opacity-60 hover:!opacity-100 
-      hover:scale-105 hover:shadow-2xl"
-    >
-      <Image
-        src={item.img}
-        alt="Project"
-        width={1400}
-        height={700}
-        className="w-full h-auto object-contain"
-        priority
-      />
+              <div
+                key={`mobile-${item.img}-${i}`}
+                className="w-full shrink-0 flex items-center justify-start pl-2 pr-2"
+              >
+                <div className="group relative w-full max-w-[100vw] rounded-none overflow-hidden shadow-lg transition-all duration-300 active:scale-[1.01]">
+                  <div className="relative w-full aspect-[1438/763] bg-gray-100">
+                    <Image
+                      src={item.img}
+                      alt="Project"
+                      fill
+                      sizes="100vw"
+                      className="object-contain"
+                      priority={i === 0}
+                    />
+                  </div>
+                  <Link
+                    href="/case-study"
+                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}
+                  >
+                    View Case Study
+                    <Image
+                      src="/icons/case-study-arrow.svg"
+                      alt="arrow"
+                      width={20}
+                      height={20}
+                      className="w-4 h-4"
+                    />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-<Link
-  href="/case-study"
-  className={`absolute 
-  bottom-[8%] left-[6%]
-  flex items-center 
-  gap-1 sm:gap-2 md:gap-2.5
-  rounded-full font-semibold
-  px-3 py-1.5 text-xs
-  sm:px-4 sm:py-2 sm:text-sm
-  md:px-5 md:py-2.5 md:text-base
-  transition-all duration-300
-  hover:scale-105 hover:shadow-md
-  ${item.btn}`}
->
-  View Case Study
-
-  <Image
-    src="/icons/case-study-arrow.svg"
-    alt="arrow"
-    width={20}
-    height={20}
-    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"
-  />
-</Link>
-    </div>
-  </div>
-))}
-          </Marquee>
+        {/* Desktop: full-height carousel, same UI */}
+        <div className="mt-12 w-full overflow-hidden flex-1 min-h-0 hidden md:flex">
+          <div
+            className="flex w-full transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
+          >
+            {caseStudies.map((item, i) => (
+              <div
+                key={`desktop-${item.img}-${i}`}
+                className="w-full shrink-0 flex items-center justify-center"
+              >
+                <div className="group relative w-full h-screen min-h-[450px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300 group-hover:opacity-60 hover:!opacity-100 hover:scale-[1.02] hover:shadow-2xl">
+                  <Image
+                    src={item.img}
+                    alt="Project"
+                    width={1400}
+                    height={720}
+                    className="w-full h-full object-cover object-[center_30%]"
+                    sizes="100vw"
+                    priority={i === 0}
+                  />
+                  <Link
+                    href="/case-study"
+                    className={`absolute bottom-[6%] left-[7%] flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
+                  >
+                    View Case Study
+                    <Image
+                      src="/icons/case-study-arrow.svg"
+                      alt="arrow"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

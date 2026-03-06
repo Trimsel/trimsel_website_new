@@ -10,7 +10,7 @@ export function ToolsSection() {
     { name: "Frontend Programming Languages", icon: "/icons/Tools/frontend.svg" },
     { name: "Backend Programming Languages", icon: "/icons/Tools/backend.svg" },
     { name: "Database", icon: "/icons/Tools/database.svg" },
-    { name: "Digital Marketing", icon: "/icons/digitalmarketing.svg" },
+    { name: "Digital Marketing", icon: "/icons/digital.svg" },
     { name: "Cloud", icon: "/icons/Tools/cloud.svg" },
     { name: "DevOps", icon: "/icons/Tools/devops.svg" },
   ];
