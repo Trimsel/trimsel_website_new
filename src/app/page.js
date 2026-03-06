@@ -27,6 +27,7 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
+  const [isCaseStudyHovered, setIsCaseStudyHovered] = useState(false);
 
   const caseStudies = [
     { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
@@ -50,12 +51,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (caseStudies.length <= 1) return;
+    if (caseStudies.length <= 1 || isCaseStudyHovered) return;
+
     const interval = setInterval(() => {
       setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
     }, 5000);
+
     return () => clearInterval(interval);
-  }, [caseStudies.length]);
+  }, [caseStudies.length, isCaseStudyHovered]);
 
   return (
     <main>
@@ -265,7 +268,11 @@ export default function Home() {
         </div>
 
         {/* Mobile: separate layout so image resizes to device, same UI */}
-        <div className="mt-6 w-full overflow-hidden md:hidden">
+        <div
+          className="mt-6 w-full overflow-hidden md:hidden"
+          onMouseEnter={() => setIsCaseStudyHovered(true)}
+          onMouseLeave={() => setIsCaseStudyHovered(false)}
+        >
           <div
             className="flex w-full transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
@@ -306,44 +313,49 @@ export default function Home() {
         </div>
 
         {/* Desktop: full-height carousel, same UI */}
-        <div className="mt-12 w-full overflow-hidden flex-1 min-h-0 hidden md:flex">
-          <div
-            className="flex w-full transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
+        <div
+          className="mt-10 w-full overflow-hidden flex-1 min-h-0 hidden md:flex"
+          onMouseEnter={() => setIsCaseStudyHovered(true)}
+          onMouseLeave={() => setIsCaseStudyHovered(false)}
+        >
+  <div
+    className="flex w-full transition-transform duration-700 ease-in-out"
+    style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
+  >
+    {caseStudies.map((item, i) => (
+      <div
+        key={`desktop-${item.img}-${i}`}
+        className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6"
+      >
+        <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
+  <Image
+    src={item.img}
+    alt="Project"
+    width={1400}
+    height={720}
+    className="w-full h-full object-cover object-[center_30%] scale-94"
+    sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, 100vw"
+    priority={i === 0}
+  />
+          <Link
+            href="/case-study"
+            className={`absolute bottom-[4%] left-[8%] flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
           >
-            {caseStudies.map((item, i) => (
-              <div
-                key={`desktop-${item.img}-${i}`}
-                className="w-full shrink-0 flex items-center justify-center"
-              >
-                <div className="group relative w-full h-screen min-h-[450px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300 group-hover:opacity-60 hover:!opacity-100 hover:scale-[1.02] hover:shadow-2xl">
-                  <Image
-                    src={item.img}
-                    alt="Project"
-                    width={1400}
-                    height={720}
-                    className="w-full h-full object-cover object-[center_30%]"
-                    sizes="100vw"
-                    priority={i === 0}
-                  />
-                  <Link
-                    href="/case-study"
-                    className={`absolute bottom-[6%] left-[7%] flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
-                  >
-                    View Case Study
-                    <Image
-                      src="/icons/case-study-arrow.svg"
-                      alt="arrow"
-                      width={20}
-                      height={20}
-                      className="w-5 h-5"
-                    />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+            View Case Study
+            <Image
+              src="/icons/case-study-arrow.svg"
+              alt="arrow"
+              width={20}
+              height={20}
+              className="w-5 h-5"
+            />
+          </Link>
+
         </div>
+      </div>
+    ))}
+  </div>
+</div>
       </section>
 
       {/* Why Choose Us */}
