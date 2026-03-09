@@ -5,7 +5,7 @@ export const projects = [
         subtitle: "Home Service & House Work App",
         description:
             "Ezyhelpers is a seamless mobile and web platform connecting users with trusted home service professionals. Whether you need cleaning, elder care, cooking, plumbing, or other daily assistance, Ezyhelpers makes it easy to book reliable help—right from your phone.",
-        category: ["IOS & ANDROID", "WEB"],
+        category: ["MOBILE", "WEB"],
         image: "/projects/project1.svg",
     },
     {
@@ -14,7 +14,7 @@ export const projects = [
         subtitle: "We aim to build a better world where clean water is accessible",
         description:
             "KarIOT is a smart water management system leveraging IoT technology to monitor, optimize, and automate water usage in high-rise buildings, commercial properties, and hotels. The platform enables real-time data collection, leak detection, and predictive maintenance, helping organizations conserve water, reduce costs, and achieve sustainability goals.",
-        category: ["IOS & ANDROID", "WEB"],
+        category: ["MOBILE", "WEB"],
         image: "/projects/project2.svg",
     },
     {
@@ -23,7 +23,7 @@ export const projects = [
         subtitle: "Taxi Business With Our Uber Clone Software",
         description:
             "Xaber is a robust ride-hailing app solution inspired by the Uber model, designed for startups and taxi businesses to launch their own branded service. The platform supports real-time bookings, driver tracking, fare calculation, and seamless payment integration—delivering a convenient and scalable experience for both riders and drivers.",
-        category: ["IOS & ANDROID", "WEB"],
+        category: ["MOBILE", "WEB"],
         image: "/projects/project3.svg",
     },
     {

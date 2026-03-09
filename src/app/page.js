@@ -22,12 +22,9 @@ const HERO_WORDS = [
 ];
 
 export default function Home() {
-
-
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
-  const [isCaseStudyHovered, setIsCaseStudyHovered] = useState(false);
 
   const caseStudies = [
     { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
@@ -36,6 +33,48 @@ export default function Home() {
     { img: "/Home/case-study-4.svg", btn: "bg-black text-white" },
   ];
 
+  const cards = [
+    {
+      title: "TIME & MATERIALS (T&M)",
+      headerColor: "#ed6b5a",
+      arrowColor: "#d95a4a",
+      bodyColor: "#f28a7e",
+      items: [
+        "Your team manages allocation of work for cost-efficiency",
+        "Work conducted at your location",
+        "Billed on T&M basis",
+        "Resources have full access to our expertise and assistance during the engagement",
+        "Resources have full access to our expertise and assistance during the engagement",
+      ],
+    },
+    {
+      title: "PROJECT-BASED FIXED-FEE",
+      headerColor: "#5b4372",
+      arrowColor: "#4a3659",
+      bodyColor: "#7f659d",
+      items: [
+        "Well-defined and well-documented needs",
+        "Small to midsize projects",
+        "Time-bound",
+        "Fixed cost based on agreed-upon requirements",
+        "Fixed cost based on agreed-upon requirements",
+        "Testing Mavens leadership manages and monitors quality of deliverables",
+      ],
+    },
+    {
+      title: "END-TO-END MANAGED SERVICES",
+      headerColor: "#f8b652",
+      arrowColor: "#e5a33d",
+      bodyColor: "#fcc572",
+      items: [
+        "Long-term engagement",
+        "Team of test engineers assigned on-site and offshore based on need",
+        "Focused on adding value and increasing efficiency",
+        "Seamless integration with your engineering team, including attending all Agile ceremonies",
+        "Testing Mavens leadership manages and monitors quality of deliverables",
+      ],
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,15 +89,15 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (caseStudies.length <= 1 || isCaseStudyHovered) return;
+  const goToNextCaseStudy = () => {
+    setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
+  };
 
-    const interval = setInterval(() => {
-      setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [caseStudies.length, isCaseStudyHovered]);
+  const goToPrevCaseStudy = () => {
+    setActiveCaseStudy((prev) =>
+      prev === 0 ? caseStudies.length - 1 : prev - 1,
+    );
+  };
 
   return (
     <main>
@@ -131,7 +170,7 @@ export default function Home() {
       <section className="bg-white text-black py-16">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Heading */}
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHO WE ARE
           </h3>
 
@@ -212,7 +251,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* LEFT CONTENT */}
               <div>
-                <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+                <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                   GET IN TOUCH
                 </h3>
 
@@ -253,7 +292,7 @@ export default function Home() {
       {/* Case Study */}
       <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             CASE STUDIES
           </h3>
 
@@ -268,20 +307,14 @@ export default function Home() {
         </div>
 
         {/* Mobile: separate layout so image resizes to device, same UI */}
-        <div
-          className="mt-6 w-full overflow-hidden md:hidden"
-          onMouseEnter={() => setIsCaseStudyHovered(true)}
-          onMouseLeave={() => setIsCaseStudyHovered(false)}
-        >
+        <div className="relative mt-6 w-full overflow-hidden md:hidden">
           <div
-            className="flex w-full transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
-          >
+            className="flex w-full"
+            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}>
             {caseStudies.map((item, i) => (
               <div
                 key={`mobile-${item.img}-${i}`}
-                className="w-full shrink-0 flex items-center justify-start pl-2 pr-2"
-              >
+                className="w-full shrink-0 flex items-center justify-start pl-2 pr-2">
                 <div className="group relative w-full max-w-[100vw] rounded-none overflow-hidden shadow-lg transition-all duration-300 active:scale-[1.01]">
                   <div className="relative w-full aspect-[1438/763] bg-gray-100">
                     <Image
@@ -295,8 +328,7 @@ export default function Home() {
                   </div>
                   <Link
                     href="/case-study"
-                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}
-                  >
+                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}>
                     View Case Study
                     <Image
                       src="/icons/case-study-arrow.svg"
@@ -310,58 +342,106 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Mobile navigation arrows */}
+          <button
+            type="button"
+            onClick={goToPrevCaseStudy}
+            aria-label="Previous case study"
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white">
+            <Image
+              src="/icons/case-study-arrow.svg"
+              alt="Previous"
+              width={20}
+              height={20}
+              className="w-4 h-4 rotate-180"
+            />
+          </button>
+          <button
+            type="button"
+            onClick={goToNextCaseStudy}
+            aria-label="Next case study"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white">
+            <Image
+              src="/icons/case-study-arrow.svg"
+              alt="Next"
+              width={20}
+              height={20}
+              className="w-4 h-4"
+            />
+          </button>
         </div>
 
         {/* Desktop: full-height carousel, same UI */}
-        <div
-          className="mt-10 w-full overflow-hidden flex-1 min-h-0 hidden md:flex"
-          onMouseEnter={() => setIsCaseStudyHovered(true)}
-          onMouseLeave={() => setIsCaseStudyHovered(false)}
-        >
-  <div
-    className="flex w-full transition-transform duration-700 ease-in-out"
-    style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
-  >
-    {caseStudies.map((item, i) => (
-      <div
-        key={`desktop-${item.img}-${i}`}
-        className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6"
-      >
-        <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
-  <Image
-    src={item.img}
-    alt="Project"
-    width={1400}
-    height={720}
-    className="w-full h-full object-cover object-[center_30%] scale-94"
-    sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, 100vw"
-    priority={i === 0}
-  />
-          <Link
-            href="/case-study"
-            className={`absolute bottom-[4%] left-[8%] flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
-          >
-            View Case Study
+        <div className="relative mt-10 w-full overflow-hidden flex-1 min-h-0 hidden md:flex">
+          <div
+            className="flex w-full"
+            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}>
+            {caseStudies.map((item, i) => (
+              <div
+                key={`desktop-${item.img}-${i}`}
+                className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6">
+                <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
+                  <Image
+                    src={item.img}
+                    alt="Project"
+                    width={1400}
+                    height={720}
+                    className="w-full h-full object-cover object-[center_30%] scale-94"
+                    sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, 100vw"
+                    priority={i === 0}
+                  />
+                  <Link
+                    href="/case-study"
+                    className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}>
+                    View Case Study
+                    <Image
+                      src="/icons/case-study-arrow.svg"
+                      alt="arrow"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop navigation arrows */}
+          <button
+            type="button"
+            onClick={goToPrevCaseStudy}
+            aria-label="Previous case study"
+            className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white">
             <Image
-              src="/icons/case-study-arrow.svg"
-              alt="arrow"
-              width={20}
-              height={20}
+              src="/icons/.svg"
+              alt="Previous"
+              width={24}
+              height={24}
+              className="w-5 h-5 rotate-180"
+            />
+          </button>
+          <button
+            type="button"
+            onClick={goToNextCaseStudy}
+            aria-label="Next case study"
+            className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white">
+            <Image
+              src="/icons/.svg"
+              alt="Next"
+              width={24}
+              height={24}
               className="w-5 h-5"
             />
-          </Link>
-
+          </button>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
       </section>
 
       {/* Why Choose Us */}
       <section className="bg-white text-black py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHY TRIMSEL
           </h3>
 
@@ -546,6 +626,83 @@ export default function Home() {
                 <span className="text-center text-xs sm:text-sm font-semibold text-black">
                   {item.name}
                 </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20"
+        style={{ backgroundImage: "url('/Home/model.svg')" }}>
+        <div className="container mx-auto px-4 sm:px-6">
+          {/* Heading */}
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            OUR DELIVERY MODELS
+          </h3>
+
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            You get more than just a testing service provider you get a true
+            partner and an extension of your team.
+          </h2>
+
+          <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
+            When you work with Testing Mavens, you get more than a testing
+            services provider-you get a true partner and an extension of your
+            team. Our delivery models are designed to be flexible, efficient,
+            and easily scalable to meet your changing needs.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <div className="max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+            {cards.map((card, index) => (
+              /* OUTER SHADOW + OUTLINE */
+              <div
+                key={index}
+                className="mt-8 p-[4px] border-2 border-white shadow-[0_10px_25px_rgba(0,0,0,0.25)]"
+                style={{
+                  clipPath:
+                    "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
+                  background: "#E5E7EB",
+                }}>
+                {/* INNER CARD */}
+                <div
+                  className="bg-white"
+                  style={{
+                    clipPath:
+                      "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
+                  }}>
+                  {/* TOP */}
+                  <div
+                    className="text-center py-6 px-4"
+                    style={{
+                      clipPath: "polygon(0 0,100% 0,100% 70%,50% 85%,0 70%)",
+                    }}>
+                    <h3 className="mt-4 font-bold text-sm sm:text-base tracking-wider uppercase text-[#6F678F]">
+                      {card.title}
+                    </h3>
+
+                    <div className="flex justify-center mt-4">
+                      <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[12px] border-l-transparent border-r-transparent border-t-gray-800 rounded-3xl"></div>
+                    </div>
+                  </div>
+
+                  {/* BODY */}
+                  <div
+                    className="text-white px-6 py-8 text-sm leading-relaxed"
+                    style={{
+                      backgroundColor: card.bodyColor,
+                      clipPath:
+                        "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
+                      marginTop: "-20px",
+                    }}>
+                    <ul className="space-y-3 text-left list-disc list-inside">
+                      {card.items.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

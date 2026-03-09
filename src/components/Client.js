@@ -14,7 +14,7 @@ export default function Clients() {
             <div className="container mx-auto px-4 sm:px-6">
 
                 {/* Heading */}
-                <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+                <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                     OUR CLIENTS
                 </h3>
 

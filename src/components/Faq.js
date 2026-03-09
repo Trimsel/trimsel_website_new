@@ -98,7 +98,7 @@ export default function FaqSection() {
         <section className="bg-white py-4">
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
 
-                <h2 className="mb-12 bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-center text-2xl font-semibold leading-tight text-transparent sm:text-3xl">
+                <h2 className="mb-12 mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                     FREQUENTLY ASKED QUESTIONS
                 </h2>
 
