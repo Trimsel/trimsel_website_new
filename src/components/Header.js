@@ -122,7 +122,7 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 3 */}
-                                        <Link href="/services/web-development"
+                                        <Link href="/services/Web-Development"
                                             className="flex items-start justify-between p-3 rounded-xl bg-purple-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">

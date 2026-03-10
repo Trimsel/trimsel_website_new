@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function ServiceCard({ icon, title, description }) {
+export default function ServiceCard({ icon, title, description, href }) {
     return (
         <div className="flex min-h-[320px] w-full max-w-[380px] flex-col rounded-xl bg-white p-6 shadow-xl">
             <div className="mb-4">
@@ -16,12 +17,21 @@ export default function ServiceCard({ icon, title, description }) {
                 {description}
             </p>
 
-            <button
-                className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center transition"
-                aria-label={`Read more about ${title}`}
-            >
-                →
-            </button>
+            {/* Bottom: Arrow Button */}
+            <div className="mt-6">
+                <Link
+                    href={href || "#"}
+                    className="inline-flex items-center justify-center"
+                >
+                    <Image
+                        src="/icons/mobile-stage-arrow.svg"
+                        alt="arrow"
+                        width={40}
+                        height={40}
+                        className="object-contain"
+                    />
+                </Link>
+            </div>
         </div>
     );
 }

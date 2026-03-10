@@ -75,54 +75,58 @@ export default function Contactform() {
 
                         {/* Row 1 */}
                         <div className="mt-12">
-                            <Marquee
-                                speed={40}
-                                direction="right"
-                                pauseOnHover
-                                gradient
-                                gradientColor={[255, 255, 255]}
-                            >
-                                {OurPartner1.map((client, index) => (
-                                    <div
-                                        key={`row1-${index}`}
-                                        className="mx-10 flex items-center justify-center"
-                                    >
-                                        <Image
-                                            src={client.logo}
-                                            alt={client.name}
-                                            width={80}
-                                            height={80}
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </Marquee>
+                            <div suppressHydrationWarning>
+                                <Marquee
+                                    speed={40}
+                                    direction="right"
+                                    pauseOnHover
+                                    gradient
+                                    gradientColor={[255, 255, 255]}
+                                >
+                                    {OurPartner1.map((client, index) => (
+                                        <div
+                                            key={`row1-${index}`}
+                                            className="mx-10 flex items-center justify-center"
+                                        >
+                                            <Image
+                                                src={client.logo}
+                                                alt={client.name}
+                                                width={80}
+                                                height={80}
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    ))}
+                                </Marquee>
+                            </div>
                         </div>
 
                         {/* Row 2 */}
                         <div className="mt-12">
-                            <Marquee
-                                speed={40}
-                                direction="left"   // opposite direction looks better
-                                pauseOnHover
-                                gradient
-                                gradientColor={[255, 255, 255]}
-                            >
-                                {OurPartner2.map((client, index) => (
-                                    <div
-                                        key={`row2-${index}`}
-                                        className="mx-10 flex items-center justify-center"
-                                    >
-                                        <Image
-                                            src={client.logo}
-                                            alt={client.name}
-                                            width={80}
-                                            height={80}
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </Marquee>
+                            <div suppressHydrationWarning>
+                                <Marquee
+                                    speed={40}
+                                    direction="left"   // opposite direction looks better
+                                    pauseOnHover
+                                    gradient
+                                    gradientColor={[255, 255, 255]}
+                                >
+                                    {OurPartner2.map((client, index) => (
+                                        <div
+                                            key={`row2-${index}`}
+                                            className="mx-10 flex items-center justify-center"
+                                        >
+                                            <Image
+                                                src={client.logo}
+                                                alt={client.name}
+                                                width={80}
+                                                height={80}
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    ))}
+                                </Marquee>
+                            </div>
                         </div>
                     </div>
 

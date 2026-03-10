@@ -1,10 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const ServiceCard = dynamic(() => import("../data/Servicecard"), {
-    ssr: false,
-});
+import ServiceCard from "../data/Servicecard";
 
 export default function Whatwedo() {
     const services = [{ title: "Mobile App Development", description: "As a top mobile app development company in Chennai, we deliver custom Android, iOS & cross-platform solutions with exceptional UX, performance, and scalability.", icon: "/icons/Mobileapp.svg", },
@@ -16,7 +12,7 @@ export default function Whatwedo() {
     return (
         <section className="bg-white text-black py-16">
             <div className="container mx-auto px-6">
-                <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
                     WHAT WE DO
                 </h3>
                 <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">

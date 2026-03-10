@@ -76,6 +76,7 @@ export default function Home() {
     },
   ];
 
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false);
@@ -251,7 +252,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* LEFT CONTENT */}
               <div>
-                <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                   GET IN TOUCH
                 </h3>
 
@@ -288,6 +289,7 @@ export default function Home() {
 
       {/* Whatwedo */}
       <Whatwedo />
+      
 
       {/* Case Study */}
       <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
@@ -344,32 +346,33 @@ export default function Home() {
           </div>
 
           {/* Mobile navigation arrows */}
-          <button
-            type="button"
-            onClick={goToPrevCaseStudy}
-            aria-label="Previous case study"
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white">
-            <Image
-              src="/icons/case-study-arrow.svg"
-              alt="Previous"
-              width={20}
-              height={20}
-              className="w-4 h-4 rotate-180"
-            />
-          </button>
-          <button
-            type="button"
-            onClick={goToNextCaseStudy}
-            aria-label="Next case study"
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white">
-            <Image
-              src="/icons/case-study-arrow.svg"
-              alt="Next"
-              width={20}
-              height={20}
-              className="w-4 h-4"
-            />
-          </button>
+          <div
+  onClick={goToPrevCaseStudy}
+  aria-label="Previous case study"
+  role="button"
+  className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+  <Image
+    src="/icons/case-study-arrow.svg"
+    alt="Previous"
+    width={20}
+    height={20}
+    className="w-4 h-4 rotate-180"
+  />
+</div>
+
+<div
+  onClick={goToNextCaseStudy}
+  aria-label="Next case study"
+  role="button"
+  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+  <Image
+    src="/icons/case-study-arrow.svg"
+    alt="Next"
+    width={20}
+    height={20}
+    className="w-4 h-4"
+  />
+</div>
         </div>
 
         {/* Desktop: full-height carousel, same UI */}
@@ -413,9 +416,11 @@ export default function Home() {
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white">
+            className="absolute left-1 top-1/2 -translate-y-1/2 
+             flex items-center justify-center
+             rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white">
             <Image
-              src="/icons/.svg"
+              src="/Home/casestudy-rightarrow.svg"
               alt="Previous"
               width={24}
               height={24}
@@ -426,9 +431,11 @@ export default function Home() {
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white">
+            className="absolute right-1 top-1/2 -translate-y-1/2 
+             flex items-center justify-center
+             rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white">
             <Image
-              src="/icons/.svg"
+              src="/Home/casestudy-rightarrow.svg"
               alt="Next"
               width={24}
               height={24}
