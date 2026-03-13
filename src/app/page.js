@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import Link from "next/link";
@@ -22,9 +23,11 @@ const HERO_WORDS = [
 ];
 
 export default function Home() {
+
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   const caseStudies = [
     { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
@@ -32,6 +35,38 @@ export default function Home() {
     { img: "/Home/case-study-3.svg", btn: "bg-black text-white" },
     { img: "/Home/case-study-4.svg", btn: "bg-black text-white" },
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % HERO_WORDS.length);
+        setFade(true);
+      }, 300);
+
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // ✅ mount effect
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const goToNextCaseStudy = () => {
+    setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
+  };
+
+  const goToPrevCaseStudy = () => {
+    setActiveCaseStudy((prev) =>
+      prev === 0 ? caseStudies.length - 1 : prev - 1
+    );
+  };
+
+  // ✅ prevent hydration mismatch
+  if (!mounted) return null;
 
   const cards = [
     {
@@ -75,30 +110,6 @@ export default function Home() {
       ],
     },
   ];
-
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false);
-
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % HERO_WORDS.length);
-        setFade(true);
-      }, 300);
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const goToNextCaseStudy = () => {
-    setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
-  };
-
-  const goToPrevCaseStudy = () => {
-    setActiveCaseStudy((prev) =>
-      prev === 0 ? caseStudies.length - 1 : prev - 1,
-    );
-  };
 
   return (
     <main>
@@ -292,7 +303,8 @@ export default function Home() {
       
 
       {/* Case Study */}
-      <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
+      <section
+        className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             CASE STUDIES
@@ -346,33 +358,33 @@ export default function Home() {
           </div>
 
           {/* Mobile navigation arrows */}
-          <div
-  onClick={goToPrevCaseStudy}
-  aria-label="Previous case study"
-  role="button"
-  className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
-  <Image
-    src="/icons/case-study-arrow.svg"
-    alt="Previous"
-    width={20}
-    height={20}
-    className="w-4 h-4 rotate-180"
-  />
-</div>
+          <button
+            type="button"
+            onClick={goToPrevCaseStudy}
+            aria-label="Previous case study"
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+            <Image
+              src="/icons/case-study-arrow.svg"
+              alt="Previous"
+              width={20}
+              height={20}
+              className="w-4 h-4 rotate-180"
+            />
+          </button>
 
-<div
-  onClick={goToNextCaseStudy}
-  aria-label="Next case study"
-  role="button"
-  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
-  <Image
-    src="/icons/case-study-arrow.svg"
-    alt="Next"
-    width={20}
-    height={20}
-    className="w-4 h-4"
-  />
-</div>
+          <button
+            type="button"
+            onClick={goToNextCaseStudy}
+            aria-label="Next case study"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+            <Image
+              src="/icons/case-study-arrow.svg"
+              alt="Next"
+              width={20}
+              height={20}
+              className="w-4 h-4"
+            />
+          </button>
         </div>
 
         {/* Desktop: full-height carousel, same UI */}

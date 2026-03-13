@@ -98,7 +98,7 @@ export default function Header({ transparent = false }) {
                                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
 
                                         {/* 1 */}
-                                        <Link href="/MobileApp-Development"
+                                        <Link href="/mobile-app-development-chennai"
                                             className="flex items-start justify-between p-3 rounded-xl bg-blue-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
@@ -110,7 +110,7 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 2 */}
-                                        <Link href="/DevOps-Consulting"
+                                        <Link href="/devops-consulting-services"
                                             className="flex items-start justify-between p-3 rounded-xl bg-orange-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
@@ -122,7 +122,7 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 3 */}
-                                        <Link href="/services/Web-Development"
+                                        <Link href="/web-development-company-chennai"
                                             className="flex items-start justify-between p-3 rounded-xl bg-purple-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
@@ -146,7 +146,7 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 5 */}
-                                        <Link href="/Digitalmarketing"
+                                        <Link href="/digital-marketing-company-chennai"
                                             className="flex items-start justify-between p-3 rounded-xl bg-red-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
@@ -159,7 +159,7 @@ export default function Header({ transparent = false }) {
 
                                         {/* 6 */}
                                         <Link
-                                            href="/Cloud-Consulting"
+                                            href="/cloud-consulting-services"
                                             className="flex items-center justify-between 
                                             p-3 rounded-xl bg-green-100 hover:shadow-md transition-all duration-300"
                                         >
