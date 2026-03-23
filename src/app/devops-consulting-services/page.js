@@ -8,8 +8,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-
-
+import React from "react";
 
 
 
@@ -114,6 +113,121 @@ const services = [
     },
   ];
 
+  const steps = [
+    {
+      id: "01",
+      title: "Strategic Planning",
+      description:
+        "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
+      gradientFrom: "#7b5ea7",
+      gradientTo: "#5b7fde",
+      side: "left",
+      Icon: () => (
+        <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
+          <circle cx="18" cy="7" r="3" fill="white" />
+          <circle cx="7" cy="27" r="3" fill="white" />
+          <circle cx="29" cy="27" r="3" fill="white" />
+          <line x1="18" y1="7" x2="7" y2="27" stroke="white" strokeWidth="1.8" />
+          <line x1="18" y1="7" x2="29" y2="27" stroke="white" strokeWidth="1.8" />
+          <line x1="7" y1="27" x2="29" y2="27" stroke="white" strokeWidth="1.8" />
+          <circle cx="18" cy="18" r="2.5" fill="white" fillOpacity="0.85" />
+        </svg>
+      ),
+    },
+    {
+      id: "02",
+      title: "Implementation Procedure",
+      description:
+        "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
+      gradientFrom: "#0ea5e9",
+      gradientTo: "#6366f1",
+      side: "right",
+      Icon: () => (
+        <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
+          <rect x="5" y="9" width="26" height="5.5" rx="2" fill="white" />
+          <rect x="5" y="17.5" width="26" height="5.5" rx="2" fill="white" />
+          <rect x="5" y="26" width="26" height="4" rx="2" fill="white" fillOpacity="0.45" />
+          <circle cx="9" cy="11.75" r="1.5" fill="#6366f1" />
+          <circle cx="9" cy="20.25" r="1.5" fill="#6366f1" />
+        </svg>
+      ),
+    },
+    {
+      id: "03",
+      title: "Strategic Planning",
+      description:
+        "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
+      gradientFrom: "#14b8a6",
+      gradientTo: "#38bdf8",
+      side: "left",
+      Icon: () => (
+        <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
+          <circle cx="18" cy="18" r="5" stroke="white" strokeWidth="2" />
+          <circle cx="18" cy="18" r="2" fill="white" />
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => {
+            const rad = (deg * Math.PI) / 180;
+            return (
+              <line
+                key={i}
+                x1={18 + 8 * Math.cos(rad)}
+                y1={18 + 8 * Math.sin(rad)}
+                x2={18 + 12 * Math.cos(rad)}
+                y2={18 + 12 * Math.sin(rad)}
+                stroke="white"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+            );
+          })}
+        </svg>
+      ),
+    },
+    {
+      id: "04",
+      title: "Strategic Planning",
+      description:
+        "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
+      gradientFrom: "#22c55e",
+      gradientTo: "#16a34a",
+      side: "right",
+      Icon: () => (
+        <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
+          <rect x="3" y="13" width="30" height="10" rx="3" stroke="white" strokeWidth="2" />
+          <circle cx="11" cy="27" r="4" stroke="white" strokeWidth="2" />
+          <circle cx="25" cy="27" r="4" stroke="white" strokeWidth="2" />
+          <line x1="11" y1="13" x2="11" y2="9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="18" y1="13" x2="18" y2="9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="25" y1="13" x2="25" y2="9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+        </svg>
+      ),
+    },
+  ];
+
+  const ICON_POSITIONS = [
+    { top: 10, left: 50 },  // y = 231.15
+    { top: 33, left: 48 },  // y = 763.0
+    { top: 57, left: 42 },  // y = 1317.6
+    { top: 80, left: 55 },  // y = 1849.2
+  ];
+
+  const features = [
+    {
+      icon: "/icons/Devops-what-we-do1.svg",
+      title: "Complex Delivery Experience",
+    },
+    {
+      icon: "/icons/Devops-what-we-do2.svg",
+      title: "Skilled And Talented Engineers",
+    },
+    {
+      icon: "/icons/Devops-what-we-do3.svg",
+      title: "Best Security Integration",
+    },
+    {
+      icon: "/icons/Devops-what-we-do4.svg",
+      title: "Dedicated DevOps Team",
+    },
+  ];
 
 export default function DevOpsConsulting() {
 
@@ -198,7 +312,7 @@ export default function DevOpsConsulting() {
 </div>
 
           {/* RIGHT — Content Card */}
-          <div className="ml-32 relative rounded-xl bg-[#EBF4FF] p-6 sm:p-8 max-w-2xl">
+          <div className="relative rounded-xl bg-[#EBF4FF] p-6 sm:p-8 max-w-2xl ml-0 md:ml-32">
             {/* Large number watermark */}
             <span className="absolute top-4 right-6 text-6xl font-bold text-white select-none">
               {selected.id}.
@@ -240,23 +354,221 @@ export default function DevOpsConsulting() {
       </section>
 
 
-            {/* Getintouch */}
+      <section
+      className="py-6 px-6 md:px-12"
+      style={{
+        background:
+          "radial-gradient(ellipse 90% 65% at 50% 0%, #e0f2fe 0%, #f8fafc 55%, #eef2ff 100%)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto relative">
+
+        {/* SVG Connector */}
+        <div className="absolute inset-0 hidden md:block pointer-events-none">
+
+        <svg
+  viewBox="0 0 757.95 2311.5"
+  className="absolute w-full h-full"
+  preserveAspectRatio="none"
+>
+  <defs>
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#f97316" />
+      <stop offset="100%" stopColor="#fdba74" />
+    </linearGradient>
+  </defs>
+
+  {/* Segment 1: Icon1(379,231) → Icon2(363,763) — bows LEFT */}
+  <path
+    d="M 379 231 Q 270 497, 363 763"
+    fill="none"
+    stroke="#c8ccd5"
+    strokeWidth="3.5"
+    strokeDasharray="22 13"
+    strokeLinecap="round"
+  />
+  <g transform="translate(295, 490) rotate(170)">
+    <polygon points="0,-18 12,8 0,2 -12,8" fill="url(#arrowGradient)" />
+  </g>
+
+  {/* Segment 2: Icon2(363,763) → Icon3(318,1318) — bows LEFT */}
+  <path
+    d="M 363 763 Q 245 1040, 318 1318"
+    fill="none"
+    stroke="#c8ccd5"
+    strokeWidth="3.5"
+    strokeDasharray="22 13"
+    strokeLinecap="round"
+  />
+  <g transform="translate(268, 1035) rotate(168)">
+    <polygon points="0,-18 12,8 0,2 -12,8" fill="url(#arrowGradient)" />
+  </g>
+
+  {/* Segment 3: Icon3(318,1318) → Icon4(416,1849) — bows RIGHT */}
+  <path
+    d="M 318 1318 Q 435 1550, 416 1849"
+    fill="none"
+    stroke="#c8ccd5"
+    strokeWidth="3.5"
+    strokeDasharray="22 13"
+    strokeLinecap="round"
+  />
+  <g transform="translate(400, 1548) rotate(155)">
+    <polygon points="0,-18 12,8 0,2 -12,8" fill="url(#arrowGradient)" />
+  </g>
+</svg>
+
+          {/* Icons */}
+          {steps.map((step, i) => (
+            <div
+              key={step.id}
+              className="absolute flex items-center justify-center"
+              style={{
+                left: `${ICON_POSITIONS[i].left}%`,
+                top: `${ICON_POSITIONS[i].top}%`,
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center text-white shadow-xl"
+                style={{
+                  background: `linear-gradient(135deg, ${step.gradientFrom}, ${step.gradientTo})`,
+                }}
+              >
+                <step.Icon size={20} />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Text Content */}
+        <div className="space-y-24 relative z-10">
+          {steps.map((step) => {
+            const isLeft = step.side === "left";
+
+            return (
+              <div
+                key={step.id}
+                className="grid md:grid-cols-2 gap-12 items-center"
+              >
+                {isLeft ? (
+                  <div className="md:pr-16">
+                    <span className="text-6xl font-black text-blue-200">
+                      {step.id}
+                    </span>
+
+                    <h3 className="text-xl font-bold text-slate-900 mt-2">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-slate-600 mt-3 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                ) : (
+                  <div />
+                )}
+
+                {!isLeft ? (
+                  <div className="md:pl-16 text-right">
+                    <span className="text-6xl font-black text-blue-200">
+                      {step.id}
+                    </span>
+
+                    <h3 className="text-xl font-bold text-slate-900 mt-2">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-slate-600 mt-3 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                ) : (
+                  <div />
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+
+
+    <section className="relative py-24 px-6 bg-white overflow-hidden">
+    
+      {/* Main Container */}
+      <div className="relative max-w-6xl mx-auto bg-black rounded-3xl p-8 shadow-2xl border border-white/10">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div className="w-[900px] h-[200px] 
+    bg-[linear-gradient(90deg,#4686FF,#9005E5,#1D55C7)] 
+    rounded-2xl opacity-60 blur-[280px]"></div>
+  </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+            WHY CHOOSE US
+          </h3>
+          <h2 className="mt-4 text-center text-2xl text-white md:text-4xl font-semibold">
+          Why choose Trimsel for your DevOps services?
+          </h2>
+
+          <p className="mt-4 max-w-5xl mx-auto text-center text-white font-medium">
+          Clients choose us because of our ability to improve business agility, increase efficiency, and reduce costs. We are differentiated by our.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-4 gap-6">
+
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition duration-300"
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 flex items-center justify-center rounded-lg mb-5">
+                <Image
+                  src={feature.icon}
+                  alt="icon"
+                  width={40}
+                  height={40}
+                />
+              </div>
+
+              <h3 className="text-white font-semibold mb-3">
+                {feature.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We have years of experience in helping organizations streamline
+                the release cycles of different applications, from legacy to
+                agile and beyond. Our experts ensure that the best CI/CD
+                practices are implemented.
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </section>
+
+
+
 {/* Getintouch */}
 <section className="bg-white py-20">
   <div className="flex justify-center px-4 sm:px-6">
-    <div
-      className="relative w-full max-w-6xl overflow-hidden rounded-xl shadow-md min-h-[220px]"
-      style={{ backgroundImage: "url('/Devops-get-in-Touch.svg')", backgroundSize: "cover", backgroundPosition: "center" }}
-    >
-      {/* Content — locked to left 50% so image shows on right */}
-      <div className="relative z-10 px-5 py-8 sm:px-8 sm:py-10 w-full md:w-[50%]">
-        <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+  <div className="relative w-full max-w-6xl rounded-xl bg-[#552A8B] shadow-lg flex flex-col md:flex-row items-center justify-between overflow-hidden">
+      {/* LEFT CONTENT */}
+      <div className="relative z-10 px-8 py-10 sm:px-12 sm:py-12 w-full md:w-[55%] lg:w-1/2 text-left">
+        <h3 className="text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-3xl lg:text-4xl">
           GET IN TOUCH
         </h3>
-        <h2 className="mt-2 text-2xl text-white font-semibold leading-tight sm:text-3xl md:text-4xl">
-        Need a DevOps consultants? Contact us Now!
+        <h2 className="mt-2 text-2xl text-white font-semibold leading-tight sm:text-3xl md:text-3xl lg:text-4xl">
+          Need a DevOps consultants? Contact us Now!
         </h2>
-        <p className="mt-4 text-white font-medium text-sm sm:text-base">
+        <p className="mt-4 text-white font-medium text-sm sm:text-base max-w-lg">
           Reach out to us to identify business challenges and get
           efficient digital solutions.
         </p>
@@ -265,14 +577,24 @@ export default function DevOpsConsulting() {
           className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
           Get Started
           <Image
-                            src="/Home/right-arrow.svg"
-                            width={20}
-                            height={20}
-                            alt="RightArrow"
-                        />
+            src="/Home/right-arrow.svg"
+            width={20}
+            height={20}
+            alt="RightArrow"
+          />
         </Link>
       </div>
 
+      {/* RIGHT IMAGE */}
+      <div className="relative w-full md:w-[45%] lg:w-1/2 flex justify-center md:justify-end items-end self-stretch px-6 pt-4 min-h-[250px] md:min-h-[auto]">
+        <Image
+          src="/Devops-getintouch.svg"
+          alt="Devops-get-in-touch"
+          width={700}
+          height={700}
+          className="w-[85%] sm:w-[60%] md:w-[95%] lg:max-w-md h-auto object-contain translate-y-[5%]"
+        />
+      </div>
     </div>
   </div>
 </section>

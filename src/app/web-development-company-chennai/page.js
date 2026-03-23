@@ -9,6 +9,107 @@ import Footer from "@/components/Footer";
 import Testimonial from "@/components/testimonial";
 
 
+
+
+const services = [
+  {
+    title: "User-Centric UI/UX Design",
+    icon: "/web-whatwedo1.svg",
+    desc: "We craft intuitive and engaging user experiences that enhance usability and drive customer satisfaction through thoughtful design."
+  },
+  {
+    title: "Front-End Development",
+    icon: "/web-whatwedo2.svg",
+    desc: "Build fast, responsive, and interactive interfaces using modern technologies to deliver seamless user experiences across all devices."
+  },
+  {
+    title: "Backend Web Development",
+    icon: "/web-whatwedo3.svg",
+    desc: "Develop secure and scalable server-side solutions that ensure smooth performance, data handling, and system reliability."
+  },
+  {
+    title: "Multi-Tier API Development",
+    icon: "/web-whatwedo4.svg",
+    desc: "Design robust APIs that enable efficient communication between systems and ensure seamless data flow across applications."
+  },
+  {
+    title: "CMS Web Development",
+    icon: "/web-whatwedo5.svg",
+    desc: "Create flexible and user-friendly CMS platforms that allow easy content management without technical expertise."
+  },
+  {
+    title: "Ecommerce Web Development",
+    icon: "/web-whatwedo6.svg",
+    desc: "Build powerful ecommerce platforms with secure payment integration, user-friendly design, and high performance."
+  },
+  {
+    title: "DevOps As A Service",
+    icon: "/web-whatwedo7.svg",
+    desc: "Streamline development and deployment with automated workflows, improving efficiency, scalability, and reliability."
+  },
+  {
+    title: "Quality Engineering & Testing",
+    icon: "/web-whatwedo8.svg",
+    desc: "Ensure flawless performance with comprehensive testing strategies that enhance product quality and reliability."
+  },
+  {
+    title: "24/7 Maintenance & Support",
+    icon: "/web-whatwedo9.svg",
+    desc: "Provide continuous monitoring and support to keep your systems running smoothly and resolve issues instantly."
+  },
+];
+
+
+const features = [
+  {
+    title: "Access to Top Worldwide Talent",
+    desc: "Web development company in Chennai helps you access top talents in the industry to meet your business needs with the best-in-class technology and industry knowledge.",
+    icon: "/webservice1.svg",
+  },
+  {
+    title: "Reduce Turnaround Time",
+    desc: "Building a website on your own can consume a lot of time and effort. Outsourcing web development to the best web development company in India can help you save costs.",
+    icon: "/webservice2.svg",
+  },
+  {
+    title: "Experienced Professionals of the Field",
+    desc: "Get access to experienced developers and professionals to help you construct and manage your project. We implement the best practices and trends to deliver products.",
+    icon: "/webservice3.svg",
+  },
+  {
+    title: "Cut Down Extra Cost",
+    desc: "Not needing to hire in-house teams and resources can help you save a lot of money and capital by simply investing in the top web development agency in India.",
+    icon: "/webservice4.svg",
+  },
+];
+
+
+const components = [
+  {
+    title: "24/7 Support",
+    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    icon: "/we-need-1.svg",
+  },
+  {
+    title: "Higher Efficiency",
+    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    icon: "/we-need-2.svg",
+  },
+  {
+    title: "Multi-layer Security",
+    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    icon: "/web-need-3.svg",
+  },
+  {
+    title: "Customisable & Scalable Solutions",
+    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    icon: "/web-need-4.svg",
+  },
+];
+
+
+
+
 export default function WebDevelopment() {
     return (
         <main>
@@ -85,6 +186,256 @@ export default function WebDevelopment() {
 
   </div>
 </section>
+
+<section className="bg-white py-16 px-4 md:px-10">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+        {/* LEFT SIDE */}
+        <div>
+          <h2 className="mb-8 text-left text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            Web Development Company <br /> 
+            In Chennai
+          </h2>
+
+
+          {/* Paragraph */}
+          <p className="mt-6 max-w-3xl mx-auto text-left text-gray-800 font-medium">
+            Minitzon web development company in India has been serving businesses
+            with their digital needs for years. Our experts have helped start-ups,
+            enterprises and businesses of all scales enhance their profits in the
+            B2C and B2B sectors of various industries. We create endless
+            possibilities to help businesses achieve great heights in the marketplace.
+          </p>
+
+          <p className="mt-4 max-w-3xl mx-auto text-left text-gray-800 font-medium">
+            If you are on the lookout for the best web app development company in
+            India to set up your digital presence, you have reached the right place.
+            Our custom solutions will fit right into your requirements at an
+            affordable price.
+          </p>
+        </div>
+
+        {/* RIGHT SIDE CARD */}
+        <div className="bg-gradient-to-br from-[#3b3be0] to-[#6a4df4] text-white p-6 md:p-8 rounded-2xl shadow-xl max-w-md w-full mx-auto">
+
+          <h5 className="text-md tracking-wider opacity-80 mb-2">
+            START YOUR PROJECT
+          </h5>
+
+          <h4 className="text-lg md:text-xl font-semibold leading-snug">
+            Are You Looking Out To Develop A Website For Your Business?
+          </h4>
+
+          <p className="text-xs mt-2 opacity-80">
+            Grow your business with well-developed websites that engage customer attention.
+          </p>
+
+          {/* Inputs */}
+          <div className="mt-6 space-y-3">
+            <input
+              type="text"
+              placeholder="Phone Number"
+              className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none"
+            />
+
+            <input
+              type="email"
+              placeholder="Enter email address"
+              className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none"
+            />
+          </div>
+
+          {/* Button */}
+          <Link
+  href="/"
+  className="mt-5 w-full bg-white text-[#3b3be0] py-2.5 rounded-md text-sm font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition"
+>
+            Book A Free Consultation
+          </Link>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section className="bg-balck py-16 px-4 md:px-10">
+      <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#0b0b14] to-[#120a1f] rounded-3xl p-8 md:p-12 text-white">
+
+        {/* HEADER */}
+        <div>
+            {/* Heading */}
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+              WHAT WE DO
+            </h3>
+
+            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+              Full Stack Web Development Services in India
+            </h2>
+
+            <p className="mt-4 px-0 md:px-10 text-center text-white font-medium leading-relaxed">
+            Minitzon web development agency in India undertakes consultancy, for
+            businesses regarding website building, understanding your needs.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((item, index) => (
+            <div
+              key={index}
+              className="bg-[#141421] rounded-2xl p-6 shadow-lg hover:shadow-xl transition"
+            >
+              {/* ICON */}
+              <div className="w-12 h-12 mb-4 relative">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              {/* TITLE */}
+              <h4 className="text-xl font-semibold">{item.title}</h4>
+
+              {/* DESC */}
+              <p className="mt-3 text-gray-600 font-medium max-w-3xl leading-relaxed">
+  {item.desc}
+</p>
+
+              {/* ARROW BUTTON */}
+              <div className="mt-5">
+              <Link
+  href="/"
+  className="w-8 h-8 rounded-full bg-gradient-to-r from-[#05A1E5] via-[#5346E5] to-[#9005E5] inline-flex items-center justify-center"
+>
+<Image
+                src="/right-arrow-whatwedo.svg"
+                alt="arrow"
+                width={8}
+                height={8}
+              />
+</Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <section className="py-16 px-4 md:px-10 bg-gradient-to-br from-[#eef3f8] to-[#f7f4ef]">
+      <div className="max-w-6xl mx-auto">
+
+        {/* HEADER */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            Outsource Web App Development Services And Increase ROI
+          </h2>
+        </div>
+
+        {/* CARDS */}
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow-sm hover:shadow-md transition"
+            >
+              {/* ICON */}
+              <div className="w-10 h-10 mb-4 relative">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              {/* TITLE */}
+              <h4 className="text-md font-semibold text-[#1f2a37] leading-snug">
+                {item.title}
+              </h4>
+
+              {/* DESCRIPTION */}
+              <p className="mt-3 text-md font-medium text-gray-600 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <section className="px-4 md:px-10 py-16 bg-white">
+      <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
+
+        {/* LEFT SIDE */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            Why Does Your Business Need <br />
+            a Web App Services?
+          </h2>
+
+          <p className="mt-5 text-gray-600 font-medium max-w-3xl leading-relaxed max-w-md">
+            Minitzon have excelled in various fields and have enabled several
+            businesses globally to meet impeccable profits. Our experienced
+            professionals and advanced IT resources serve adequately to meet
+            business demands of any scale quickly and efficiently. See where our
+            Minitzon has guided businesses to excellence.
+          </p>
+
+          {/* BUTTON */}
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 mt-6 bg-[#1ea7d7] hover:bg-[#1696c4] text-white px-6 py-3 rounded-lg text-md font-medium transition"
+          >
+            Contact Us 
+            <Image
+                    src="/Home/right-arrow.svg"
+                    width={20}
+                    height={20}
+                    alt="RightArrow"
+                  />
+          </Link>
+        </div>
+
+        {/* RIGHT SIDE CARDS */}
+        <div className="grid grid-cols-2 gap-6">
+
+          {components.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/70 backdrop-blur-md rounded-2xl p-5 shadow-sm"
+            >
+              {/* ICON BOX */}
+              <div className="w-10 h-10 bg-[#e6eef5] rounded-lg flex items-center justify-center mb-3">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={20}
+                  height={20}
+                />
+              </div>
+
+              {/* TITLE */}
+              <h3 className="text-sm font-semibold text-[#1f2a37]">
+                {item.title}
+              </h3>
+
+              {/* DESC */}
+              <p className="mt-2 text-xs text-gray-600 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </section>
 
         <Client />
 
