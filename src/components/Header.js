@@ -77,7 +77,7 @@ export default function Header({ transparent = false }) {
                     <nav className="hidden md:flex items-center gap-6 lg:gap-8">
 
                         <Link href="/" className={navLinkStyle}>Home</Link>
-                        <Link href="/about" className={navLinkStyle}>About Us</Link>
+                        <Link href="/aboutus" className={navLinkStyle}>About Us</Link>
 
                         {/* ================= Services Dropdown ================= */}
                         <div ref={servicesRef} className="relative">
