@@ -313,11 +313,3 @@ p {
 .clip-cut {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
 }
-
-/* Slanted top with rounded corners */
-.clip-slant-rounded {
-    clip-path: polygon(0 0%,
-            100% 6%,
-            100% 100%,
-            0% 100%);
-}

@@ -30,10 +30,10 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
 
   const caseStudies = [
-    { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black" },
-    { img: "/Home/case-study-2.svg", btn: "bg-black text-white" },
-    { img: "/Home/case-study-3.svg", btn: "bg-black text-white" },
-    { img: "/Home/case-study-4.svg", btn: "bg-black text-white" },
+    { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black", slug: "KarIoT", },
+    { img: "/Home/case-study-2.svg", btn: "bg-black text-white", slug: "Xaber", },
+    { img: "/Home/case-study-3.svg", btn: "bg-black text-white", slug: "Mocial", },
+    { img: "/Home/case-study-4.svg", btn: "bg-black text-white", slug: "EzyHelpers", },
   ];
 
   useEffect(() => {
@@ -55,15 +55,15 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  const goToNextCaseStudy = () => {
-    setActiveCaseStudy((prev) => (prev + 1) % caseStudies.length);
-  };
-
-  const goToPrevCaseStudy = () => {
+  const goToPrevCaseStudy = () =>
     setActiveCaseStudy((prev) =>
       prev === 0 ? caseStudies.length - 1 : prev - 1
     );
-  };
+
+  const goToNextCaseStudy = () =>
+    setActiveCaseStudy((prev) =>
+      prev === caseStudies.length - 1 ? 0 : prev + 1
+    );
 
   // ✅ prevent hydration mismatch
   if (!mounted) return null;
@@ -279,7 +279,13 @@ export default function Home() {
                 <Link
                   href="/contact"
                   className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
-                  Get Started →
+                  Get Started
+                  <Image
+                    src="/Home/right-arrow.svg"
+                    width={20}
+                    height={20}
+                    alt="RightArrow"
+                  />
                 </Link>
               </div>
 
@@ -300,40 +306,38 @@ export default function Home() {
 
       {/* Whatwedo */}
       <Whatwedo />
-      
+
 
       {/* Case Study */}
-      <section
-        className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
+      <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
+        {/* Header */}
         <div className="container mx-auto px-4 sm:px-6">
           <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             CASE STUDIES
           </h3>
-
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Real work. Real impact.
           </h2>
-
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-            Explore a few highlights from projects we’ve delivered across
+            Explore a few highlights from projects we&#39;ve delivered across
             industries.
           </p>
         </div>
 
-        {/* Mobile: separate layout so image resizes to device, same UI */}
+        {/* ── MOBILE CAROUSEL ──────────────────────────────────── */}
         <div className="relative mt-6 w-full overflow-hidden md:hidden">
           <div
-            className="flex w-full"
+            className="flex w-full transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}>
             {caseStudies.map((item, i) => (
               <div
-                key={`mobile-${item.img}-${i}`}
+                key={`mobile-${item.slug}-${i}`}
                 className="w-full shrink-0 flex items-center justify-start pl-2 pr-2">
                 <div className="group relative w-full max-w-[100vw] rounded-none overflow-hidden shadow-lg transition-all duration-300 active:scale-[1.01]">
                   <div className="relative w-full aspect-[1438/763] bg-gray-100">
                     <Image
                       src={item.img}
-                      alt="Project"
+                      alt={`Case study ${i + 1}`}
                       fill
                       sizes="100vw"
                       className="object-contain"
@@ -341,7 +345,7 @@ export default function Home() {
                     />
                   </div>
                   <Link
-                    href="/case-study"
+                    href={`/case-study/${item.slug}`}
                     className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}>
                     View Case Study
                     <Image
@@ -357,7 +361,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Mobile navigation arrows */}
+          {/* Mobile Prev */}
           <button
             type="button"
             onClick={goToPrevCaseStudy}
@@ -372,6 +376,7 @@ export default function Home() {
             />
           </button>
 
+          {/* Mobile Next */}
           <button
             type="button"
             onClick={goToNextCaseStudy}
@@ -387,19 +392,19 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Desktop: full-height carousel, same UI */}
+        {/* ── DESKTOP CAROUSEL ─────────────────────────────────── */}
         <div className="relative mt-10 w-full overflow-hidden flex-1 min-h-0 hidden md:flex">
           <div
-            className="flex w-full"
+            className="flex w-full transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}>
             {caseStudies.map((item, i) => (
               <div
-                key={`desktop-${item.img}-${i}`}
+                key={`desktop-${item.slug}-${i}`}
                 className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6">
                 <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
                   <Image
                     src={item.img}
-                    alt="Project"
+                    alt={`Case study ${i + 1}`}
                     width={1400}
                     height={720}
                     className="w-full h-full object-cover object-[center_30%] scale-94"
@@ -407,7 +412,7 @@ export default function Home() {
                     priority={i === 0}
                   />
                   <Link
-                    href="/case-study"
+                    href={`/casestudy/${item.slug}`}
                     className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}>
                     View Case Study
                     <Image
@@ -423,14 +428,12 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Desktop navigation arrows */}
+          {/* Desktop Prev */}
           <button
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-1 top-1/2 -translate-y-1/2 
-             flex items-center justify-center
-             rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white">
+            className="absolute left-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer">
             <Image
               src="/Home/casestudy-rightarrow.svg"
               alt="Previous"
@@ -439,13 +442,13 @@ export default function Home() {
               className="w-5 h-5 rotate-180"
             />
           </button>
+
+          {/* Desktop Next */}
           <button
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-1 top-1/2 -translate-y-1/2 
-             flex items-center justify-center
-             rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white">
+            className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer">
             <Image
               src="/Home/casestudy-rightarrow.svg"
               alt="Next"
@@ -682,7 +685,7 @@ export default function Home() {
                 style={{
                   clipPath:
                     "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
-                  background: "#E5E7EB",
+                  background: "#2BB673",
                 }}>
                 {/* INNER CARD */}
                 <div

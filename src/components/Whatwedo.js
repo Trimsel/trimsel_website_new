@@ -7,7 +7,8 @@ export default function Whatwedo() {
     { title: "Web Application Development", description: "We’re a leading website development company in Chennai building fast, SEO-friendly websites and enterprise-grade web applications that scale with your business.", icon: "/icons/Website.svg", },
     { title: "Cloud Computing ", description: "Our cloud consulting experts help you migrate, modernize, and optimize with AWS, Azure, and GCP for scalable and cost-effective cloud infrastructure.", icon: "/icons/Cloudcomputing.svg", },
     { title: "DevOps Consulting Services", description: "Our DevOps services in India bring automation, CI/CD, and container orchestration (Kubernetes, Docker) to boost development speed and infrastructure reliability.", icon: "/icons/devops.svg", },
-    { title: "Digital Marketing", description: "As a performance-driven digital marketing agency in Chennai, we offer SEO, PPC, social ads & content strategies to help you grow visibility and leads.", icon: "/icons/digitalmarketing.svg", }, { title: "AI Development", description: "Bring AI to the heart of your business with solutions like chatbots, copilots, intelligent search, computer vision, and workflow automation. Our AI development team in Chennai uses LLMs, retrieval-augmented generation, and fine-tuning to take your idea from prototype to production—securely, quickly, and at scale.", icon: "/icons/AIML.svg", },];
+    { title: "Digital Marketing", description: "As a performance-driven digital marketing agency in Chennai, we offer SEO, PPC, social ads & content strategies to help you grow visibility and leads.", icon: "/icons/digitalmarketing.svg", },
+    { title: "AI Development", description: "Bring AI to the heart of your business with solutions like chatbots, copilots, intelligent search, computer vision, and workflow automation.", icon: "/icons/AIML.svg", },];
 
     return (
         <section className="bg-white text-black py-16">

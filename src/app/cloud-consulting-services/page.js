@@ -531,11 +531,10 @@ export default function CloudConsulting() {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex-1 flex items-center justify-center text-center whitespace-normal break-words px-1 py-1.5 sm:px-2 md:px-8 md:py-2 rounded-lg text-[10px] leading-[1.1] sm:text-xs md:text-sm font-medium transition ${
-                  activeTab === index
+                className={`flex-1 flex items-center justify-center text-center whitespace-normal break-words px-1 py-1.5 sm:px-2 md:px-8 md:py-2 rounded-lg text-[10px] leading-[1.1] sm:text-xs md:text-sm font-medium transition ${activeTab === index
                     ? "bg-[#1C9ACF] text-white shadow"
                     : "text-gray-600 hover:bg-gray-100"
-                }`}>
+                  }`}>
                 {tab.title}
               </button>
             ))}
@@ -570,7 +569,7 @@ export default function CloudConsulting() {
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* LEFT CONTENT */}
               <div>
-                <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                   GET IN TOUCH
                 </h3>
 
