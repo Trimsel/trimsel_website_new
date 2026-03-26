@@ -30,8 +30,8 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
 
   const caseStudies = [
-    { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black", slug: "KarIoT", },
-    { img: "/Home/case-study-2.svg", btn: "bg-black text-white", slug: "Xaber", },
+    { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black", slug: "kariot-case-study", },
+    { img: "/Home/case-study-2.svg", btn: "bg-black text-white", slug: "xaber-case-study", },
     { img: "/Home/case-study-3.svg", btn: "bg-black text-white", slug: "Mocial", },
     { img: "/Home/case-study-4.svg", btn: "bg-black text-white", slug: "EzyHelpers", },
   ];
@@ -345,7 +345,7 @@ export default function Home() {
                     />
                   </div>
                   <Link
-                    href={`/case-study/${item.slug}`}
+                    href={`/portfolio/${item.slug}`}
                     className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}>
                     View Case Study
                     <Image
@@ -412,7 +412,7 @@ export default function Home() {
                     priority={i === 0}
                   />
                   <Link
-                    href={`/casestudy/${item.slug}`}
+                    href={`/portfolio/${item.slug}`}
                     className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}>
                     View Case Study
                     <Image

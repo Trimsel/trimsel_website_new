@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { projects } from "@/data/projects";
 import Header from "@/components/Header";
 import Clients from "@/components/Client";
@@ -36,11 +35,10 @@ export default function PortfolioPage() {
 
   const buttonStyle = (category) =>
     `px-6 py-2 rounded-lg border font-medium transition-all duration-300
-        ${
-          active === category
-            ? "bg-gradient-to-r from-[#1C76BD] to-[#02A89B] text-white border-none"
-            : "border-gray-300 text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:text-white"
-        }`;
+        ${active === category
+      ? "bg-gradient-to-r from-[#1C76BD] to-[#02A89B] text-white border-none"
+      : "border-gray-300 text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:text-white"
+    }`;
 
   return (
     <div>
@@ -48,27 +46,27 @@ export default function PortfolioPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] md:h-screen bg-[url('/portfolio.svg')] bg-cover bg-center flex items-center pt-24 md:pt-20">
-  <div className="w-full px-4 sm:px-6 md:pl-16 md:pr-0 pb-6 text-center md:text-left">
+        <div className="w-full px-4 sm:px-6 md:pl-16 md:pr-0 pb-6 text-center md:text-left">
 
-    <h1
-      className="text-black font-bold leading-tight
+          <h1
+            className="text-black font-bold leading-tight
       text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl
       max-w-4xl mx-auto md:mx-0"
-    >
-      We Create Successful Digital
-      <br />
-      Experiences, Turning Your Ideas Into
-      <br />
-      Great Applications.
-    </h1>
+          >
+            We Create Successful Digital
+            <br />
+            Experiences, Turning Your Ideas Into
+            <br />
+            Great Applications.
+          </h1>
 
-    <p className="mt-6 mx-auto md:mx-0 max-w-2xl text-black text-base sm:text-lg md:text-xl">
-      From innovative mobile apps to robust web platforms, we help
-      businesses turn ideas into exceptional digital products.
-    </p>
+          <p className="mt-6 mx-auto md:mx-0 max-w-2xl text-black text-base sm:text-lg md:text-xl">
+            From innovative mobile apps to robust web platforms, we help
+            businesses turn ideas into exceptional digital products.
+          </p>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* Filter Section */}
       <section className="py-20">
@@ -92,9 +90,8 @@ export default function PortfolioPage() {
                 key={project.id}
                 className="bg-white rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)] transition-all duration-300 p-8 md:p-12">
                 <div
-                  className={`flex flex-col md:flex-row items-center gap-12 ${
-                    index % 2 === 1 ? "md:flex-row-reverse" : ""
-                  }`}>
+                  className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
+                    }`}>
                   {/* Content */}
                   <div className="flex-1">
                     {/* Categories */}
@@ -122,7 +119,7 @@ export default function PortfolioPage() {
                     </p>
 
                     <Link
-                      href="/"
+                      href={`/portfolio/${project.slug}`}
                       className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-[#1C76BD] to-[#02A89B] text-white font-medium hover:opacity-90 transition duration-300">
                       View Case Study
                     </Link>

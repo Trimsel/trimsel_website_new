@@ -313,3 +313,7 @@ p {
 .clip-cut {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
 }
+
+.clip-slant {
+    clip-path: polygon(30% 0%, 100% 0%, 100% 70%);
+}

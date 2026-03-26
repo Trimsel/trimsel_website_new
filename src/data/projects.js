@@ -2,6 +2,7 @@ export const projects = [
     {
         id: 1,
         title: "Ezyhelpers",
+        slug: "ezyhelpers-case-study",
         subtitle: "Home Service & House Work App",
         description:
             "Ezyhelpers is a seamless mobile and web platform connecting users with trusted home service professionals. Whether you need cleaning, elder care, cooking, plumbing, or other daily assistance, Ezyhelpers makes it easy to book reliable help—right from your phone.",
@@ -11,6 +12,7 @@ export const projects = [
     {
         id: 2,
         title: "KarIOT",
+        slug: "kariot-case-study",
         subtitle: "We aim to build a better world where clean water is accessible",
         description:
             "KarIOT is a smart water management system leveraging IoT technology to monitor, optimize, and automate water usage in high-rise buildings, commercial properties, and hotels. The platform enables real-time data collection, leak detection, and predictive maintenance, helping organizations conserve water, reduce costs, and achieve sustainability goals.",
@@ -20,6 +22,7 @@ export const projects = [
     {
         id: 3,
         title: "Xaber",
+        slug: "xaber-case-study",
         subtitle: "Taxi Business With Our Uber Clone Software",
         description:
             "Xaber is a robust ride-hailing app solution inspired by the Uber model, designed for startups and taxi businesses to launch their own branded service. The platform supports real-time bookings, driver tracking, fare calculation, and seamless payment integration—delivering a convenient and scalable experience for both riders and drivers.",
@@ -29,6 +32,7 @@ export const projects = [
     {
         id: 4,
         title: "Mocial",
+        slug: "mocial-case-study",
         subtitle: "DevOps & Cloud Transformation for a Next-Gen Social Platform",
         description:
             "Mocial is an ambitious all-in-one social super app, bringing together streaming, networking, and sharing into one unified experience. While the platform was developed by another team, the Mocial leadership engaged Trimsel to overcome major stability and scalability challenges that hindered user growth and reliability.",
