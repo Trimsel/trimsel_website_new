@@ -7,6 +7,8 @@ import StatsSection from "@/components/StatsSection";
 import CaseStudyHero from "@/components/CaseStudyHero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
+import CTASection from "@/components/CTA";
+import CaseStudiesSection from "@/components/relatedcasestudy";
 
 
 
@@ -98,7 +100,7 @@ export default function XaberCaseStudy() {
                     description2="If you are an entrepreneur or business owner and wish to start your ride-hailing business online, we provide a white label Uber clone app solution for any range of businesses."
 
                     bgColor="#F9FAFB"
-                    cardBg="#FFF9DC"
+                    cardBg="#FFF3B0"
                     buttonBg="#F59E0B"
                     lineColor="#F59E0B"
 
@@ -154,6 +156,40 @@ export default function XaberCaseStudy() {
                     bgColor="#E6CF85"
                     image="/xaber-solution.svg"
                     imageClass="md:w-[400px] lg:w-[500px] xl:w-[600px]"
+                />
+            </section>
+
+
+            <section>
+                <CTASection
+                    title="Launch your food delivery business in days"
+                    subtitle="START YOUR BUSINESS"
+                    bgGradient="from-yellow-400 to-orange-500"
+                    image="/.svg"
+                />
+            </section>
+
+
+            <section>
+                <CaseStudiesSection
+                    tag="RELATED CASE STUDIES"
+                    heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
+                    studies={[
+                        {
+                            title: "EzyHelpers",
+                            description:
+                                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+                            image: "/images/ezyhelpers.png",
+                            link: "/case-study/ezyhelpers",
+                        },
+                        {
+                            title: "KarIOT",
+                            description:
+                                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+                            image: "/images/kariot.png",
+                            link: "/case-study/kariot",
+                        },
+                    ]}
                 />
             </section>
 

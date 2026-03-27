@@ -57,9 +57,9 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     className="cursor-pointer"
                                 >
-                                    21B 5th Cross Street, South Phase Thiru VI <br />
-                                    KA Industrial Estate, Guindy, Chennai, <br />
-                                    Tamil Nadu - 600032.
+                                    No.21-B 5th Cross Street, South Phase Thiru VI <br />
+                                    KA Industrial Estate, Indira Nagar, Guindy, <br />
+                                    Chennai, Tamil Nadu - 600032.
                                 </a>
                             </div>
 
@@ -84,8 +84,8 @@ export default function Footer() {
                                     className="cursor-pointer"
                                 >
                                     1st Floor, Crystal Plaza State Bank, 138/2, <br />
-                                    NGO B Colony, New Colony, Tirunelveli, <br />
-                                    Tamil Nadu - 627007.
+                                    NGO B Colony, New Colony, <br />
+                                    Tirunelveli, Tamil Nadu - 627007.
                                 </a>
                             </div>
                         </div>
@@ -120,16 +120,16 @@ export default function Footer() {
 
                     {/* Mobile/Tablet Image */}
                     {/* Mobile/Tablet Image */}
-{/* Mobile/Tablet Image */}
-<div className="flex justify-center lg:hidden mt-6 -mb-10 overflow-hidden">
-    <Image
-        src="/temple.svg"
-        alt="Temple illustration"
-        width={520}
-        height={480}
-        className="h-auto w-full max-w-lg"
-    />
-</div>
+                    {/* Mobile/Tablet Image */}
+                    <div className="flex justify-center lg:hidden mt-6 -mb-10 overflow-hidden">
+                        <Image
+                            src="/temple.svg"
+                            alt="Temple illustration"
+                            width={520}
+                            height={480}
+                            className="h-auto w-full max-w-lg"
+                        />
+                    </div>
                 </div>
             </div>
 
