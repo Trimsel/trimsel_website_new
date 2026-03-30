@@ -242,8 +242,8 @@ export default function DevOpsConsulting() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#003b5c_0%,_transparent_30%)]"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#003b5c_0%,_transparent_30%)]"></div>
 
-                <div className="container mx-auto mt-14 px-4 py-8 text-white sm:py-12">
-                    <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-8">
+                <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 text-white sm:py-12">
+                    <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
 
                         {/* LEFT CONTENT */}
                         <div className="relative z-20 text-center md:text-left">
@@ -557,11 +557,11 @@ export default function DevOpsConsulting() {
 
 
 {/* Getintouch */}
-<section className="bg-white py-20">
+<section className="bg-white py-12 md:py-20">
   <div className="flex justify-center px-4 sm:px-6">
   <div className="relative w-full max-w-6xl rounded-xl bg-[#552A8B] shadow-lg flex flex-col md:flex-row items-center justify-between overflow-hidden">
       {/* LEFT CONTENT */}
-      <div className="relative z-10 px-8 py-10 sm:px-12 sm:py-12 w-full md:w-[55%] lg:w-1/2 text-left">
+      <div className="relative z-10 px-8 py-10 sm:px-12 md:py-16 w-full md:w-[60%] lg:w-1/2 text-left">
         <h3 className="text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-3xl lg:text-4xl">
           GET IN TOUCH
         </h3>
@@ -586,13 +586,13 @@ export default function DevOpsConsulting() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="relative w-full md:w-[45%] lg:w-1/2 flex justify-center md:justify-end items-end self-stretch px-6 pt-4 min-h-[250px] md:min-h-[auto]">
+      <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
         <Image
           src="/Devops-getintouch.svg"
           alt="Devops-get-in-touch"
           width={700}
           height={700}
-          className="w-[85%] sm:w-[60%] md:w-[95%] lg:max-w-md h-auto object-contain translate-y-[5%]"
+          className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
         />
       </div>
     </div>

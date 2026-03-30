@@ -3,12 +3,12 @@
 import ServiceCard from "../data/Servicecard";
 
 export default function Whatwedo() {
-    const services = [{ title: "Mobile App Development", description: "As a top mobile app development company in Chennai, we deliver custom Android, iOS & cross-platform solutions with exceptional UX, performance, and scalability.", icon: "/icons/Mobileapp.svg", },
-    { title: "Web Application Development", description: "We’re a leading website development company in Chennai building fast, SEO-friendly websites and enterprise-grade web applications that scale with your business.", icon: "/icons/Website.svg", },
-    { title: "Cloud Computing ", description: "Our cloud consulting experts help you migrate, modernize, and optimize with AWS, Azure, and GCP for scalable and cost-effective cloud infrastructure.", icon: "/icons/Cloudcomputing.svg", },
-    { title: "DevOps Consulting Services", description: "Our DevOps services in India bring automation, CI/CD, and container orchestration (Kubernetes, Docker) to boost development speed and infrastructure reliability.", icon: "/icons/devops.svg", },
-    { title: "Digital Marketing", description: "As a performance-driven digital marketing agency in Chennai, we offer SEO, PPC, social ads & content strategies to help you grow visibility and leads.", icon: "/icons/digitalmarketing.svg", },
-    { title: "AI Development", description: "Bring AI to the heart of your business with solutions like chatbots, copilots, intelligent search, computer vision, and workflow automation.", icon: "/icons/AIML.svg", },];
+    const services = [{ title: "Mobile App Development", description: "As a top mobile app development company in Chennai, we deliver custom Android, iOS & cross-platform solutions with exceptional UX, performance, and scalability.", icon: "/icons/Mobileapp.svg", href: "/mobile-app-development-chennai", },
+    { title: "Web Application Development", description: "We’re a leading website development company in Chennai building fast, SEO-friendly websites and enterprise-grade web applications that scale with your business.", icon: "/icons/Website.svg", href: "/web-development-company-chennai", },
+    { title: "Cloud Computing ", description: "Our cloud consulting experts help you migrate, modernize, and optimize with AWS, Azure, and GCP for scalable and cost-effective cloud infrastructure.", icon: "/icons/Cloudcomputing.svg", href: "/cloud-consulting-services", },
+    { title: "DevOps Consulting Services", description: "Our DevOps services in India bring automation, CI/CD, and container orchestration (Kubernetes, Docker) to boost development speed and infrastructure reliability.", icon: "/icons/devops.svg", href: "/devops-consulting-services", },
+    { title: "Digital Marketing", description: "As a performance-driven digital marketing agency in Chennai, we offer SEO, PPC, social ads & content strategies to help you grow visibility and leads.", icon: "/icons/digitalmarketing.svg", href: "/digital-marketing-company-chennai", },
+    { title: "AI Development", description: "Bring AI to the heart of your business with solutions like chatbots, copilots, intelligent search, computer vision, and workflow automation.", icon: "/icons/AIML.svg", href: "/ai-development-company" },];
 
     return (
         <section className="bg-white text-black py-16">
@@ -31,6 +31,7 @@ export default function Whatwedo() {
                             icon={service.icon}
                             title={service.title}
                             description={service.description}
+                            href={service.href}
                         />
                     ))}
                 </div>

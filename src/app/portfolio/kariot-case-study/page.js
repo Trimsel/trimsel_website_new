@@ -18,19 +18,19 @@ export default function XaberCaseStudy() {
             <Header transparent />
 
             {/* Hero Section */}
-            <section className="w-full relative overflow-hidden bg-gradient-to-br from-[#FFDA5A] to-[#FFCA71]">
+            <section className="w-full relative overflow-hidden bg-gradient-to-br from-[#8FD9F8] to-[#4DA3F5]">
                 {/* CONTAINER */}
-                <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+                <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
 
                     {/* LEFT CONTENT */}
                     <div className="z-10 mt-8">
                         <p className="text-sm md:text-base font-medium text-black/70 mb-6">
-                            Home • Portfolio • <span className="text-blue-600 font-medium">Xaber</span>
+                            Home • Portfolio • <span className="text-blue-600 font-medium">KarIoT</span>
                         </p>
 
                         <div className="mb-6 w-[120px] h-[40px] relative">
                             <Image
-                                src="/icons/Xaberlogo.svg"
+                                src="/icons/KarIoTlogo.svg"
                                 alt="xaber logo"
                                 fill
                                 className="object-contain"
@@ -49,12 +49,16 @@ export default function XaberCaseStudy() {
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
-                            Uber Clone: Online Taxi-Booking For Your Business Success
+                            KarIot is a IoT Enabled Smart Water Management System
                         </h1>
 
+                        <p className="mt-6 mx-auto md:mx-0 max-w-2xl text-black text-base sm:text-lg md:text-xl">
+                            KarIoT is a technology that automates water management systems with the help of IoT solutions. It allows the customers to analyze their water consumption towards preserving and reducing the water leakage.
+                        </p>
+
                         <Link
-                            href="#"
-                            className="inline-flex items-center gap-2 bg-[#F59E0B] hover:bg-[#e58c06] text-white px-6 py-3 rounded-lg font-medium transition"
+                            href="/contactus"
+                            className="inline-flex items-center gap-2 bg-[#016DEC] hover:bg-[#016DEC] text-white px-6 py-3 rounded-lg font-medium transition mt-8"
                         >
                             Get Started Today
                             <Image
@@ -66,30 +70,18 @@ export default function XaberCaseStudy() {
                         </Link>
                     </div>
 
-                </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] mt-8 md:mt-0">
+                        <Image
+                            src="/KarIoTHero.svg"
+                            alt="EzyHelpers App"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                    </div>
 
-                {/* RIGHT IMAGE - MOBILE ONLY (EDGE TO EDGE) */}
-                <div className="block md:hidden relative w-full h-[350px] sm:h-[450px]">
-                    <Image
-                        src="/XaberHero.svg"
-                        alt="Xaber App on Phones"
-                        fill
-                        className="object-contain object-bottom"
-                        priority
-                    />
                 </div>
-
-                {/* RIGHT IMAGE - DESKTOP ONLY (EDGE TO EDGE) */}
-                <div className="hidden md:absolute md:block bottom-0 right-0 w-[55%] h-full">
-                    <Image
-                        src="/XaberHero.svg"
-                        alt="phones"
-                        fill
-                        className="object-contain object-right-bottom"
-                        priority
-                    />
-                </div>
-
             </section>
 
             <section>
@@ -100,9 +92,9 @@ export default function XaberCaseStudy() {
                     description2="If you are an entrepreneur or business owner and wish to start your ride-hailing business online, we provide a white label Uber clone app solution for any range of businesses."
 
                     bgColor="#F9FAFB"
-                    cardBg="#FFF9DC"
-                    buttonBg="#F59E0B"
-                    lineColor="#F59E0B"
+                    cardBg="#8FD9F8"
+                    buttonBg="#016DEC"
+                    lineColor="#016DEC"
 
                     details={[
                         { label: "Client", value: "Xaber – Uber Clone" },
@@ -115,23 +107,23 @@ export default function XaberCaseStudy() {
 
             <section>
                 <StatsSection
-                    variant="gold"
+                    variant="blue"
                     stats={[
                         { value: "3.6K+", label: "Downloads" },
                         { value: "1.2K+", label: "Active Users" },
                         { value: "590+", label: "Request A Ride" },
                     ]}
-                    image="/xaber-combinedimg.svg"
+                    image="/KarIoTstats.svg"
                 />
             </section>
 
             <section className="mt-10">
                 <CaseStudyHero
                     tag="THE CHALLENGE"
-                    title="Xaber – Uber Clone App That Automates and Drives Growth for Businesses"
+                    title="Water management is no longer a problem."
                     description="If you want to take your taxi business digital, go for Uber like app development by partnering with us. We have integrated the top features and user experiences from every successful taxi booking app in the market. Our expert team of developers will customize and follow a proven Uber clone app development process. This will let you differentiate it from the competition while keeping it easy to use for your customers and unique to you to ensure success for your business."
-                    image="/xaber-challenge.svg"
-                    bgColor="#E6C57E"
+                    image="/KarIoTChallenge.svg"
+                    bgColor="#FFFFF"
                 />
             </section>
 
@@ -147,14 +139,14 @@ export default function XaberCaseStudy() {
             </section>
 
 
-            <section className="bg-[#E6CF85]">
+            <section className="bg-[#F5F5F5]">
                 <SolutionSection
                     tag="THE SOLUTION"
                     title="Uber Clone For Your Ride-Hailing Business Success"
                     description="If you want to take your taxi business digital, go for Uber like app development by partnering with us. We have integrated the top features and user experiences from every successful taxi booking app in the market. Our expert team of developers 
                     will customize and follow a proven Uber clone app development process. This will let you differentiate it from the competition while keeping it easy to use for your customers and unique to you to ensure success for your business."
                     bgColor="#E6CF85"
-                    image="/xaber-solution.svg"
+                    image="/KarIoTsolution.svg"
                     imageClass="md:w-[400px] lg:w-[500px] xl:w-[600px]"
                 />
             </section>

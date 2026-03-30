@@ -198,7 +198,7 @@ export default function WebDevelopment() {
 
       <section className="relative overflow-hidden bg-[#E4F3FF]">
         {/* Content */}
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-28 pb-16 sm:px-6 sm:pt-28 lg:grid-cols-2 lg:items-start lg:px-8 lg:pt-32">
+        <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-20 pb-16 sm:px-6 sm:pt-20 lg:grid-cols-2 lg:items-start lg:px-12 lg:pt-24">
 
           {/* LEFT CONTENT */}
           <div className="flex flex-col items-start">

@@ -65,8 +65,8 @@ export default function Home() {
       prev === caseStudies.length - 1 ? 0 : prev + 1
     );
 
-  // ✅ prevent hydration mismatch
-  if (!mounted) return null;
+  // ✅ remove the full-page hydration guard that causes a blank screen flash
+  // if (!mounted) return null;
 
   const cards = [
     {
@@ -116,8 +116,8 @@ export default function Home() {
       <Header />
 
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
-        <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-28 sm:px-6 md:pt-24">
-          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-12">
+        <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-16 sm:px-6 md:pt-16 lg:pt-20">
+          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             <div className="relative z-20 mt-6 text-center md:mt-0 md:text-left">
               <h1 className="mb-8 text-3xl font-bold leading-tight sm:text-5xl">
                 Smarter Logistics,
@@ -125,6 +125,7 @@ export default function Home() {
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
                   <span>Powered by</span>
                   <span
+                    suppressHydrationWarning
                     className={`inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl ${fade ? "animate-rotate-word" : ""}`}>
                     {HERO_WORDS[index]}
                   </span>
@@ -257,12 +258,11 @@ export default function Home() {
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-10 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              {/* LEFT CONTENT */}
-              <div>
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+            {/* LEFT CONTENT */}
+            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
                 <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                   GET IN TOUCH
                 </h3>
@@ -290,16 +290,15 @@ export default function Home() {
               </div>
 
               {/* RIGHT IMAGE */}
-              <div className="relative flex justify-center md:justify-end">
+              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
                 <Image
                   src="/Home/getintouch.svg"
                   alt="Contact illustration"
                   width={700}
                   height={700}
-                  className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
+                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
                 />
               </div>
-            </div>
           </div>
         </div>
       </section>

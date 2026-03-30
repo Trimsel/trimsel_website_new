@@ -334,9 +334,12 @@ export default function CloudConsulting() {
                     </text>
                   </svg>
                   {/* Center Button */}
-                  <button className="absolute inset-0 m-auto w-16 h-16 bg-blue-500 hover:bg-blue-600 transition-colors rounded-full flex items-center justify-center text-white text-xs font-semibold text-center leading-tight shadow-md">
+                  <Link
+                    href="/contact"
+                    className="absolute inset-0 m-auto w-16 h-16 bg-blue-500 hover:bg-blue-600 transition-colors rounded-full flex items-center justify-center text-white text-xs font-semibold text-center leading-tight shadow-md"
+                  >
                     Let&apos;s talk
-                  </button>
+                  </Link>
                 </div>
 
                 {/* Cloud + Person image placeholder */}
@@ -532,8 +535,8 @@ export default function CloudConsulting() {
                 key={index}
                 onClick={() => setActiveTab(index)}
                 className={`flex-1 flex items-center justify-center text-center whitespace-normal break-words px-1 py-1.5 sm:px-2 md:px-8 md:py-2 rounded-lg text-[10px] leading-[1.1] sm:text-xs md:text-sm font-medium transition ${activeTab === index
-                    ? "bg-[#1C9ACF] text-white shadow"
-                    : "text-gray-600 hover:bg-gray-100"
+                  ? "bg-[#1C9ACF] text-white shadow"
+                  : "text-gray-600 hover:bg-gray-100"
                   }`}>
                 {tab.title}
               </button>
@@ -561,9 +564,9 @@ export default function CloudConsulting() {
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[url('/getintouch2.svg')] bg-cover bg-center bg-no-repeat px-5 py-8 shadow-md sm:px-8 sm:py-10">
+          <div className="relative w-full max-w-6xl rounded-xl bg-[url('/getintouch2.svg')] bg-cover bg-center bg-no-repeat px-6 py-10 sm:px-12 md:py-16 shadow-md">
             <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
 
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

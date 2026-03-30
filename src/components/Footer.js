@@ -148,7 +148,7 @@ export default function Footer() {
                                 className="h-16 w-auto"
                             />
 
-                            <p className="max-w-xs text-md text-white/80 leading-relaxed">
+                            <p className="max-w-xs text-md font-medium text-white/100 leading-relaxed">
                                 At Trimsel, we focus on providing digital solutions built with cutting-edge technology, so our clients are always ahead of the curve.
                             </p>
 

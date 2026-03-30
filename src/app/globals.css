@@ -293,15 +293,6 @@ p {
     clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
 }
 
-/* Large cut (used in outer container) */
-.clip-cut-lg {
-    clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%);
-}
-
-.clip-cut {
-    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
-}
-
 .clip-cut-section {
     clip-path: polygon(0 0,
             calc(100% - 80px) 0,

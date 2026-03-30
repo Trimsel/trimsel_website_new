@@ -98,8 +98,8 @@ export default function aboutus() {
             <section className="w-full relative">
 
                 {/* TOP SECTION */}
-                <div className="bg-gradient-to-r from-[#dbeafe] via-[#e0f2fe] to-[#fef3c7] px-6 py-12">
-                    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center mt-20 lg:ml-4">
+                <div className="relative bg-gradient-to-r from-[#dbeafe] via-[#e0f2fe] to-[#fef3c7] px-6 py-12">
+                    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center mt-10 md:mt-12 md:px-12 lg:px-20">
 
                         <div>
                             <h1 className="text-5xl font-bold text-gray-800 leading-tight">
@@ -127,17 +127,40 @@ export default function aboutus() {
                         </div>
 
                     </div>
-                </div>
 
-                {/* FLOATING BUTTON (MAIN FIX) */}
-                <div className="absolute right-4 md:right-8 top-[38%] md:top-[25%] z-20 w-24 h-24 md:w-40 md:h-40">
-                    <Image
-                        src="/Discuss-your-project-idea1.svg"
-                        alt="Discuss project"
-                        width={80}
-                        height={80}
-                        className="w-full h-full object-contain"
-                    />
+                    {/* Let's Talk BUTTON — straddles content/image boundary */}
+                    <div className="hidden sm:block absolute right-4 bottom-0 translate-y-1/2 z-10 w-44 h-44">
+                        <svg
+                            viewBox="0 0 160 160"
+                            className="w-full h-full animate-spin"
+                            style={{ animationDuration: "12s" }}
+                        >
+                            <defs>
+                                <path
+                                    id="circle"
+                                    d="M 80,80 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
+                                />
+                            </defs>
+                            <text
+                                fontSize="11.5"
+                                fill="#9CA3AF"
+                                letterSpacing="2.5"
+                                fontFamily="sans-serif"
+                            >
+                                <textPath href="#circle">
+                                    . Discuss your project idea . Discuss your project idea
+                                </textPath>
+                            </text>
+                        </svg>
+
+                        {/* Center Link Button */}
+                        <Link
+                            href="/contact"
+                            className="absolute inset-0 m-auto w-16 h-16 bg-blue-500 hover:bg-blue-600 transition-colors rounded-full flex items-center justify-center text-white text-xs font-semibold text-center leading-tight shadow-md"
+                        >
+                            Let&apos;s talk
+                        </Link>
+                    </div>
                 </div>
 
                 {/* IMAGE SECTION */}
@@ -396,130 +419,12 @@ export default function aboutus() {
             <Whatwedo />
 
 
-            <section className="bg-[#f5f7fb] py-16 px-4">
-                <div className="max-w-7xl mx-auto">
-
-                    {/* TOP GRID */}
-                    <div className="grid md:grid-cols-2 gap-10 items-center">
-
-                        {/* LEFT CONTENT */}
-                        <div className="md:ml-6">
-                            {/* BADGE */}
-                            <h3 className="mb-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                                PAYMENT MILESTONES
-                            </h3>
-
-                            {/* HEADING */}
-                            <h2 className="mb-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                                What are the payment milestones in the plan?
-                            </h2>
-
-                            {/* DESCRIPTION */}
-                            <p className="mt-4 max-w-5xl mx-auto text-black font-medium">
-                                We have designed the most flexible payment methods so that you feel
-                                safe and secure while we ensure the value we provide during each
-                                release meets your expectation. The payment is equally divided into
-                                five milestones where you are requested to pay 20% during each
-                                milestone.
-                                <br /><br />
-                                This ensures that you feel confident and pay as you go. Currently,
-                                we don’t accept revenue sharing or equity-based payment since we
-                                might not understand the industry insights. We ensure you get great
-                                value and a world-class product worth the amount you pay.
-                            </p>
-                        </div>
-
-                        {/* RIGHT VIDEO CARD */}
-                        <div className="relative md:-ml-6">
-                            {/* VIDEO CARD */}
-                            <div className="mt-12">
-                                <Image
-                                    src="/payment-milestone.svg"
-                                    alt="payment"
-                                    width={500}
-                                    height={800}
-                                    className="w-full h-auto object-contain"
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* TIMELINE */}
-                    <div className="mt-8 relative">
-
-                        {/* FULL DOTTED LINE */}
-                        <div className="hidden md:block absolute top-7 left-0 right-0 mx-[8%] border-t-2 border-dashed border-gray-300"></div>
-
-                        {/* ARROWS (BETWEEN ITEMS) */}
-                        <div className="hidden md:block absolute top-7 left-0 w-full pointer-events-none">
-                            <div className="relative w-full h-full">
-
-                                {/* 4 arrows between 5 items */}
-                                {[1, 2, 3, 4].map((pos) => (
-                                    <Image
-                                        key={pos}
-                                        src="/icons/payment-arrow.svg"
-                                        alt="arrow"
-                                        width={18}
-                                        height={18}
-                                        className="absolute -translate-x-1/2 -translate-y-1/2"
-                                        style={{
-                                            left: `${(pos * 100) / 5}%`, // perfectly between items
-                                            top: "50%",
-                                        }}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* STEPS */}
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 relative">
-
-                            {milestones.map((item, i) => (
-                                <div key={i} className="flex flex-col items-center text-center">
-
-                                    {/* ICON */}
-                                    <div className="relative z-10">
-                                        <div className={`absolute inset-0 ${item.color} blur-md opacity-40 rounded-full`} />
-
-                                        <div className={`relative w-14 h-14 ${item.color} rounded-full flex items-center justify-center shadow-md`}>
-                                            <Image
-                                                src={item.icon}
-                                                alt={item.title}
-                                                width={22}
-                                                height={22}
-                                                className="object-contain"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    {/* TITLE */}
-                                    <p className="mt-4 text-lg font-semibold text-gray-800">
-                                        {item.title}
-                                    </p>
-
-                                    {/* SUBTEXT */}
-                                    <p className="text-md font-medium text-gray-600">
-                                        {item.percent}
-                                    </p>
-
-                                </div>
-                            ))}
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-
             {/* Getintouch */}
-            <section className="bg-white py-24">
+            <section className="bg-white py-12 md:py-20">
                 <div className="flex justify-center px-4 sm:px-6">
-                    <div className="relative w-full max-w-6xl rounded-xl bg-[#DEFFCE] px-5 py-8 shadow-md sm:px-8 sm:py-10">
-                        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                            {/* LEFT CONTENT */}
-                            <div>
+                    <div className="relative w-full max-w-6xl rounded-xl bg-[#DEFFCE] px-6 py-10 sm:px-12 md:py-16 shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+                        {/* LEFT CONTENT */}
+                        <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
                                 <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                                     GET IN TOUCH
                                 </h3>
@@ -542,16 +447,15 @@ export default function aboutus() {
                             </div>
 
                             {/* RIGHT IMAGE */}
-                            <div className="relative flex justify-center md:justify-end">
+                            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
                                 <Image
                                     src="/aboutus-getintouch.svg"
                                     alt="Contact illustration"
                                     width={700}
                                     height={700}
-                                    className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
+                                    className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
                                 />
                             </div>
-                        </div>
                     </div>
                 </div>
             </section>

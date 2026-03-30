@@ -45,8 +45,8 @@ export default function PortfolioPage() {
       <Header transparent />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:h-screen bg-[url('/portfolio.svg')] bg-cover bg-center flex items-center pt-24 md:pt-20">
-        <div className="w-full px-4 sm:px-6 md:pl-16 md:pr-0 pb-6 text-center md:text-left">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:h-screen bg-[url('/portfolio.svg')] bg-cover bg-center flex items-center pt-24 md:pt-12">
+        <div className="w-full px-4 sm:px-6 md:pl-24 md:pr-24 pb-6 text-center md:text-left">
 
           <h1
             className="text-black font-bold leading-tight
@@ -143,11 +143,11 @@ export default function PortfolioPage() {
       </section>
 
       {/* Get in Touch */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 pt-6 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-5 py-8 shadow-md sm:px-8 sm:py-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div>
+          <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-6 py-10 sm:px-12 md:py-16 shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+            {/* LEFT CONTENT */}
+            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
                 <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
                   GET IN TOUCH
                 </h3>
@@ -168,16 +168,16 @@ export default function PortfolioPage() {
                 </Link>
               </div>
 
-              <div className="relative flex justify-center md:justify-end">
+              {/* RIGHT IMAGE */}
+              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
                 <Image
                   src="/getintouch1.svg"
                   alt="Contact illustration"
                   width={700}
                   height={700}
-                  className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
+                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
                 />
               </div>
-            </div>
           </div>
         </div>
       </section>

@@ -202,8 +202,8 @@ export default function MobileAppDevelopment() {
       <Header />
 
       <section className="bg-gradient-to-b from-white via-slate-50 to-white">
-        <div className="container mx-auto mt-16 px-4 py-8 sm:py-12">
-          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
+        <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 sm:py-12">
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center md:text-left">
               <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
@@ -665,10 +665,9 @@ C270 520 430 520 430 432
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-10 rounded-xl bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC] shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC] shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
               {/* LEFT CONTENT */}
               <div>
                 <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -698,16 +697,15 @@ C270 520 430 520 430 432
               </div>
 
               {/* RIGHT IMAGE */}
-              <div className="relative flex justify-center md:justify-end">
+              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
                 <Image
                   src="/getintouchmobile.svg"
                   alt="Contact illustration"
                   width={700}
                   height={700}
-                  className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]"
+                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
                 />
               </div>
-            </div>
           </div>
         </div>
       </section>

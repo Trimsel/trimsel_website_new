@@ -61,8 +61,8 @@ export default function Digitalmarketing() {
       <Header />
 
       <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-20">
-        <div className="container mx-auto mt-14 px-4 py-8 sm:py-12">
-          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-8">
+        <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 sm:py-12">
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center text-black md:text-left">
               <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
@@ -241,7 +241,12 @@ export default function Digitalmarketing() {
               {services.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white p-5 rounded-xl shadow-sm clip-cut transition hover:shadow-md">
+                  className="bg-white p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300"
+                  style={{
+                    clipPath: "polygon(0 0, 85% 0, 100% 20%, 100% 100%, 0 100%)",
+                    borderRadius: "16px",
+                  }}
+                >
                   {/* Icon */}
                   <div className="mb-3">
                     <Image
@@ -278,18 +283,18 @@ export default function Digitalmarketing() {
       </section>
 
       <section className="bg-white py-16 px-4 md:px-12">
-      <div>
-      {/* Badge */}
-      <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-              WHY MINITZON
-            </h3>
+        <div>
+          {/* Badge */}
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            WHY MINITZON
+          </h3>
 
-            {/* Heading */}
-            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-              Here&#39;s Why Minitzon Is The Best Digital Marketing Agency In
-              Chennai, India
-            </h2>
-</div>
+          {/* Heading */}
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            Here&#39;s Why Minitzon Is The Best Digital Marketing Agency In
+            Chennai, India
+          </h2>
+        </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* LEFT CONTENT */}
           <div>
@@ -327,141 +332,141 @@ export default function Digitalmarketing() {
             </div>
 
             {/* Vertical Line */}
-          <div className="flex flex-col items-center mt-16 ml-0 md:ml-20">
+            <div className="flex flex-col items-center mt-16 ml-0 md:ml-20">
 
-  {/* ITEM 1 */}
-  <div className="relative flex items-center justify-center h-16">
-    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-cyan-500 shadow-md z-20">
-      <Image src="/icons/result.svg" alt="" width={28} height={28} />
-    </div>
-    <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-cyan-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
-      ROI Focused
-    </div>
-  </div>
+              {/* ITEM 1 */}
+              <div className="relative flex items-center justify-center h-16">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-cyan-500 shadow-md z-20">
+                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                </div>
+                <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-cyan-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
+                  ROI Focused
+                </div>
+              </div>
 
-  {/* ITEM 2 */}
-  <div className="relative flex items-center justify-center h-16">
-    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-indigo-500 shadow-md z-20">
-      <Image src="/icons/result.svg" alt="" width={28} height={28} />
-    </div>
-    <div className="absolute left-full translate-x-0 md:-translate-x-[6px] bg-indigo-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
-      Data Driven
-    </div>
-  </div>
+              {/* ITEM 2 */}
+              <div className="relative flex items-center justify-center h-16">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-indigo-500 shadow-md z-20">
+                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                </div>
+                <div className="absolute left-full translate-x-0 md:-translate-x-[6px] bg-indigo-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
+                  Data Driven
+                </div>
+              </div>
 
-  {/* ITEM 3 */}
-  <div className="relative flex items-center justify-center h-16">
-    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-purple-500 shadow-md z-20">
-      <Image src="/icons/result.svg" alt="" width={28} height={28} />
-    </div>
-    <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-purple-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
-      Creativity And Innovation
-    </div>
-  </div>
+              {/* ITEM 3 */}
+              <div className="relative flex items-center justify-center h-16">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-purple-500 shadow-md z-20">
+                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                </div>
+                <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-purple-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
+                  Creativity And Innovation
+                </div>
+              </div>
 
-  {/* ITEM 4 */}
-  <div className="relative flex items-center justify-center h-16">
-    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-pink-500 shadow-md z-20">
-      <Image src="/icons/result.svg" alt="" width={28} height={28} />
-    </div>
-    <div className="absolute left-full translate-x-0 md:-translate-x-[6px] bg-pink-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
-      360° Digital Marketing
-    </div>
-  </div>
+              {/* ITEM 4 */}
+              <div className="relative flex items-center justify-center h-16">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-pink-500 shadow-md z-20">
+                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                </div>
+                <div className="absolute left-full translate-x-0 md:-translate-x-[6px] bg-pink-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
+                  360° Digital Marketing
+                </div>
+              </div>
 
-  {/* ITEM 5 */}
-  <div className="relative flex items-center justify-center h-16">
-    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-red-500 shadow-md z-20">
-      <Image src="/icons/result.svg" alt="" width={28} height={28} />
-    </div>
-    <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-red-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
-      Result Oriented
-    </div>
-  </div>
+              {/* ITEM 5 */}
+              <div className="relative flex items-center justify-center h-16">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-red-500 shadow-md z-20">
+                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                </div>
+                <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-red-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
+                  Result Oriented
+                </div>
+              </div>
 
-</div>
+            </div>
           </div>
         </div>
       </section>
 
 
       <section className="px-4 md:px-10 py-16 bg-white">
-      <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
 
-        {/* LEFT SIDE */}
-        <div>
-          <h2 className="text-2xl md:text-4xl font-semibold text-[#1f2a37] leading-snug">
-            It's Time to Leverage <br />
-            Our Digital Marketing <br />
-            Services in Chennai to <br />
-            Fuel Your Business <br />
-            Growth.
-          </h2>
+          {/* LEFT SIDE */}
+          <div>
+            <h2 className="text-2xl md:text-4xl font-semibold text-[#1f2a37] leading-snug">
+              It's Time to Leverage
+              Our Digital Marketing
+              Services in Chennai to
+              Fuel Your Business
+              Growth.
+            </h2>
 
-          <Link
-  href="/"
-  className="inline-flex items-center gap-2 mt-6 bg-[#1ea7d7] hover:bg-[#1696c4] text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
->
-            Find Out More
-            <Image
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 mt-6 bg-[#1ea7d7] hover:bg-[#1696c4] text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+            >
+              Find Out More
+              <Image
                 src="/Home/right-arrow.svg"
                 alt="arrow"
                 width={16}
                 height={16}
               />
-          </Link>
+            </Link>
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="text-[#4b5563] text-md font-medium leading-relaxed space-y-4">
+
+            <p>
+              At some point in their business, every entrepreneur or CEO contemplates
+              the need for a digital marketing agency in India. Here are some quick
+              questions to help you decide if your business requires a digital marketing
+              company in India to expand your business -
+            </p>
+
+            <ul className="space-y-3">
+              {[
+                "Are you unsure how to leverage technology and digital media for your business?",
+                "Are you facing a marketing slowdown?",
+                "Are you unable to manage leads and establish a proper sales funnel?",
+                "Are you facing a decrease in business enquiries?",
+                "Are you falling short of time to concentrate on marketing?"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+
+                  {/* Green Tick */}
+                  <span className="mt-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center text-white text-xs">
+                    ✓
+                  </span>
+
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p>
+              If you've answered YES to even one of the above questions, then you
+              require a digital marketing agency in India. At Minitzon, we use various
+              technologies and online marketing strategies to help your business
+              achieve its marketing goals.
+            </p>
+
+          </div>
+
         </div>
-
-        {/* RIGHT SIDE */}
-        <div className="text-[#4b5563] text-sm leading-relaxed space-y-4">
-
-          <p>
-            At some point in their business, every entrepreneur or CEO contemplates
-            the need for a digital marketing agency in India. Here are some quick
-            questions to help you decide if your business requires a digital marketing
-            company in India to expand your business -
-          </p>
-
-          <ul className="space-y-3">
-            {[
-              "Are you unsure how to leverage technology and digital media for your business?",
-              "Are you facing a marketing slowdown?",
-              "Are you unable to manage leads and establish a proper sales funnel?",
-              "Are you facing a decrease in business enquiries?",
-              "Are you falling short of time to concentrate on marketing?"
-            ].map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
-                
-                {/* Green Tick */}
-                <span className="mt-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center text-white text-xs">
-                  ✓
-                </span>
-
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p>
-            If you've answered YES to even one of the above questions, then you
-            require a digital marketing agency in India. At Minitzon, we use various
-            technologies and online marketing strategies to help your business
-            achieve its marketing goals.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
+      </section>
 
 
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-16 mt-4 md:mt-8">
+      <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
           <div className="relative w-full max-w-6xl rounded-xl bg-[#E1C8FF] shadow-lg flex flex-col md:flex-row items-center justify-between overflow-hidden">
             {/* LEFT CONTENT */}
-            <div className="relative z-10 px-8 py-10 sm:px-12 sm:py-12 w-full md:w-[55%] lg:w-1/2 text-left">
+            <div className="relative z-10 px-8 py-10 sm:px-12 md:py-16 w-full md:w-[60%] lg:w-1/2 text-left">
               <h3 className="text-xl font-semibold tracking-widest text-[#1C75BC] sm:text-2xl">
                 GET IN TOUCH
               </h3>
@@ -480,13 +485,13 @@ export default function Digitalmarketing() {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[45%] lg:w-1/2 flex justify-center md:justify-end items-end self-stretch px-6 pt-4 min-h-[220px] md:min-h-[auto]">
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
               <Image
                 src="/getintouchdigitalmarketing.svg"
                 alt="Contact illustration"
                 width={350}
                 height={350}
-                className="w-[70%] sm:w-[60%] md:w-[85%] lg:max-w-xs h-auto object-contain translate-y-[5%]"
+                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
               />
             </div>
           </div>
