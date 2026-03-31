@@ -277,25 +277,25 @@ export default function MobileAppDevelopment() {
       </section>
 
       <section className="py-16"
-      style={{
-    background: "radial-gradient(circle at center, #E3EFFF 10%, #DDD7D7 90%)"
-  }}>
-            <div className="mb-12">
-            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+        style={{
+          background: "radial-gradient(circle at center, #E3EFFF 10%, #DDD7D7 90%)"
+        }}>
+        <div className="mb-12">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHAT WE DO
           </h3>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-          Mobile App Development Company in Chennai
+            Mobile App Development Company in Chennai
           </h2>
-          </div>
-          <p className="mt-2 px-10 text-center text-black font-medium leading-relaxed">
-    Mobile apps are changing the way businesses engage with their customers, vendors, and employees. Minitzon is one of the top mobile app development companies in India that empowers your enterprise with leading technology and modern mobile application solutions. We are a team of collaborative developers with industry knowledge and skill that works together to help companies make long strides toward their digital and customer experience goals.
+        </div>
+        <p className="mt-2 px-10 text-center text-black font-medium leading-relaxed">
+          Mobile apps are changing the way businesses engage with their customers, vendors, and employees. Minitzon is one of the top mobile app development companies in India that empowers your enterprise with leading technology and modern mobile application solutions. We are a team of collaborative developers with industry knowledge and skill that works together to help companies make long strides toward their digital and customer experience goals.
 
-    As an app development company in Chennai, we understand niche segments and their behaviors to use them in our app development strategies. This helps us see maximum success in our products with the highest customer experience ratings.
+          As an app development company in Chennai, we understand niche segments and their behaviors to use them in our app development strategies. This helps us see maximum success in our products with the highest customer experience ratings.
 
-    Our mobile app development services in India extend to custom-built apps for Android and iOS platforms with ML and AI Applications for maximum customer satisfaction. Our efforts to meet client requirements with the top mobile app development services in Chennai have brought us a reputation and acknowledgment as a trusted brand for mobile app development in India.
-  </p>
+          Our mobile app development services in India extend to custom-built apps for Android and iOS platforms with ML and AI Applications for maximum customer satisfaction. Our efforts to meet client requirements with the top mobile app development services in Chennai have brought us a reputation and acknowledgment as a trusted brand for mobile app development in India.
+        </p>
       </section>
 
       {/* Expand Your Digital Platform*/}
@@ -436,7 +436,7 @@ export default function MobileAppDevelopment() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-md text-gray-500 leading-relaxed">
+                <p className="text-md font-medium text-gray-500 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -668,44 +668,44 @@ C270 520 430 520 430 432
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
           <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC] shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
-              {/* LEFT CONTENT */}
-              <div>
-                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                  GET IN TOUCH
-                </h3>
+            {/* LEFT CONTENT */}
+            <div>
+              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                GET IN TOUCH
+              </h3>
 
-                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                  Wanna Develop a Mobile Application? Contact us Now!
-                </h2>
+              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+                Wanna Develop a Mobile Application? Contact us Now!
+              </h2>
 
-                <p className="mt-4 text-black font-medium">
-                  Reach out to us to identify business challenges and get
-                  efficient digital solutions.
-                </p>
+              <p className="mt-4 text-black font-medium">
+                Reach out to us to identify business challenges and get
+                efficient digital solutions.
+              </p>
 
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-                  <Image
-                    src="/icons/mailbox.svg"
-                    width={20}
-                    height={20}
-                    alt="RightArrow"
-                  />
-                  Get in Touch
-                </Link>
-              </div>
-
-              {/* RIGHT IMAGE */}
-              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Link
+                href="/contact-us"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
                 <Image
-                  src="/getintouchmobile.svg"
-                  alt="Contact illustration"
-                  width={700}
-                  height={700}
-                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                  src="/icons/mailbox.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
                 />
-              </div>
+                Get in Touch
+              </Link>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Image
+                src="/getintouchmobile.svg"
+                alt="Contact illustration"
+                width={700}
+                height={700}
+                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+              />
+            </div>
           </div>
         </div>
       </section>

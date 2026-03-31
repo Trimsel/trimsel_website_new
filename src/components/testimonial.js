@@ -21,6 +21,9 @@ export default function Testimonial() {
                     <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                         What Clients are Saying About Our Collaboration
                     </h2>
+                    <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
+                        At Trimsel, there is continuous learning that happens as we work on various projects. We also love to update and upgrade with the latest innovations in the field of technology and apps.
+                    </p>
                 </div>
 
                 {/* Marquee */}

@@ -162,7 +162,7 @@ export default function PortfolioPage() {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                   Get Started →
                 </Link>

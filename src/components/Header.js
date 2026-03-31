@@ -185,7 +185,7 @@ export default function Header({ transparent = false }) {
                     {/* Desktop Button */}
                     <div className="hidden md:block">
                         <Link
-                            href="/contact"
+                            href="/contact-us"
                             className="rounded-lg bg-[#27AAE1] px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#27AAE1]/60 focus-visible:ring-offset-2"
                         >
                             Contact Us
@@ -209,16 +209,16 @@ export default function Header({ transparent = false }) {
                 {open && (
                     <nav className="animate-fadeIn rounded-b-xl border-t border-slate-200 bg-white py-4 shadow-lg md:hidden">
                         <Link href="/" className={mobileLinkStyle} onClick={() => setOpen(false)}>Home</Link>
-                        <Link href="/about" className={mobileLinkStyle} onClick={() => setOpen(false)}>About Us</Link>
-                        <Link href="/MobileApp-Development" className={mobileLinkStyle} onClick={() => setOpen(false)}>Mobile App Development</Link>
-                        <Link href="/DevOps-Consulting" className={mobileLinkStyle} onClick={() => setOpen(false)}>DevOps Consulting</Link>
-                        <Link href="/services/web-development" className={mobileLinkStyle} onClick={() => setOpen(false)}>Web Development</Link>
+                        <Link href="/aboutus" className={mobileLinkStyle} onClick={() => setOpen(false)}>About Us</Link>
+                        <Link href="/mobile-app-development-chennai" className={mobileLinkStyle} onClick={() => setOpen(false)}>Mobile App Development</Link>
+                        <Link href="/devops-consulting-services" className={mobileLinkStyle} onClick={() => setOpen(false)}>DevOps Consulting</Link>
+                        <Link href="/web-development-company-chennai" className={mobileLinkStyle} onClick={() => setOpen(false)}>Web Development</Link>
                         <Link href="/ai-development-company" className={mobileLinkStyle} onClick={() => setOpen(false)}>AI & ML Development</Link>
-                        <Link href="/Digitalmarketing" className={mobileLinkStyle} onClick={() => setOpen(false)}>Digital Marketing</Link>
-                        <Link href="/Cloud-Consulting" className={mobileLinkStyle} onClick={() => setOpen(false)}>Cloud Consulting</Link>
+                        <Link href="/digital-marketing-company-chennai" className={mobileLinkStyle} onClick={() => setOpen(false)}>Digital Marketing</Link>
+                        <Link href="/cloud-consulting-services" className={mobileLinkStyle} onClick={() => setOpen(false)}>Cloud Consulting</Link>
                         <Link href="/portfolio" className={mobileLinkStyle} onClick={() => setOpen(false)}>Portfolio</Link>
                         <Link href="/blog" className={mobileLinkStyle} onClick={() => setOpen(false)}>Blog</Link>
-                        <Link href="/contact" className="mt-2 inline-block rounded-lg bg-[#27AAE1] px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:bg-[#1896cd] hover:shadow-lg" onClick={() => setOpen(false)}>
+                        <Link href="/contact-us" className="mt-2 inline-block rounded-lg bg-[#27AAE1] px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:bg-[#1896cd] hover:shadow-lg" onClick={() => setOpen(false)}>
                             Contact Us
                         </Link>
                     </nav>

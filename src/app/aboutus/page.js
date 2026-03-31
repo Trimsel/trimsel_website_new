@@ -155,7 +155,7 @@ export default function aboutus() {
 
                         {/* Center Link Button */}
                         <Link
-                            href="/contact"
+                            href="/contact-us"
                             className="absolute inset-0 m-auto w-16 h-16 bg-blue-500 hover:bg-blue-600 transition-colors rounded-full flex items-center justify-center text-white text-xs font-semibold text-center leading-tight shadow-md"
                         >
                             Let&apos;s talk
@@ -288,7 +288,7 @@ export default function aboutus() {
 
                         {/* BUTTON */}
                         <Link
-                            href="/contact"
+                            href="/contact-us"
                             className="mt-8 inline-flex bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg items-center gap-2 shadow-md font-medium transition"
                         >
                             Talk To Our Expert
@@ -434,7 +434,7 @@ export default function aboutus() {
                                 </h2>
 
                                 <Link
-                                    href="/contact"
+                                    href="/contact-us"
                                     className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                                     Get Started
                                     <Image

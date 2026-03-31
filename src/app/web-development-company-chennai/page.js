@@ -306,7 +306,7 @@ export default function WebDevelopment() {
               Are You Looking Out To Develop A Website For Your Business?
             </h4>
 
-            <p className="text-xs mt-2 opacity-80">
+            <p className="text-md font-medium mt-2 opacity-80">
               Grow your business with well-developed websites that engage customer attention.
             </p>
 
@@ -315,20 +315,20 @@ export default function WebDevelopment() {
               <input
                 type="text"
                 placeholder="Phone Number"
-                className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none"
+                className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none font-medium"
               />
 
               <input
                 type="email"
                 placeholder="Enter email address"
-                className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none"
+                className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none font-medium"
               />
             </div>
 
             {/* Button */}
             <Link
               href="/"
-              className="mt-5 w-full bg-white text-[#3b3be0] py-2.5 rounded-md text-sm font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition"
+              className="mt-5 w-full bg-white text-[#3b3be0] py-2.5 rounded-md text-md font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition"
             >
               Book A Free Consultation
             </Link>
@@ -496,18 +496,18 @@ export default function WebDevelopment() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={20}
-                    height={20}
+                    width={35}
+                    height={35}
                   />
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-sm font-semibold text-[#1f2a37]">
+                <h3 className="text-md font-semibold text-[#1f2a37]">
                   {item.title}
                 </h3>
 
                 {/* DESC */}
-                <p className="mt-2 text-xs text-gray-600 leading-relaxed">
+                <p className="mt-2 text-sm font-medium text-gray-600 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -550,10 +550,10 @@ export default function WebDevelopment() {
                 key={index}
                 className="bg-white rounded-xl shadow-md p-6 text-left hover:shadow-lg transition"
               >
-                <h3 className="text-lg font-semibold mb-3 bg-gradient-to-r from-[#01AAEC] via-[#0057FF] to-[#FF0000] bg-clip-text text-transparent">
+                <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-[#01AAEC] via-[#0057FF] to-[#FF0000] bg-clip-text text-transparent">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-800 text-md font-medium leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -574,16 +574,16 @@ export default function WebDevelopment() {
         }}
       >
 
-        <div className="max-w-7xl mx-auto pl-2 sm:pl-4 md:pl-6 grid lg:grid-cols-2 gap-6 md:gap-10 items-start">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
           <h2 className="text-left text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Approach to Web Application <br /> Development
           </h2>
 
-          <p className="max-w-3xl mx-auto text-left font-medium leading-relaxed text-gray-200">
+          <p className="max-w-3xl text-left font-medium leading-relaxed text-gray-200">
             We will take your project through a comprehensive app development process that comprises the following phases.
           </p>
         </div>
-        <div className="max-w-7xl mx-auto pl-2 sm:pl-4 md:pl-6 mt-8 md:mt-10 grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div className="max-w-7xl mx-auto mt-10 grid lg:grid-cols-2 gap-12 items-start">
 
           {/* LEFT SIDE */}
           <div className="max-w-3xl mt-2">
@@ -595,19 +595,21 @@ export default function WebDevelopment() {
                     className="flex justify-between items-center cursor-pointer"
                     onClick={() => setActive(active === index ? null : index)}
                   >
-                    <div className="flex items-center gap-3">
-                      <Image src={item.icon} alt={item.title} width={25} height={25} className="text-blue-400" />
-                      <h3 className="font-medium">{item.title}</h3>
+                    <div className="flex items-center gap-3 pr-4">
+                      <div className="shrink-0">
+                        <Image src={item.icon} alt={item.title} width={25} height={25} className="text-blue-400" />
+                      </div>
+                      <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
                     </div>
 
-                    <div>
-                      <Image
-                        src="/icons/add-icon.svg"
-                        width={20}
-                        height={20}
-                        alt="RightArrow"
-                      />
-                    </div>
+                    <div className="shrink-0 ml-2">
+                       <Image
+                         src="/icons/add-icon.svg"
+                         width={20}
+                         height={20}
+                         alt="RightArrow"
+                       />
+                     </div>
                   </div>
 
                   <div
@@ -626,6 +628,53 @@ export default function WebDevelopment() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Getintouch */}
+      <section className="bg-white py-12 md:py-20">
+        <div className="flex justify-center px-4 sm:px-6">
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF] shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+            {/* LEFT CONTENT */}
+            <div>
+              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                GET IN TOUCH
+              </h3>
+
+              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+                Wanna Develop a Mobile Application? Contact us Now!
+              </h2>
+
+              <p className="mt-4 text-black font-medium">
+                Reach out to us to identify business challenges and get
+                efficient digital solutions.
+              </p>
+
+              <Link
+                href="/contact-us"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <Image
+                  src="/icons/mailbox.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
+                Get in Touch
+              </Link>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Image
+                src="/getintouchweb.svg"
+                alt="Contact illustration"
+                width={700}
+                height={700}
+                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+              />
             </div>
           </div>
         </div>

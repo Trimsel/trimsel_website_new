@@ -139,7 +139,7 @@ export default function Home() {
               </p>
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                 Get Started Today{" "}
                 <Image
@@ -277,7 +277,7 @@ export default function Home() {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                   Get Started
                   <Image

@@ -79,7 +79,7 @@ export default function Digitalmarketing() {
               </p>
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
                 Get a Digital Strategy Session{" "}
                 <Image
@@ -150,7 +150,7 @@ export default function Digitalmarketing() {
             {/* CTA */}
             <div className="mt-6">
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 bg-[#1C9ACF] text-white font-medium px-6 py-3 rounded-md hover:bg-[#168bb9] transition">
                 Contact Us
                 <Image
@@ -202,7 +202,7 @@ export default function Digitalmarketing() {
 
             {/* Button */}
             <Link
-              href="/contact"
+              href="/contact-us"
               className="mt-5 w-full bg-[#1C9ACF] text-white py-3 rounded-md hover:bg-[#168bb9] transition flex items-center justify-center gap-2 font-medium">
               Submit Now
               <Image
@@ -477,7 +477,7 @@ export default function Digitalmarketing() {
                 Whether you&apos;re a startup or scaling business, Trimsel&apos;s digital marketing experts in Chennai are ready to help. From SEO to social media and PPC, we’ll craft a custom strategy to grow your brand online.
               </p>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-[#ff3b5b]">
                 Contact Us
                 <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
