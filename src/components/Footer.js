@@ -118,8 +118,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Mobile/Tablet Image */}
-                    {/* Mobile/Tablet Image */}
+
                     {/* Mobile/Tablet Image */}
                     <div className="flex justify-center lg:hidden mt-6 -mb-10 overflow-hidden">
                         <Image

@@ -308,3 +308,23 @@ p {
 .clip-slant {
     clip-path: polygon(30% 0%, 100% 0%, 100% 70%);
 }
+
+@keyframes rotateCard {
+    0% {
+        opacity: 0;
+        transform: rotateX(70deg) translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
+    }
+}
+
+.rotate-animation {
+    animation: rotateCard 1.0s ease;
+}
+
+.perspective {
+    perspective: 1000px;
+}
