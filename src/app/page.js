@@ -22,6 +22,51 @@ const HERO_WORDS = [
   "Smart Technology",
 ];
 
+
+const faqData = [
+  {
+    question: "What services does trimsel provide?",
+    answer: "Trimsel offers custom software development, mobile app development in Chennai, web design, cloud consulting, DevOps automation, digital marketing and quality engineering services."
+  },
+  {
+    question: "What industries does trimsel serve?",
+    answer: "The cost of custom application development varies based on project complexity, tech stack, timeline, and features. We offer flexible engagement models for startups, SMEs, and enterprises."
+  },
+  {
+    question: "How much does custom application development cost?",
+    answer: "Yes. Our DevOps consulting services include CI/CD pipeline setup, Kubernetes deployment, infrastructure automation using terraform, and cloud-native implementation across AWS, GCP, and Azure."
+  },
+  {
+    question: "Do you offer devops and CI/CD automation?",
+    answer: "Yes! Whether you need a dedication developer, a UI/UX designer , a cloud engineer, or a DevOps specialist. Hire full-time or on a project basis, and get a skilled  of your own team-without the overhead."
+  },
+  {
+    question: "What makes trimsel different from other it service providers?",
+    answer: "Our client-first approach, commitment to innovation, and cross-functional expertise make us a reliable digital transformation partner. We deliver scalable, and future-ready tech solution, not just code."
+  },
+
+  {
+    question: "What services does trimsel provide?",
+    answer: "Trimsel offers custom software development, mobile app development in Chennai, web design, cloud consulting, DevOps automation, digital marketing and quality engineering services."
+  },
+  {
+    question: "What industries does trimsel serve?",
+    answer: "The cost of custom application development varies based on project complexity, tech stack, timeline, and features. We offer flexible engagement models for startups, SMEs, and enterprises."
+  },
+  {
+    question: "How much does custom application development cost?",
+    answer: "Yes. Our DevOps consulting services include CI/CD pipeline setup, Kubernetes deployment, infrastructure automation using terraform, and cloud-native implementation across AWS, GCP, and Azure."
+  },
+  {
+    question: "Do you offer devops and CI/CD automation?",
+    answer: "Yes! Whether you need a dedication developer, a UI/UX designer , a cloud engineer, or a DevOps specialist. Hire full-time or on a project basis, and get a skilled  of your own team-without the overhead."
+  },
+  {
+    question: "What makes trimsel different from other it service providers?",
+    answer: "Our client-first approach, commitment to innovation, and cross-functional expertise make us a reliable digital transformation partner. We deliver scalable, and future-ready tech solution, not just code."
+  }
+];
+
 export default function Home() {
 
   const [index, setIndex] = useState(0);
@@ -263,42 +308,42 @@ export default function Home() {
           <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
             {/* LEFT CONTENT */}
             <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                  GET IN TOUCH
-                </h3>
+              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                GET IN TOUCH
+              </h3>
 
-                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                  Have a project? We would love to help.
-                </h2>
+              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+                Have a project? We would love to help.
+              </h2>
 
-                <p className="mt-4 text-black font-medium">
-                  Reach out to us to identify business challenges and get
-                  efficient digital solutions.
-                </p>
+              <p className="mt-4 text-black font-medium">
+                Reach out to us to identify business challenges and get
+                efficient digital solutions.
+              </p>
 
-                <Link
-                  href="/contact-us"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
-                  Get Started
-                  <Image
-                    src="/Home/right-arrow.svg"
-                    width={20}
-                    height={20}
-                    alt="RightArrow"
-                  />
-                </Link>
-              </div>
-
-              {/* RIGHT IMAGE */}
-              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Link
+                href="/contact-us"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                Get Started
                 <Image
-                  src="/Home/getintouch.svg"
-                  alt="Contact illustration"
-                  width={700}
-                  height={700}
-                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
                 />
-              </div>
+              </Link>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Image
+                src="/Home/getintouch.svg"
+                alt="Contact illustration"
+                width={700}
+                height={700}
+                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+              />
+            </div>
           </div>
         </div>
       </section>

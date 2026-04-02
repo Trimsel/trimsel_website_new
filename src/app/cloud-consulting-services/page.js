@@ -184,6 +184,19 @@ export default function CloudConsulting() {
 
       <section className="flex min-h-screen items-center bg-[url('/CloudConsultingservice.svg')] bg-cover bg-center pt-20">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 pb-8 text-center sm:px-6">
+
+          {/* BREADCRUMB */}
+          <p className="text-md md:text-base font-medium text-white/70 mb-6">
+            <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+              Home
+            </Link>
+
+            {" • "}
+
+            <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Cloud Consulting Services</span>
+          </p>
+
+
           <h1 className="text-center text-4xl font-bold leading-tight text-white sm:text-5xl">
             Cloud Consulting & Implementation
             <br />

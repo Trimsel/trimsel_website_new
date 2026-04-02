@@ -48,6 +48,19 @@ export default function PortfolioPage() {
       <section className="relative min-h-[70vh] sm:min-h-[80vh] md:h-screen bg-[url('/portfolio.svg')] bg-cover bg-center flex items-center pt-24 md:pt-12">
         <div className="w-full px-4 sm:px-6 md:pl-24 md:pr-24 pb-6 text-center md:text-left">
 
+          {/* BREADCRUMB */}
+          <p className="text-sm md:text-base font-medium text-black mb-8">
+            <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+              Home
+            </Link>
+
+            {" • "}
+
+            <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+              Portfolio
+            </span>
+          </p>
+
           <h1
             className="text-black font-bold leading-tight
       text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl
@@ -148,36 +161,36 @@ export default function PortfolioPage() {
           <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-6 py-10 sm:px-12 md:py-16 shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
             {/* LEFT CONTENT */}
             <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-                <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
-                  GET IN TOUCH
-                </h3>
+              <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
+                GET IN TOUCH
+              </h3>
 
-                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                  Have a project? We would love to help.
-                </h2>
+              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+                Have a project? We would love to help.
+              </h2>
 
-                <p className="mt-4 text-black font-medium">
-                  Reach out to us to identify business challenges and get
-                  efficient digital solutions.
-                </p>
+              <p className="mt-4 text-black font-medium">
+                Reach out to us to identify business challenges and get
+                efficient digital solutions.
+              </p>
 
-                <Link
-                  href="/contact-us"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
-                  Get Started →
-                </Link>
-              </div>
+              <Link
+                href="/contact-us"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                Get Started →
+              </Link>
+            </div>
 
-              {/* RIGHT IMAGE */}
-              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-                <Image
-                  src="/getintouch1.svg"
-                  alt="Contact illustration"
-                  width={700}
-                  height={700}
-                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
-                />
-              </div>
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Image
+                src="/getintouch1.svg"
+                alt="Contact illustration"
+                width={700}
+                height={700}
+                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+              />
+            </div>
           </div>
         </div>
       </section>

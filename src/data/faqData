@@ -1,0 +1,303 @@
+
+// faqData.js
+export const faqData = {
+  devops: [
+    {
+      question: "What is DevOps?",
+      answer: "DevOps is a set of practices that combines development and IT operations."
+    },
+    {
+      question: "Do you provide CI/CD?",
+      answer: "Yes, we implement CI/CD pipelines using modern tools."
+    },
+    {
+      question: "What is DevOps?",
+      answer: "DevOps is a set of practices that combines development and IT operations."
+    },
+    {
+      question: "Do you provide CI/CD?",
+      answer: "Yes, we implement CI/CD pipelines using modern tools."
+    },
+    {
+      question: "What is DevOps?",
+      answer: "DevOps is a set of practices that combines development and IT operations."
+    },
+    {
+      question: "Do you provide CI/CD?",
+      answer: "Yes, we implement CI/CD pipelines using modern tools."
+    },
+    {
+      question: "What is DevOps?",
+      answer: "DevOps is a set of practices that combines development and IT operations."
+    },
+    {
+      question: "Do you provide CI/CD?",
+      answer: "Yes, we implement CI/CD pipelines using modern tools."
+    },
+    {
+      question: "What is DevOps?",
+      answer: "DevOps is a set of practices that combines development and IT operations."
+    },
+    {
+      question: "Do you provide CI/CD?",
+      answer: "Our client-first approach, commitment to innovation, and cross-functional expertise make us a reliable digital transformation partner. We deliver scalable, and future-ready tech solution, not just code."
+    },
+  ],
+
+  mobile: [
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+  ],
+  web: [
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+  ],
+
+  cloud: [
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+  ],
+
+  digital: [
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+  ],
+
+  ai: [
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+    {
+      question: "Do you build mobile apps?",
+      answer: "Yes, we develop Android and iOS apps."
+    },
+    {
+      question: "What tech stack do you use?",
+      answer: "We use Flutter, React Native, and native technologies."
+    },
+  ],
+
+  default: [
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+    {
+      question: "What services do you offer?",
+      answer: "We offer web, mobile, cloud, and DevOps services."
+    },
+  ]
+};

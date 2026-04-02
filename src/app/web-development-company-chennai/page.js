@@ -202,13 +202,25 @@ export default function WebDevelopment() {
 
           {/* LEFT CONTENT */}
           <div className="flex flex-col items-start">
-            <h1 className="mb-6 text-4xl font-semibold text-black">
+
+            {/* BREADCRUMB */}
+            <p className="text-md md:text-base font-medium text-black mt-8">
+              <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                Home
+              </Link>
+
+              {" • "}
+
+              <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Web Development Company</span>
+            </p>
+
+            <h1 className="mt-8 text-4xl font-semibold text-black">
               Top-Rated Web Development
               Company in Chennai –
               Built for Growth & Performance.
             </h1>
 
-            <p className="max-w-xl mb-8 text-lg">
+            <p className="max-w-xl mt-6 text-lg">
               An AI-driven logistics optimization platform that revolutionizes how
               businesses plan, execute, and manage transportation. Real-time
               insights enable smarter decisions, while end-to-end visibility ensures
@@ -218,7 +230,7 @@ export default function WebDevelopment() {
             <div>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-gradient-to-r from-[#29B375] to-[#2E70C3] text-white font-medium hover:scale-105 transition-all shadow-lg"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-gradient-to-r from-[#29B375] to-[#2E70C3] text-white font-medium hover:scale-105 transition-all shadow-lg mt-6"
               >
                 Get a Free Consultation
                 <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
@@ -603,13 +615,13 @@ export default function WebDevelopment() {
                     </div>
 
                     <div className="shrink-0 ml-2">
-                       <Image
-                         src="/icons/add-icon.svg"
-                         width={20}
-                         height={20}
-                         alt="RightArrow"
-                       />
-                     </div>
+                      <Image
+                        src="/icons/add-icon.svg"
+                        width={20}
+                        height={20}
+                        alt="RightArrow"
+                      />
+                    </div>
                   </div>
 
                   <div

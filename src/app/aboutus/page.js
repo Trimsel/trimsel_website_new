@@ -99,10 +99,25 @@ export default function aboutus() {
 
                 {/* TOP SECTION */}
                 <div className="relative bg-gradient-to-r from-[#dbeafe] via-[#e0f2fe] to-[#fef3c7] px-6 py-12">
-                    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center mt-10 md:mt-12 md:px-12 lg:px-20">
 
-                        <div>
-                            <h1 className="text-5xl font-bold text-gray-800 leading-tight">
+
+                    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center mr-8 mt-10 md:mt-12 md:px-12 lg:px-20">
+
+                        <div className="-ml-8">
+
+                            {/* BREADCRUMB */}
+                            <p className="text-md md:text-base font-medium text-black mt-2">
+                                <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                                    Home
+                                </Link>
+
+                                {" • "}
+
+                                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                                    About Us
+                                </span>
+                            </p>
+                            <h1 className="mt-2 text-5xl font-bold text-gray-800 leading-tight">
                                 Who are{" "}
                                 <span className="bg-blue-500 text-white px-3 py-1 rounded-lg">
                                     We
@@ -425,37 +440,37 @@ export default function aboutus() {
                     <div className="relative w-full max-w-6xl rounded-xl bg-[#DEFFCE] px-6 py-10 sm:px-12 md:py-16 shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
                         {/* LEFT CONTENT */}
                         <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-                                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                                    GET IN TOUCH
-                                </h3>
+                            <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                                GET IN TOUCH
+                            </h3>
 
-                                <h2 className="mt-2 text-2xl font-semibold leading-tight text-black sm:text-3xl md:text-4xl">
-                                    Reach out to us to identify business challenges and get efficient digital solutions.
-                                </h2>
+                            <h2 className="mt-2 text-2xl font-semibold leading-tight text-black sm:text-3xl md:text-4xl">
+                                Reach out to us to identify business challenges and get efficient digital solutions.
+                            </h2>
 
-                                <Link
-                                    href="/contact-us"
-                                    className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
-                                    Get Started
-                                    <Image
-                                        src="/Home/right-arrow.svg"
-                                        width={20}
-                                        height={20}
-                                        alt="RightArrow"
-                                    />
-                                </Link>
-                            </div>
-
-                            {/* RIGHT IMAGE */}
-                            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+                            <Link
+                                href="/contact-us"
+                                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                                Get Started
                                 <Image
-                                    src="/aboutus-getintouch.svg"
-                                    alt="Contact illustration"
-                                    width={700}
-                                    height={700}
-                                    className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                                    src="/Home/right-arrow.svg"
+                                    width={20}
+                                    height={20}
+                                    alt="RightArrow"
                                 />
-                            </div>
+                            </Link>
+                        </div>
+
+                        {/* RIGHT IMAGE */}
+                        <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+                            <Image
+                                src="/aboutus-getintouch.svg"
+                                alt="Contact illustration"
+                                width={700}
+                                height={700}
+                                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

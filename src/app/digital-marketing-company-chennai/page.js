@@ -65,6 +65,18 @@ export default function Digitalmarketing() {
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center text-black md:text-left">
+
+              {/* BREADCRUMB */}
+              <p className="text-md md:text-base font-medium text-black mb-4">
+                <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                  Home
+                </Link>
+
+                {" • "}
+
+                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Digital Marketing Company</span>
+              </p>
+
               <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
                 Top Digital Marketing Company <br />
                 in Chennai, India

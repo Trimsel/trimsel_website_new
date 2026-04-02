@@ -204,9 +204,23 @@ export default function MobileAppDevelopment() {
       <section className="bg-gradient-to-b from-white via-slate-50 to-white">
         <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 sm:py-12">
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
+
             {/* LEFT CONTENT */}
-            <div className="relative z-20 text-center md:text-left">
-              <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
+            <div className="relative z-20 text-center md:text-left mb-4 space-y-4">
+
+              {/* BREADCRUMB */}
+              <p className="text-md md:text-base font-medium text-black mb-4">
+                <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                  Home
+                </Link>
+
+                {" • "}
+
+                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Mobile App Development</span>
+              </p>
+
+
+              <h1 className="mb-4 text-4xl font-bold leading-tight sm:text-5xl">
                 Mobile App Development
                 <br />
                 Company in Chennai

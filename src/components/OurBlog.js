@@ -18,7 +18,7 @@ export default function OurBlog() {
     return (
         <section className="bg-white py-16 text-black">
             <div className="container mx-auto px-4 sm:px-6">
-            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                     OUR BLOGS
                 </h3>
 
@@ -101,7 +101,7 @@ export default function OurBlog() {
 
                 <div className="mt-10 flex justify-center">
                     <Link
-                        href="/contact-us"
+                        href="/"
                         className="inline-flex items-center gap-1 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
                     >
                         View All Blogs

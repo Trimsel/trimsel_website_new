@@ -24,8 +24,24 @@ export default function XaberCaseStudy() {
 
                     {/* LEFT CONTENT */}
                     <div className="z-10 mt-8 md:mt-0">
-                        <p className="text-sm md:text-base font-medium text-black/70 mb-6">
-                            Home • Portfolio • <span className="text-blue-600 font-medium">EzyHelpers</span>
+
+                        {/* BREADCRUMB */}
+                        <p className="text-sm md:text-base font-medium text-black mb-6">
+                            <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                                Home
+                            </Link>
+
+                            {" • "}
+
+                            <Link href="/portfolio" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                                Portfolio
+                            </Link>
+
+                            {" • "}
+
+                            <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                                EzyHelpers
+                            </span>
                         </p>
 
                         <div className="flex gap-2 sm:gap-3 mb-6 flex-wrap">

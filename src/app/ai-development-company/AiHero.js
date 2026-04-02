@@ -135,6 +135,18 @@ export default function AIDevelopmentPage() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 gap-4">
 
+
+                    {/* BREADCRUMB */}
+                    <p className="text-md md:text-base font-medium text-white mb-6">
+                        <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                            Home
+                        </Link>
+
+                        {" • "}
+
+                        <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">AI Development</span>
+                    </p>
+
                     <motion.div className="mb-6 flex items-center justify-center gap-4 px-5 py-2 rounded-full bg-white/10 backdrop-blur text-white text-sm">
 
                         {/* Left Image */}
@@ -157,6 +169,7 @@ export default function AIDevelopmentPage() {
                         />
 
                     </motion.div>
+
 
 
 
