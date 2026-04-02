@@ -396,7 +396,7 @@ export default function WebDevelopment() {
                 </p>
 
                 {/* ARROW BUTTON */}
-                <div className="mt-5">
+                {/* <div className="mt-5">
                   <Link
                     href="/"
                     className="w-8 h-8 rounded-full bg-gradient-to-r from-[#05A1E5] via-[#5346E5] to-[#9005E5] inline-flex items-center justify-center"
@@ -408,7 +408,7 @@ export default function WebDevelopment() {
                       height={8}
                     />
                   </Link>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

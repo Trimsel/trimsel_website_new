@@ -328,3 +328,7 @@ p {
 .perspective {
     perspective: 1000px;
 }
+
+.fade-text {
+    transition: opacity 0.4s ease-in-out;
+}

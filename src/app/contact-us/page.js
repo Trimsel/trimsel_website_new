@@ -225,7 +225,6 @@ export default function ContactUs() {
                                 onMouseLeave={() => setIsHovered(false)}
                             >
                                 <div className="bg-[#1e293b] p-4 rounded-lg space-y-6 transition-all duration-500 transform rotate-animation">
-
                                     <p className="text-md text-white font-medium mb-3">
                                         “{t.text}”
                                     </p>

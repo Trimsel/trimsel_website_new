@@ -110,18 +110,6 @@ export default function Header({ transparent = false }) {
                                         </Link>
 
                                         {/* 2 */}
-                                        <Link href="/devops-consulting-services"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-orange-100 hover:shadow-md transition">
-
-                                            <div className="flex gap-4">
-                                                <Image src="/icons/service4.svg" alt="DevOps" width={32} height={32} />
-                                                <div>
-                                                    <h4 className="text-sm font-semibold sm:text-base">DevOps Consulting</h4>
-                                                </div>
-                                            </div>
-                                        </Link>
-
-                                        {/* 3 */}
                                         <Link href="/web-development-company-chennai"
                                             className="flex items-start justify-between p-3 rounded-xl bg-purple-100 hover:shadow-md transition">
 
@@ -133,7 +121,8 @@ export default function Header({ transparent = false }) {
                                             </div>
                                         </Link>
 
-                                        {/* 4 */}
+
+                                        {/* 3 */}
                                         <Link href="/ai-development-company"
                                             className="flex items-start justify-between p-3 rounded-xl bg-pink-100 hover:shadow-md transition">
 
@@ -145,19 +134,20 @@ export default function Header({ transparent = false }) {
                                             </div>
                                         </Link>
 
-                                        {/* 5 */}
-                                        <Link href="/digital-marketing-company-chennai"
-                                            className="flex items-start justify-between p-3 rounded-xl bg-red-100 hover:shadow-md transition">
+                                        {/* 4 */}
+                                        <Link href="/devops-consulting-services"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-orange-100 hover:shadow-md transition">
 
                                             <div className="flex gap-4">
-                                                <Image src="/icons/service3.svg" alt="Marketing" width={32} height={32} />
+                                                <Image src="/icons/service4.svg" alt="DevOps" width={32} height={32} />
                                                 <div>
-                                                    <h4 className="text-sm font-semibold sm:text-base">Digital Marketing</h4>
+                                                    <h4 className="text-sm font-semibold sm:text-base">DevOps Consulting</h4>
                                                 </div>
                                             </div>
                                         </Link>
 
-                                        {/* 6 */}
+
+                                        {/* 5 */}
                                         <Link
                                             href="/cloud-consulting-services"
                                             className="flex items-center justify-between 
@@ -171,6 +161,20 @@ export default function Header({ transparent = false }) {
                                                 </div>
                                             </div>
                                         </Link>
+
+
+                                        {/* 6 */}
+                                        <Link href="/digital-marketing-company-chennai"
+                                            className="flex items-start justify-between p-3 rounded-xl bg-red-100 hover:shadow-md transition">
+
+                                            <div className="flex gap-4">
+                                                <Image src="/icons/service3.svg" alt="Marketing" width={32} height={32} />
+                                                <div>
+                                                    <h4 className="text-sm font-semibold sm:text-base">Digital Marketing</h4>
+                                                </div>
+                                            </div>
+                                        </Link>
+
 
                                     </div>
                                 </div>

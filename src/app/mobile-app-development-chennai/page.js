@@ -456,7 +456,7 @@ export default function MobileAppDevelopment() {
               </div>
 
               {/* Bottom: Arrow Button */}
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <Link
                   href={service.href}
                   className="inline-flex items-center justify-center">
@@ -468,7 +468,7 @@ export default function MobileAppDevelopment() {
                     className="object-contain"
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

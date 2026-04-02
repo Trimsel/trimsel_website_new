@@ -280,13 +280,13 @@ export default function Digitalmarketing() {
                   </p>
 
                   {/* Link */}
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <Link
                       href="#"
                       className="text-[#1C9ACF] text-md font-medium inline-flex items-center gap-1">
                       Learn More →
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -298,7 +298,7 @@ export default function Digitalmarketing() {
         <div>
           {/* Badge */}
           <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-            WHY MINITZON
+            WHY TRIMSEL
           </h3>
 
           {/* Heading */}
@@ -337,9 +337,9 @@ export default function Digitalmarketing() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-4">
             {/* Title */}
-            <div className="bg-[#23293d] text-white px-10 py-4 rounded-xl text-xl font-semibold">
+            <div className="bg-[#23293d] text-white px-10 py-4 rounded-xl text-xl font-semibold mt-8">
               Our Marketing Strategy
             </div>
 

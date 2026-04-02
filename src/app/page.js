@@ -16,56 +16,13 @@ import { ToolsSection } from "./Home/ToolsSection";
 import { useEffect, useState } from "react";
 
 const HERO_WORDS = [
-  "AI",
-  "Intelligent Automation",
-  "Cognitive Computing",
-  "Smart Technology",
+  "AI Development",
+  "Mobile App",
+  "Web Development",
+  "DevOps & Cloud",
+  "Digital Marketing",
 ];
 
-
-const faqData = [
-  {
-    question: "What services does trimsel provide?",
-    answer: "Trimsel offers custom software development, mobile app development in Chennai, web design, cloud consulting, DevOps automation, digital marketing and quality engineering services."
-  },
-  {
-    question: "What industries does trimsel serve?",
-    answer: "The cost of custom application development varies based on project complexity, tech stack, timeline, and features. We offer flexible engagement models for startups, SMEs, and enterprises."
-  },
-  {
-    question: "How much does custom application development cost?",
-    answer: "Yes. Our DevOps consulting services include CI/CD pipeline setup, Kubernetes deployment, infrastructure automation using terraform, and cloud-native implementation across AWS, GCP, and Azure."
-  },
-  {
-    question: "Do you offer devops and CI/CD automation?",
-    answer: "Yes! Whether you need a dedication developer, a UI/UX designer , a cloud engineer, or a DevOps specialist. Hire full-time or on a project basis, and get a skilled  of your own team-without the overhead."
-  },
-  {
-    question: "What makes trimsel different from other it service providers?",
-    answer: "Our client-first approach, commitment to innovation, and cross-functional expertise make us a reliable digital transformation partner. We deliver scalable, and future-ready tech solution, not just code."
-  },
-
-  {
-    question: "What services does trimsel provide?",
-    answer: "Trimsel offers custom software development, mobile app development in Chennai, web design, cloud consulting, DevOps automation, digital marketing and quality engineering services."
-  },
-  {
-    question: "What industries does trimsel serve?",
-    answer: "The cost of custom application development varies based on project complexity, tech stack, timeline, and features. We offer flexible engagement models for startups, SMEs, and enterprises."
-  },
-  {
-    question: "How much does custom application development cost?",
-    answer: "Yes. Our DevOps consulting services include CI/CD pipeline setup, Kubernetes deployment, infrastructure automation using terraform, and cloud-native implementation across AWS, GCP, and Azure."
-  },
-  {
-    question: "Do you offer devops and CI/CD automation?",
-    answer: "Yes! Whether you need a dedication developer, a UI/UX designer , a cloud engineer, or a DevOps specialist. Hire full-time or on a project basis, and get a skilled  of your own team-without the overhead."
-  },
-  {
-    question: "What makes trimsel different from other it service providers?",
-    answer: "Our client-first approach, commitment to innovation, and cross-functional expertise make us a reliable digital transformation partner. We deliver scalable, and future-ready tech solution, not just code."
-  }
-];
 
 export default function Home() {
 
@@ -88,9 +45,9 @@ export default function Home() {
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % HERO_WORDS.length);
         setFade(true);
-      }, 300);
+      }, 800);
 
-    }, 2500);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -165,10 +122,10 @@ export default function Home() {
           <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             <div className="relative z-20 mt-6 text-center md:mt-0 md:text-left">
               <h1 className="mb-8 text-3xl font-bold leading-tight sm:text-5xl">
-                Smarter Logistics,
+                We Build what you
                 <br />
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
-                  <span>Powered by</span>
+                  <span>imagine With</span>
                   <span
                     suppressHydrationWarning
                     className={`inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl ${fade ? "animate-rotate-word" : ""}`}>
