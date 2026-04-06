@@ -27,7 +27,6 @@ const HERO_WORDS = [
 export default function Home() {
 
   const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
   const [mounted, setMounted] = useState(false);
 
@@ -40,14 +39,8 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false);
-
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % HERO_WORDS.length);
-        setFade(true);
-      }, 800);
-
-    }, 5000);
+      setIndex((prev) => (prev + 1) % HERO_WORDS.length);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -127,8 +120,9 @@ export default function Home() {
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
                   <span>imagine With</span>
                   <span
+                    key={index}
                     suppressHydrationWarning
-                    className={`inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl ${fade ? "animate-rotate-word" : ""}`}>
+                    className="inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl animate-rotate-word">
                     {HERO_WORDS[index]}
                   </span>
                 </span>

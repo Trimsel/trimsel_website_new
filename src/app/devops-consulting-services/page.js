@@ -113,103 +113,6 @@ const services = [
   },
 ];
 
-const steps = [
-  {
-    id: "01",
-    title: "Strategic Planning",
-    description:
-      "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
-    gradientFrom: "#7b5ea7",
-    gradientTo: "#5b7fde",
-    side: "left",
-    Icon: () => (
-      <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
-        <circle cx="18" cy="7" r="3" fill="white" />
-        <circle cx="7" cy="27" r="3" fill="white" />
-        <circle cx="29" cy="27" r="3" fill="white" />
-        <line x1="18" y1="7" x2="7" y2="27" stroke="white" strokeWidth="1.8" />
-        <line x1="18" y1="7" x2="29" y2="27" stroke="white" strokeWidth="1.8" />
-        <line x1="7" y1="27" x2="29" y2="27" stroke="white" strokeWidth="1.8" />
-        <circle cx="18" cy="18" r="2.5" fill="white" fillOpacity="0.85" />
-      </svg>
-    ),
-  },
-  {
-    id: "02",
-    title: "Implementation Procedure",
-    description:
-      "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
-    gradientFrom: "#0ea5e9",
-    gradientTo: "#6366f1",
-    side: "right",
-    Icon: () => (
-      <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
-        <rect x="5" y="9" width="26" height="5.5" rx="2" fill="white" />
-        <rect x="5" y="17.5" width="26" height="5.5" rx="2" fill="white" />
-        <rect x="5" y="26" width="26" height="4" rx="2" fill="white" fillOpacity="0.45" />
-        <circle cx="9" cy="11.75" r="1.5" fill="#6366f1" />
-        <circle cx="9" cy="20.25" r="1.5" fill="#6366f1" />
-      </svg>
-    ),
-  },
-  {
-    id: "03",
-    title: "Strategic Planning",
-    description:
-      "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
-    gradientFrom: "#14b8a6",
-    gradientTo: "#38bdf8",
-    side: "left",
-    Icon: () => (
-      <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
-        <circle cx="18" cy="18" r="5" stroke="white" strokeWidth="2" />
-        <circle cx="18" cy="18" r="2" fill="white" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => {
-          const rad = (deg * Math.PI) / 180;
-          return (
-            <line
-              key={i}
-              x1={18 + 8 * Math.cos(rad)}
-              y1={18 + 8 * Math.sin(rad)}
-              x2={18 + 12 * Math.cos(rad)}
-              y2={18 + 12 * Math.sin(rad)}
-              stroke="white"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          );
-        })}
-      </svg>
-    ),
-  },
-  {
-    id: "04",
-    title: "Strategic Planning",
-    description:
-      "Before adopting the Devops culture, our Devops consulting team analyze the current IT infrastructure, available resources and products portfolio. With DevOps as a service, Increase the frequency of software deliveries with enhanced user experience",
-    gradientFrom: "#22c55e",
-    gradientTo: "#16a34a",
-    side: "right",
-    Icon: () => (
-      <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7">
-        <rect x="3" y="13" width="30" height="10" rx="3" stroke="white" strokeWidth="2" />
-        <circle cx="11" cy="27" r="4" stroke="white" strokeWidth="2" />
-        <circle cx="25" cy="27" r="4" stroke="white" strokeWidth="2" />
-        <line x1="11" y1="13" x2="11" y2="9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="18" y1="13" x2="18" y2="9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="25" y1="13" x2="25" y2="9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-];
-
-const ICON_POSITIONS = [
-  { top: 10, left: 50 },  // y = 231.15
-  { top: 33, left: 48 },  // y = 763.0
-  { top: 57, left: 42 },  // y = 1317.6
-  { top: 80, left: 55 },  // y = 1849.2
-];
-
 const features = [
   {
     icon: "/icons/Devops-what-we-do1.svg",
@@ -376,145 +279,35 @@ export default function DevOpsConsulting() {
       </section>
 
 
-      <section
-        className="py-6 px-6 md:px-12"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 65% at 50% 0%, #e0f2fe 0%, #f8fafc 55%, #eef2ff 100%)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto relative">
 
-          {/* SVG Connector */}
-          <div className="absolute inset-0 hidden md:block pointer-events-none">
 
-            <svg
-              viewBox="0 0 757.95 2311.5"
-              className="absolute w-full h-full"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#f97316" />
-                  <stop offset="100%" stopColor="#fdba74" />
-                </linearGradient>
-              </defs>
+      <section className="bg-white px-10 py-16">
+        <div className="mb-8">
+          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+            IMPLEMENTATION PROCESS
+          </h3>
 
-              {/* Segment 1: Icon1(379,231) → Icon2(363,763) — bows LEFT */}
-              <path
-                d="M 379 231 Q 270 497, 363 763"
-                fill="none"
-                stroke="#c8ccd5"
-                strokeWidth="3.5"
-                strokeDasharray="22 13"
-                strokeLinecap="round"
-              />
-              <g transform="translate(295, 490) rotate(170)">
-                <polygon points="0,-18 12,8 0,2 -12,8" fill="url(#arrowGradient)" />
-              </g>
+          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+            Step By Step Devops Implementation Process
+          </h2>
 
-              {/* Segment 2: Icon2(363,763) → Icon3(318,1318) — bows LEFT */}
-              <path
-                d="M 363 763 Q 245 1040, 318 1318"
-                fill="none"
-                stroke="#c8ccd5"
-                strokeWidth="3.5"
-                strokeDasharray="22 13"
-                strokeLinecap="round"
-              />
-              <g transform="translate(268, 1035) rotate(168)">
-                <polygon points="0,-18 12,8 0,2 -12,8" fill="url(#arrowGradient)" />
-              </g>
+          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
+            Different phases of Devops process integrated into any business model seamlessly. Modern technology and cloud computing have opened new avenues for businesses to modernize.
+          </p>
+        </div>
 
-              {/* Segment 3: Icon3(318,1318) → Icon4(416,1849) — bows RIGHT */}
-              <path
-                d="M 318 1318 Q 435 1550, 416 1849"
-                fill="none"
-                stroke="#c8ccd5"
-                strokeWidth="3.5"
-                strokeDasharray="22 13"
-                strokeLinecap="round"
-              />
-              <g transform="translate(400, 1548) rotate(155)">
-                <polygon points="0,-18 12,8 0,2 -12,8" fill="url(#arrowGradient)" />
-              </g>
-            </svg>
-
-            {/* Icons */}
-            {steps.map((step, i) => (
-              <div
-                key={step.id}
-                className="absolute flex items-center justify-center"
-                style={{
-                  left: `${ICON_POSITIONS[i].left}%`,
-                  top: `${ICON_POSITIONS[i].top}%`,
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-white shadow-xl"
-                  style={{
-                    background: `linear-gradient(135deg, ${step.gradientFrom}, ${step.gradientTo})`,
-                  }}
-                >
-                  <step.Icon size={20} />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Text Content */}
-          <div className="space-y-24 relative z-10">
-            {steps.map((step) => {
-              const isLeft = step.side === "left";
-
-              return (
-                <div
-                  key={step.id}
-                  className="grid md:grid-cols-2 gap-12 items-center"
-                >
-                  {isLeft ? (
-                    <div className="md:pr-16">
-                      <span className="text-6xl font-black text-blue-200">
-                        {step.id}
-                      </span>
-
-                      <h3 className="text-xl font-bold text-slate-900 mt-2">
-                        {step.title}
-                      </h3>
-
-                      <p className="text-slate-600 mt-3 text-sm leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  ) : (
-                    <div />
-                  )}
-
-                  {!isLeft ? (
-                    <div className="md:pl-16 text-right">
-                      <span className="text-6xl font-black text-blue-200">
-                        {step.id}
-                      </span>
-
-                      <h3 className="text-xl font-bold text-slate-900 mt-2">
-                        {step.title}
-                      </h3>
-
-                      <p className="text-slate-600 mt-3 text-sm leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  ) : (
-                    <div />
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
+        {/* IMAGE BELOW CONTENT */}
+        <div className="flex justify-center mt-10">
+          <Image
+            src="/ImplementationProcess.svg"   // put your image in public folder
+            alt="What we do"
+            width={1200}
+            height={600}
+            className="w-[100%] md:w-[100%]"
+          />
         </div>
       </section>
+
 
 
       <section className="relative py-24 px-6 bg-white overflow-hidden">

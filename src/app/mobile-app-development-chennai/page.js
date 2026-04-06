@@ -475,11 +475,14 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Development Process*/}
+      import Image from "next/image";
+
       <section className="bg-white px-10 py-16">
         <div className="mb-8">
           <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
             WHAT WE DO
           </h3>
+
           <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
             We pride ourselves on being the one stop shop for all your needs
           </h2>
@@ -491,190 +494,15 @@ export default function MobileAppDevelopment() {
           </p>
         </div>
 
-        <div
-          style={{
-            background:
-              "linear-gradient(135deg,#f8f4ff 0%,#edf5ff 45%,#f2fcf5 100%)",
-            padding: "60px 32px 80px",
-            fontFamily: "'DM Sans', sans-serif",
-          }}>
-          <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <svg viewBox="0 0 900 590" style={{ width: "100%" }}>
-              {/* CONNECTORS */}
-
-              {/* 01 → 02 */}
-              <line
-                x1="100"
-                y1="128"
-                x2="100"
-                y2="230"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-                strokeLinecap="round"
-              />
-
-              {/* 04 → 05 */}
-              <line
-                x1="430"
-                y1="348"
-                x2="430"
-                y2="258"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-              />
-
-              {/* 05 → 06 */}
-              <line
-                x1="430"
-                y1="182"
-                x2="430"
-                y2="107"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-              />
-
-              {/* 07 → 08 */}
-              <line
-                x1="720"
-                y1="223"
-                x2="720"
-                y2="303"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-              />
-
-              {/* 08 → 09 */}
-              <line
-                x1="720"
-                y1="387"
-                x2="720"
-                y2="448"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-              />
-
-              {/* U SHAPED CURVE */}
-
-              <path
-                d="
-M100 312
-C100 520 270 520 270 440
-C270 520 430 520 430 432
-"
-                fill="none"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-              />
-
-              {/* TOP ARCH */}
-
-              <path
-                d="M430 23 C430 -70 720 -70 720 143"
-                fill="none"
-                stroke="#adb8c6"
-                strokeWidth="2.2"
-                strokeDasharray="8 5"
-              />
-
-              {/* ===== NODES ===== */}
-
-              {/* 01 */}
-              <circle cx="100" cy="90" r="38" fill="#9333ea" />
-              <image
-                href="/icons/requirement.png"
-                x="85"
-                y="75"
-                width="30"
-                height="30"
-              />
-
-              {/* 02 */}
-              <circle cx="100" cy="270" r="38" fill="#4f46e5" />
-              <image
-                href="/icons/design.png"
-                x="85"
-                y="255"
-                width="30"
-                height="30"
-              />
-
-              {/* 03 */}
-              <circle cx="270" cy="440" r="38" fill="#0891b2" />
-              <image
-                href="/icons/architecture.png"
-                x="255"
-                y="425"
-                width="30"
-                height="30"
-              />
-
-              {/* 04 */}
-              <circle cx="430" cy="390" r="38" fill="#0d9488" />
-              <image
-                href="/icons/development.png"
-                x="415"
-                y="375"
-                width="30"
-                height="30"
-              />
-
-              {/* 05 */}
-              <circle cx="430" cy="220" r="38" fill="#0284c7" />
-              <image
-                href="/icons/build.png"
-                x="415"
-                y="205"
-                width="30"
-                height="30"
-              />
-
-              {/* 06 */}
-              <circle cx="430" cy="65" r="38" fill="#059669" />
-              <image
-                href="/icons/qa.png"
-                x="415"
-                y="50"
-                width="30"
-                height="30"
-              />
-
-              {/* 07 */}
-              <circle cx="720" cy="185" r="38" fill="#16a34a" />
-              <image
-                href="/icons/submission.png"
-                x="705"
-                y="170"
-                width="30"
-                height="30"
-              />
-
-              {/* 08 */}
-              <circle cx="720" cy="345" r="38" fill="#15803d" />
-              <image
-                href="/icons/golive.png"
-                x="705"
-                y="330"
-                width="30"
-                height="30"
-              />
-
-              {/* 09 */}
-              <circle cx="720" cy="490" r="38" fill="#d97706" />
-              <image
-                href="/icons/support.png"
-                x="705"
-                y="475"
-                width="30"
-                height="30"
-              />
-            </svg>
-          </div>
+        {/* IMAGE BELOW CONTENT */}
+        <div className="flex justify-center mt-10">
+          <Image
+            src="/whatwedoimage.svg"   // put your image in public folder
+            alt="What we do"
+            width={1200}
+            height={600}
+            className="w-[100%] md:w-[100%]"
+          />
         </div>
       </section>
 

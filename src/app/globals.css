@@ -281,7 +281,7 @@ p {
 }
 
 .animate-rotate-word {
-    animation: rotateWord 2.5s ease-in-out;
+    animation: rotateWord 3s ease-in-out forwards;
 }
 
 .orbit-center {
