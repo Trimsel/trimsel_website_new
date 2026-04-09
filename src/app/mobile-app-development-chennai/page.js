@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Clients from "@/components/Client";
 import Contactform from "@/components/Contactform";
@@ -119,106 +121,57 @@ const services = [
   },
 ];
 
-const steps = [
-  {
-    id: "01",
-    title: "Requirements Analysis",
-    img: "/icons/requirement.png",
-    position: "left-[60px] top-[120px]",
-    color: "from-fuchsia-500 to-purple-600",
-    direction: "row",
-  },
-  {
-    id: "02",
-    title: "Design",
-    img: "/icons/design.png",
-    position: "left-[60px] top-[350px]",
-    color: "from-purple-500 to-indigo-600",
-    direction: "row",
-  },
-  {
-    id: "03",
-    title: "Architecture",
-    img: "/icons/architecture.png",
-    position: "left-[260px] top-[620px]", // moved DOWN
-    color: "from-blue-500 to-cyan-500",
-    direction: "row",
-  },
-  {
-    id: "04",
-    title: "Development",
-    img: "/icons/development.png",
-    position: "left-[480px] top-[470px]",
-    color: "from-cyan-400 to-blue-500",
-    direction: "row",
-  },
-  {
-    id: "05",
-    title: "Build & Release",
-    img: "/icons/build.png",
-    position: "left-[600px] top-[250px]",
-    color: "from-teal-400 to-cyan-400",
-    direction: "row",
-  },
-  {
-    id: "06",
-    title: "Quality Assurance",
-    img: "/icons/qa.png",
-    position: "left-[760px] top-[100px]",
-    color: "from-teal-400 to-green-400",
-    direction: "row",
-  },
+const tabs = ["FRONTEND", "BACKEND", "PLATFORMS"];
 
-  // RIGHT SIDE STEPS
-  {
-    id: "07",
-    title: "Submission To App Stores",
-    img: "/icons/submission.png",
-    position: "right-[260px] top-[220px]",
-    color: "from-green-400 to-emerald-500",
-    direction: "row-reverse",
-  },
-  {
-    id: "08",
-    title: "Go Live",
-    img: "/icons/golive.png",
-    position: "right-[260px] top-[430px]",
-    color: "from-green-500 to-lime-500",
-    direction: "row-reverse",
-  },
-  {
-    id: "09",
-    title: "Support & Maintenance",
-    img: "/icons/support.png",
-    position: "right-[260px] top-[650px]",
-    color: "from-yellow-400 to-amber-500",
-    direction: "row-reverse",
-  },
-];
+const toolsData = {
+  FRONTEND: [
+    { name: "HTML", icon: "/icons/html.png" },
+    { name: "CSS", icon: "/icons/css.png" },
+    { name: "JavaScript", icon: "/icons/js.png" },
+    { name: "React", icon: "/icons/react.png" },
+    { name: "Angular", icon: "/icons/angular.png" },
+  ],
+
+  BACKEND: [
+    { name: "Node.js", icon: "/icons/node.png" },
+    { name: "Express", icon: "/icons/express.png" },
+    { name: "Python", icon: "/icons/python.png" },
+    { name: "Java", icon: "/icons/java.png" },
+  ],
+
+  PLATFORMS: [
+    { name: "AWS", icon: "/icons/aws.png" },
+    { name: "Azure", icon: "/icons/azure.png" },
+    { name: "Docker", icon: "/icons/docker.png" },
+  ],
+};
 
 export default function MobileAppDevelopment() {
+  const [activeTab, setActiveTab] = useState("FRONTEND");
+
   return (
     <main>
       <Header />
-
       <section className="bg-gradient-to-b from-white via-slate-50 to-white">
         <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 sm:py-12">
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
-
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center md:text-left mb-4 space-y-4">
-
               {/* BREADCRUMB */}
               <p className="text-md md:text-base font-medium text-black mb-4">
-                <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                <Link
+                  href="/"
+                  className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
+                >
                   Home
                 </Link>
 
                 {" • "}
 
-                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Mobile App Development</span>
+                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                  Mobile App Development
+                </span>
               </p>
-
 
               <h1 className="mb-4 text-4xl font-bold leading-tight sm:text-5xl">
                 Mobile App Development
@@ -237,7 +190,8 @@ export default function MobileAppDevelopment() {
               <div>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#29B375] to-[#2E70C3] px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#29B375] to-[#2E70C3] px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                >
                   Get a Mobile App Consultation
                   <Image
                     src="/Home/right-arrow.svg"
@@ -289,11 +243,13 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
-
-      <section className="py-16"
+      <section
+        className="py-16"
         style={{
-          background: "radial-gradient(circle at center, #E3EFFF 10%, #DDD7D7 90%)"
-        }}>
+          background:
+            "radial-gradient(circle at center, #E3EFFF 10%, #DDD7D7 90%)",
+        }}
+      >
         <div className="mb-12">
           <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHAT WE DO
@@ -304,14 +260,24 @@ export default function MobileAppDevelopment() {
           </h2>
         </div>
         <p className="mt-2 px-10 text-center text-black font-medium leading-relaxed">
-          Mobile apps are changing the way businesses engage with their customers, vendors, and employees. Minitzon is one of the top mobile app development companies in India that empowers your enterprise with leading technology and modern mobile application solutions. We are a team of collaborative developers with industry knowledge and skill that works together to help companies make long strides toward their digital and customer experience goals.
-
-          As an app development company in Chennai, we understand niche segments and their behaviors to use them in our app development strategies. This helps us see maximum success in our products with the highest customer experience ratings.
-
-          Our mobile app development services in India extend to custom-built apps for Android and iOS platforms with ML and AI Applications for maximum customer satisfaction. Our efforts to meet client requirements with the top mobile app development services in Chennai have brought us a reputation and acknowledgment as a trusted brand for mobile app development in India.
+          Mobile apps are changing the way businesses engage with their
+          customers, vendors, and employees. Minitzon is one of the top mobile
+          app development companies in India that empowers your enterprise with
+          leading technology and modern mobile application solutions. We are a
+          team of collaborative developers with industry knowledge and skill
+          that works together to help companies make long strides toward their
+          digital and customer experience goals. As an app development company
+          in Chennai, we understand niche segments and their behaviors to use
+          them in our app development strategies. This helps us see maximum
+          success in our products with the highest customer experience ratings.
+          Our mobile app development services in India extend to custom-built
+          apps for Android and iOS platforms with ML and AI Applications for
+          maximum customer satisfaction. Our efforts to meet client requirements
+          with the top mobile app development services in Chennai have brought
+          us a reputation and acknowledgment as a trusted brand for mobile app
+          development in India.
         </p>
       </section>
-
       {/* Expand Your Digital Platform*/}
       <section className="bg-white py-16">
         <div className="flex justify-center px-4 sm:px-6">
@@ -333,7 +299,8 @@ export default function MobileAppDevelopment() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-blue-100 rounded-lg p-4 hover:shadow-md hover:shadow-blue-100 transition-shadow duration-200 cursor-default">
+                className="bg-blue-100 rounded-lg p-4 hover:shadow-md hover:shadow-blue-100 transition-shadow duration-200 cursor-default"
+              >
                 {/* Icon + Heading */}
                 <div className="flex items-center gap-3 mb-2">
                   <Image
@@ -358,7 +325,6 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#EEF5F8] px-10 py-16">
         <div className="mb-8">
           <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
@@ -388,7 +354,8 @@ export default function MobileAppDevelopment() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 bg-white rounded-2xl px-8 py-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+                  className="flex items-center gap-4 bg-white rounded-2xl px-8 py-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
                   <div className="shrink-0">
                     <Image
                       src={benefit.icon}
@@ -407,7 +374,6 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#f0efeb] px-10 py-16">
         <div className="mb-8">
           <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
@@ -427,7 +393,8 @@ export default function MobileAppDevelopment() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
+              className="bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200"
+            >
               {/* Top: Icon */}
               <div>
                 <div className="mb-5">
@@ -473,13 +440,11 @@ export default function MobileAppDevelopment() {
           ))}
         </div>
       </section>
-
       {/* Development Process*/}
       import Image from "next/image";
-
       <section className="bg-white px-10 py-16">
         <div className="mb-8">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
+          <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHAT WE DO
           </h3>
 
@@ -497,7 +462,7 @@ export default function MobileAppDevelopment() {
         {/* IMAGE BELOW CONTENT */}
         <div className="flex justify-center mt-10">
           <Image
-            src="/whatwedoimage.svg"   // put your image in public folder
+            src="/whatwedoimage.svg" // put your image in public folder
             alt="What we do"
             width={1200}
             height={600}
@@ -505,7 +470,6 @@ export default function MobileAppDevelopment() {
           />
         </div>
       </section>
-
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
@@ -527,7 +491,8 @@ export default function MobileAppDevelopment() {
 
               <Link
                 href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              >
                 <Image
                   src="/icons/mailbox.svg"
                   width={20}
@@ -551,17 +516,66 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
+      <section className="bg-[#f3f3f3] py-24 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Heading */}
+          <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            Tools and Technology
+          </h3>
 
+          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+            We pride ourselves on being the one stop shop for all your needs
+          </h2>
+
+          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
+            Tools and technology help make work easier and faster. They play an
+            important role in improving efficiency and innovation in everyday
+            life.
+          </p>
+
+          {/* Tabs */}
+          <div className="flex justify-center gap-64 mt-10">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`pb-2 text-lg md:text-xl font-medium transition-all duration-300
+          ${
+            activeTab === tab
+              ? "border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold"
+              : "border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent"
+          }
+        `}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Icons */}
+          <div className="flex flex-wrap justify-start gap-48 mt-12 ml-20">
+            {toolsData[activeTab]?.map((tool, index) => (
+              <div key={index} className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 relative">
+                  <Image
+                    src={tool.icon}
+                    alt={tool.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
+                <p className="text-md font-medium text-black">{tool.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <Testimonial />
-
       <Clients />
-
       <Contactform />
-
       <OurBlog />
-
       <Faq />
-
       <Footer />
     </main>
   );

@@ -10,57 +10,53 @@ import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Testimonial from "@/components/testimonial";
 
-
-
-
 const services = [
   {
     title: "User-Centric UI/UX Design",
     icon: "/web-whatwedo1.svg",
-    desc: "We craft intuitive and engaging user experiences that enhance usability and drive customer satisfaction through thoughtful design."
+    desc: "We craft intuitive and engaging user experiences that enhance usability and drive customer satisfaction through thoughtful design.",
   },
   {
     title: "Front-End Development",
     icon: "/web-whatwedo2.svg",
-    desc: "Build fast, responsive, and interactive interfaces using modern technologies to deliver seamless user experiences across all devices."
+    desc: "Build fast, responsive, and interactive interfaces using modern technologies to deliver seamless user experiences across all devices.",
   },
   {
     title: "Backend Web Development",
     icon: "/web-whatwedo3.svg",
-    desc: "Develop secure and scalable server-side solutions that ensure smooth performance, data handling, and system reliability."
+    desc: "Develop secure and scalable server-side solutions that ensure smooth performance, data handling, and system reliability.",
   },
   {
     title: "Multi-Tier API Development",
     icon: "/web-whatwedo4.svg",
-    desc: "Design robust APIs that enable efficient communication between systems and ensure seamless data flow across applications."
+    desc: "Design robust APIs that enable efficient communication between systems and ensure seamless data flow across applications.",
   },
   {
     title: "CMS Web Development",
     icon: "/web-whatwedo5.svg",
-    desc: "Create flexible and user-friendly CMS platforms that allow easy content management without technical expertise."
+    desc: "Create flexible and user-friendly CMS platforms that allow easy content management without technical expertise.",
   },
   {
     title: "Ecommerce Web Development",
     icon: "/web-whatwedo6.svg",
-    desc: "Build powerful ecommerce platforms with secure payment integration, user-friendly design, and high performance."
+    desc: "Build powerful ecommerce platforms with secure payment integration, user-friendly design, and high performance.",
   },
   {
     title: "DevOps As A Service",
     icon: "/web-whatwedo7.svg",
-    desc: "Streamline development and deployment with automated workflows, improving efficiency, scalability, and reliability."
+    desc: "Streamline development and deployment with automated workflows, improving efficiency, scalability, and reliability.",
   },
   {
     title: "Quality Engineering & Testing",
     icon: "/web-whatwedo8.svg",
-    desc: "Ensure flawless performance with comprehensive testing strategies that enhance product quality and reliability."
+    desc: "Ensure flawless performance with comprehensive testing strategies that enhance product quality and reliability.",
   },
   {
     title: "24/7 Maintenance & Support",
     icon: "/web-whatwedo9.svg",
-    desc: "Provide continuous monitoring and support to keep your systems running smoothly and resolve issues instantly."
+    desc: "Provide continuous monitoring and support to keep your systems running smoothly and resolve issues instantly.",
   },
 ];
-
 
 const features = [
   {
@@ -84,7 +80,6 @@ const features = [
     icon: "/webservice4.svg",
   },
 ];
-
 
 const components = [
   {
@@ -185,46 +180,83 @@ const items = [
   },
 ];
 
+const tabs = ["FRONTEND", "BACKEND", "PLATFORMS", "DATABASE", "UI/UX"];
+
+const toolsData = {
+  FRONTEND: [
+    { name: "HTML", icon: "/icons/html.png" },
+    { name: "CSS", icon: "/icons/css.png" },
+    { name: "JavaScript", icon: "/icons/js.png" },
+    { name: "React", icon: "/icons/react.png" },
+    { name: "Angular", icon: "/icons/angular.png" },
+  ],
+
+  BACKEND: [
+    { name: "Node.js", icon: "/icons/node.png" },
+    { name: "Express", icon: "/icons/express.png" },
+    { name: "Python", icon: "/icons/python.png" },
+    { name: "Java", icon: "/icons/java.png" },
+  ],
+
+  PLATFORMS: [
+    { name: "AWS", icon: "/icons/aws.png" },
+    { name: "Azure", icon: "/icons/azure.png" },
+    { name: "Docker", icon: "/icons/docker.png" },
+  ],
+
+  DATABASE: [
+    { name: "MongoDB", icon: "/icons/mongodb.png" },
+    { name: "MySQL", icon: "/icons/mysql.png" },
+    { name: "PostgreSQL", icon: "/icons/postgres.png" },
+  ],
+
+  "UI/UX": [
+    { name: "Figma", icon: "/icons/figma.png" },
+    { name: "Adobe XD", icon: "/icons/xd.png" },
+    { name: "Sketch", icon: "/icons/sketch.png" },
+  ],
+};
 
 export default function WebDevelopment() {
-
   const [active, setActive] = useState(null);
-
+  const [activeTab, setActiveTab] = useState("FRONTEND");
 
   return (
     <main>
-
       <Header />
 
       <section className="relative overflow-hidden bg-[#E4F3FF]">
         {/* Content */}
         <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-20 pb-16 sm:px-6 sm:pt-20 lg:grid-cols-2 lg:items-start lg:px-12 lg:pt-24">
-
           {/* LEFT CONTENT */}
           <div className="flex flex-col items-start">
-
             {/* BREADCRUMB */}
             <p className="text-md md:text-base font-medium text-black mt-8">
-              <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+              <Link
+                href="/"
+                className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
+              >
                 Home
               </Link>
 
               {" • "}
 
-              <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Web Development Company</span>
+              <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                Web Development Company
+              </span>
             </p>
 
             <h1 className="mt-8 text-4xl font-semibold text-black">
-              Top-Rated Web Development
-              Company in Chennai –
-              Built for Growth & Performance.
+              Top-Rated Web Development Company in Chennai – Built for Growth &
+              Performance.
             </h1>
 
             <p className="max-w-xl mt-6 text-lg">
-              An AI-driven logistics optimization platform that revolutionizes how
-              businesses plan, execute, and manage transportation. Real-time
-              insights enable smarter decisions, while end-to-end visibility ensures
-              greater transparency across every stage of the supply chain.
+              An AI-driven logistics optimization platform that revolutionizes
+              how businesses plan, execute, and manage transportation. Real-time
+              insights enable smarter decisions, while end-to-end visibility
+              ensures greater transparency across every stage of the supply
+              chain.
             </p>
 
             <div>
@@ -233,23 +265,25 @@ export default function WebDevelopment() {
                 className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-gradient-to-r from-[#29B375] to-[#2E70C3] text-white font-medium hover:scale-105 transition-all shadow-lg mt-6"
               >
                 Get a Free Consultation
-                <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
               </Link>
             </div>
           </div>
 
           {/* RIGHT IMAGE */}
           <div className="relative flex items-center justify-center overflow-hidden py-8 lg:py-0">
-
             {/* Glow blob */}
             <div className="absolute h-72 w-72 rounded-full bg-blue-200 opacity-50 blur-3xl" />
 
             {/* Scale wrapper */}
             <div className="flex items-center justify-center scale-[0.6] -my-28 origin-center sm:scale-[0.85] sm:-my-14 lg:scale-100 lg:my-0">
-
               {/* Outer container — fixed size, never changes */}
               <div className="relative h-[540px] w-[540px]">
-
                 {/* Web1 — dashboard/card, top-right */}
                 <div className="absolute top-8 left-28 z-10 h-[75%] w-[95%]">
                   <Image
@@ -271,17 +305,14 @@ export default function WebDevelopment() {
                     priority
                   />
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       <section className="bg-white py-16 px-4 md:px-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
           {/* LEFT SIDE */}
           <div>
             <h2 className="mb-8 text-left text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
@@ -289,27 +320,26 @@ export default function WebDevelopment() {
               In Chennai
             </h2>
 
-
             {/* Paragraph */}
             <p className="mt-6 max-w-3xl mx-auto text-left text-gray-800 font-medium">
-              Minitzon web development company in India has been serving businesses
-              with their digital needs for years. Our experts have helped start-ups,
-              enterprises and businesses of all scales enhance their profits in the
-              B2C and B2B sectors of various industries. We create endless
-              possibilities to help businesses achieve great heights in the marketplace.
+              Minitzon web development company in India has been serving
+              businesses with their digital needs for years. Our experts have
+              helped start-ups, enterprises and businesses of all scales enhance
+              their profits in the B2C and B2B sectors of various industries. We
+              create endless possibilities to help businesses achieve great
+              heights in the marketplace.
             </p>
 
             <p className="mt-4 max-w-3xl mx-auto text-left text-gray-800 font-medium">
-              If you are on the lookout for the best web app development company in
-              India to set up your digital presence, you have reached the right place.
-              Our custom solutions will fit right into your requirements at an
-              affordable price.
+              If you are on the lookout for the best web app development company
+              in India to set up your digital presence, you have reached the
+              right place. Our custom solutions will fit right into your
+              requirements at an affordable price.
             </p>
           </div>
 
           {/* RIGHT SIDE CARD */}
           <div className="bg-gradient-to-br from-[#3b3be0] to-[#6a4df4] text-white p-6 md:p-8 rounded-2xl shadow-xl max-w-md w-full mx-auto">
-
             <h5 className="text-md tracking-wider opacity-80 mb-2">
               START YOUR PROJECT
             </h5>
@@ -319,7 +349,8 @@ export default function WebDevelopment() {
             </h4>
 
             <p className="text-md font-medium mt-2 opacity-80">
-              Grow your business with well-developed websites that engage customer attention.
+              Grow your business with well-developed websites that engage
+              customer attention.
             </p>
 
             {/* Inputs */}
@@ -345,14 +376,11 @@ export default function WebDevelopment() {
               Book A Free Consultation
             </Link>
           </div>
-
         </div>
       </section>
 
-
       <section className="bg-balck py-16 px-4 md:px-10">
         <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#0b0b14] to-[#120a1f] rounded-3xl p-8 md:p-12 text-white">
-
           {/* HEADER */}
           <div>
             {/* Heading */}
@@ -365,8 +393,9 @@ export default function WebDevelopment() {
             </h2>
 
             <p className="mt-4 px-0 md:px-10 text-center text-white font-medium leading-relaxed">
-              Minitzon web development agency in India undertakes consultancy, for
-              businesses regarding website building, understanding your needs.
+              Minitzon web development agency in India undertakes consultancy,
+              for businesses regarding website building, understanding your
+              needs.
             </p>
           </div>
 
@@ -412,17 +441,13 @@ export default function WebDevelopment() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-
       <section className="py-16 px-4 md:px-10 bg-gradient-to-br from-[#eef3f8] to-[#f7f4ef]">
         <div className="max-w-6xl mx-auto">
-
           {/* HEADER */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
               Outsource Web App Development Services And Increase ROI
             </h2>
@@ -457,27 +482,23 @@ export default function WebDevelopment() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-
       <section className="px-4 md:px-10 py-16 bg-white">
         <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
-
           {/* LEFT SIDE */}
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-              Why Does Your Business Need <br />
-              a Web App Services?
+              Why Does Your Business Need <br />a Web App Services?
             </h2>
 
             <p className="mt-5 text-gray-600 font-medium max-w-3xl leading-relaxed">
               Minitzon have excelled in various fields and have enabled several
               businesses globally to meet impeccable profits. Our experienced
               professionals and advanced IT resources serve adequately to meet
-              business demands of any scale quickly and efficiently. See where our
-              Minitzon has guided businesses to excellence.
+              business demands of any scale quickly and efficiently. See where
+              our Minitzon has guided businesses to excellence.
             </p>
 
             {/* BUTTON */}
@@ -497,7 +518,6 @@ export default function WebDevelopment() {
 
           {/* RIGHT SIDE CARDS */}
           <div className="grid grid-cols-2 gap-6">
-
             {components.map((item, index) => (
               <div
                 key={index}
@@ -524,15 +544,12 @@ export default function WebDevelopment() {
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
-
       <section className="bg-gradient-to-br from-[#f5f7fa] to-[#e4edf5] py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
-
           {/* Top Tag */}
           <div>
             <h3 className="mt-2 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -551,8 +568,9 @@ export default function WebDevelopment() {
 
           {/* Subtitle */}
           <p className="mt-4 max-w-3xl mx-auto text-center text-gray-900 font-medium md:text-base">
-            Web app development company in India can be outsourced to help businesses
-            unlock their full potential in the marketplace and stay competitive.
+            Web app development company in India can be outsourced to help
+            businesses unlock their full potential in the marketplace and stay
+            competitive.
           </p>
 
           {/* Cards */}
@@ -571,11 +589,8 @@ export default function WebDevelopment() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
-
-
 
       <section
         className="relative text-white py-16 md:py-20 px-4 sm:px-6"
@@ -585,33 +600,39 @@ export default function WebDevelopment() {
           backgroundPosition: "center",
         }}
       >
-
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
           <h2 className="text-left text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Approach to Web Application <br /> Development
           </h2>
 
           <p className="max-w-3xl text-left font-medium leading-relaxed text-gray-200">
-            We will take your project through a comprehensive app development process that comprises the following phases.
+            We will take your project through a comprehensive app development
+            process that comprises the following phases.
           </p>
         </div>
         <div className="max-w-7xl mx-auto mt-10 grid lg:grid-cols-2 gap-12 items-start">
-
           {/* LEFT SIDE */}
           <div className="max-w-3xl mt-2">
             <div className="space-y-4">
               {items.map((item, index) => (
                 <div key={index} className="border-b border-white/30 pb-6">
-
                   <div
                     className="flex justify-between items-center cursor-pointer"
                     onClick={() => setActive(active === index ? null : index)}
                   >
                     <div className="flex items-center gap-3 pr-4">
                       <div className="shrink-0">
-                        <Image src={item.icon} alt={item.title} width={25} height={25} className="text-blue-400" />
+                        <Image
+                          src={item.icon}
+                          alt={item.title}
+                          width={25}
+                          height={25}
+                          className="text-blue-400"
+                        />
                       </div>
-                      <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
+                      <h3 className="font-medium text-lg leading-tight">
+                        {item.title}
+                      </h3>
                     </div>
 
                     <div className="shrink-0 ml-2">
@@ -625,10 +646,11 @@ export default function WebDevelopment() {
                   </div>
 
                   <div
-                    className={`ml-8 overflow-hidden transition-all duration-300 ${active === index
-                      ? "mt-4 max-h-96 opacity-100"
-                      : "max-h-0 opacity-0"
-                      }`}
+                    className={`ml-8 overflow-hidden transition-all duration-300 ${
+                      active === index
+                        ? "mt-4 max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
                   >
                     {item.points && (
                       <ul className="text-sm text-white-300 font-medium space-y-2">
@@ -644,7 +666,6 @@ export default function WebDevelopment() {
           </div>
         </div>
       </section>
-
 
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
@@ -667,7 +688,8 @@ export default function WebDevelopment() {
 
               <Link
                 href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              >
                 <Image
                   src="/icons/mailbox.svg"
                   width={20}
@@ -692,11 +714,69 @@ export default function WebDevelopment() {
         </div>
       </section>
 
+      <section className="bg-[#f3f3f3] py-24 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Heading */}
+          <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            Tools and Technology
+          </h3>
+
+          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
+            We pride ourselves on being the one stop shop for all your needs
+          </h2>
+
+          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
+            Tools and technology help make work easier and faster. They play an
+            important role in improving efficiency and innovation in everyday
+            life.
+          </p>
+
+          {/* Tabs */}
+          <div className="flex justify-center gap-36 mt-10">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`pb-2 text-lg md:text-xl font-medium transition-all duration-300
+    ${
+      activeTab === tab
+        ? "border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold"
+        : "border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent"
+    }
+  `}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Icons */}
+          <div className="flex flex-wrap justify-start gap-48 mt-12 ml-20">
+            {toolsData[activeTab]?.map((tool, index) => (
+              <div key={index} className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 relative">
+                  <Image
+                    src={tool.icon}
+                    alt={tool.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
+                <p className="text-md font-medium text-black">{tool.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Client />
 
       <Contactform />
 
       <Testimonial />
+
+      <Faq />
 
       <OurBlog />
 
