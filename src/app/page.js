@@ -53,8 +53,6 @@ export default function Home() {
     },
   ];
 
-
-
   // ✅ mount effect
   useEffect(() => {
     setMounted(true);
@@ -132,9 +130,9 @@ export default function Home() {
 
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
         <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-16 sm:px-6 md:pt-16 lg:pt-20">
-          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24 md:px-6 lg:px-0 lg:translate-x-6 xl:translate-x-12">
-            <div className="relative z-20 mt-6 text-center md:mt-0 md:text-left">
-              <h1 className="mb-8 text-3xl font-bold leading-tight sm:text-5xl">
+          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 lg:grid-cols-[55%_45%] md:gap-12 lg:gap-12 xl:gap-24 md:px-6 lg:pr-0 lg:pl-6 xl:pl-10">
+            <div className="relative z-20 mt-6 text-center md:mt-10 lg:mt-16 md:text-left">
+              <h1 className="mb-8 whitespace-nowrap text-[26px] font-bold leading-tight sm:text-4xl md:text-5xl lg:text-[44px] xl:text-5xl">
                 We Engineer Businesses
                 <br />
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
@@ -142,7 +140,9 @@ export default function Home() {
                   <span
                     key={index}
                     suppressHydrationWarning
-                    onAnimationEnd={() => setIndex((prev) => (prev + 1) % HERO_WORDS.length)}
+                    onAnimationEnd={() =>
+                      setIndex((prev) => (prev + 1) % HERO_WORDS.length)
+                    }
                     className="inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl animate-rotate-word"
                   >
                     {HERO_WORDS[index]}
@@ -151,9 +151,11 @@ export default function Home() {
               </h1>
 
               <p className="mb-8 max-w-xl text-base sm:text-lg">
-                Trimsel is a digital product development company based in India.
-                We use the power of digital engineering and empower businesses
-                to execute their ideas with innovation.
+                Trimsel helps startups, growing businesses, and enterprise teams
+                build custom software and AI-driven digital products — from
+                intelligent mobile apps and scalable web platforms to cloud
+                infrastructure and DevOps automation. We handle the full
+                engineering journey so your team stays focused on growth.
               </p>
 
               <Link
@@ -170,7 +172,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="relative mx-auto flex h-[340px] w-full max-w-[620px] items-center justify-center sm:h-[440px] md:h-[72vh] md:max-h-[620px]">
+            <div className="relative mx-auto flex h-[340px] w-full max-w-[620px] items-center justify-center sm:h-[440px] md:h-[72vh] md:max-h-[620px] md:-translate-x-4 lg:-translate-x-8 xl:-translate-x-12">
               <div className="absolute z-0 h-[240px] w-[240px] rounded-full bg-blue-200 opacity-60 blur-3xl sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]" />
 
               <Image
@@ -178,7 +180,7 @@ export default function Home() {
                 alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
                 width={400}
                 height={380}
-                className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[430px]"
+                className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[85%] lg:w-[80%] xl:w-[430px]"
                 priority
               />
 
@@ -187,7 +189,7 @@ export default function Home() {
                 alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
                 width={200}
                 height={200}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-auto w-[150px] sm:w-[190px] md:w-[225px]"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-auto w-[150px] sm:w-[190px] md:w-[45%] lg:w-[45%] xl:w-[225px]"
                 priority
               />
             </div>
