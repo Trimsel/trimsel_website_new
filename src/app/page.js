@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
@@ -16,34 +17,43 @@ import { ToolsSection } from "./Home/ToolsSection";
 import { useEffect, useState } from "react";
 
 const HERO_WORDS = [
-  "AI Development",
-  "Mobile App",
-  "Web Development",
-  "DevOps & Cloud",
+  "Mobile Apps",
+  "Web Platforms",
+  "AI Solutions",
+  "Cloud Infrastructure",
+  "DevOps Automation",
   "Digital Marketing",
 ];
 
-
 export default function Home() {
-
   const [index, setIndex] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
   const [mounted, setMounted] = useState(false);
 
   const caseStudies = [
-    { img: "/Home/case-study-1.svg", btn: "bg-yellow-400 text-black", slug: "kariot-case-study", },
-    { img: "/Home/case-study-2.svg", btn: "bg-black text-white", slug: "xaber-case-study", },
-    { img: "/Home/case-study-3.svg", btn: "bg-black text-white", slug: "Mocial", },
-    { img: "/Home/case-study-4.svg", btn: "bg-black text-white", slug: "EzyHelpers", },
+    {
+      img: "/Home/case-study-1.svg",
+      btn: "bg-yellow-400 text-black",
+      slug: "kariot-case-study",
+    },
+    {
+      img: "/Home/case-study-2.svg",
+      btn: "bg-black text-white",
+      slug: "xaber-case-study",
+    },
+    {
+      img: "/Home/case-study-3.svg",
+      btn: "bg-black text-white",
+      slug: "Mocial",
+    },
+    {
+      img: "/Home/case-study-4.svg",
+      btn: "bg-black text-white",
+      slug: "EzyHelpers",
+    },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % HERO_WORDS.length);
-    }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
 
   // ✅ mount effect
   useEffect(() => {
@@ -52,12 +62,12 @@ export default function Home() {
 
   const goToPrevCaseStudy = () =>
     setActiveCaseStudy((prev) =>
-      prev === 0 ? caseStudies.length - 1 : prev - 1
+      prev === 0 ? caseStudies.length - 1 : prev - 1,
     );
 
   const goToNextCaseStudy = () =>
     setActiveCaseStudy((prev) =>
-      prev === caseStudies.length - 1 ? 0 : prev + 1
+      prev === caseStudies.length - 1 ? 0 : prev + 1,
     );
 
   // ✅ remove the full-page hydration guard that causes a blank screen flash
@@ -108,21 +118,33 @@ export default function Home() {
 
   return (
     <main>
+      <Head>
+        <title>
+          Trimsel — Software Development Company in India | Mobile, AI, Cloud &
+          DevOps
+        </title>
+        <meta
+          name="description"
+          content="Trimsel is a full-service software development company in Chennai, India. We build custom mobile apps, AI solutions, cloud infrastructure, and DevOps pipelines for startups and enterprises. Book a free strategy call."
+        />
+      </Head>
       <Header />
 
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
         <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-16 sm:px-6 md:pt-16 lg:pt-20">
-          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
+          <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24 md:px-6 lg:px-0 lg:translate-x-6 xl:translate-x-12">
             <div className="relative z-20 mt-6 text-center md:mt-0 md:text-left">
               <h1 className="mb-8 text-3xl font-bold leading-tight sm:text-5xl">
-                We Build what you
+                We Engineer Businesses
                 <br />
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
-                  <span>imagine With</span>
+                  <span>That Scale With</span>
                   <span
                     key={index}
                     suppressHydrationWarning
-                    className="inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl animate-rotate-word">
+                    onAnimationEnd={() => setIndex((prev) => (prev + 1) % HERO_WORDS.length)}
+                    className="inline-block whitespace-nowrap text-xl font-semibold text-[#1FA6A0] sm:text-3xl lg:text-4xl animate-rotate-word"
+                  >
                     {HERO_WORDS[index]}
                   </span>
                 </span>
@@ -136,7 +158,8 @@ export default function Home() {
 
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+              >
                 Get Started Today{" "}
                 <Image
                   src="/Home/right-arrow.svg"
@@ -152,7 +175,7 @@ export default function Home() {
 
               <Image
                 src="/Home/HomeImage.svg"
-                alt="Home"
+                alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
                 width={400}
                 height={380}
                 className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[430px]"
@@ -161,7 +184,7 @@ export default function Home() {
 
               <Image
                 src="/Home/Robot.svg"
-                alt="AI Robot"
+                alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
                 width={200}
                 height={200}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-auto w-[150px] sm:w-[190px] md:w-[225px]"
@@ -274,7 +297,8 @@ export default function Home() {
 
               <Link
                 href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+              >
                 Get Started
                 <Image
                   src="/Home/right-arrow.svg"
@@ -302,7 +326,6 @@ export default function Home() {
       {/* Whatwedo */}
       <Whatwedo />
 
-
       {/* Case Study */}
       <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
         {/* Header */}
@@ -323,11 +346,13 @@ export default function Home() {
         <div className="relative mt-6 w-full overflow-hidden md:hidden">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}>
+            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
+          >
             {caseStudies.map((item, i) => (
               <div
                 key={`mobile-${item.slug}-${i}`}
-                className="w-full shrink-0 flex items-center justify-start pl-2 pr-2">
+                className="w-full shrink-0 flex items-center justify-start pl-2 pr-2"
+              >
                 <div className="group relative w-full max-w-[100vw] rounded-none overflow-hidden shadow-lg transition-all duration-300 active:scale-[1.01]">
                   <div className="relative w-full aspect-[1438/763] bg-gray-100">
                     <Image
@@ -341,7 +366,8 @@ export default function Home() {
                   </div>
                   <Link
                     href={`/portfolio/${item.slug}`}
-                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}>
+                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}
+                  >
                     View Case Study
                     <Image
                       src="/icons/case-study-arrow.svg"
@@ -361,7 +387,8 @@ export default function Home() {
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+          >
             <Image
               src="/icons/case-study-arrow.svg"
               alt="Previous"
@@ -376,7 +403,8 @@ export default function Home() {
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+          >
             <Image
               src="/icons/case-study-arrow.svg"
               alt="Next"
@@ -391,11 +419,13 @@ export default function Home() {
         <div className="relative mt-10 w-full overflow-hidden flex-1 min-h-0 hidden md:flex">
           <div
             className="flex w-full transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}>
+            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
+          >
             {caseStudies.map((item, i) => (
               <div
                 key={`desktop-${item.slug}-${i}`}
-                className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6">
+                className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6"
+              >
                 <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
                   <Image
                     src={item.img}
@@ -408,7 +438,8 @@ export default function Home() {
                   />
                   <Link
                     href={`/portfolio/${item.slug}`}
-                    className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}>
+                    className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
+                  >
                     View Case Study
                     <Image
                       src="/icons/case-study-arrow.svg"
@@ -428,7 +459,8 @@ export default function Home() {
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+            className="absolute left-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+          >
             <Image
               src="/Home/casestudy-rightarrow.svg"
               alt="Previous"
@@ -443,7 +475,8 @@ export default function Home() {
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer">
+            className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+          >
             <Image
               src="/Home/casestudy-rightarrow.svg"
               alt="Next"
@@ -631,7 +664,8 @@ export default function Home() {
               <div
                 key={item.name}
                 className="flex h-[100px] w-[120px] sm:h-[110px] sm:w-[130px] flex-col items-center justify-center gap-2 rounded-xl border border-white/60 shadow-md transition-transform duration-300 hover:scale-105"
-                style={{ backgroundColor: item.bg }}>
+                style={{ backgroundColor: item.bg }}
+              >
                 <Image
                   src={item.icon}
                   alt={item.name}
@@ -651,7 +685,8 @@ export default function Home() {
 
       <section
         className="bg-cover bg-center bg-no-repeat py-20"
-        style={{ backgroundImage: "url('/Home/model.svg')" }}>
+        style={{ backgroundImage: "url('/Home/model.svg')" }}
+      >
         <div className="container mx-auto px-4 sm:px-6">
           {/* Heading */}
           <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -681,20 +716,23 @@ export default function Home() {
                   clipPath:
                     "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
                   background: "#2BB673",
-                }}>
+                }}
+              >
                 {/* INNER CARD */}
                 <div
                   className="bg-white"
                   style={{
                     clipPath:
                       "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
-                  }}>
+                  }}
+                >
                   {/* TOP */}
                   <div
                     className="text-center py-6 px-4"
                     style={{
                       clipPath: "polygon(0 0,100% 0,100% 70%,50% 85%,0 70%)",
-                    }}>
+                    }}
+                  >
                     <h3 className="mt-4 font-bold text-sm sm:text-base tracking-wider uppercase text-[#6F678F]">
                       {card.title}
                     </h3>
@@ -712,7 +750,8 @@ export default function Home() {
                       clipPath:
                         "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
                       marginTop: "-20px",
-                    }}>
+                    }}
+                  >
                     <ul className="space-y-3 text-left list-disc list-inside">
                       {card.items.map((item, i) => (
                         <li key={i}>{item}</li>

@@ -121,10 +121,14 @@ const services = [
   },
 ];
 
-const tabs = ["FRONTEND", "BACKEND", "PLATFORMS"];
+const tabs = [
+  "NATIVE MOBILE ARCHITECTURES",
+  "CROSS-PLATFORM AND HYBRID ENGINES",
+  "BACKEND AND MICROSERVICES",
+];
 
 const toolsData = {
-  FRONTEND: [
+  "NATIVE MOBILE ARCHITECTURES" : [
     { name: "HTML", icon: "/icons/html.png" },
     { name: "CSS", icon: "/icons/css.png" },
     { name: "JavaScript", icon: "/icons/js.png" },
@@ -132,14 +136,14 @@ const toolsData = {
     { name: "Angular", icon: "/icons/angular.png" },
   ],
 
-  BACKEND: [
+  "CROSS-PLATFORM AND HYBRID ENGINES" : [
     { name: "Node.js", icon: "/icons/node.png" },
     { name: "Express", icon: "/icons/express.png" },
     { name: "Python", icon: "/icons/python.png" },
     { name: "Java", icon: "/icons/java.png" },
   ],
 
-  PLATFORMS: [
+  "BACKEND AND MICROSERVICES" : [
     { name: "AWS", icon: "/icons/aws.png" },
     { name: "Azure", icon: "/icons/azure.png" },
     { name: "Docker", icon: "/icons/docker.png" },
@@ -147,7 +151,7 @@ const toolsData = {
 };
 
 export default function MobileAppDevelopment() {
-  const [activeTab, setActiveTab] = useState("FRONTEND");
+  const [activeTab, setActiveTab] = useState("NATIVE MOBILE ARCHITECTURES");
 
   return (
     <main>
@@ -441,7 +445,6 @@ export default function MobileAppDevelopment() {
         </div>
       </section>
       {/* Development Process*/}
-      import Image from "next/image";
       <section className="bg-white px-10 py-16">
         <div className="mb-8">
           <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -534,12 +537,12 @@ export default function MobileAppDevelopment() {
           </p>
 
           {/* Tabs */}
-          <div className="flex justify-center gap-64 mt-10">
+          <div className="flex justify-center gap-36 mt-10">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`pb-2 text-lg md:text-xl font-medium transition-all duration-300
+                className={`pb-2 text-md md:text-md font-medium transition-all duration-300
           ${
             activeTab === tab
               ? "border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold"
