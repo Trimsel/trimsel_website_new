@@ -61,18 +61,18 @@ export default function Contactform() {
           {/* LEFT COLUMN */}
           <div className="mt-4 md:mt-12">
             <h4 className="bg-gradient-to-r from-[#1C7DBD] to-[#05A898] bg-clip-text text-center text-xl font-bold tracking-[0.12em] text-transparent sm:text-2xl">
-              LATEST INSIGHTS
+              OUR TECHNOLOGY PARTNERS
             </h4>
 
             <h5 className="text-center text-xl font-semibold text-black sm:text-2xl">
-              Practical Guides From the Engineers and Strategists Who Build This
-              Stuff
+              Backed by the World's Most Trusted Technology Platforms
             </h5>
 
             <p className="mt-4 text-center text-black font-medium">
-              Real-world experience from live projects, on mobile app
-              development, AI engineering, cloud architecture, DevOps
-              automation, and digital marketing. No filler, no recycled takes.
+              We team up with the platforms that the world's best businesses run
+              on. Our technology partnerships mean every solution we build for
+              you is powered by tools that are proven, trusted, and built to
+              perform.
             </p>
 
             {/* Row 1 */}
