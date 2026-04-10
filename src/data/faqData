@@ -260,44 +260,44 @@ export const faqData = {
 
   default: [
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "What services does Trimsel provide?",
+      answer: "Trimsel is a full-service software development company in Chennai offering AI development, mobile app development, web development, cloud consulting, DevOps automation, and digital marketing. We work with startups, SMEs, and enterprise teams across India, UAE, and the US  handling every stage from product strategy and design through to post-launch support."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "How much does it cost to build a mobile app or website?",
+      answer: "Cost depends on complexity, features, platform, and tech stack. A basic business website typically starts from ₹2–5 lakhs. A mobile app MVP ranges from ₹5–15 lakhs depending on platform and features. Complex enterprise platforms, AI-powered products, or multi-platform solutions vary significantly beyond that. We provide a detailed scope and cost estimate after a free consultation, no generic quotes."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "How long does software development take?",
+      answer: "It depends on scope. A basic website takes 2–4 weeks. An MVP mobile app takes 6–10 weeks. A complex enterprise platform or AI solution can take 3–6 months. We use agile sprint-based delivery so you see working progress every two weeks, not just a final handover at the end."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "Do you work with startups or only large enterprises?",
+      answer: "Both. We've helped seed-stage founders validate their first product within tight budgets and supported established enterprises replacing systems that no longer scaled. Our engagement models are designed to flex  a startup and a Fortune 500 company have very different needs, and we structure each engagement accordingly."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "Do you provide a free consultation before committing to a project?",
+      answer: "Yes, completely free, no commitment required. Our initial consultation is a 30-minute conversation where we listen to your project idea, ask the right questions, and give you an honest assessment of what it would take to build it. You'll leave with clarity on scope, timeline, and approach, whether you decide to work with us or not. Book yours using the form below."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "Can I hire dedicated developers from Trimsel?",
+      answer: "Yes. You can hire dedicated developers, DevOps engineers, UI/UX designers, cloud architects, or a full cross-functional pod, on a part-time or full-time basis. Your Trimsel team works embedded in your workflow with shared tools, standups, and full accountability. No account managers in the middle."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "Do you provide post-launch support and maintenance?",
+      answer: "Yes, every project includes post-launch support. We monitor performance, apply security patches, ship feature updates, and respond to issues around the clock. You get a dedicated support channel, not a generic ticket queue. Our involvement doesn't end at go-live, it continues as your product grows."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "How do I choose the right software development company in Chennai?",
+      answer: "Look for three things, a proven delivery track record, technical depth across your specific stack, and a team that stays accountable after launch. At Trimsel, our 92% client retention rate and 200+ projects delivered reflect an approach that starts with your business problem, not our preferred technology, and stays involved until the outcome is right."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "Do you sign an NDA before discussing project details?",
+      answer: "Yes. We sign a Non-Disclosure Agreement before any detailed project discussion. Your idea, business logic, and technical requirements are fully protected from the moment we start talking. You can request an NDA before the first call, no questions asked."
     },
     {
-      question: "What services do you offer?",
-      answer: "We offer web, mobile, cloud, and DevOps services."
+      question: "Which industries does Trimsel serve?",
+      answer: "We've delivered projects across FinTech, HealthTech, on-demand services, IoT and smart systems, logistics, SaaS, e-commerce, real estate, and media. Our clients range from seed-stage startups to established enterprises and our cross-industry experience means we bring relevant technical patterns and compliance awareness to each engagement."
     },
   ]
 };

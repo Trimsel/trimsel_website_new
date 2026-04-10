@@ -11,11 +11,13 @@ export default function Fivestage() {
           FIVE STAGE
         </h3>
         <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-          The 5-Stage Model We Work On
+          How We Take Your Project From Brief to Launched Product
         </h2>
         <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur.
+          Every project we take on follows the same structured process, not
+          because it's rigid, but because it works. These five stages ensure
+          nothing is skipped, no assumptions are made, and the product that
+          ships matches the one that was scoped.
         </p>
 
         {/* ===== MOBILE / TABLET LAYOUT (< lg) ===== */}
@@ -23,13 +25,22 @@ export default function Fivestage() {
           {/* Stage 01 */}
           <div className="relative bg-[#44ABD3] text-white p-8 rounded-2xl rounded-br-none min-h-[320px] flex flex-col justify-between mx-auto w-full max-w-sm">
             <div className="absolute -top-12 left-6">
-              <Image src="/icons/stage1.svg" alt="Ideation" width={100} height={100} />
+              <Image
+                src="/icons/stage1.svg"
+                alt="Ideation"
+                width={100}
+                height={100}
+              />
             </div>
-            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">01</span>
+            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
+              01
+            </span>
             <h3 className="text-2xl font-bold mt-20">Ideation and Analysis.</h3>
             <p className="text-black font-medium leading-relaxed opacity-90 mt-3">
-              At Trimsel, we work on every idea like it&apos;s our first. We not only analyze existing
-              solutions for the ones we work with but also create futuristic solutions.
+              Every project starts with a discovery workshop,understanding your
+              business goals, user needs, technical constraints, and competitive
+              landscape. We define scope, validate feasibility, and agree on
+              success metrics before a single line of code is written.
             </p>
           </div>
 
@@ -40,40 +51,74 @@ export default function Fivestage() {
               <span className="absolute top-0 right-0 w-[4px] h-full bg-gradient-to-b from-[#5AC56B] via-[#5AC56B] to-white rounded-full"></span>
             </div>
             <div className="absolute -top-12 left-6">
-              <Image src="/icons/stage2.svg" alt="Design" width={100} height={100} />
+              <Image
+                src="/icons/stage2.svg"
+                alt="Design"
+                width={100}
+                height={100}
+              />
             </div>
-            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">02</span>
-            <h3 className="text-xl font-bold text-gray-900 mt-20 mb-3">Design Theory.</h3>
+            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
+              02
+            </span>
+            <h3 className="text-xl font-bold text-gray-900 mt-20 mb-3">
+              UI/UX Design & Prototyping.
+            </h3>
             <p className="text-black font-medium leading-relaxed opacity-90">
-              We have an excellent expertise of wireframing and design having delivered the best
-              UI/UX experience to different businesses.
+              Wireframes, interactive prototypes, and high-fidelity designs
+              created before development begins so you can see and test the
+              experience early. We design for usability, conversion, and
+              consistency across every screen and platform.
             </p>
           </div>
 
           {/* Stage 03 */}
           <div className="relative bg-[#E16DB4] text-white p-8 rounded-2xl rounded-bl-none min-h-[320px] flex flex-col justify-between mx-auto w-full max-w-sm">
             <div className="absolute -top-12 left-6">
-              <Image src="/icons/stage3.svg" alt="Architecture" width={100} height={100} />
+              <Image
+                src="/icons/stage3.svg"
+                alt="Architecture"
+                width={100}
+                height={100}
+              />
             </div>
-            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">03</span>
-            <h3 className="text-2xl font-bold mt-20">Architecture and DevOps.</h3>
+            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
+              03
+            </span>
+            <h3 className="text-2xl font-bold mt-20">
+              Architecture and DevOps.
+            </h3>
             <p className="text-black font-medium leading-relaxed opacity-90 mt-3">
-              Trimsel experts look at every project from a scalability and security point of view.
-              Based on analysis, we set up the best architecture necessary.
+              Before development begins, our architects design the system for
+              how it needs to perform at scale not just at launch. We select the
+              right tech stack, define the cloud infrastructure on AWS, Azure,
+              or GCP, and set up CI/CD pipelines and DevOps workflows from day
+              one.
             </p>
           </div>
 
           {/* Stage 04 */}
           <div className="relative bg-[#A576C2] text-white p-8 rounded-2xl rounded-bl-none min-h-[320px] flex flex-col justify-between mx-auto w-full max-w-sm">
             <div className="absolute -top-12 left-6">
-              <Image src="/icons/stage5.svg" alt="Development" width={100} height={100} />
+              <Image
+                src="/icons/stage5.svg"
+                alt="Development"
+                width={100}
+                height={100}
+              />
             </div>
-            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">04</span>
-            <h3 className="text-2xl font-bold mt-20">Backend &amp; Frontend Development</h3>
+            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
+              04
+            </span>
+            <h3 className="text-2xl font-bold mt-20">
+              Full-Stack Development & Delivery
+            </h3>
             <p className="text-black font-medium leading-relaxed opacity-90 mt-3">
-              We understand that for a successful web app development both backend and frontend
-              processes are integral. We have an expert backend team that looks at integrating
-              third-party servers, cloud servers based on the nature of the project.
+              Development runs in agile sprints with regular demos, code
+              reviews, and QA testing built into every cycle. Our full-stack
+              team handles frontend, backend, APIs, and third-party integrations
+              for web platforms, mobile apps, or both, shipping incrementally so
+              you see progress every two weeks.
             </p>
           </div>
 
@@ -84,12 +129,24 @@ export default function Fivestage() {
               <span className="absolute top-0 right-0 w-[4px] h-full bg-gradient-to-b from-[#5AC56B] via-[#5AC56B] to-white rounded-full"></span>
             </div>
             <div className="absolute -top-12 left-6">
-              <Image src="/icons/stage4.svg" alt="Support" width={100} height={100} />
+              <Image
+                src="/icons/stage4.svg"
+                alt="Support"
+                width={100}
+                height={100}
+              />
             </div>
-            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">05</span>
-            <h3 className="text-xl font-bold text-gray-900 mt-20">24/7 Maintenance and Support</h3>
+            <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
+              05
+            </span>
+            <h3 className="text-xl font-bold text-gray-900 mt-20">
+              24/7 Maintenance and Support
+            </h3>
             <p className="text-black font-medium leading-relaxed opacity-90 mt-2">
-              Every project comes with 24/7 maintenance and dedicated support teams.
+              Launch is not the finish line, it's the starting point. After
+              go-live, our team monitors performance, applies security patches,
+              ships feature updates, and responds to issues around the clock.
+              Every client gets a dedicated support channel, not a ticket queue.
             </p>
           </div>
         </div>
@@ -116,11 +173,18 @@ export default function Fivestage() {
                   className="relative -top-6 -left-6"
                 />
               </div>
-              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">01</span>
-              <h3 className="text-2xl font-bold mt-24">Ideation and Analysis.</h3>
+              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
+                01
+              </span>
+              <h3 className="text-2xl font-bold mt-24">
+                Ideation and Analysis.
+              </h3>
               <p className="text-black font-medium leading-relaxed opacity-90">
-                At Trimsel, we work on every idea like it&apos;s our first. We not only analyze existing
-                solutions for the ones we work with but also create futuristic solutions.
+                Every project starts with a discovery workshop,understanding
+                your business goals, user needs, technical constraints, and
+                competitive landscape. We define scope, validate feasibility,
+                and agree on success metrics before a single line of code is
+                written.
               </p>
             </div>
 
@@ -146,11 +210,17 @@ export default function Fivestage() {
                   className="relative -top-6 -left-6"
                 />
               </div>
-              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">02</span>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Design Theory.</h3>
+              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
+                02
+              </span>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                UI/UX Design & Prototyping.
+              </h3>
               <p className="text-black font-medium leading-relaxed opacity-90">
-                We have an excellent expertise of wireframing and design having delivered the best
-                UI/UX experience to different businesses.
+                Wireframes, interactive prototypes, and high-fidelity designs
+                created before development begins so you can see and test the
+                experience early. We design for usability, conversion, and
+                consistency across every screen and platform.
               </p>
             </div>
 
@@ -172,11 +242,18 @@ export default function Fivestage() {
                   className="relative -top-6 -left-6"
                 />
               </div>
-              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">03</span>
-              <h3 className="text-2xl font-bold mt-24">Architecture and DevOps.</h3>
+              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
+                03
+              </span>
+              <h3 className="text-2xl font-bold mt-24">
+                Architecture and DevOps.
+              </h3>
               <p className="text-black font-medium leading-relaxed opacity-90">
-                Trimsel experts look at every project from a scalability and security point of view.
-                Based on analysis, we set up the best architecture necessary.
+                Before development begins, our architects design the system for
+                how it needs to perform at scale not just at launch. We select
+                the right tech stack, define the cloud infrastructure on AWS,
+                Azure, or GCP, and set up CI/CD pipelines and DevOps workflows
+                from day one.
               </p>
             </div>
           </div>
@@ -198,10 +275,18 @@ export default function Fivestage() {
                   className="relative -top-6 -left-6"
                 />
               </div>
-              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">05</span>
-              <h3 className="text-xl font-bold text-gray-900 mt-16">24/7 Maintenance and Support</h3>
+              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
+                05
+              </span>
+              <h3 className="text-xl font-bold text-gray-900 mt-16">
+                24/7 Maintenance and Support
+              </h3>
               <p className="text-black font-medium leading-relaxed opacity-90 mt-2">
-                Every project comes with 24/7 maintenance and dedicated support teams.
+                Launch is not the finish line, it's the starting point. After
+                go-live, our team monitors performance, applies security
+                patches, ships feature updates, and responds to issues around
+                the clock. Every client gets a dedicated support channel, not a
+                ticket queue.
               </p>
             </div>
 
@@ -223,13 +308,18 @@ export default function Fivestage() {
                   className="relative -top-6 -left-6"
                 />
               </div>
-              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">04</span>
-              <h3 className="text-2xl font-bold mt-20">Backend &amp; Frontend Development</h3>
+              <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
+                04
+              </span>
+              <h3 className="text-2xl font-bold mt-20">
+                Full-Stack Development & Delivery
+              </h3>
               <p className="text-black font-medium leading-relaxed opacity-90">
-                We understand that for a successful web app development both backend and frontend
-                processes are integral. We have an expert backend team that looks at integrating
-                third-party servers, cloud servers based on the nature of the project. For existing
-                businesses.
+                Development runs in agile sprints with regular demos, code
+                reviews, and QA testing built into every cycle. Our full-stack
+                team handles frontend, backend, APIs, and third-party
+                integrations for web platforms, mobile apps, or both, shipping
+                incrementally so you see progress every two weeks.
               </p>
             </div>
           </div>

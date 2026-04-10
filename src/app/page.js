@@ -77,39 +77,44 @@ export default function Home() {
       headerColor: "#ed6b5a",
       arrowColor: "#d95a4a",
       bodyColor: "#f28a7e",
+      BestFor:
+        "Startups, evolving products, MVP development, and projects with changing requirements",
       items: [
-        "Your team manages allocation of work for cost-efficiency",
-        "Work conducted at your location",
-        "Billed on T&M basis",
-        "Resources have full access to our expertise and assistance during the engagement",
-        "Resources have full access to our expertise and assistance during the engagement",
+        "You control priorities and resource allocation throughout the engagement",
+        "Billed only for work actually completed, per sprint or hourly",
+        "Full flexibility to adjust scope, features, and direction as needs change",
+        "Ideal for startups validating ideas or products evolving through user feedback",
+        "Dedicated project manager keeps delivery on track and stakeholders informed",
       ],
     },
     {
-      title: "PROJECT-BASED FIXED-FEE",
+      title: "FIXED-FEE PROJECT",
       headerColor: "#5b4372",
       arrowColor: "#4a3659",
       bodyColor: "#7f659d",
+      BestFor:
+        "Startups, evolving products, MVP development, and projects with changing requirements",
       items: [
-        "Well-defined and well-documented needs",
-        "Small to midsize projects",
-        "Time-bound",
-        "Fixed cost based on agreed-upon requirements",
-        "Fixed cost based on agreed-upon requirements",
-        "Testing Mavens leadership manages and monitors quality of deliverables",
+        "Well-defined requirements and scope agreed upfront, no hidden surprises",
+        "Suitable for MVPs, website builds, app launches, and defined feature releases",
+        "Milestone-based delivery with sign-off at each stage",
+        "Change requests handled transparently with clear impact on scope and timeline",
+        "Our team manages quality end to end, delivered on time, within agreed scope",
       ],
     },
     {
-      title: "END-TO-END MANAGED SERVICES",
+      title: "DEDICATED TEAM MODEL",
       headerColor: "#f8b652",
       arrowColor: "#e5a33d",
       bodyColor: "#fcc572",
+      BestFor:
+        "Startups, evolving products, MVP development, and projects with changing requirements",
       items: [
-        "Long-term engagement",
-        "Team of test engineers assigned on-site and offshore based on need",
-        "Focused on adding value and increasing efficiency",
-        "Seamless integration with your engineering team, including attending all Agile ceremonies",
-        "Testing Mavens leadership manages and monitors quality of deliverables",
+        "A dedicated pod of developers, designers, DevOps engineers, and QA  assigned to your product",
+        "Fully embedded into your engineering workflow with shared tools and processes",
+        "Attends your sprints, standups, and planning sessions just like an in-house team",
+        "Scales up or down based on delivery phase and business priorities",
+        "Full ownership of delivery and quality assurance, engagement continues post-launch",
       ],
     },
   ];
@@ -131,7 +136,7 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-100 via-[#d4e9fd] to-white text-black">
         <div className="container mx-auto flex min-h-screen items-center px-4 pb-10 pt-16 sm:px-6 md:pt-16 lg:pt-20">
           <div className="relative z-10 grid w-full items-center gap-10 md:grid-cols-2 lg:grid-cols-[55%_45%] md:gap-12 lg:gap-12 xl:gap-24 md:px-6 lg:pr-0 lg:pl-6 xl:pl-10">
-            <div className="relative z-20 mt-6 text-center md:mt-10 lg:mt-16 md:text-left">
+            <div className="relative z-20 mt-6 text-center md:mt-10 lg:mt-16 md:text-left lg:text-left">
               <h1 className="mb-8 whitespace-nowrap text-[26px] font-bold leading-tight sm:text-4xl md:text-5xl lg:text-[44px] xl:text-5xl">
                 We Engineer Businesses
                 <br />
@@ -152,7 +157,7 @@ export default function Home() {
 
               <p className="mb-8 max-w-xl text-base sm:text-lg">
                 Trimsel helps startups, growing businesses, and enterprise teams
-                build custom software and AI-driven digital products — from
+                build custom software and AI-driven digital products from
                 intelligent mobile apps and scalable web platforms to cloud
                 infrastructure and DevOps automation. We handle the full
                 engineering journey so your team stays focused on growth.
@@ -162,7 +167,7 @@ export default function Home() {
                 href="/contact-us"
                 className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
               >
-                Get Started Today{" "}
+                Book a Free Strategy Call{" "}
                 <Image
                   src="/Home/right-arrow.svg"
                   width={20}
@@ -209,19 +214,22 @@ export default function Home() {
           </h3>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            We&apos;re Experts At Helping Businesses Reach Their True Potential
+            Built by Engineers. Trusted by Businesses. Delivered With
+            Accountability.
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Transform your business processes by migrating from legacy solutions
-            to modern technology and developments that guarantee growth,
-            optimization, and ROI for your business. Trimsel was founded at the
-            right moment to meet the challenges faced by businesses and enable
-            them to meet their digital transformation goals. Established in 2020
-            in Chennai, Trimsel and its robust team of developers and
-            consultants have provided Product Engineering and Digital
-            Transformation services to Fortune 500 companies and start-up
-            enterprises globally.
+            We started Trimsel in 2020 in Chennai with one clear mission build
+            software that solves real business problems, not just
+            impressive-looking demos. Our team spans AI development, mobile
+            apps, web platforms, cloud consulting, DevOps automation, and
+            digital marketing. We've helped startups turn their ideas into real
+            products and worked with established businesses replacing systems
+            that had outgrown their purpose. Wherever our clients are in their
+            journey, we take time to understand their goals, build the right
+            solution, and stay involved until it's delivered properly. With 200+
+            projects behind us and a 92% client retention rate, that approach
+            speaks for itself.
           </p>
 
           {/* Stats */}
@@ -289,19 +297,20 @@ export default function Home() {
               </h3>
 
               <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Have a project? We would love to help.
+                Got a Project in Mind? Let's Have an Honest Conversation.
               </h2>
 
               <p className="mt-4 text-black font-medium">
-                Reach out to us to identify business challenges and get
-                efficient digital solutions.
+                Whether you're starting from scratch or fixing something that
+                isn't working tell us what you're trying to achieve and we'll
+                tell you exactly how we can help.
               </p>
 
               <Link
                 href="/contact-us"
                 className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
               >
-                Get Started
+                Talk to Our Team
                 <Image
                   src="/Home/right-arrow.svg"
                   width={20}
@@ -336,11 +345,12 @@ export default function Home() {
             CASE STUDIES
           </h3>
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Real work. Real impact.
+            Projects That Shipped. Results That Speak.
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-            Explore a few highlights from projects we&#39;ve delivered across
-            industries.
+            Each project below shows the same pattern, a real problem, a
+            practical solution, and measurable outcomes. Browse the work and see
+            how we approach different industries and challenges.
           </p>
         </div>
 
@@ -502,12 +512,10 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            At Trimsel, we don’t just build software—we build long-term
-            partnerships. As a full-cycle software development company in
-            Chennai, we deliver everything from mobile apps and cloud services
-            to DevOps automation and AI-powered solutions. Our client-first
-            approach means we start with your goals, not our tech stack, and
-            deliver solutions that make a measurable difference.
+            We don't just deliver projects and move on, we build relationships
+            that last. Based in Chennai, we start with your goals and build
+            everything around them, bringing the right people, thinking, and
+            technology to make it work every single time.
           </p>
 
           {/* Four Cards */}
@@ -526,9 +534,9 @@ export default function Home() {
                 Diverse Global Clientele
               </h4>
               <p className="max-w-lg text-base text-black sm:text-lg">
-                From startups and SMBs to Fortune 500 enterprises, Trimsel has
-                delivered custom software solutions tailored to unique business
-                models and challenges across industries.
+                From early-stage startups to large enterprises, we've worked
+                with businesses of all sizes across multiple industries,
+                delivering solutions that fit their unique goals and challenges.
               </p>
             </div>
 
@@ -546,9 +554,9 @@ export default function Home() {
                 Domain & Tech Expertise
               </h4>
               <p className="max-w-xl text-base text-black sm:text-lg">
-                Our certified developers, DevOps engineers, and UI/UX designers
-                have deep expertise in cloud computing, full stack development,
-                and emerging tech like AI & automation.
+                Our developers, DevOps engineers, and UI/UX designers bring
+                genuine depth to every project from cloud platforms and full
+                stack development to AI and automation.
               </p>
             </div>
 
@@ -566,9 +574,9 @@ export default function Home() {
                 Flexible Engagement Models
               </h4>
               <p className="max-w-xl text-base text-black sm:text-lg">
-                Whether you need end-to-end product delivery, team augmentation,
-                or application development outsourcing, we adapt our approach to
-                your preferred engagement style.
+                Whether you need a dedicated team, end-to-end delivery, or extra
+                hands on an existing project we adapt our approach to suit the
+                way you work best.
               </p>
             </div>
 
@@ -586,9 +594,9 @@ export default function Home() {
                 All-in-One IT Partner
               </h4>
               <p className="max-w-xl text-base text-black sm:text-lg">
-                We manage your entire digital journey in-house — design,
-                development, DevOps, QA, and support — ensuring seamless
-                collaboration and better cost control.
+                Design, development, DevOps, QA, and support all under one roof,
+                keeping communication clear and giving you full control without
+                the hassle.
               </p>
             </div>
           </div>
@@ -603,15 +611,20 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           {/* Heading Section */}
           <div className="flex flex-col items-center gap-4 text-center">
-            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
               INDUSTRIES WE SERVE
+            </h3>
+
+            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+              Deep Experience Across the Sectors That Matter.
             </h2>
 
             <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-              Android App Solutions for Various Industries help businesses
-              streamline operations, enhance customer engagement, and boost
-              efficiency. From healthcare and education to retail and logistics,
-              our tailored Android apps meet specific industry needs.
+              From healthcare and on-demand platforms to logistics, e-commerce,
+              and SaaS, our custom software development and mobile app teams
+              bring the technical depth to build solutions that fit how your
+              industry actually operates. We've delivered across 12+ sectors and
+              counting.
             </p>
           </div>
 
@@ -696,15 +709,13 @@ export default function Home() {
           </h3>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            You get more than just a testing service provider you get a true
-            partner and an extension of your team.
+            Flexible Engagement. Built Around You.
           </h2>
 
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-            When you work with Testing Mavens, you get more than a testing
-            services provider-you get a true partner and an extension of your
-            team. Our delivery models are designed to be flexible, efficient,
-            and easily scalable to meet your changing needs.
+            We understand that every business works differently. That's why we
+            offer three delivery models designed to fit your timeline, budget,
+            and the way your team operates.
           </p>
         </div>
         <div className="flex justify-center">
@@ -717,7 +728,7 @@ export default function Home() {
                 style={{
                   clipPath:
                     "polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%)",
-                  background: "#2BB673",
+                  background: "#ffffff",
                 }}
               >
                 {/* INNER CARD */}
@@ -754,7 +765,14 @@ export default function Home() {
                       marginTop: "-20px",
                     }}
                   >
-                    <ul className="space-y-3 text-left list-disc list-inside">
+                    {/* NEW: Best For */}
+                    <p className="font-semibold mb-2">Best for:</p>
+                    <p className="mb-4 text-white/90 text-md font-medium">
+                      {card.BestFor}
+                    </p>
+
+                    {/* Existing List */}
+                    <ul className="space-y-3 text-left list-disc list-inside font-medium text-md">
                       {card.items.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
