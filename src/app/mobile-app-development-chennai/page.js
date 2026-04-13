@@ -13,39 +13,39 @@ import Testimonial from "@/components/testimonial";
 const features = [
   {
     icon: "/icons/Reliable Quality.svg",
-    title: "Reliable Quality",
+    title: "App Quality & Performance Testing",
     description:
-      "What makes Minitzon the top Mobile app development company is our keen attention to detail and grade-A product deliveries.",
+      "Every app we build undergoes functional testing, performance testing under load, and security validation before submission. We don't release apps with known bugs, every build meets a defined quality bar and performs consistently under real-world usage conditions.",
   },
   {
     icon: "/icons/Cost Efficient.svg",
-    title: "Cost Efficient",
+    title: "Cost-Effective App Development",
     description:
-      "What makes Minitzon the top Mobile app development company is our keen attention to detail and grade-A product deliveries.",
+      "We help you prioritise the features that matter for launch and phase the rest avoiding unnecessary complexity and reducing long-term maintenance costs. Our fixed-fee and T&M models both come with transparent cost tracking so there are no budget surprises.",
   },
   {
     icon: "/icons/Build by experts.svg",
-    title: "Build By Experts",
+    title: "Expert Mobile App Developers",
     description:
-      "What makes Minitzon the top Mobile app development company is our keen attention to detail and grade-A product deliveries.",
+      "Our mobile team includes Flutter specialists, native iOS and Android developers, React Native engineers, and UI/UX designers who have shipped production apps, not just portfolio projects. Every solution is tailored to your specific business workflows and user expectations.",
   },
   {
     icon: "/icons/Transparent process.svg",
-    title: "Transparent Process",
+    title: "Agile & Transparent Development",
     description:
-      "What makes Minitzon the top Mobile app development company is our keen attention to detail and grade-A product deliveries.",
+      "You get a shared project board, weekly sprint demos, and direct access to your developers, not status updates filtered through a project manager. You always know project status, milestones, and what's coming next without having to chase for updates.",
   },
   {
     icon: "/icons/Customer Engagement.svg",
-    title: "Customer Engagement",
+    title: "Apps Built for User Retention",
     description:
-      "What makes Minitzon the top Mobile app development company is our keen attention to detail and grade-A product deliveries.",
+      "An app that gets downloaded but not used is a failed product. We design for engagement from the first screen, intuitive onboarding, push notifications, personalised experiences, and interaction patterns that reduce drop-off and bring users back. Our apps average 4.8★ across the App Store and Google Play.",
   },
   {
     icon: "/icons/Quick time to Market.svg",
-    title: "Quick Time To Market",
+    title: "Fast App Development & Delivery",
     description:
-      "What makes Minitzon the top Mobile app development company is our keen attention to detail and grade-A product deliveries.",
+      "Most MVPs ship within 6–10 weeks. We achieve this through agile sprints, parallel design and development tracks, and CI/CD pipelines that automate testing and deployment, helping your business launch ahead of competitors without cutting corners on quality.",
   },
 ];
 
@@ -79,44 +79,44 @@ const benefits = [
 const services = [
   {
     icon: "/icons/mobile-service-1.svg",
-    title: "Mobile Application Design",
+    title: "Android App Development",
     description:
-      "We ensure to use guidelines by Apple and Google to make our apps visually appealing while keeping all functionalities tightly integrated.",
+      "We build native Android apps using Kotlin, reliable, fast, and optimised for the Android ecosystem's wide range of devices, screen sizes, and OS versions. Every app focuses on usability, stability, and long-term scalability with rigorous compatibility testing across devices before Google Play submission.",
     href: "#",
   },
   {
     icon: "/icons/mobile-service-2.svg",
-    title: "IOS Application Development",
+    title: "IOS App Development",
     description:
-      "We ensure to use guidelines by Apple and Google to make our apps visually appealing while keeping all functionalities tightly integrated.",
+      "We build native iOS apps using Swift and Xcode, designed to meet Apple's performance standards with full access to iOS-specific capabilities like Face ID, Apple Pay, ARKit, and HealthKit. Every app is tested across current and legacy iPhone and iPad models, delivering consistent experiences for premium device users.",
     href: "#",
   },
   {
     icon: "/icons/mobile-service-3.svg",
-    title: "Android Application Development",
+    title: "Cross-Platform App Development",
     description:
-      "We ensure to use guidelines by Apple and Google to make our apps visually appealing while keeping all functionalities tightly integrated.",
+      "We build cross-platform apps using Flutter and React Native, delivering native-like performance on both iOS and Android from a single codebase. This approach reduces development time and overall project cost without sacrificing user experience. Best suited for startups and businesses that need to reach both platforms simultaneously.",
     href: "#",
   },
   {
     icon: "/icons/mobile-service-4.svg",
-    title: "Hybrid Application Development",
+    title: "UI/UX Design for Mobile Apps",
     description:
-      "We ensure to use guidelines by Apple and Google to make our apps visually appealing while keeping all functionalities tightly integrated.",
+      "We design mobile interfaces that feel intuitive from the first tap built on user research, tested interaction patterns, and platform-specific guidelines including iOS Human Interface Guidelines and Android Material Design. Every interface we design prioritises clear navigation, fast interactions, and accessibility compliance across all screen sizes.",
     href: "#",
   },
   {
     icon: "/icons/mobile-service-5.svg",
-    title: "Mobile Application Testing",
+    title: "Enterprise Mobile Applications",
     description:
-      "We ensure to use guidelines by Apple and Google to make our apps visually appealing while keeping all functionalities tightly integrated.",
+      "We build internal business applications for enterprises that need secure, scalable tools for field teams, operations management, and cross-department coordination. Enterprise apps from Trimsel include admin dashboards, role-based access control, SSO integration, offline functionality, and compliance with corporate MDM policies built to handle real operational complexity.",
     href: "#",
   },
   {
     icon: "/icons/mobile-service-6.svg",
-    title: "24*7 Maintenance And Support",
+    title: "App Maintenance and Support",
     description:
-      "We ensure to use guidelines by Apple and Google to make our apps visually appealing while keeping all functionalities tightly integrated.",
+      "After launch, your app needs ongoing attention, OS updates break features, user behaviour reveals new requirements, and growing load needs active management. Our post-launch support covers bug fixes, OS compatibility updates, performance monitoring, feature enhancements, and App Store and Google Play re-submissions keeping your application secure, stable, and aligned with evolving business needs. You get a dedicated point of contact, not a support queue.",
     href: "#",
   },
 ];
@@ -128,7 +128,7 @@ const tabs = [
 ];
 
 const toolsData = {
-  "NATIVE MOBILE ARCHITECTURES" : [
+  "NATIVE MOBILE ARCHITECTURES": [
     { name: "HTML", icon: "/icons/html.png" },
     { name: "CSS", icon: "/icons/css.png" },
     { name: "JavaScript", icon: "/icons/js.png" },
@@ -136,14 +136,14 @@ const toolsData = {
     { name: "Angular", icon: "/icons/angular.png" },
   ],
 
-  "CROSS-PLATFORM AND HYBRID ENGINES" : [
+  "CROSS-PLATFORM AND HYBRID ENGINES": [
     { name: "Node.js", icon: "/icons/node.png" },
     { name: "Express", icon: "/icons/express.png" },
     { name: "Python", icon: "/icons/python.png" },
     { name: "Java", icon: "/icons/java.png" },
   ],
 
-  "BACKEND AND MICROSERVICES" : [
+  "BACKEND AND MICROSERVICES": [
     { name: "AWS", icon: "/icons/aws.png" },
     { name: "Azure", icon: "/icons/azure.png" },
     { name: "Docker", icon: "/icons/docker.png" },
@@ -184,11 +184,13 @@ export default function MobileAppDevelopment() {
               </h1>
 
               <p className="mb-8 max-w-xl text-base sm:text-lg">
-                An AI-driven logistics optimization platform that revolutionizes
-                how businesses plan, execute, and manage transportation.
-                Real-time insights enable smarter decisions, while end-to-end
-                visibility ensures greater transparency across every stage of
-                the supply chain.
+                We help businesses turn app ideas into working mobile products
+                that customers actually use Android, iOS, and Flutter
+                applications built to support daily operations, scale with
+                growth, and perform under real-world conditions. From MVP
+                validation to enterprise-grade apps, our mobile app development
+                team in Chennai covers UI/UX design, development, App Store
+                deployment, and post-launch support under one roof.
               </p>
 
               <div>
@@ -216,7 +218,7 @@ export default function MobileAppDevelopment() {
                 {/* Main Mobile */}
                 <Image
                   src="/Mobile1.svg"
-                  alt="Main Mobile"
+                  alt=" Mobile app development company in Chennai, custom iOS, Android and cross-platform apps"
                   width={520}
                   height={520}
                   className="relative z-10 h-auto w-[260px] sm:w-[320px] md:w-[380px]"
@@ -226,7 +228,7 @@ export default function MobileAppDevelopment() {
                 {/* Center UI */}
                 <Image
                   src="/Mobile3.svg"
-                  alt="UI Screen"
+                  alt=" Mobile app development company in Chennai, custom iOS, Android and cross-platform apps"
                   width={280}
                   height={320}
                   className="absolute left-1/2 top-1/2 z-20 h-auto w-[170px] -translate-x-1/2 -translate-y-[46%] zoom-animation sm:w-[210px] md:w-[250px]"
@@ -236,7 +238,7 @@ export default function MobileAppDevelopment() {
                 {/* Overlay Graphic */}
                 <Image
                   src="/Mobile2.svg"
-                  alt="Overlay"
+                  alt=" Mobile app development company in Chennai, custom iOS, Android and cross-platform apps"
                   width={280}
                   height={340}
                   className="absolute z-30 h-auto w-[180px] sm:w-[220px] md:w-[260px]"
@@ -247,6 +249,7 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
+
       <section
         className="py-16"
         style={{
@@ -259,40 +262,66 @@ export default function MobileAppDevelopment() {
             WHAT WE DO
           </h3>
 
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Mobile App Development Company in Chennai
+          <h2 className="mt-2 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            Custom Mobile App Development Services,Built Around Your Business
           </h2>
         </div>
-        <p className="mt-2 px-10 text-center text-black font-medium leading-relaxed">
-          Mobile apps are changing the way businesses engage with their
-          customers, vendors, and employees. Minitzon is one of the top mobile
-          app development companies in India that empowers your enterprise with
-          leading technology and modern mobile application solutions. We are a
-          team of collaborative developers with industry knowledge and skill
-          that works together to help companies make long strides toward their
-          digital and customer experience goals. As an app development company
-          in Chennai, we understand niche segments and their behaviors to use
-          them in our app development strategies. This helps us see maximum
-          success in our products with the highest customer experience ratings.
-          Our mobile app development services in India extend to custom-built
-          apps for Android and iOS platforms with ML and AI Applications for
-          maximum customer satisfaction. Our efforts to meet client requirements
-          with the top mobile app development services in Chennai have brought
-          us a reputation and acknowledgment as a trusted brand for mobile app
-          development in India.
+        <p className="px-10 text-center text-black font-medium leading-relaxed">
+          At Trimsel, we don't start with code, we start with your users, your
+          workflows, and your long-term goals. Instead of jumping straight into
+          development, we work closely with you to define the right approach
+          before building anything. The result is a mobile app your customers
+          actually want to use and your team can depend on daily.
         </p>
+
+        <div className="mt-6 ml-6 px-10 mx-auto">
+          <h4 className="text-lg font-semibold text-[#1C75BC] mb-4 text-left">
+            We help you:
+          </h4>
+
+          <ul className="space-y-3 text-black font-medium list-disc list-inside">
+            <li>
+              Define the right mobile app strategy, platform choice, feature
+              prioritisation, and go-to-market approach
+            </li>
+            <li>
+              Build native Android and iOS apps or cross-platform solutions
+              using Flutter and React Native
+            </li>
+            <li>
+              Design intuitive interfaces that reduce friction and keep users
+              engaged session after session
+            </li>
+            <li>
+              Develop secure backend systems and third-party integrations using
+              Node.js, PostgreSQL, and AWS
+            </li>
+            <li>
+              Launch successfully on the App Store and Google Play with store
+              listing optimisation included
+            </li>
+            <li>
+              Upgrade or rebuild existing mobile applications that have outgrown
+              their original architecture
+            </li>
+          </ul>
+        </div>
       </section>
-      {/* Expand Your Digital Platform*/}
+
+      {/* WHY CHOOSE TRIMSEL*/}
       <section className="bg-white py-16">
         <div className="flex justify-center px-4 sm:px-6">
           <div className="mb-12">
-            <h2 className="text-center text-2xl md:text-4xl font-semibold">
-              Expand Your Digital Platform
+            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+              WHY CHOOSE TRIMSEL
+            </h3>
+            <h2 className="mt-2 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+              Six Reasons Our Clients Trust Us to Build Their Mobile Apps
             </h2>
-
             <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-              See how Minitzone, the leading mobile app development company in
-              India can help your business grow.
+              From first prototype to App Store launch here's what makes working
+              with Trimsel different from hiring just another development
+              agency.
             </p>
           </div>
         </div>
@@ -329,15 +358,19 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
+
       <section className="bg-[#EEF5F8] px-10 py-16">
         <div className="mb-8">
-          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            How we can help you?
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            HOW WE HELP?
+          </h3>
+          <h2 className="mt-2 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            What You Get When You Build Your App With Trimsel
           </h2>
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            With our amazing in-house talent, we deliver insightful solutions.
-            You can see a seamless transition of your business to the digital
-            era.
+            From idea validation to post-launch improvements our mobile app
+            development team supports your project at every stage with practical
+            guidance and reliable execution.
           </p>
         </div>
         <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12">
@@ -378,19 +411,20 @@ export default function MobileAppDevelopment() {
           </div>
         </div>
       </section>
+
       <section className="bg-[#f0efeb] px-10 py-16">
         <div className="mb-8">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
-            WHAT WE DO
+          <h3 className="mt-4 text-2xl font-semibold text-center leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            Our Mobile App Development Services
           </h3>
           <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            We pride ourselves on being the one stop shop for all your needs
+            The Full Spectrum of Mobile App Development Services We Offer
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We envision, design, build and support solutions that transform and
-            elevate your digital presence. Our expertise extends to clients
-            worldwide enabling them to achieve global recognition and standard.
+            Whether you need a native iOS app, an Android app, a cross-platform
+            solution, an enterprise mobile tool, or support for an existing
+            product our team has the capability and experience to deliver it.
           </p>
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -416,12 +450,12 @@ export default function MobileAppDevelopment() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base font-bold text-gray-900 mb-3">
+                <h3 className="text-lg font-bold text-black mb-3">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-md font-medium text-gray-500 leading-relaxed">
+                <p className="text-md font-medium text-black leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -447,18 +481,21 @@ export default function MobileAppDevelopment() {
       {/* Development Process*/}
       <section className="bg-white px-10 py-16">
         <div className="mb-8">
-          <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-            WHAT WE DO
+          <h3 className="mt-4 text-2xl font-semibold text-center leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            Our Mobile App Development Process
           </h3>
 
           <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            We pride ourselves on being the one stop shop for all your needs
+            A Step-by-Step Approach to Building Reliable Mobile Applications
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We envision, design, build and support solutions that transform and
-            elevate your digital presence. Our expertise extends to clients
-            worldwide enabling them to achieve global recognition and standard.
+            We follow a structured development approach that begins with
+            understanding your business objectives and user expectations. Each
+            stage from planning and design to testing and deployment is
+            carefully managed to ensure quality delivery. This process helps
+            reduce risks and ensures your application launches smoothly and
+            performs reliably.
           </p>
         </div>
 
@@ -473,6 +510,7 @@ export default function MobileAppDevelopment() {
           />
         </div>
       </section>
+
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
@@ -480,16 +518,18 @@ export default function MobileAppDevelopment() {
             {/* LEFT CONTENT */}
             <div>
               <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                GET IN TOUCH
+                SPEAK WITH OUR EXPERTS
               </h3>
 
               <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Wanna Develop a Mobile Application? Contact us Now!
+                Planning to Build a Mobile App for Your Business? Let’s Discuss
+                Your Idea.
               </h2>
 
               <p className="mt-4 text-black font-medium">
-                Reach out to us to identify business challenges and get
-                efficient digital solutions.
+                Start your project today with the best mobile app development
+                company in Chennai and turn your app idea into a practical
+                digital solution.
               </p>
 
               <Link
