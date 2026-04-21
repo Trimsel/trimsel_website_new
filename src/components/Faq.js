@@ -39,7 +39,7 @@ export default function FaqSection() {
     >
       <button
         onClick={() => toggleFaq(index)}
-        className={`w-full flex min-h-[90px] justify-between items-center outline-none p-6 text-left font-medium transition-all duration-300 ${
+        className={`w-full flex min-h-[60px] justify-between items-center outline-none px-4 py-3 text-left font-medium transition-all duration-300 ${
           openIndex === index ? "bg-[#F3FBFF]" : "hover:bg-gray-50"
         }`}
       >

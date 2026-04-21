@@ -3,14 +3,13 @@ import { useState } from "react";
 import Clients from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
+import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-
 
 const services = [
   {
@@ -133,10 +132,8 @@ const features = [
 ];
 
 export default function DevOpsConsulting() {
-
   const [active, setActive] = useState(0);
   const selected = services[active];
-
 
   return (
     <main>
@@ -147,35 +144,47 @@ export default function DevOpsConsulting() {
 
         <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 text-white sm:py-12">
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
-
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center md:text-left">
-
               {/* BREADCRUMB */}
               <p className="text-md md:text-base font-medium text-white mb-4">
-                <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                <Link
+                  href="/"
+                  className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
+                >
                   Home
                 </Link>
 
                 {" • "}
 
-                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Devops Consulting Services</span>
+                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                  Devops Consulting Services
+                </span>
               </p>
-
 
               <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
                 Leading DevOps Consulting Services
               </h1>
 
               <p className="mb-8 max-w-xl text-base sm:text-lg">
-                Trimsel is a top-rated DevOps company in India offering expert DevOps consulting services to businesses worldwide. We help teams build scalable CI/CD pipelines, leverage Kubernetes, and automate infrastructure for high-speed, secure, and reliable deployments.
+                Trimsel is a top-rated DevOps company in India offering
+                expert DevOps consulting services to businesses worldwide. We
+                help teams build scalable CI/CD pipelines, leverage Kubernetes,
+                and automate infrastructure for high-speed, secure, and reliable
+                deployments.
               </p>
 
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
               >
-                Contact Our Cloud Expert <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
+                Contact Our Cloud Expert{" "}
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
               </Link>
             </div>
 
@@ -204,22 +213,23 @@ export default function DevOpsConsulting() {
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Different phases of Devops process integrated into any business model seamlessly. Businesses to modernize their technologies.
+            Different phases of Devops process integrated into any business
+            model seamlessly. Businesses to modernize their technologies.
           </p>
         </div>
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-16">
-
             {/* LEFT — Tab List */}
             <div className="flex flex-col gap-1 w-full md:w-[380px]">
               {services.map((s, i) => (
                 <button
                   key={s.id}
                   onClick={() => setActive(i)}
-                  className={`flex items-center gap-3 text-left px-6 py-3 rounded-md text-md font-semibold transition-all duration-200 ${active === i
-                    ? "bg-[#1C75BC] text-white"
-                    : "text-gray-700 hover:bg-gray-100"
-                    }`}
+                  className={`flex items-center gap-3 text-left px-6 py-3 rounded-md text-md font-semibold transition-all duration-200 ${
+                    active === i
+                      ? "bg-[#1C75BC] text-white"
+                      : "text-gray-700 hover:bg-gray-100"
+                  }`}
                 >
                   {/* ICON */}
                   <Image
@@ -266,20 +276,19 @@ export default function DevOpsConsulting() {
               {/* Points — 2 column grid */}
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
                 {selected.points.map((point) => (
-                  <li key={point} className="flex items-center gap-2 text-md text-black font-medium">
+                  <li
+                    key={point}
+                    className="flex items-center gap-2 text-md text-black font-medium"
+                  >
                     <span className="text-gray-500">•</span>
                     {point}
                   </li>
                 ))}
               </ul>
             </div>
-
           </div>
         </div>
       </section>
-
-
-
 
       <section className="bg-white px-10 py-16">
         <div className="mb-8">
@@ -292,14 +301,16 @@ export default function DevOpsConsulting() {
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Different phases of Devops process integrated into any business model seamlessly. Modern technology and cloud computing have opened new avenues for businesses to modernize.
+            Different phases of Devops process integrated into any business
+            model seamlessly. Modern technology and cloud computing have opened
+            new avenues for businesses to modernize.
           </p>
         </div>
 
         {/* IMAGE BELOW CONTENT */}
         <div className="flex justify-center mt-10">
           <Image
-            src="/ImplementationProcess.svg"   // put your image in public folder
+            src="/ImplementationProcess.svg" // put your image in public folder
             alt="What we do"
             width={1200}
             height={600}
@@ -308,16 +319,15 @@ export default function DevOpsConsulting() {
         </div>
       </section>
 
-
-
       <section className="relative py-24 px-6 bg-white overflow-hidden">
-
         {/* Main Container */}
         <div className="relative max-w-6xl mx-auto bg-black rounded-3xl p-8 shadow-2xl border border-white/10">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-[900px] h-[200px] 
+            <div
+              className="w-[900px] h-[200px] 
     bg-[linear-gradient(90deg,#4686FF,#9005E5,#1D55C7)] 
-    rounded-2xl opacity-60 blur-[280px]"></div>
+    rounded-2xl opacity-60 blur-[280px]"
+            ></div>
           </div>
 
           {/* Header */}
@@ -330,13 +340,14 @@ export default function DevOpsConsulting() {
             </h2>
 
             <p className="mt-4 max-w-5xl mx-auto text-center text-white font-medium">
-              Clients choose us because of our ability to improve business agility, increase efficiency, and reduce costs. We are differentiated by our.
+              Clients choose us because of our ability to improve business
+              agility, increase efficiency, and reduce costs. We are
+              differentiated by our.
             </p>
           </div>
 
           {/* Cards */}
           <div className="grid md:grid-cols-4 gap-6">
-
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -344,12 +355,7 @@ export default function DevOpsConsulting() {
               >
                 {/* Icon */}
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg mb-5">
-                  <Image
-                    src={feature.icon}
-                    alt="icon"
-                    width={40}
-                    height={40}
-                  />
+                  <Image src={feature.icon} alt="icon" width={40} height={40} />
                 </div>
 
                 <h3 className="text-white font-semibold mb-3">
@@ -357,19 +363,16 @@ export default function DevOpsConsulting() {
                 </h3>
 
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  We have years of experience in helping organizations streamline
-                  the release cycles of different applications, from legacy to
-                  agile and beyond. Our experts ensure that the best CI/CD
-                  practices are implemented.
+                  We have years of experience in helping organizations
+                  streamline the release cycles of different applications, from
+                  legacy to agile and beyond. Our experts ensure that the best
+                  CI/CD practices are implemented.
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
-
-
 
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
@@ -389,7 +392,8 @@ export default function DevOpsConsulting() {
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              >
                 Get Started
                 <Image
                   src="/Home/right-arrow.svg"
@@ -418,11 +422,11 @@ export default function DevOpsConsulting() {
 
       <Contactform />
 
-      <OurBlog />
+      <OurBlog {...blogData.devops} />
 
       <Faq />
 
       <Footer />
     </main>
-  )
+  );
 }

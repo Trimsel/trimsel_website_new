@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
+import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Testimonial from "@/components/testimonial";
@@ -778,7 +779,7 @@ export default function WebDevelopment() {
 
       <Faq />
 
-      <OurBlog />
+      <OurBlog {...blogData.web} />
 
       <Footer />
     </main>

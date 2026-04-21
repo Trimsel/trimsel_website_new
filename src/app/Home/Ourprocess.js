@@ -8,7 +8,7 @@ export default function Fivestage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-          FIVE STAGE
+          OUR PROCESS
         </h3>
         <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
           How We Take Your Project From Brief to Launched Product

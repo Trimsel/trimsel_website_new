@@ -6,6 +6,7 @@ import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
+import { blogData } from "@/data/blogData";
 
 const services = [
   {
@@ -65,16 +66,20 @@ export default function Digitalmarketing() {
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center text-black md:text-left">
-
               {/* BREADCRUMB */}
               <p className="text-md md:text-base font-medium text-black mb-4">
-                <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                <Link
+                  href="/"
+                  className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
+                >
                   Home
                 </Link>
 
                 {" • "}
 
-                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Digital Marketing Company</span>
+                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                  Digital Marketing Company
+                </span>
               </p>
 
               <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
@@ -92,7 +97,8 @@ export default function Digitalmarketing() {
 
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+              >
                 Get a Digital Strategy Session{" "}
                 <Image
                   src="/Home/right-arrow.svg"
@@ -163,7 +169,8 @@ export default function Digitalmarketing() {
             <div className="mt-6">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 bg-[#1C9ACF] text-white font-medium px-6 py-3 rounded-md hover:bg-[#168bb9] transition">
+                className="inline-flex items-center gap-2 bg-[#1C9ACF] text-white font-medium px-6 py-3 rounded-md hover:bg-[#168bb9] transition"
+              >
                 Contact Us
                 <Image
                   src="/Home/right-arrow.svg"
@@ -215,7 +222,8 @@ export default function Digitalmarketing() {
             {/* Button */}
             <Link
               href="/contact-us"
-              className="mt-5 w-full bg-[#1C9ACF] text-white py-3 rounded-md hover:bg-[#168bb9] transition flex items-center justify-center gap-2 font-medium">
+              className="mt-5 w-full bg-[#1C9ACF] text-white py-3 rounded-md hover:bg-[#168bb9] transition flex items-center justify-center gap-2 font-medium"
+            >
               Submit Now
               <Image
                 src="/Home/right-arrow.svg"
@@ -255,7 +263,8 @@ export default function Digitalmarketing() {
                   key={index}
                   className="bg-white p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300"
                   style={{
-                    clipPath: "polygon(0 0, 85% 0, 100% 20%, 100% 100%, 0 100%)",
+                    clipPath:
+                      "polygon(0 0, 85% 0, 100% 20%, 100% 100%, 0 100%)",
                     borderRadius: "16px",
                   }}
                 >
@@ -345,11 +354,15 @@ export default function Digitalmarketing() {
 
             {/* Vertical Line */}
             <div className="flex flex-col items-center mt-16 ml-0 md:ml-20">
-
               {/* ITEM 1 */}
               <div className="relative flex items-center justify-center h-16">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-cyan-500 shadow-md z-20">
-                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                  <Image
+                    src="/icons/result.svg"
+                    alt=""
+                    width={28}
+                    height={28}
+                  />
                 </div>
                 <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-cyan-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
                   ROI Focused
@@ -359,7 +372,12 @@ export default function Digitalmarketing() {
               {/* ITEM 2 */}
               <div className="relative flex items-center justify-center h-16">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-indigo-500 shadow-md z-20">
-                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                  <Image
+                    src="/icons/result.svg"
+                    alt=""
+                    width={28}
+                    height={28}
+                  />
                 </div>
                 <div className="absolute left-full translate-x-0 md:-translate-x-[6px] bg-indigo-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
                   Data Driven
@@ -369,7 +387,12 @@ export default function Digitalmarketing() {
               {/* ITEM 3 */}
               <div className="relative flex items-center justify-center h-16">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-purple-500 shadow-md z-20">
-                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                  <Image
+                    src="/icons/result.svg"
+                    alt=""
+                    width={28}
+                    height={28}
+                  />
                 </div>
                 <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-purple-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
                   Creativity And Innovation
@@ -379,7 +402,12 @@ export default function Digitalmarketing() {
               {/* ITEM 4 */}
               <div className="relative flex items-center justify-center h-16">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-pink-500 shadow-md z-20">
-                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                  <Image
+                    src="/icons/result.svg"
+                    alt=""
+                    width={28}
+                    height={28}
+                  />
                 </div>
                 <div className="absolute left-full translate-x-0 md:-translate-x-[6px] bg-pink-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
                   360° Digital Marketing
@@ -389,30 +417,29 @@ export default function Digitalmarketing() {
               {/* ITEM 5 */}
               <div className="relative flex items-center justify-center h-16">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-red-500 shadow-md z-20">
-                  <Image src="/icons/result.svg" alt="" width={28} height={28} />
+                  <Image
+                    src="/icons/result.svg"
+                    alt=""
+                    width={28}
+                    height={28}
+                  />
                 </div>
                 <div className="absolute right-full translate-x-0 md:translate-x-[6px] bg-red-500 text-white px-10 py-4 rounded-full shadow-lg max-w-[90vw] whitespace-normal break-words md:max-w-none md:whitespace-nowrap">
                   Result Oriented
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
-
       <section className="px-4 md:px-10 py-16 bg-white">
         <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
-
           {/* LEFT SIDE */}
           <div>
             <h2 className="text-2xl md:text-4xl font-semibold text-[#1f2a37] leading-snug">
-              It's Time to Leverage
-              Our Digital Marketing
-              Services in Chennai to
-              Fuel Your Business
-              Growth.
+              It's Time to Leverage Our Digital Marketing Services in Chennai to
+              Fuel Your Business Growth.
             </h2>
 
             <Link
@@ -431,12 +458,12 @@ export default function Digitalmarketing() {
 
           {/* RIGHT SIDE */}
           <div className="text-[#4b5563] text-md font-medium leading-relaxed space-y-4">
-
             <p>
-              At some point in their business, every entrepreneur or CEO contemplates
-              the need for a digital marketing agency in India. Here are some quick
-              questions to help you decide if your business requires a digital marketing
-              company in India to expand your business -
+              At some point in their business, every entrepreneur or CEO
+              contemplates the need for a digital marketing agency in India.
+              Here are some quick questions to help you decide if your business
+              requires a digital marketing company in India to expand your
+              business -
             </p>
 
             <ul className="space-y-3">
@@ -445,10 +472,9 @@ export default function Digitalmarketing() {
                 "Are you facing a marketing slowdown?",
                 "Are you unable to manage leads and establish a proper sales funnel?",
                 "Are you facing a decrease in business enquiries?",
-                "Are you falling short of time to concentrate on marketing?"
+                "Are you falling short of time to concentrate on marketing?",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-
                   {/* Green Tick */}
                   <span className="mt-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center text-white text-xs">
                     ✓
@@ -460,18 +486,14 @@ export default function Digitalmarketing() {
             </ul>
 
             <p>
-              If you've answered YES to even one of the above questions, then you
-              require a digital marketing agency in India. At Minitzon, we use various
-              technologies and online marketing strategies to help your business
-              achieve its marketing goals.
+              If you've answered YES to even one of the above questions, then
+              you require a digital marketing agency in India. At Minitzon, we
+              use various technologies and online marketing strategies to help
+              your business achieve its marketing goals.
             </p>
-
           </div>
-
         </div>
       </section>
-
-
 
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
@@ -483,16 +505,26 @@ export default function Digitalmarketing() {
                 GET IN TOUCH
               </h3>
               <h2 className="mt-2 text-2xl text-black font-bold leading-tight sm:text-3xl md:text-3xl lg:text-4xl">
-                Not Sure How to Start with Digital Marketing? Let’s Build a Strategy That Works for You.
+                Not Sure How to Start with Digital Marketing? Let’s Build a
+                Strategy That Works for You.
               </h2>
               <p className="mt-4 text-black font-medium text-sm sm:text-base max-w-lg">
-                Whether you&apos;re a startup or scaling business, Trimsel&apos;s digital marketing experts in Chennai are ready to help. From SEO to social media and PPC, we’ll craft a custom strategy to grow your brand online.
+                Whether you&apos;re a startup or scaling business,
+                Trimsel&apos;s digital marketing experts in Chennai are ready to
+                help. From SEO to social media and PPC, we’ll craft a custom
+                strategy to grow your brand online.
               </p>
               <Link
                 href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-[#ff3b5b]">
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-[#ff3b5b]"
+              >
                 Contact Us
-                <Image src="/Home/right-arrow.svg" width={20} height={20} alt="RightArrow" />
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
               </Link>
             </div>
 
@@ -514,7 +546,7 @@ export default function Digitalmarketing() {
 
       <Contactform />
 
-      <OurBlog />
+      <OurBlog {...blogData.marketing} />
 
       <Faq />
 

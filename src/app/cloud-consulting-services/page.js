@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Clients from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
+import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 
@@ -88,7 +89,8 @@ const CheckIcon = () => (
     className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"
     viewBox="0 0 20 20"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="10" cy="10" r="9" stroke="#3B82F6" strokeWidth="1.5" />
     <path
       d="M6.5 10.5L8.5 12.5L13.5 8"
@@ -184,18 +186,21 @@ export default function CloudConsulting() {
 
       <section className="flex min-h-screen items-center bg-[url('/CloudConsultingservice.svg')] bg-cover bg-center pt-20">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 pb-8 text-center sm:px-6">
-
           {/* BREADCRUMB */}
           <p className="text-md md:text-base font-medium text-white/70 mb-6">
-            <Link href="/" className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+            <Link
+              href="/"
+              className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
+            >
               Home
             </Link>
 
             {" • "}
 
-            <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">Cloud Consulting Services</span>
+            <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+              Cloud Consulting Services
+            </span>
           </p>
-
 
           <h1 className="text-center text-4xl font-bold leading-tight text-white sm:text-5xl">
             Cloud Consulting & Implementation
@@ -217,13 +222,15 @@ export default function CloudConsulting() {
               style={{
                 background:
                   "linear-gradient(90deg, rgba(28, 125, 189, 1) 0%, rgba(5, 168, 152, 1) 100%)",
-              }}>
+              }}
+            >
               Schedule Consultation
             </Link>
 
             <Link
               href="/services"
-              className="rounded-lg border border-white/20 bg-white/10 px-8 py-3 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20">
+              className="rounded-lg border border-white/20 bg-white/10 px-8 py-3 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+            >
               View Services
             </Link>
           </div>
@@ -252,7 +259,8 @@ export default function CloudConsulting() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
+              className="bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200"
+            >
               {/* Top: Icon */}
               <div>
                 <div className="mb-5">
@@ -284,7 +292,8 @@ export default function CloudConsulting() {
               <div className="mt-6">
                 <Link
                   href={service.href}
-                  className="inline-flex items-center justify-center">
+                  className="inline-flex items-center justify-center"
+                >
                   <Image
                     src="/icons/mobile-stage-arrow.svg"
                     alt="arrow"
@@ -329,7 +338,8 @@ export default function CloudConsulting() {
                   <svg
                     viewBox="0 0 160 160"
                     className="w-full h-full animate-spin"
-                    style={{ animationDuration: "12s" }}>
+                    style={{ animationDuration: "12s" }}
+                  >
                     <defs>
                       <path
                         id="circle"
@@ -340,7 +350,8 @@ export default function CloudConsulting() {
                       fontSize="11.5"
                       fill="#9CA3AF"
                       letterSpacing="2.5"
-                      fontFamily="sans-serif">
+                      fontFamily="sans-serif"
+                    >
                       <textPath href="#circle">
                         . Discuss your project idea . Discuss your project idea
                       </textPath>
@@ -451,7 +462,8 @@ export default function CloudConsulting() {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="bg-white p-6 clip-cut-sm rounded-xl shadow-sm">
+                className="bg-white p-6 clip-cut-sm rounded-xl shadow-sm"
+              >
                 <h3 className="font-semibold text-gray-900 mb-2">
                   {card.title}
                 </h3>
@@ -515,7 +527,8 @@ export default function CloudConsulting() {
           <div className="mt-10">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#1C9ACF] text-white px-6 py-3 rounded-md hover:bg-[#168bb9] transition">
+              className="inline-flex items-center gap-2 bg-[#1C9ACF] text-white px-6 py-3 rounded-md hover:bg-[#168bb9] transition"
+            >
               Discuss My Cloud Strategy
               <Image
                 src="/Home/right-arrow.svg"
@@ -547,10 +560,12 @@ export default function CloudConsulting() {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex-1 flex items-center justify-center text-center whitespace-normal break-words px-1 py-1.5 sm:px-2 md:px-8 md:py-2 rounded-lg text-[10px] leading-[1.1] sm:text-xs md:text-sm font-medium transition ${activeTab === index
-                  ? "bg-[#1C9ACF] text-white shadow"
-                  : "text-gray-600 hover:bg-gray-100"
-                  }`}>
+                className={`flex-1 flex items-center justify-center text-center whitespace-normal break-words px-1 py-1.5 sm:px-2 md:px-8 md:py-2 rounded-lg text-[10px] leading-[1.1] sm:text-xs md:text-sm font-medium transition ${
+                  activeTab === index
+                    ? "bg-[#1C9ACF] text-white shadow"
+                    : "text-gray-600 hover:bg-gray-100"
+                }`}
+              >
                 {tab.title}
               </button>
             ))}
@@ -596,7 +611,8 @@ export default function CloudConsulting() {
 
                 <Link
                   href="/contact"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+                >
                   Contact Us
                   <Image
                     src="/Home/right-arrow.svg"
@@ -615,7 +631,7 @@ export default function CloudConsulting() {
 
       <Contactform />
 
-      <OurBlog />
+      <OurBlog {...blogData.cloud} />
 
       <Faq />
 
