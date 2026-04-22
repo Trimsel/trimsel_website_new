@@ -61,77 +61,75 @@ export default function Digitalmarketing() {
     <main>
       <Header />
 
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-20">
-        <div className="container mx-auto mt-0 md:mt-0 px-4 pt-2 pb-8 sm:pt-4 sm:pb-12">
-          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
-            {/* LEFT CONTENT */}
-            <div className="relative z-20 text-center text-black md:text-left">
-              {/* BREADCRUMB */}
-              <p className="text-md md:text-base font-medium text-black mb-4">
-                <Link
-                  href="/"
-                  className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
-                >
-                  Home
-                </Link>
-
-                {" • "}
-
-                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
-                  Digital Marketing Company
-                </span>
-              </p>
-
-              <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
-                Top Digital Marketing Company <br />
-                in Chennai, India
-              </h1>
-
-              <p className="mb-8 max-w-xl text-base sm:text-lg">
-                An AI-driven logistics optimization platform that revolutionizes
-                how businesses plan, execute, and manage
-                transportation.Real-time insights enable smarter decisions,
-                while end-to-end visibility ensures greater transparency across
-                every stage of the supply chain.
-              </p>
-
+      <section className="relative flex min-h-screen lg:min-h-[100dvh] items-center overflow-hidden bg-white">
+        <div className="container mx-auto grid max-w-7xl gap-10 px-4 pt-24 pb-12 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12 lg:pt-10 lg:pb-0">
+          {/* LEFT CONTENT */}
+          <div className="relative z-20 text-center text-black md:text-left">
+            {/* BREADCRUMB */}
+            <p className="text-md md:text-base font-medium text-black mt-2 mb-4">
               <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+                href="/"
+                className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
               >
-                Get a Digital Strategy Session{" "}
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
+                Home
               </Link>
-            </div>
 
-            {/* RIGHT IMAGE */}
-            <div className="relative mx-auto flex w-full max-w-[520px] items-center justify-center">
-              {/* Main Image */}
+              {" • "}
+
+              <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
+                Digital Marketing Company
+              </span>
+            </p>
+
+            <h1 className="mt-4 mb-8 text-4xl font-bold leading-tight sm:text-5xl">
+              Top Digital Marketing Company <br />
+              in Chennai, India
+            </h1>
+
+            <p className="mb-8 max-w-xl text-base sm:text-lg">
+              An AI-driven logistics optimization platform that revolutionizes
+              how businesses plan, execute, and manage transportation.Real-time
+              insights enable smarter decisions, while end-to-end visibility
+              ensures greater transparency across every stage of the supply
+              chain.
+            </p>
+
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+            >
+              Get a Digital Strategy Session{" "}
               <Image
-                src="/digitalmarketing1.svg"
-                alt="Digital Marketing Illustration"
-                width={340}
-                height={340}
-                className="relative z-10 h-auto w-[220px] sm:w-[280px] md:w-[340px]"
-                priority
+                src="/Home/right-arrow.svg"
+                width={20}
+                height={20}
+                alt="RightArrow"
               />
+            </Link>
+          </div>
 
-              {/* Floating Image */}
+          {/* RIGHT IMAGE */}
+          <div className="relative mx-auto flex w-full max-w-[520px] items-center justify-center lg:mt-2">
+            {/* Main Image */}
+            <Image
+              src="/digitalmarketing1.svg"
+              alt="Digital Marketing Illustration"
+              width={340}
+              height={340}
+              className="relative z-10 h-auto w-[220px] sm:w-[280px] md:w-[340px]"
+              priority
+            />
 
-              <Image
-                src="/digitalmarketing2.svg"
-                alt="Marketing Analytics"
-                width={550}
-                height={550}
-                className="absolute left-1/6 top-1/6 z-10 h-auto w-[280px] -translate-x-1/2 -translate-y-1/2 animate-shake sm:w-[360px] md:w-[460px]"
-                priority
-              />
-            </div>
+            {/* Floating Image */}
+
+            <Image
+              src="/digitalmarketing2.svg"
+              alt="Marketing Analytics"
+              width={550}
+              height={550}
+              className="absolute left-1/6 top-1/6 z-10 h-auto w-[280px] -translate-x-1/2 -translate-y-1/2 animate-shake sm:w-[360px] md:w-[460px]"
+              priority
+            />
           </div>
         </div>
       </section>

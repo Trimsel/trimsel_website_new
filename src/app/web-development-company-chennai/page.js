@@ -226,13 +226,13 @@ export default function WebDevelopment() {
     <main>
       <Header />
 
-      <section className="relative overflow-hidden bg-[#E4F3FF]">
+      <section className="relative overflow-hidden bg-[#E4F3FF] min-h-screen lg:min-h-[100dvh] flex items-center">
         {/* Content */}
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-20 pb-16 sm:px-6 sm:pt-20 lg:grid-cols-2 lg:items-start lg:px-12 lg:pt-24">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-10 px-4 pt-20 pb-12 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12 lg:pt-10 lg:pb-0">
           {/* LEFT CONTENT */}
           <div className="flex flex-col items-start">
             {/* BREADCRUMB */}
-            <p className="text-md md:text-base font-medium text-black mt-8">
+            <p className="text-md md:text-base font-medium text-black mt-2">
               <Link
                 href="/"
                 className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
@@ -247,7 +247,7 @@ export default function WebDevelopment() {
               </span>
             </p>
 
-            <h1 className="mt-8 text-4xl font-semibold text-black">
+            <h1 className="mt-4 text-4xl font-bold text-black leading-tight sm:text-5xl">
               Top-Rated Web Development Company in Chennai – Built for Growth &
               Performance.
             </h1>
@@ -277,12 +277,12 @@ export default function WebDevelopment() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative flex items-center justify-center overflow-hidden py-8 lg:py-0">
+          <div className="relative flex items-center justify-center overflow-hidden py-8 lg:py-0 lg:mt-12">
             {/* Glow blob */}
             <div className="absolute h-72 w-72 rounded-full bg-blue-200 opacity-50 blur-3xl" />
 
             {/* Scale wrapper */}
-            <div className="flex items-center justify-center scale-[0.6] -my-28 origin-center sm:scale-[0.85] sm:-my-14 lg:scale-100 lg:my-0">
+            <div className="flex items-center justify-center scale-[0.65] -my-24 origin-center sm:scale-[0.85] sm:-my-14 lg:scale-100 lg:my-0 xl:scale-110">
               {/* Outer container — fixed size, never changes */}
               <div className="relative h-[540px] w-[540px]">
                 {/* Web1 — dashboard/card, top-right */}
