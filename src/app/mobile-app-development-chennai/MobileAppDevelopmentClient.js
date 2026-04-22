@@ -53,27 +53,44 @@ const features = [
 const benefits = [
   {
     icon: "/icons/help-1.svg",
-    text: "Validate your vision and provide a clear roadmap",
+    question: "What You Get When You Build Your App With Trimsel",
+    answer:
+      "From idea validation to post-launch improvements our mobile app development team supports your project at every stage with practical guidance and reliable execution.",
   },
   {
     icon: "/icons/help-2.svg",
-    text: "Innovate solutions for complex problems",
+    question:
+      "A validated app concept with defined scope, platform choice, and feature roadmap before development begins",
+    answer:
+      "Before we write a single line of code we run a discovery session to understand your users, your workflows, and your business goals. You leave with a clear product brief what the app does, what platform it runs on, which features ship in version one, and what's planned for later phases. This prevents scope creep and budget overruns before they start.",
   },
   {
     icon: "/icons/help-3.svg",
-    text: "Deliver products at 10x speed and maximize efficiency",
+    question:
+      "Native Android, iOS, or cross-platform Flutter and React Native development, whichever fits your timeline and budget",
+    answer:
+      "We build native Android apps using Kotlin, native iOS apps using Swift, and cross-platform apps using Flutter or React Native. Each approach has genuine trade-offs, native gives you maximum platform performance and access to device-specific features, while Flutter and React Native reduce development time and cost for apps that need to run on both platforms simultaneously. We help you choose the right option based on your actual requirements, not what's easiest for us to build.",
   },
   {
     icon: "/icons/help-4.svg",
-    text: "Adapt to the latest technologies and provide a future-proof product",
+    question:
+      "Intuitive UI/UX design with user flow mapping, wireframes, and high-fidelity prototypes before a line of code is written",
+    answer:
+      "Our design process starts with user research and flow mapping understanding how real people will navigate your app before designing a single screen. We then produce wireframes for structural feedback, followed by high-fidelity prototypes you can test and approve before development begins. Every interface is designed for usability first such as clear navigation, fast interactions, and accessible design patterns that work across screen sizes and user abilities.",
   },
   {
     icon: "/icons/help-5.svg",
-    text: "Ensure product scalability, security, and modularity",
+    question:
+      "Full App Store and Google Play submission,including store listing optimisation, screenshots, and compliance review",
+    answer:
+      "App store submission is more than uploading a build. We handle the complete submission process writing keyword-optimised app titles and descriptions, designing preview screenshots and feature graphics, configuring metadata for discoverability, and ensuring your app meets the latest App Store and Google Play compliance requirements. A well-optimised store listing directly affects how many users find and download your app organically we treat it as part of the product, not an afterthought.",
   },
   {
     icon: "/icons/help-6.svg",
-    text: "World-class support during and after project completion",
+    question:
+      "Scalable backend architecture with secure APIs, cloud hosting on AWS or GCP, and third-party integrations",
+    answer:
+      "The backend is what keeps your app reliable under real-world load. We build backend systems using Node.js or Python, with PostgreSQL or MongoDB for data storage, and Redis for caching and performance. Everything runs on AWS or GCP with auto-scaling configured from day one so your app handles 100 users and 100,000 users without requiring a rebuild. Third-party integrations: payment gateways, messaging services, analytics platforms, CRMs  are handled as part of the standard delivery scope.",
   },
 ];
 
@@ -153,16 +170,21 @@ const toolsData = {
 
 export default function MobileAppDevelopmentClient() {
   const [activeTab, setActiveTab] = useState("NATIVE MOBILE ARCHITECTURES");
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const toggleDropdown = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <>
       <main>
         <Header />
         <section className="bg-gradient-to-b from-white via-slate-50 to-white">
-          <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 sm:py-12">
+          <div className="container mx-auto mt-0 md:mt-0 px-4 pt-2 pb-8 sm:pt-4 sm:pb-12">
             <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
               {/* LEFT CONTENT */}
-              <div className="relative z-20 text-center md:text-left mb-4 space-y-4">
+              <div className="relative z-20 text-center md:text-left mb-8 space-y-4">
                 {/* BREADCRUMB */}
                 <p className="text-md md:text-base font-medium text-black mb-4">
                   <Link
@@ -214,16 +236,16 @@ export default function MobileAppDevelopmentClient() {
               {/* RIGHT IMAGES */}
               <div className="relative flex justify-center">
                 {/* Background Glow */}
-                <div className="absolute h-[240px] w-[240px] rounded-full bg-blue-200 opacity-50 blur-3xl sm:h-[320px] sm:w-[320px] md:h-[380px] md:w-[380px]" />
+                <div className="absolute h-[350px] w-[350px] rounded-full bg-blue-200 opacity-50 blur-3xl sm:h-[450px] sm:w-[450px] md:h-[550px] md:w-[550px]" />
 
-                <div className="relative mt-4 flex h-[360px] w-full max-w-[420px] items-center justify-center sm:h-[460px] md:h-[520px]">
+                <div className="relative mt-4 flex h-[500px] w-full max-w-[600px] items-center justify-center sm:h-[620px] md:h-[720px]">
                   {/* Main Mobile */}
                   <Image
                     src="/Mobile1.svg"
                     alt=" Mobile app development company in Chennai, custom iOS, Android and cross-platform apps"
                     width={520}
                     height={520}
-                    className="relative z-10 h-auto w-[260px] sm:w-[320px] md:w-[380px]"
+                    className="relative z-10 h-auto w-[340px] sm:w-[430px] md:w-[520px]"
                     priority
                   />
 
@@ -233,7 +255,7 @@ export default function MobileAppDevelopmentClient() {
                     alt=" Mobile app development company in Chennai, custom iOS, Android and cross-platform apps"
                     width={280}
                     height={320}
-                    className="absolute left-1/2 top-1/2 z-20 h-auto w-[170px] -translate-x-1/2 -translate-y-[46%] zoom-animation sm:w-[210px] md:w-[250px]"
+                    className="absolute left-1/2 top-1/2 z-20 h-auto w-[230px] -translate-x-1/2 -translate-y-[46%] zoom-animation sm:w-[290px] md:w-[350px]"
                     priority
                   />
 
@@ -243,7 +265,7 @@ export default function MobileAppDevelopmentClient() {
                     alt=" Mobile app development company in Chennai, custom iOS, Android and cross-platform apps"
                     width={280}
                     height={340}
-                    className="absolute z-30 h-auto w-[180px] sm:w-[220px] md:w-[260px]"
+                    className="absolute z-30 h-auto w-[240px] sm:w-[300px] md:w-[360px]"
                     priority
                   />
                 </div>
@@ -361,6 +383,7 @@ export default function MobileAppDevelopmentClient() {
           </div>
         </section>
 
+        {/* HOW WE HELP SECTION */}
         <section className="bg-[#EEF5F8] px-10 py-16">
           <div className="mb-8">
             <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -375,9 +398,10 @@ export default function MobileAppDevelopmentClient() {
               practical guidance and reliable execution.
             </p>
           </div>
-          <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-            {/* Left Side - Image ONLY */}
-            <div className="flex-1 flex items-center justify-center -ml-16">
+
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+            {/* LEFT IMAGE */}
+            <div className="flex-1 flex items-center justify-center -ml-10">
               <Image
                 src="/Help-you.svg"
                 alt="How we can help illustration"
@@ -387,26 +411,44 @@ export default function MobileAppDevelopmentClient() {
               />
             </div>
 
-            {/* Right Side - Text + Benefit Cards */}
+            {/* RIGHT SIDE DROPDOWN */}
             <div className="flex-1 flex flex-col gap-4 ml-16">
               <div className="flex flex-col gap-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 bg-white rounded-2xl px-8 py-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    className="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:bg-blue-100 hover:shadow-md"
                   >
-                    <div className="shrink-0">
-                      <Image
-                        src={benefit.icon}
-                        alt={benefit.text}
-                        width={30}
-                        height={30}
-                        className="object-contain"
-                      />
+                    {/* HEADER */}
+                    <div
+                      onClick={() => toggleDropdown(index)}
+                      className="flex items-center justify-between px-6 py-4 cursor-pointer"
+                    >
+                      <div className="flex items-center gap-6">
+                        <Image
+                          src={item.icon}
+                          alt={item.question}
+                          width={30}
+                          height={30}
+                        />
+                        <p className="text-md text-gray-800 font-medium">
+                          {item.question}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-md text-gray-700 font-medium leading-snug">
-                      {benefit.text}
-                    </p>
+
+                    {/* DROPDOWN CONTENT */}
+                    <div
+                      className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
+                        activeIndex === index
+                          ? "max-h-[300px] py-4 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <p className="text-md text-gray-800 font-medium leading-relaxed">
+                        {item.answer}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -517,7 +559,7 @@ export default function MobileAppDevelopmentClient() {
         {/* Getintouch */}
         <section className="bg-white py-12 md:py-20">
           <div className="flex justify-center px-4 sm:px-6">
-            <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC] shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+            <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC] shadow-md flex flex-col md:flex-row items-center justify-between">
               {/* LEFT CONTENT */}
               <div>
                 <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -556,7 +598,7 @@ export default function MobileAppDevelopmentClient() {
                   alt="Contact illustration"
                   width={700}
                   height={700}
-                  className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                  className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
                 />
               </div>
             </div>

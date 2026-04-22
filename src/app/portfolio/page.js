@@ -158,7 +158,7 @@ export default function PortfolioPage() {
       {/* Get in Touch */}
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 pt-6 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-6 py-10 sm:px-12 md:py-16 shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+          <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] shadow-md flex flex-col md:flex-row items-center justify-between">
             {/* LEFT CONTENT */}
             <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
               <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
@@ -188,7 +188,7 @@ export default function PortfolioPage() {
                 alt="Contact illustration"
                 width={700}
                 height={700}
-                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
               />
             </div>
           </div>

@@ -275,6 +275,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Getintouch */}
+      <section className="bg-white py-6 md:py-10">
+        <div className="flex justify-center px-4 sm:px-6">
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-[#F2DFFF] shadow-md flex flex-col md:flex-row items-center justify-between">
+            {/* LEFT CONTENT */}
+            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
+              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                GET IN TOUCH
+              </h3>
+
+              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+                Prepared to build your application with the right development
+                partner?
+              </h2>
+
+              <p className="mt-4 text-black font-medium">
+                Reach out to our team and get started with a strategy aligned to
+                your business goals.
+              </p>
+
+              <Link
+                href="/contact-us"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+              >
+                Get Started
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
+              </Link>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Image
+                src="/Home/getintouchhomepage.svg"
+                alt="Contact illustration"
+                width={700}
+                height={700}
+                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Whatwedo */}
       <Whatwedo />
 
@@ -550,7 +598,7 @@ export default function Home() {
       {/* Getintouch */}
       <section className="bg-white py-6 md:py-10">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-6 py-6 sm:px-12 md:py-8 rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md flex flex-col md:flex-row items-center justify-between">
             {/* LEFT CONTENT */}
             <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
               <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -588,7 +636,7 @@ export default function Home() {
                 alt="Contact illustration"
                 width={700}
                 height={700}
-                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
               />
             </div>
           </div>

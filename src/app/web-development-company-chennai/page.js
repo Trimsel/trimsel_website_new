@@ -671,7 +671,7 @@ export default function WebDevelopment() {
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-16 rounded-xl bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF] shadow-md flex flex-col md:flex-row items-center justify-between overflow-hidden">
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF] shadow-md flex flex-col md:flex-row items-center justify-between">
             {/* LEFT CONTENT */}
             <div>
               <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
@@ -708,7 +708,7 @@ export default function WebDevelopment() {
                 alt="Contact illustration"
                 width={700}
                 height={700}
-                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
               />
             </div>
           </div>

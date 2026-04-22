@@ -62,7 +62,7 @@ export default function Digitalmarketing() {
       <Header />
 
       <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-20">
-        <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 sm:py-12">
+        <div className="container mx-auto mt-0 md:mt-0 px-4 pt-2 pb-8 sm:pt-4 sm:pb-12">
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center text-black md:text-left">
@@ -498,9 +498,9 @@ export default function Digitalmarketing() {
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[#E1C8FF] shadow-lg flex flex-col md:flex-row items-center justify-between overflow-hidden">
+          <div className="relative w-full max-w-6xl rounded-xl bg-[#E1C8FF] min-h-[160px] md:min-h-[180px] shadow-lg flex flex-col md:flex-row items-center justify-between">
             {/* LEFT CONTENT */}
-            <div className="relative z-10 px-8 py-10 sm:px-12 md:py-16 w-full md:w-[60%] lg:w-1/2 text-left">
+            <div className="relative z-10 px-8 py-6 sm:px-12 md:py-8 w-full md:w-[60%] lg:w-1/2 text-left">
               <h3 className="text-xl font-semibold tracking-widest text-[#1C75BC] sm:text-2xl">
                 GET IN TOUCH
               </h3>
@@ -529,13 +529,13 @@ export default function Digitalmarketing() {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-center items-end self-stretch">
               <Image
                 src="/getintouchdigitalmarketing.svg"
                 alt="Contact illustration"
                 width={350}
                 height={350}
-                className="relative md:absolute md:bottom-0 md:right-0 ml-auto w-[80%] sm:w-[50%] md:w-full h-full object-contain object-right-bottom"
+                className="md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2 w-full h-[220px] sm:h-[260px] md:h-[340px] object-contain object-bottom"
               />
             </div>
           </div>

@@ -594,7 +594,7 @@ export default function CloudConsulting() {
       {/* Getintouch */}
       <section className="bg-white py-12 md:py-20">
         <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[url('/getintouch2.svg')] bg-cover bg-center bg-no-repeat px-6 py-10 sm:px-12 md:py-16 shadow-md">
+          <div className="relative w-full max-w-6xl rounded-xl bg-[url('/getintouch2.svg')] bg-cover bg-center bg-no-repeat px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] shadow-md">
             <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
 
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
