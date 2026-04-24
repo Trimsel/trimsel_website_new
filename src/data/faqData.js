@@ -106,44 +106,57 @@ export const faqData = {
   ],
   web: [
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How much does website development cost in Chennai?",
+      answer:
+        "Cost depends on project type, complexity, and features. A standard business website typically starts from ₹1–3 lakhs. A custom web application with backend integrations and user authentication ranges from ₹5–20 lakhs. Enterprise platforms with complex workflows, API integrations, and compliance requirements vary significantly beyond that. We provide a detailed scope and cost estimate after a free consultation no generic quotes.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "How long does it take to build a business website?",
+      answer:
+        "A standard business website with 5–15 pages takes 2–4 weeks. A custom web application with user authentication, dashboards, and API integrations takes 8–16 weeks. Complex enterprise platforms can take 4–6 months. We use two-week agile sprints so you see working progress throughout, not just a final handover at the end.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How do I choose the best web development company in Chennai?",
+      answer:
+        "Look for three things a portfolio of live, working websites (not just screenshots), technical depth across frontend and backend, and a team that provides post-launch support rather than disappearing after delivery. At Trimsel, our 180+ delivered web projects, 95% on-time delivery rate, and dedicated post-launch support reflect an approach that starts with your business problem and stays accountable until the outcome is right.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question:
+        "Can you redesign my existing website without losing SEO rankings?",
+      answer:
+        "Yes, Website redesign with SEO preservation is one of our core capabilities. Before any redesign we audit your current URL structure, metadata, internal linking, indexed pages, and backlink profile. During migration we implement 301 redirects for every changed URL, preserve existing meta titles and descriptions where they're performing well, and maintain your sitemap and robots.txt configuration. Post-launch we monitor Google Search Console for crawl errors and ranking changes for 4–6 weeks to catch any issues early.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question:
+        "Which platform is best for my website WordPress, custom-built, or Shopify?",
+      answer:
+        "It depends on your business needs. WordPress is ideal for content-heavy business websites where your team needs to update pages regularly without developer help. Shopify is best for e-commerce businesses that want a quick, reliable online store without heavy customisation. Custom-built solutions using React, Next.js, or Node.js are right when you need advanced functionality, complex user flows, or integrations that off-the-shelf platforms can't support. We help you choose based on your actual requirements not what's easiest for us to build.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question:
+        "Why should I choose Trimsel as my web development company in Chennai?",
+      answer:
+        "Three things set us apart. First, We've delivered 180+ web projects with a 95% on-time delivery rate, so you're working with a team that has consistently shipped real products under real deadlines. Second, We don't hand off your project to junior developers or offshore it after scoping. The team that plans your project is the team that builds it. Third, We stay involved after launch with dedicated support, agreed SLAs, and proactive maintenance. Our 92% client retention rate reflects how that approach works in practice.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Do you provide ecommerce website development in Chennai?",
+      answer:
+        "Yes, We build e-commerce platforms on WooCommerce, Shopify, and custom solutions with secure payment gateway integration, product catalogue management, inventory tracking, and conversion-optimised checkout flows. Every e-commerce build is tested under simulated peak traffic before launch. We've delivered online stores for retail, D2C brands, and B2B wholesale businesses.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Will my website be SEO-friendly after development?",
+      answer:
+        "Yes, SEO is built into our development process, not added as an afterthought. Every website we deliver includes clean URL structures, semantic HTML markup, optimised meta tags, fast page load speeds targeting Core Web Vitals thresholds, mobile-first responsive design, structured data markup, XML sitemap generation, and proper robots.txt configuration. These technical foundations give your SEO strategy the strongest possible starting point.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Can I hire dedicated web developers from Trimsel?",
+      answer:
+        "Yes, You can hire dedicated frontend developers, backend engineers, full-stack developers, or a complete web development team on a part-time or full-time basis. Your Trimsel developers work embedded in your workflow with shared tools, daily standups, and full accountability. No account managers in the middle — you communicate directly with the engineers building your product.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Do you sign an NDA before discussing my web project?",
+      answer:
+        "Yes, Always. We sign a Non-Disclosure Agreement before any detailed project discussion. Your business logic, technical requirements, competitive advantages, and any sensitive information shared during scoping is fully protected from the moment we start talking. You can request the NDA before the first call.",
     },
   ],
 

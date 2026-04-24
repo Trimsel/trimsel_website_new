@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CaseStudiesSection from "@/components/relatedcasestudy";
 
 const services = [
   {
@@ -417,6 +418,27 @@ export default function DevOpsConsulting() {
           </div>
         </div>
       </section>
+
+      <CaseStudiesSection
+        tag="RELATED CASE STUDIES"
+        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
+        studies={[
+          {
+            title: "EzyHelpers",
+            description:
+              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+            image: "/images/ezyhelpers.png",
+            link: "/case-study/ezyhelpers",
+          },
+          {
+            title: "KarIOT",
+            description:
+              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+            image: "/images/kariot.png",
+            link: "/case-study/kariot",
+          },
+        ]}
+      />
 
       <Clients />
 

@@ -10,6 +10,7 @@ import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Testimonial from "@/components/testimonial";
+import CaseStudiesSection from "@/components/relatedcasestudy";
 
 const features = [
   {
@@ -659,6 +660,28 @@ export default function MobileAppDevelopmentClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudiesSection
+          tag="RELATED CASE STUDIES"
+          heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
+          studies={[
+            {
+              title: "EzyHelpers",
+              description:
+                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+              image: "/images/ezyhelpers.png",
+              link: "/case-study/ezyhelpers",
+            },
+            {
+              title: "KarIOT",
+              description:
+                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+              image: "/images/kariot.png",
+              link: "/case-study/kariot",
+            },
+          ]}
+        />
+
         <Testimonial />
         <Clients />
         <Contactform />

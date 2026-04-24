@@ -1,4 +1,5 @@
 import "./globals.css";
+import Image from "next/image";
 
 export const metadata = {
   title: "Software Development Company in India | Trimsel",
@@ -36,6 +37,21 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <a
+          href="https://wa.me/917200841581"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="fixed bottom-8 right-8 z-[9999] transition-transform duration-200 hover:scale-105"
+        >
+          <Image
+            src="/icons/whatsappicon.svg"
+            alt="WhatsApp"
+            width={60}
+            height={60}
+            priority
+          />
+        </a>
       </body>
     </html>
   );

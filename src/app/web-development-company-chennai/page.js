@@ -9,122 +9,123 @@ import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
+import CaseStudiesSection from "@/components/relatedcasestudy";
 import Testimonial from "@/components/testimonial";
 
 const services = [
   {
-    title: "User-Centric UI/UX Design",
+    title: "UI/UX Design for Web",
     icon: "/web-whatwedo1.svg",
-    desc: "We craft intuitive and engaging user experiences that enhance usability and drive customer satisfaction through thoughtful design.",
+    desc: "We design interfaces that make sense to real users clear navigation, logical flows, and mobile-first layouts tested against real user behaviour. Every design decision targets conversion and usability reducing drop-off and increasing the time visitors spend engaging with your product",
   },
   {
     title: "Front-End Development",
     icon: "/web-whatwedo2.svg",
-    desc: "Build fast, responsive, and interactive interfaces using modern technologies to deliver seamless user experiences across all devices.",
+    desc: "We build fast, responsive frontends using React, Next.js, Vue.js, and Angular optimised for Core Web Vitals, SEO performance, and WCAG accessibility standards. Every interface is tested across devices and browsers before a single page goes live.",
   },
   {
     title: "Backend Web Development",
     icon: "/web-whatwedo3.svg",
-    desc: "Develop secure and scalable server-side solutions that ensure smooth performance, data handling, and system reliability.",
+    desc: "We build secure, scalable backend systems using Node.js, Python, and PHP — handling authentication, business logic, database management, and third-party integrations reliably, whether you're serving 100 users or 100,000",
   },
   {
-    title: "Multi-Tier API Development",
+    title: "API Development & Integration",
     icon: "/web-whatwedo4.svg",
-    desc: "Design robust APIs that enable efficient communication between systems and ensure seamless data flow across applications.",
+    desc: "We design and build RESTful and GraphQL APIs that connect your web platform to third-party tools, mobile apps, payment gateways, and CRMs enabling clean, consistent data flow across your entire stack. Every API is documented, versioned, and secured.",
   },
   {
     title: "CMS Web Development",
     icon: "/web-whatwedo5.svg",
-    desc: "Create flexible and user-friendly CMS platforms that allow easy content management without technical expertise.",
+    desc: "We build and configure CMS platforms WordPress, Headless CMS solutions like Contentful and Sanity, and custom builds so your team can update pages, publish content, and manage media without raising a development ticket every time.",
   },
   {
     title: "Ecommerce Web Development",
     icon: "/web-whatwedo6.svg",
-    desc: "Build powerful ecommerce platforms with secure payment integration, user-friendly design, and high performance.",
+    desc: "We deliver complete e-commerce solutions WooCommerce, Shopify, and custom platforms covering product catalogue setup, payment gateway integration, cart logic, order management, and conversion-optimised checkout. Every build is tested under peak traffic conditions before launch.",
   },
   {
-    title: "DevOps As A Service",
+    title: "DevOps for Web Projects",
     icon: "/web-whatwedo7.svg",
-    desc: "Streamline development and deployment with automated workflows, improving efficiency, scalability, and reliability.",
+    desc: "We set up CI/CD pipelines, staging and production environments, automated testing workflows, and cloud hosting on AWS or GCP so deployments are reliable, rollbacks are safe, and your development cycle keeps moving without your production environment becoming a risk.",
   },
   {
-    title: "Quality Engineering & Testing",
+    title: "Website Testing & QA",
     icon: "/web-whatwedo8.svg",
-    desc: "Ensure flawless performance with comprehensive testing strategies that enhance product quality and reliability.",
+    desc: "We run functional testing, cross-browser checks, mobile compatibility, performance audits under load, security vulnerability scanning, and regression testing before every launch so what goes live is exactly what you approved in review.",
   },
   {
     title: "24/7 Maintenance & Support",
     icon: "/web-whatwedo9.svg",
-    desc: "Provide continuous monitoring and support to keep your systems running smoothly and resolve issues instantly.",
+    desc: "After launch, we monitor uptime, apply security patches, update plugins and dependencies, manage hosting renewals, and respond to performance issues around the clock so your website never goes unmanaged. You get a dedicated support contact and agreed response SLAs, not a shared inbox.",
   },
 ];
 
 const features = [
   {
-    title: "Access to Top Worldwide Talent",
-    desc: "Web development company in Chennai helps you access top talents in the industry to meet your business needs with the best-in-class technology and industry knowledge.",
+    title: "Skip Recruitment - Get a Full Team Immediately",
+    desc: "Hiring and training an in-house team of frontend, backend, UI/UX, and QA professionals takes 3–6 months and significant overhead. With Trimsel you skip the recruitment cycle entirely our team of experienced React, Next.js, Node.js, and WordPress developers is ready to start on your project within days, not months.",
     icon: "/webservice1.svg",
   },
   {
-    title: "Reduce Turnaround Time",
-    desc: "Building a website on your own can consume a lot of time and effort. Outsourcing web development to the best web development company in India can help you save costs.",
+    title: "Faster Time to Market",
+    desc: "Our agile delivery process, pre-built component libraries, and structured development workflows cut typical web project timelines by 40–60% compared to an in-house team building from scratch. A basic business website takes 2–4 weeks. A complex web application takes 8–16 weeks. You get working demos every two weeks throughout.",
     icon: "/webservice2.svg",
   },
   {
-    title: "Experienced Professionals of the Field",
-    desc: "Get access to experienced developers and professionals to help you construct and manage your project. We implement the best practices and trends to deliver products.",
+    title: "Experienced Professionals on Every Project",
+    desc: "You get senior developers and designers who have shipped real products across multiple industries not juniors practising on your budget. Every specialist is applied only when your project needs their skills, so you're never paying for idle capacity.",
     icon: "/webservice3.svg",
   },
   {
-    title: "Cut Down Extra Cost",
-    desc: "Not needing to hire in-house teams and resources can help you save a lot of money and capital by simply investing in the top web development agency in India.",
+    title: "Lower Cost Than Hiring In-House",
+    desc: "Working with a professional web development company in Chennai means you avoid the overhead of salaries, infrastructure, and software licenses  while getting output that meets enterprise-grade standards.",
     icon: "/webservice4.svg",
   },
 ];
 
 const components = [
   {
-    title: "24/7 Support",
-    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    title: "Your Business Runs 24/7 — Your Platform Should Too",
+    desc: "Your web platform takes enquiries, processes orders, delivers product information, and captures leads around the clock even outside business hours, weekends, and holidays. No additional staffing cost, no downtime, no missed opportunities.",
     icon: "/we-need-1.svg",
   },
   {
-    title: "Higher Efficiency",
-    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    title: "Automate the Work Your Team Shouldn't Be Doing Manually",
+    desc: "Custom web applications replace repetitive manual processes data entry, report generation, invoice creation, approval workflows with automated systems that reduce errors, save hours weekly, and let your team focus on work that actually moves the business forward.",
     icon: "/we-need-2.svg",
   },
   {
     title: "Multi-layer Security",
-    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    desc: "We build security into every layer of your web application encrypted data handling, role-based access controls, OWASP-compliant code practices, and regular vulnerability scanning. Your customers' data and your business reputation are protected by architecture, not afterthoughts.",
     icon: "/web-need-3.svg",
   },
   {
-    title: "Customisable & Scalable Solutions",
-    desc: "Reach out to Minitzon at any time to get your requirements fulfilled or your queries answered.",
+    title: "Built to Grow With Your Business",
+    desc: "Every web application we build is designed to scale add new features, expand your user base, integrate new tools, or enter new markets without triggering a full rebuild. We plan for growth from the architecture stage so scaling up is a configuration change, not a rewrite.",
     icon: "/web-need-4.svg",
   },
 ];
 
 const servicesprovider = [
   {
-    title: "Grade A Services Available 24/7",
+    title: "Startups & MVPs",
     description:
-      "Minitzon provides support, assistance and consulting regarding our products and services on all days and at all times. Technical experts, consultants and customer support are always on board and active to help you gain the best from our services.",
+      "You need a working product fast validated, functional, and ready for real users. We help startups go from idea to live web product in 4–8 weeks with agile sprints and lean architecture that doesn't lock you into decisions you'll regret at scale.",
   },
   {
-    title: "Well – Trained Experts",
+    title: "Growing SMEss",
     description:
-      "Minitzon provides support, assistance and consulting regarding our products and services on all days and at all times. Technical experts, consultants and customer support are always on board and active to help you gain the best from our services.",
+      "Your website or web application needs to keep up with your business more traffic, more products, more users, more integrations. We build web platforms designed for growth so you're not facing a full rebuild every 18 months as your business evolves.",
   },
   {
-    title: "Efficient Communications",
+    title: "Enterprise Teams",
     description:
-      "Minitzon provides support, assistance and consulting regarding our products and services on all days and at all times. Technical experts, consultants and customer support are always on board and active to help you gain the best from our services.",
+      "Your web platform needs to integrate with existing enterprise systems, meet compliance and security standards, and support complex workflows across departments. We build enterprise-grade web applications with SSO, role-based access control, audit logging, and API-first architecture.",
   },
   {
-    title: "Best Services at Reasonable Cost",
+    title: "Agencies & White-Label Partners",
     description:
-      "Minitzon provides support, assistance and consulting regarding our products and services on all days and at all times. Technical experts, consultants and customer support are always on board and active to help you gain the best from our services.",
+      "You need a reliable development team behind the scenes one that delivers consistently without your clients ever knowing you outsourced. We provide white-label web development for agencies your brand, our engineering, same quality standards, full confidentiality.",
   },
 ];
 
@@ -133,50 +134,50 @@ const items = [
     title: "Pre-Discovery Phase",
     icon: "/web-approach1.svg",
     points: [
-      "Analysis Of The Legislative Environment",
-      "Assessment Of User Complaints And The Shortcomings Of Existing Services",
-      "Measurements Related To The Service",
-      "Team Alignment",
+      "Stakeholder alignment and business goal mapping understanding what success looks like for your project",
+      "Review of existing systems, platforms, and current pain points",
+      "High-level scope definition, feasibility assessment, and budget estimation",
+      "Team onboarding, responsibility allocation, and communication setup",
     ],
   },
   {
     title: "Discovery Phase",
     icon: "/web-approach2.svg",
     points: [
-      "Analysis Of The Legislative Environment",
-      "Assessment Of User Complaints And The Shortcomings Of Existing Services",
-      "Measurements Related To The Service",
-      "Team Alignment",
+      "User research, audience analysis, and competitor benchmarking",
+      "Detailed technical requirements and acceptance criteria documentation",
+      "Architecture planning and technology selection. React, Next.js, Node.js, WordPress, or headless CMS based on project needs",
+      "Risk identification, dependency mapping, and sprint-by-sprint project roadmap",
     ],
   },
   {
     title: "Design Phase",
     icon: "/web-approach3.svg",
     points: [
-      "Analysis Of The Legislative Environment",
-      "Assessment Of User Complaints And The Shortcomings Of Existing Services",
-      "Measurements Related To The Service",
-      "Team Alignment",
+      "Information architecture, sitemap structure, and user flow mapping",
+      "Wireframes for structural feedback before visual design begins",
+      "High-fidelity UI design with brand-aligned visual language mobile-first and responsive",
+      "Interactive prototypes for client review and testing design sign-off required before a line of code is written",
     ],
   },
   {
-    title: "Delivery Phase",
+    title: "Development & QA",
     icon: "/web-approach4.svg",
     points: [
-      "Analysis Of The Legislative Environment",
-      "Assessment Of User Complaints And The Shortcomings Of Existing Services",
-      "Measurements Related To The Service",
-      "Team Alignment",
+      "Two-week agile sprints with working demos at the end of every cycle you see real progress, not just status updates",
+      "Code reviews, unit testing, integration testing, and structured QA after every sprint",
+      "Staging environment deployed for client testing and feedback before anything goes to production",
+      "Performance audits under load, security vulnerability scanning, and cross-browser compatibility checks before release",
     ],
   },
   {
-    title: "Launch And Deployment",
+    title: "Launch & Post-Launch",
     icon: "/web-approach5.svg",
     points: [
-      "Analysis Of The Legislative Environment",
-      "Assessment Of User Complaints And The Shortcomings Of Existing Services",
-      "Measurements Related To The Service",
-      "Team Alignment",
+      "Production deployment with environment configuration, DNS setup, SSL certificates, and CDN activation",
+      "First 48–72 hours of active monitoring crash reports, performance anomalies, and user behaviour tracking",
+      "Full documentation handover codebase, architecture, deployment procedures, and admin training for your team",
+      "Ongoing maintenance and support plan with agreed SLAs bug fixes, security patches, OS updates, and feature enhancements",
     ],
   },
 ];
@@ -219,7 +220,7 @@ const toolsData = {
 };
 
 export default function WebDevelopment() {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
   const [activeTab, setActiveTab] = useState("FRONTEND");
 
   return (
@@ -248,16 +249,17 @@ export default function WebDevelopment() {
             </p>
 
             <h1 className="mt-4 text-4xl font-bold text-black leading-tight sm:text-5xl">
-              Top-Rated Web Development Company in Chennai – Built for Growth &
-              Performance.
+              Web Development Company in Chennai
             </h1>
 
             <p className="max-w-xl mt-6 text-lg">
-              An AI-driven logistics optimization platform that revolutionizes
-              how businesses plan, execute, and manage transportation. Real-time
-              insights enable smarter decisions, while end-to-end visibility
-              ensures greater transparency across every stage of the supply
-              chain.
+              Trimsel builds custom websites and web applications for startups,
+              SMEs, and enterprises that need more than just an online presence.
+              From business portals and e-commerce platforms to scalable web
+              applications. We use React, Next.js, Node.js, and WordPress to
+              build products that perform under real-world conditions. Every
+              project is scoped around your business goals, not a templated
+              shortcut.
             </p>
 
             <div>
@@ -265,7 +267,7 @@ export default function WebDevelopment() {
                 href="/contact-us"
                 className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-gradient-to-r from-[#29B375] to-[#2E70C3] text-white font-medium hover:scale-105 transition-all shadow-lg mt-6"
               >
-                Get a Free Consultation
+                Get a Free Web Consultation
                 <Image
                   src="/Home/right-arrow.svg"
                   width={20}
@@ -289,7 +291,7 @@ export default function WebDevelopment() {
                 <div className="absolute top-8 left-28 z-10 h-[75%] w-[95%]">
                   <Image
                     src="/Web1.svg"
-                    alt="Web1"
+                    alt="Web development company in Chennai — custom websites and web applications built with React, Next.js, and Node.js"
                     fill
                     className="object-contain opacity-90 drop-shadow-lg"
                     priority
@@ -300,7 +302,7 @@ export default function WebDevelopment() {
                 <div className="absolute bottom-28 left-12 z-20 h-[70%] w-[70%]">
                   <Image
                     src="/Web2.svg"
-                    alt="AI Robot"
+                    alt="Web development company in Chennai — custom websites and web applications built with React, Next.js, and Node.js"
                     fill
                     className="object-contain drop-shadow-2xl animate-shake"
                     priority
@@ -313,69 +315,81 @@ export default function WebDevelopment() {
       </section>
 
       <section className="bg-white py-16 px-4 md:px-10">
+        <div>
+          <h2 className="mb-8 text-2xl text-center font-semibold leading-tight sm:text-3xl md:text-4xl">
+            What We Build And Why It Works For Your Business
+          </h2>
+        </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* LEFT SIDE */}
           <div>
-            <h2 className="mb-8 text-left text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-              Web Development Company <br />
-              In Chennai
-            </h2>
-
             {/* Paragraph */}
             <p className="mt-6 max-w-3xl mx-auto text-left text-gray-800 font-medium">
-              Minitzon web development company in India has been serving
-              businesses with their digital needs for years. Our experts have
-              helped start-ups, enterprises and businesses of all scales enhance
-              their profits in the B2C and B2B sectors of various industries. We
-              create endless possibilities to help businesses achieve great
-              heights in the marketplace.
+              A website is often the first meaningful interaction a potential
+              customer has with your business and it needs to do more than exist
+              online. It should load in under 3 seconds, communicate your value
+              clearly on every device, and guide visitors toward a specific
+              action. We work with founders, product teams, and enterprise
+              stakeholders across industries to build websites and web
+              applications that are well-engineered, easy to manage, and built
+              to last beyond the first year of launch.
             </p>
 
             <p className="mt-4 max-w-3xl mx-auto text-left text-gray-800 font-medium">
-              If you are on the lookout for the best web app development company
-              in India to set up your digital presence, you have reached the
-              right place. Our custom solutions will fit right into your
-              requirements at an affordable price.
+              We don't hand off projects to junior developers or offshore them
+              after scoping your project is handled by the same team from
+              kickoff to go-live. That team works across the full web
+              development stack: React and Next.js for fast, SEO-friendly
+              frontends, Node.js and Python for robust backends, PostgreSQL and
+              MongoDB for data management, and WordPress or headless CMS for
+              content-driven sites.
+              <br />
+              <br />
+              We've delivered 180+ web projects for clients across SaaS,
+              FinTech, e-commerce, healthcare, and professional services with a
+              95% on-time delivery rate. The businesses we work with don't just
+              get a website,they get a web presence that works as hard as they
+              do.
             </p>
           </div>
 
           {/* RIGHT SIDE CARD */}
-          <div className="bg-gradient-to-br from-[#3b3be0] to-[#6a4df4] text-white p-6 md:p-8 rounded-2xl shadow-xl max-w-md w-full mx-auto">
-            <h5 className="text-md tracking-wider opacity-80 mb-2">
-              START YOUR PROJECT
-            </h5>
+          <div className="bg-gradient-to-br from-[#3b3be0] to-[#6a4df4] text-white p-8 md:p-10 rounded-2xl shadow-xl max-w-lg w-full min-h-[440px] mx-auto">
+            <div className="mt-6">
+              <h5 className="text-xl font-bold mb-2">START YOUR PROJECT</h5>
 
-            <h4 className="text-lg md:text-xl font-semibold leading-snug">
-              Are You Looking Out To Develop A Website For Your Business?
-            </h4>
+              <h4 className="text-lg md:text-xl font-semibold leading-snug">
+                Ready to Build or Rebuild Your Website?
+              </h4>
 
-            <p className="text-md font-medium mt-2 opacity-80">
-              Grow your business with well-developed websites that engage
-              customer attention.
-            </p>
+              <p className="text-md font-medium mt-2">
+                Tell us what you need. We'll get back to you within one business
+                day with a clear plan.
+              </p>
 
-            {/* Inputs */}
-            <div className="mt-6 space-y-3">
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none font-medium"
-              />
+              {/* Inputs */}
+              <div className="mt-6 space-y-3">
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none font-medium"
+                />
 
-              <input
-                type="email"
-                placeholder="Enter email address"
-                className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none font-medium"
-              />
+                <input
+                  type="email"
+                  placeholder="Enter email address"
+                  className="w-full px-4 py-2 rounded-md bg-white/20 placeholder-white/70 text-white outline-none font-medium"
+                />
+              </div>
+
+              {/* Button */}
+              <Link
+                href="/"
+                className="mt-5 w-full bg-white text-[#3b3be0] py-2.5 rounded-md text-md font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition"
+              >
+                Book A Free Consultation
+              </Link>
             </div>
-
-            {/* Button */}
-            <Link
-              href="/"
-              className="mt-5 w-full bg-white text-[#3b3be0] py-2.5 rounded-md text-md font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition"
-            >
-              Book A Free Consultation
-            </Link>
           </div>
         </div>
       </section>
@@ -390,13 +404,15 @@ export default function WebDevelopment() {
             </h3>
 
             <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-              Full Stack Web Development Services in India
+              Full-Stack Web Design and Development Services
             </h2>
 
             <p className="mt-4 px-0 md:px-10 text-center text-white font-medium leading-relaxed">
-              Minitzon web development agency in India undertakes consultancy,
-              for businesses regarding website building, understanding your
-              needs.
+              Trimsel offers end-to-end web development services from
+              early-stage planning and UI design through to backend engineering,
+              integrations, and post-launch support. Whether you need a
+              customer-facing website or a complex internal platform, our team
+              handles the complete build without outsourcing any part of it.
             </p>
           </div>
 
@@ -418,10 +434,12 @@ export default function WebDevelopment() {
                 </div>
 
                 {/* TITLE */}
-                <h4 className="text-xl font-semibold">{item.title}</h4>
+                <h4 className="text-xl text-[#1ea7d7] font-semibold">
+                  {item.title}
+                </h4>
 
                 {/* DESC */}
-                <p className="mt-3 text-gray-600 font-medium max-w-3xl leading-relaxed">
+                <p className="mt-3 font-medium max-w-3xl leading-relaxed">
                   {item.desc}
                 </p>
 
@@ -448,10 +466,22 @@ export default function WebDevelopment() {
       <section className="py-16 px-4 md:px-10 bg-gradient-to-br from-[#eef3f8] to-[#f7f4ef]">
         <div className="max-w-6xl mx-auto">
           {/* HEADER */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-              Outsource Web App Development Services And Increase ROI
+          <div>
+            {/* Heading */}
+            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+              WHY OUTSOURCE WEB DEVELOPMENT
+            </h3>
+
+            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+              Why Businesses Outsource Web Development to Trimsel
             </h2>
+
+            <p className="mt-4 px-0 md:px-10 text-center text-black font-medium leading-relaxed">
+              Building and maintaining a web development team in-house is
+              expensive, slow to scale, and hard to keep current with changing
+              technology. Here's why businesses choose to work with Trimsel
+              instead.
+            </p>
           </div>
 
           {/* CARDS */}
@@ -487,34 +517,36 @@ export default function WebDevelopment() {
       </section>
 
       <section className="px-4 md:px-10 py-16 bg-white">
-        <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 space-y-6">
           {/* LEFT SIDE */}
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-              Why Does Your Business Need <br />a Web App Services?
+              Why Your Business Needs a Web Application?
             </h2>
 
-            <p className="mt-5 text-gray-600 font-medium max-w-3xl leading-relaxed">
-              Minitzon have excelled in various fields and have enabled several
-              businesses globally to meet impeccable profits. Our experienced
-              professionals and advanced IT resources serve adequately to meet
-              business demands of any scale quickly and efficiently. See where
-              our Minitzon has guided businesses to excellence.
-            </p>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+              <p className="mt-5 text-gray-800 font-medium max-w-3xl leading-relaxed">
+                Most businesses today don't just need a website they need a
+                platform that actively supports how they operate, sell, and
+                serve customers. A well-built web application reduces manual
+                work, connects your systems, and gives your team the tools to
+                make faster, better decisions every day.
+              </p>
 
-            {/* BUTTON */}
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 mt-6 bg-[#1ea7d7] hover:bg-[#1696c4] text-white px-6 py-3 rounded-lg text-md font-medium transition"
-            >
-              Contact Us
-              <Image
-                src="/Home/right-arrow.svg"
-                width={20}
-                height={20}
-                alt="RightArrow"
-              />
-            </Link>
+              {/* BUTTON */}
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 mb-4 md:mb-4 bg-[#1ea7d7] hover:bg-[#1696c4] text-white px-6 py-3 rounded-md text-md font-medium transition w-fit whitespace-nowrap"
+              >
+                Talk to Our Web Team
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={16}
+                  height={16}
+                  alt="RightArrow"
+                />
+              </Link>
+            </div>
           </div>
 
           {/* RIGHT SIDE CARDS */}
@@ -529,18 +561,18 @@ export default function WebDevelopment() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={35}
-                    height={35}
+                    width={50}
+                    height={50}
                   />
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-md font-semibold text-[#1f2a37]">
+                <h3 className="text-lg font-semibold text-gray-800">
                   {item.title}
                 </h3>
 
                 {/* DESC */}
-                <p className="mt-2 text-sm font-medium text-gray-600 leading-relaxed">
+                <p className="mt-2 text-md font-medium text-gray-800 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -554,24 +586,20 @@ export default function WebDevelopment() {
           {/* Top Tag */}
           <div>
             <h3 className="mt-2 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-              TOP DESTINATION
+              WHO WE BUILD FOR
             </h3>
           </div>
 
           {/* Heading */}
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-gray-800">
-            {"< "}WEB{" "}
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-              /
-            </span>{" "}
-            DEVELOPMENT{" >"}
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mt-4">
+            Web Development for Every Stage of Business Growth
           </h2>
 
           {/* Subtitle */}
           <p className="mt-4 max-w-3xl mx-auto text-center text-gray-900 font-medium md:text-base">
-            Web app development company in India can be outsourced to help
-            businesses unlock their full potential in the marketplace and stay
-            competitive.
+            From first-time founders launching an MVP to enterprise teams
+            modernising legacy platforms. We've built web products for
+            businesses at every stage.
           </p>
 
           {/* Cards */}
@@ -603,12 +631,14 @@ export default function WebDevelopment() {
       >
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
           <h2 className="text-left text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Approach to Web Application <br /> Development
+            Our Web Development Process From Discovery to Deployment
           </h2>
 
           <p className="max-w-3xl text-left font-medium leading-relaxed text-gray-200">
-            We will take your project through a comprehensive app development
-            process that comprises the following phases.
+            Every web project follows the same five-phase process — designed to
+            eliminate guesswork, keep you in control of every decision, and
+            deliver a product that works exactly as intended at launch and
+            continues to perform long after.
           </p>
         </div>
         <div className="max-w-7xl mx-auto mt-10 grid lg:grid-cols-2 gap-12 items-start">
@@ -679,12 +709,14 @@ export default function WebDevelopment() {
               </h3>
 
               <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Wanna Develop a Mobile Application? Contact us Now!
+                Ready to Build a Website That Works for Your Business?
               </h2>
 
               <p className="mt-4 text-black font-medium">
-                Reach out to us to identify business challenges and get
-                efficient digital solutions.
+                Tell our web development team what you need — whether it's a
+                business website, a complex web application, or an e-commerce
+                platform — and we'll give you a realistic scope, honest
+                timeline, and clear plan to build it right.
               </p>
 
               <Link
@@ -697,7 +729,7 @@ export default function WebDevelopment() {
                   height={20}
                   alt="RightArrow"
                 />
-                Get in Touch
+                Talk to Our Web Team
               </Link>
             </div>
 
@@ -723,13 +755,15 @@ export default function WebDevelopment() {
           </h3>
 
           <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            We pride ourselves on being the one stop shop for all your needs
+            The Web Development Stack We Use Chosen for Your Project, Not Just
+            Ours
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Tools and technology help make work easier and faster. They play an
-            important role in improving efficiency and innovation in everyday
-            life.
+            We choose tools based on what genuinely fits your project's scale,
+            performance needs, and long-term maintainability not what's trending
+            or easiest to bill. Here's the stack our web development team works
+            with.
           </p>
 
           {/* Tabs */}
@@ -770,6 +804,76 @@ export default function WebDevelopment() {
           </div>
         </div>
       </section>
+
+      {/* Getintouch */}
+      <section className="bg-white py-12 md:py-20">
+        <div className="flex justify-center px-4 sm:px-6">
+          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF] shadow-md flex flex-col md:flex-row items-center justify-between">
+            {/* LEFT CONTENT */}
+            <div>
+              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+                GET IN TOUCH
+              </h3>
+
+              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+                Ready to Build a Website That Works for Your Business?
+              </h2>
+
+              <p className="mt-4 text-black font-medium">
+                Tell our web development team what you need — whether it's a
+                business website, a complex web application, or an e-commerce
+                platform — and we'll give you a realistic scope, honest
+                timeline, and clear plan to build it right.
+              </p>
+
+              <Link
+                href="/contact-us"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                <Image
+                  src="/icons/mailbox.svg"
+                  width={20}
+                  height={20}
+                  alt="RightArrow"
+                />
+                Talk to Our Web Team
+              </Link>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
+              <Image
+                src="/getintouchweb.svg"
+                alt="Contact illustration"
+                width={700}
+                height={700}
+                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CaseStudiesSection
+        tag="RELATED CASE STUDIES"
+        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
+        studies={[
+          {
+            title: "EzyHelpers",
+            description:
+              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+            image: "/images/ezyhelpers.png",
+            link: "/case-study/ezyhelpers",
+          },
+          {
+            title: "KarIOT",
+            description:
+              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+            image: "/images/kariot.png",
+            link: "/case-study/kariot",
+          },
+        ]}
+      />
 
       <Client />
 

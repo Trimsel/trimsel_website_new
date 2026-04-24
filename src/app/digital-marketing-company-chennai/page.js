@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
+import CaseStudiesSection from "@/components/relatedcasestudy";
 
 const services = [
   {
@@ -539,6 +540,27 @@ export default function Digitalmarketing() {
           </div>
         </div>
       </section>
+
+      <CaseStudiesSection
+        tag="RELATED CASE STUDIES"
+        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
+        studies={[
+          {
+            title: "EzyHelpers",
+            description:
+              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+            image: "/images/ezyhelpers.png",
+            link: "/case-study/ezyhelpers",
+          },
+          {
+            title: "KarIOT",
+            description:
+              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
+            image: "/images/kariot.png",
+            link: "/case-study/kariot",
+          },
+        ]}
+      />
 
       <Clients />
 

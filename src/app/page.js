@@ -13,7 +13,7 @@ import { blogData } from "@/data/blogData";
 import Contactform from "@/components/Contactform";
 import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const HERO_WORDS = [
   "Mobile Apps",
@@ -27,7 +27,6 @@ const HERO_WORDS = [
 export default function Home() {
   const [index, setIndex] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
-  const [mounted, setMounted] = useState(false);
 
   const caseStudies = [
     {
@@ -51,11 +50,6 @@ export default function Home() {
       slug: "EzyHelpers",
     },
   ];
-
-  // ✅ mount effect
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const goToPrevCaseStudy = () =>
     setActiveCaseStudy((prev) =>
@@ -212,11 +206,11 @@ export default function Home() {
             software that solves real business problems, not just
             impressive-looking demos. Our team spans AI development, mobile
             apps, web platforms, cloud consulting, DevOps automation, and
-            digital marketing. We've helped startups turn their ideas into real
+            digital marketing. We&apos;ve helped startups turn their ideas into real
             products and worked with established businesses replacing systems
             that had outgrown their purpose. Wherever our clients are in their
             journey, we take time to understand their goals, build the right
-            solution, and stay involved until it's delivered properly. With 200+
+            solution, and stay involved until it&apos;s delivered properly. With 200+
             projects behind us and a 92% client retention rate, that approach
             speaks for itself.
           </p>
@@ -501,7 +495,7 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We don't just deliver projects and move on, we build relationships
+            We don&apos;t just deliver projects and move on, we build relationships
             that last. Based in Chennai, we start with your goals and build
             everything around them, bringing the right people, thinking, and
             technology to make it work every single time.
@@ -523,7 +517,7 @@ export default function Home() {
                 Diverse Global Clientele
               </h4>
               <p className="max-w-lg text-base text-black sm:text-lg">
-                From early-stage startups to large enterprises, we've worked
+                From early-stage startups to large enterprises, we&apos;ve worked
                 with businesses of all sizes across multiple industries,
                 delivering solutions that fit their unique goals and challenges.
               </p>
@@ -606,12 +600,12 @@ export default function Home() {
               </h3>
 
               <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Got a Project in Mind? Let's Have an Honest Conversation.
+                Got a Project in Mind? Let&apos;s Have an Honest Conversation.
               </h2>
 
               <p className="mt-4 text-black font-medium">
-                Whether you're starting from scratch or fixing something that
-                isn't working tell us what you're trying to achieve and we'll
+                Whether you&apos;re starting from scratch or fixing something that
+                isn&apos;t working tell us what you&apos;re trying to achieve and we&apos;ll
                 tell you exactly how we can help.
               </p>
 
@@ -660,7 +654,7 @@ export default function Home() {
               From healthcare and on-demand platforms to logistics, e-commerce,
               and SaaS, our custom software development and mobile app teams
               bring the technical depth to build solutions that fit how your
-              industry actually operates. We've delivered across 12+ sectors and
+              industry actually operates. We&apos;ve delivered across 12+ sectors and
               counting.
             </p>
           </div>
@@ -778,7 +772,7 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-            We understand that every business works differently. That's why we
+            We understand that every business works differently. That&apos;s why we
             offer three delivery models designed to fit your timeline, budget,
             and the way your team operates.
           </p>
