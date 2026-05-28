@@ -255,7 +255,7 @@ export default function AI() {
                 <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md">
                   <Image
                     src="/icons/automation.svg" // replace with your icon
-                    alt="icon"
+                    alt="Automated Testing Services icon"
                     width={30}
                     height={30}
                   />
@@ -287,7 +287,7 @@ export default function AI() {
                 <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md">
                   <Image
                     src="/icons/manual.svg" // replace with your icon
-                    alt="icon"
+                    alt="Manual Testing Services icon"
                     width={30}
                     height={30}
                   />

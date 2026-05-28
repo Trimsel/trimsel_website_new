@@ -143,7 +143,7 @@ export default function ContactUs() {
               <div className="grid grid-cols-2 gap-4">
                 {/* ITEM */}
                 <Link
-                  href="#"
+                  href="https://wa.me/917200841581?text=Hi%20Trimsel%20team!%20I'd%20like%20to%20chat%20about%20a%20project."
                   className="flex items-center justify-between border p-3 rounded-lg hover:bg-gray-50 transition"
                 >
                   <div className="flex items-center gap-4">
@@ -151,7 +151,7 @@ export default function ContactUs() {
                       src="/contactus5.svg"
                       width={35}
                       height={35}
-                      alt=""
+                      alt="WhatsApp"
                     />
                     <div>
                       <p className="text-md font-medium">WhatsApp</p>
@@ -165,7 +165,7 @@ export default function ContactUs() {
 
                 {/* ITEM */}
                 <Link
-                  href="#"
+                  href="tel:+917200841581"
                   className="flex items-center justify-between border p-3 rounded-lg hover:bg-gray-50 transition"
                 >
                   <div className="flex items-center gap-4">
@@ -173,7 +173,7 @@ export default function ContactUs() {
                       src="/contactus6.svg"
                       width={35}
                       height={35}
-                      alt=""
+                      alt="Phone"
                     />
                     <div>
                       <p className="text-md font-medium">Call Us</p>
@@ -187,7 +187,7 @@ export default function ContactUs() {
 
                 {/* ITEM */}
                 <Link
-                  href="#"
+                  href="mailto:contact@trimsel.com"
                   className="flex items-center justify-between border p-3 rounded-lg hover:bg-gray-50 transition"
                 >
                   <div className="flex items-center gap-4">
@@ -195,7 +195,7 @@ export default function ContactUs() {
                       src="/contactus7.svg"
                       width={35}
                       height={35}
-                      alt=""
+                      alt="Email"
                     />
                     <div>
                       <p className="text-md font-medium">Email</p>
@@ -209,7 +209,7 @@ export default function ContactUs() {
 
                 {/* ITEM */}
                 <Link
-                  href="#"
+                  href="/contact-us#contact-form"
                   className="flex items-center justify-between border p-3 rounded-lg hover:bg-gray-50 transition"
                 >
                   <div className="flex items-center gap-4">
@@ -217,7 +217,7 @@ export default function ContactUs() {
                       src="/contactus14.svg"
                       width={35}
                       height={35}
-                      alt=""
+                      alt="Schedule a call"
                     />
                     <div>
                       <p className="text-md font-medium">Schedule a Call</p>
@@ -380,7 +380,7 @@ export default function ContactUs() {
                         src={s.icon || "/icons/default.png"}
                         width={15}
                         height={15}
-                        alt=""
+                        alt="Select service"
                       />
                       {s.name}
                     </button>
@@ -463,7 +463,7 @@ export default function ContactUs() {
 
               {/* BUTTON */}
               <Link
-                href="#"
+                href="/contact-us#contact-form"
                 className="w-full flex items-center justify-center gap-2 bg-[#27AAE1] text-white py-3 rounded-lg text-md font-medium hover:bg-[#27AAE1] transition-all duration-200"
               >
                 <span>Send My Request</span>
@@ -478,7 +478,7 @@ export default function ContactUs() {
               </Link>
 
               <Link
-                href="#"
+                href="https://wa.me/917200841581?text=Hi%20Trimsel%20team!%20I'd%20like%20to%20chat%20about%20a%20project."
                 className="w-full flex items-center justify-center gap-2 text-[#15803D] text-sm border border-gray-200 rounded-lg py-3 hover:bg-gray-50 transition-all duration-200"
               >
                 <Image src="/lock.svg" alt="whatsapp" width={18} height={18} />

@@ -785,23 +785,30 @@ export default function WebDevelopment() {
             ))}
           </div>
 
-          {/* Icons */}
-          <div className="flex flex-wrap justify-start gap-48 mt-12 ml-20">
-            {toolsData[activeTab]?.map((tool, index) => (
-              <div key={index} className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 relative">
-                  <Image
-                    src={tool.icon}
-                    alt={tool.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+          {/* Icons — all tab contents always in DOM, active one shown via CSS */}
+          {tabs.map((tab) => (
+            <div
+              key={tab}
+              className={`flex flex-wrap justify-start gap-48 mt-12 ml-20 ${
+                activeTab === tab ? "" : "hidden"
+              }`}
+            >
+              {toolsData[tab]?.map((tool, index) => (
+                <div key={index} className="flex flex-col items-center gap-3">
+                  <div className="w-12 h-12 relative">
+                    <Image
+                      src={tool.icon}
+                      alt={tool.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
 
-                <p className="text-md font-medium text-black">{tool.name}</p>
-              </div>
-            ))}
-          </div>
+                  <p className="text-md font-medium text-black">{tool.name}</p>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 

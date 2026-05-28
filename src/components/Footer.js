@@ -200,7 +200,7 @@ export default function Footer() {
                           src={social.icon}
                           width={30}
                           height={30}
-                          alt=""
+                          alt={social.label}
                         />
                       </a>
                     </li>

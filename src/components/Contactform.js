@@ -7,9 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import { OurPartner1 } from "@/data/OurPartner";
 import { OurPartner2 } from "@/data/OurPartner";
 
-const Marquee = dynamic(() => import("react-fast-marquee"), {
-  ssr: false,
-});
+const Marquee = dynamic(() => import("react-fast-marquee"));
 
 export default function Contactform() {
   const countries = [

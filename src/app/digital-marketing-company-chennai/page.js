@@ -358,7 +358,7 @@ export default function Digitalmarketing() {
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-cyan-500 shadow-md z-20">
                   <Image
                     src="/icons/result.svg"
-                    alt=""
+                    alt="ROI Focused"
                     width={28}
                     height={28}
                   />
@@ -373,7 +373,7 @@ export default function Digitalmarketing() {
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-indigo-500 shadow-md z-20">
                   <Image
                     src="/icons/result.svg"
-                    alt=""
+                    alt="Data Driven"
                     width={28}
                     height={28}
                   />
@@ -388,7 +388,7 @@ export default function Digitalmarketing() {
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-purple-500 shadow-md z-20">
                   <Image
                     src="/icons/result.svg"
-                    alt=""
+                    alt="Creativity And Innovation"
                     width={28}
                     height={28}
                   />
@@ -403,7 +403,7 @@ export default function Digitalmarketing() {
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-pink-500 shadow-md z-20">
                   <Image
                     src="/icons/result.svg"
-                    alt=""
+                    alt="360° Digital Marketing"
                     width={28}
                     height={28}
                   />
@@ -418,7 +418,7 @@ export default function Digitalmarketing() {
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[6px] border-red-500 shadow-md z-20">
                   <Image
                     src="/icons/result.svg"
-                    alt=""
+                    alt="Result Oriented"
                     width={28}
                     height={28}
                   />

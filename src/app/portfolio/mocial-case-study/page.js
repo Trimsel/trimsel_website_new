@@ -67,7 +67,7 @@ export default function XaberCaseStudy() {
                         </h1>
 
                         <Link
-                            href="#"
+                            href="/contact-us"
                             className="inline-flex items-center gap-2 bg-[#F59E0B] hover:bg-[#e58c06] text-white px-6 py-3 rounded-lg font-medium transition"
                         >
                             Get Started Today

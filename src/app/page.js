@@ -165,7 +165,7 @@ export default function Home() {
 
               <Image
                 src="/Home/HomeImage.svg"
-                alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
+                alt="Trimsel software development"
                 width={400}
                 height={380}
                 className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[85%] lg:w-[80%] xl:w-[430px]"
@@ -174,7 +174,7 @@ export default function Home() {
 
               <Image
                 src="/Home/Robot.svg"
-                alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
+                alt="AI robot illustration"
                 width={200}
                 height={200}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-auto w-[150px] sm:w-[190px] md:w-[45%] lg:w-[45%] xl:w-[225px]"
@@ -192,9 +192,9 @@ export default function Home() {
       <section className="bg-white text-black py-16">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Heading */}
-          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHO WE ARE
-          </h3>
+          </h2>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Built by Engineers. Trusted by Businesses. Delivered With
@@ -275,9 +275,9 @@ export default function Home() {
           <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-[#F2DFFF] shadow-md flex flex-col md:flex-row items-center justify-between">
             {/* LEFT CONTENT */}
             <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+              <h2 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                 GET IN TOUCH
-              </h3>
+              </h2>
 
               <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                 Prepared to build your application with the right development
@@ -324,9 +324,9 @@ export default function Home() {
       <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
         {/* Header */}
         <div className="container mx-auto px-4 sm:px-6">
-          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             CASE STUDIES
-          </h3>
+          </h2>
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Projects That Shipped. Results That Speak.
           </h2>
@@ -339,26 +339,25 @@ export default function Home() {
 
         {/* ── MOBILE CAROUSEL ──────────────────────────────────── */}
         <div className="relative mt-6 w-full overflow-hidden md:hidden">
-          <div
-            className="flex w-full transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
-          >
+          <div className="relative w-full aspect-[1438/763]">
             {caseStudies.map((item, i) => (
               <div
                 key={`mobile-${item.slug}-${i}`}
-                className="w-full shrink-0 flex items-center justify-start pl-2 pr-2"
+                className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+                  activeCaseStudy === i
+                    ? "opacity-100 z-10"
+                    : "opacity-0 z-0 pointer-events-none"
+                }`}
               >
-                <div className="group relative w-full max-w-[100vw] rounded-none overflow-hidden shadow-lg transition-all duration-300 active:scale-[1.01]">
-                  <div className="relative w-full aspect-[1438/763] bg-gray-100">
-                    <Image
-                      src={item.img}
-                      alt={`Case study ${i + 1}`}
-                      fill
-                      sizes="100vw"
-                      className="object-contain"
-                      priority={i === 0}
-                    />
-                  </div>
+                <div className="group relative w-full h-full rounded-none overflow-hidden shadow-lg transition-all duration-300 active:scale-[1.01] bg-gray-100">
+                  <Image
+                    src={item.img}
+                    alt={`Case study ${i + 1}`}
+                    fill
+                    sizes="100vw"
+                    className="object-contain"
+                    priority={i === 0}
+                  />
                   <Link
                     href={`/portfolio/${item.slug}`}
                     className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}
@@ -382,7 +381,7 @@ export default function Home() {
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
           >
             <Image
               src="/icons/case-study-arrow.svg"
@@ -398,7 +397,7 @@ export default function Home() {
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
           >
             <Image
               src="/icons/case-study-arrow.svg"
@@ -411,50 +410,49 @@ export default function Home() {
         </div>
 
         {/* ── DESKTOP CAROUSEL ─────────────────────────────────── */}
-        <div className="relative mt-10 w-full overflow-hidden flex-1 min-h-0 hidden md:flex">
-          <div
-            className="flex w-full transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeCaseStudy * 100}%)` }}
-          >
-            {caseStudies.map((item, i) => (
-              <div
-                key={`desktop-${item.slug}-${i}`}
-                className="w-full shrink-0 flex items-center justify-center px-4 xl:px-6"
-              >
-                <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
+        <div className="relative mt-10 w-full min-h-[420px] h-[90vh] hidden md:block">
+          {caseStudies.map((item, i) => (
+            <div
+              key={`desktop-${item.slug}-${i}`}
+              className={`absolute inset-0 flex items-center justify-center px-4 xl:px-6 transition-opacity duration-500 ease-in-out ${
+                activeCaseStudy === i
+                  ? "opacity-100 z-10"
+                  : "opacity-0 z-0 pointer-events-none"
+              }`}
+            >
+              <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
+                <Image
+                  src={item.img}
+                  alt={`Case study ${i + 1}`}
+                  width={1400}
+                  height={720}
+                  className="w-full h-full object-cover object-[center_30%] scale-94"
+                  sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, 100vw"
+                  priority={i === 0}
+                />
+                <Link
+                  href={`/portfolio/${item.slug}`}
+                  className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
+                >
+                  View Case Study
                   <Image
-                    src={item.img}
-                    alt={`Case study ${i + 1}`}
-                    width={1400}
-                    height={720}
-                    className="w-full h-full object-cover object-[center_30%] scale-94"
-                    sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, 100vw"
-                    priority={i === 0}
+                    src="/icons/case-study-arrow.svg"
+                    alt="arrow"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5"
                   />
-                  <Link
-                    href={`/portfolio/${item.slug}`}
-                    className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
-                  >
-                    View Case Study
-                    <Image
-                      src="/icons/case-study-arrow.svg"
-                      alt="arrow"
-                      width={20}
-                      height={20}
-                      className="w-5 h-5"
-                    />
-                  </Link>
-                </div>
+                </Link>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
 
           {/* Desktop Prev */}
           <button
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+            className="absolute left-1 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center rounded-full bg-white/80 p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer"
           >
             <Image
               src="/Home/casestudy-rightarrow.svg"
@@ -470,7 +468,7 @@ export default function Home() {
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+            className="absolute right-1 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center rounded-full bg-white p-3 shadow-md backdrop-blur hover:bg-white cursor-pointer"
           >
             <Image
               src="/Home/casestudy-rightarrow.svg"
@@ -486,9 +484,9 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="bg-white text-black py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             WHY TRIMSEL
-          </h3>
+          </h2>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Empowering Businesses with 360° Digital Transformation
@@ -595,9 +593,9 @@ export default function Home() {
           <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md flex flex-col md:flex-row items-center justify-between">
             {/* LEFT CONTENT */}
             <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+              <h2 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
                 GET IN TOUCH
-              </h3>
+              </h2>
 
               <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
                 Got a Project in Mind? Let&apos;s Have an Honest Conversation.
@@ -642,9 +640,9 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           {/* Heading Section */}
           <div className="flex flex-col items-center gap-4 text-center">
-            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
               INDUSTRIES WE SERVE
-            </h3>
+            </h2>
 
             <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
               Deep Experience Across the Sectors That Matter.
@@ -763,9 +761,9 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           {/* Heading */}
-          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             OUR DELIVERY MODELS
-          </h3>
+          </h2>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Flexible Engagement. Built Around You.

@@ -356,7 +356,7 @@ export default function DevOpsConsulting() {
               >
                 {/* Icon */}
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg mb-5">
-                  <Image src={feature.icon} alt="icon" width={40} height={40} />
+                  <Image src={feature.icon} alt={`${feature.title} icon`} width={40} height={40} />
                 </div>
 
                 <h3 className="text-white font-semibold mb-3">

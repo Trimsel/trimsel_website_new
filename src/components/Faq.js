@@ -28,40 +28,54 @@ export default function FaqSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const renderFaq = (faq, index) => (
-    <div
-      key={index}
-      className={`border rounded-lg overflow-hidden transition-all duration-300 ${
-        openIndex === index
-          ? "border-b-2 border-b-[#1C7DBD] shadow-lg"
-          : "shadow-md"
-      }`}
-    >
-      <button
-        onClick={() => toggleFaq(index)}
-        className={`w-full flex min-h-[60px] justify-between items-center outline-none px-4 py-3 text-left font-medium transition-all duration-300 ${
-          openIndex === index ? "bg-[#F3FBFF]" : "hover:bg-gray-50"
+  const renderFaq = (faq, index) => {
+    const isOpen = openIndex === index;
+    return (
+      <div
+        key={index}
+        className={`border rounded-lg overflow-hidden transition-all duration-300 ${
+          isOpen
+            ? "border-b-2 border-b-[#1C7DBD] shadow-lg"
+            : "shadow-md"
         }`}
       >
-        <span className="text-black text-[15px] sm:text-base pr-6 leading-relaxed">
-          {openIndex === index ? faq.answer : faq.question}
-        </span>
+        <button
+          onClick={() => toggleFaq(index)}
+          className={`w-full flex min-h-[60px] justify-between items-center outline-none px-4 py-3 text-left font-medium transition-all duration-300 ${
+            isOpen ? "bg-[#F3FBFF]" : "hover:bg-gray-50"
+          }`}
+        >
+          <span className="text-black text-[15px] sm:text-base pr-6 leading-relaxed">
+            {faq.question}
+          </span>
 
-        <div className="shrink-0">
-          <Image
-            src={
-              openIndex === index
-                ? "/icons/chevron-up.svg"
-                : "/icons/chevron-down.svg"
-            }
-            alt="toggle"
-            width={28}
-            height={28}
-          />
+          <div className="shrink-0">
+            <Image
+              src={
+                isOpen
+                  ? "/icons/chevron-up.svg"
+                  : "/icons/chevron-down.svg"
+              }
+              alt="toggle"
+              width={28}
+              height={28}
+            />
+          </div>
+        </button>
+
+        {/* Answer — always in DOM, CSS-hidden when collapsed */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ${
+            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <p className="px-4 py-3 text-black text-[15px] sm:text-base leading-relaxed bg-[#F3FBFF]">
+            {faq.answer}
+          </p>
         </div>
-      </button>
-    </div>
-  );
+      </div>
+    );
+  };
 
   return (
     <section className="bg-white py-4">
