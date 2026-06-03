@@ -767,7 +767,7 @@ export default function WebDevelopment() {
           </p>
 
           {/* Tabs */}
-          <div className="flex justify-center gap-36 mt-10">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-36 mt-10">
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -789,7 +789,7 @@ export default function WebDevelopment() {
           {tabs.map((tab) => (
             <div
               key={tab}
-              className={`flex flex-wrap justify-start gap-48 mt-12 ml-20 ${
+              className={`flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16 lg:gap-48 mt-12 ml-0 sm:ml-4 lg:ml-20 ${
                 activeTab === tab ? "" : "hidden"
               }`}
             >

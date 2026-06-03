@@ -413,7 +413,7 @@ export default function MobileAppDevelopmentClient() {
             </div>
 
             {/* RIGHT SIDE DROPDOWN */}
-            <div className="flex-1 flex flex-col gap-4 ml-16">
+            <div className="flex-1 flex flex-col gap-4 ml-0 lg:ml-16">
               <div className="flex flex-col gap-3">
                 {benefits.map((item, index) => (
                   <div
@@ -623,7 +623,7 @@ export default function MobileAppDevelopmentClient() {
             </p>
 
             {/* Tabs */}
-            <div className="flex justify-center gap-36 mt-10">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-36 mt-10">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -642,7 +642,7 @@ export default function MobileAppDevelopmentClient() {
             </div>
 
             {/* Icons */}
-            <div className="flex flex-wrap justify-start gap-48 mt-12 ml-20">
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16 lg:gap-48 mt-12 ml-0 sm:ml-4 lg:ml-20">
               {toolsData[activeTab]?.map((tool, index) => (
                 <div key={index} className="flex flex-col items-center gap-3">
                   <div className="w-12 h-12 relative">

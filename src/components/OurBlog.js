@@ -40,6 +40,7 @@ export default function OurBlog({
                     width={250}
                     height={180}
                     className="h-[180px] w-full rounded-lg object-cover sm:w-[220px]"
+                    style={{ width: 'auto', height: 'auto' }}
                   />
 
                   <div className="flex flex-col justify-center">

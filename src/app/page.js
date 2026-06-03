@@ -339,7 +339,7 @@ export default function Home() {
 
         {/* ── MOBILE CAROUSEL ──────────────────────────────────── */}
         <div className="relative mt-6 w-full overflow-hidden md:hidden">
-          <div className="relative w-full aspect-[1438/763]">
+          <div className="relative w-full aspect-[1438/763] min-h-[240px]">
             {caseStudies.map((item, i) => (
               <div
                 key={`mobile-${item.slug}-${i}`}
@@ -360,7 +360,7 @@ export default function Home() {
                   />
                   <Link
                     href={`/portfolio/${item.slug}`}
-                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}
+                    className={`absolute bottom-[6%] left-[6%] flex items-center gap-2 rounded-full px-4 py-3 text-sm font-semibold transition-all duration-300 active:scale-105 ${item.btn}`}
                   >
                     View Case Study
                     <Image
@@ -381,7 +381,7 @@ export default function Home() {
             type="button"
             onClick={goToPrevCaseStudy}
             aria-label="Previous case study"
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 p-3 min-w-[44px] min-h-[44px] shadow-md backdrop-blur hover:bg-white cursor-pointer"
           >
             <Image
               src="/icons/case-study-arrow.svg"
@@ -397,7 +397,7 @@ export default function Home() {
             type="button"
             onClick={goToNextCaseStudy}
             aria-label="Next case study"
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 p-2 shadow-md backdrop-blur hover:bg-white cursor-pointer"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/80 p-3 min-w-[44px] min-h-[44px] shadow-md backdrop-blur hover:bg-white cursor-pointer"
           >
             <Image
               src="/icons/case-study-arrow.svg"
@@ -410,7 +410,7 @@ export default function Home() {
         </div>
 
         {/* ── DESKTOP CAROUSEL ─────────────────────────────────── */}
-        <div className="relative mt-10 w-full min-h-[420px] h-[90vh] hidden md:block">
+        <div className="relative mt-10 w-full overflow-hidden min-h-[360px] md:h-[55vh] lg:h-[90vh] hidden md:block">
           {caseStudies.map((item, i) => (
             <div
               key={`desktop-${item.slug}-${i}`}
@@ -420,19 +420,19 @@ export default function Home() {
                   : "opacity-0 z-0 pointer-events-none"
               }`}
             >
-              <div className="group relative w-[102vw] h-[90vh] min-h-[420px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
+              <div className="group relative w-full h-full min-h-[360px] rounded-3xl overflow-hidden shadow-lg transition-all duration-300">
                 <Image
                   src={item.img}
                   alt={`Case study ${i + 1}`}
                   width={1400}
                   height={720}
                   className="w-full h-full object-cover object-[center_30%] scale-94"
-                  sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, 100vw"
+                  sizes="(min-width: 1536px) 1700px, (min-width: 1024px) 1200px, (min-width: 768px) 768px, 100vw"
                   priority={i === 0}
                 />
                 <Link
                   href={`/portfolio/${item.slug}`}
-                  className={`absolute bottom-7 left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
+                  className={`absolute bottom-4 lg:bottom-7 left-4 md:left-8 lg:left-20 flex items-center gap-2.5 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-md ${item.btn}`}
                 >
                   View Case Study
                   <Image

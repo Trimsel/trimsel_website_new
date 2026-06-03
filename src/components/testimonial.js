@@ -26,7 +26,7 @@ export default function Testimonial() {
         </div>
 
         {/* Marquee */}
-        <Marquee speed={40} pauseOnHover gradient={false} autoFill={true}>
+        <Marquee speed={40} pauseOnHover gradient={false}>
           {testimonialData?.map((item) => (
             <div
               key={item.id}

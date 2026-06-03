@@ -35,7 +35,6 @@ export default function Clients() {
           direction="right"
           pauseOnHover
           gradient={false}
-          autoFill={true}
         >
           {clientsData1.map((client, index) => (
             <div
@@ -61,7 +60,6 @@ export default function Clients() {
           direction="left"
           pauseOnHover
           gradient={false}
-          autoFill={true}
         >
           {clientsData2.map((client, index) => (
             <div

@@ -65,8 +65,8 @@ export default function FaqSection() {
 
         {/* Answer — always in DOM, CSS-hidden when collapsed */}
         <div
-          className={`overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`overflow-hidden transition-[max-height,opacity] duration-300 ${
+            isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <p className="px-4 py-3 text-black text-[15px] sm:text-base leading-relaxed bg-[#F3FBFF]">

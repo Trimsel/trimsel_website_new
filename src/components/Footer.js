@@ -97,6 +97,7 @@ export default function Footer() {
               alt="Temple illustration"
               width={540}
               height={620}
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
 
@@ -135,6 +136,7 @@ export default function Footer() {
               width={520}
               height={480}
               className="h-auto w-full max-w-lg"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
         </div>
