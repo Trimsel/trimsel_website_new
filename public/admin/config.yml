@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: Trimsel/trimsel_website_new
+  branch: main
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Trimsel" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - { label: "Thumbnail", name: "thumbnailUrl", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Index", name: "indexing", widget: "boolean", default: true }
+          - { label: "Meta Title", name: "metaTitle", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
+          - { label: "Canonical URL", name: "canonicalUrl", widget: "string", required: false }
+          - { label: "OG Image", name: "ogImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
