@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import CaseStudySection from "@/components/CaseStudySection";
 import StatsSection from "@/components/StatsSection";
 import CaseStudyHero from "@/components/CaseStudyHero";
@@ -45,6 +44,7 @@ export default function XaberCaseStudy() {
                                 src="/icons/Xaberlogo.svg"
                                 alt="xaber logo"
                                 fill
+                                sizes="120px"
                                 className="object-contain"
                             />
                         </div>
@@ -86,6 +86,7 @@ export default function XaberCaseStudy() {
                         src="/XaberHero.svg"
                         alt="Xaber App on Phones"
                         fill
+                        sizes="100vw"
                         className="object-contain object-bottom"
                         priority
                     />
@@ -97,6 +98,7 @@ export default function XaberCaseStudy() {
                         src="/XaberHero.svg"
                         alt="phones"
                         fill
+                        sizes="55vw"
                         className="object-contain object-right-bottom"
                         priority
                     />
@@ -206,7 +208,6 @@ export default function XaberCaseStudy() {
             </section>
 
 
-            <Footer />
         </main>
     )
 }

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import CaseStudySection from "@/components/CaseStudySection";
 import StatsSection from "@/components/StatsSection";
 import CaseStudyHero from "@/components/CaseStudyHero";
@@ -84,6 +83,7 @@ export default function XaberCaseStudy() {
                             src="/projects/project1.svg"
                             alt="EzyHelpers App"
                             fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-contain"
                             priority
                         />
@@ -195,7 +195,6 @@ export default function XaberCaseStudy() {
             </section>
 
 
-            <Footer />
         </main>
     )
 }

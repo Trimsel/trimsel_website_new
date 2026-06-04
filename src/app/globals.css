@@ -18,24 +18,28 @@
     font-family: "Gilroy";
     src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Gilroy";
     src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Gilroy";
     src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
     font-weight: 700;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Gilroy";
     src: url("/fonts/Gilroy-SemiBold.ttf") format("truetype");
     font-weight: 600;
+    font-display: swap;
 }
 
 * {
@@ -128,17 +132,6 @@ svg {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-}
-
-/* ----------------------------- */
-/* 5. CARD FIX (Optional) */
-/* ----------------------------- */
-
-.card {
-    width: 100%;
-    max-width: 350px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ----------------------------- */
@@ -333,10 +326,6 @@ p {
     transition: opacity 0.4s ease-in-out;
 }
 
-.perspective {
-  perspective: 1000px;
-}
-
 .transform-style {
   transform-style: preserve-3d;
 }
@@ -356,4 +345,129 @@ p {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ----------------------------- */
+/* AI Hero — CSS particle field  */
+/* Replaces Three.js canvas      */
+/* ----------------------------- */
+
+@keyframes aiParticleSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.ai-particle-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* White particles */
+.ai-particle-field::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    -382px -203px 0 0 rgba(255,255,255,0.8),
+     127px -341px 0 0 rgba(255,255,255,0.7),
+     453px  187px 0 0 rgba(255,255,255,0.9),
+    -176px  312px 0 0 rgba(255,255,255,0.6),
+      67px  198px 0 0 rgba(255,255,255,0.8),
+    -508px   93px 0 0 rgba(255,255,255,0.5),
+     298px -274px 0 0 rgba(255,255,255,0.9),
+    -118px -398px 0 0 rgba(255,255,255,0.7),
+     578px -148px 0 0 rgba(255,255,255,0.6),
+    -403px -318px 0 0 rgba(255,255,255,0.8),
+     198px  347px 0 0 rgba(255,255,255,0.7),
+    -276px  153px 0 0 rgba(255,255,255,0.9),
+     427px  281px 0 0 rgba(255,255,255,0.5),
+     -57px -181px 0 0 rgba(255,255,255,0.8),
+     318px -423px 0 0 rgba(255,255,255,0.7),
+    -447px  257px 0 0 rgba(255,255,255,0.6),
+     154px -248px 0 0 rgba(255,255,255,0.9),
+    -297px  -97px 0 0 rgba(255,255,255,0.5),
+     521px  203px 0 0 rgba(255,255,255,0.7),
+    -195px  418px 0 0 rgba(255,255,255,0.8),
+      79px  323px 0 0 rgba(255,255,255,0.6),
+    -377px -247px 0 0 rgba(255,255,255,0.9),
+     251px  152px 0 0 rgba(255,255,255,0.7),
+    -149px -319px 0 0 rgba(255,255,255,0.8),
+     477px -297px 0 0 rgba(255,255,255,0.5),
+    -519px  177px 0 0 rgba(255,255,255,0.9),
+     103px  -97px 0 0 rgba(255,255,255,0.6),
+    -348px  352px 0 0 rgba(255,255,255,0.7),
+     397px  103px 0 0 rgba(255,255,255,0.8),
+     -78px  248px 0 0 rgba(255,255,255,0.9),
+     281px -182px 0 0 rgba(255,255,255,0.6),
+    -197px -447px 0 0 rgba(255,255,255,0.7),
+     548px -198px 0 0 rgba(255,255,255,0.5),
+    -462px -183px 0 0 rgba(255,255,255,0.8),
+     179px  403px 0 0 rgba(255,255,255,0.9),
+     -99px  101px 0 0 rgba(255,255,255,0.7),
+     361px -321px 0 0 rgba(255,255,255,0.6),
+    -319px  223px 0 0 rgba(255,255,255,0.8),
+     498px  302px 0 0 rgba(255,255,255,0.5),
+    -158px -281px 0 0 rgba(255,255,255,0.9),
+      41px -397px 0 0 rgba(255,255,255,0.7),
+    -419px  302px 0 0 rgba(255,255,255,0.6),
+     241px  221px 0 0 rgba(255,255,255,0.8),
+    -239px  101px 0 0 rgba(255,255,255,0.7),
+     461px  -97px 0 0 rgba(255,255,255,0.9),
+    -558px  -97px 0 0 rgba(255,255,255,0.5),
+     143px  281px 0 0 rgba(255,255,255,0.8),
+    -337px -382px 0 0 rgba(255,255,255,0.6),
+     419px  382px 0 0 rgba(255,255,255,0.7),
+     -77px  378px 0 0 rgba(255,255,255,0.9),
+     301px  -97px 0 0 rgba(255,255,255,0.8),
+    -198px  221px 0 0 rgba(255,255,255,0.5),
+     578px -348px 0 0 rgba(255,255,255,0.7),
+    -477px  198px 0 0 rgba(255,255,255,0.6),
+     198px -298px 0 0 rgba(255,255,255,0.9),
+    -338px  152px 0 0 rgba(255,255,255,0.7),
+     379px  201px 0 0 rgba(255,255,255,0.8),
+    -119px -198px 0 0 rgba(255,255,255,0.6),
+     481px   97px 0 0 rgba(255,255,255,0.9),
+    -257px -277px 0 0 rgba(255,255,255,0.7);
+  animation: aiParticleSpin 130s linear infinite;
+}
+
+/* Blue network-node particles */
+.ai-particle-field::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(122, 162, 255, 0.6);
+  box-shadow:
+    -250px -150px 3px 1px rgba(122,162,255,0.5),
+     200px -280px 3px 1px rgba(122,162,255,0.4),
+    -350px  200px 3px 1px rgba(122,162,255,0.6),
+     150px  250px 3px 1px rgba(122,162,255,0.5),
+     400px -200px 3px 1px rgba(122,162,255,0.4),
+    -100px  300px 3px 1px rgba(122,162,255,0.6),
+     300px  150px 3px 1px rgba(122,162,255,0.5),
+    -400px -100px 3px 1px rgba(122,162,255,0.4),
+     100px -350px 3px 1px rgba(122,162,255,0.6),
+     500px  100px 3px 1px rgba(122,162,255,0.5),
+    -300px  350px 3px 1px rgba(122,162,255,0.4),
+     250px -100px 3px 1px rgba(122,162,255,0.6),
+    -150px -250px 3px 1px rgba(122,162,255,0.5),
+     350px -300px 3px 1px rgba(122,162,255,0.4),
+    -450px  250px 3px 1px rgba(122,162,255,0.6),
+      50px  200px 3px 1px rgba(122,162,255,0.5),
+    -200px  100px 3px 1px rgba(122,162,255,0.4),
+     450px  200px 3px 1px rgba(122,162,255,0.6),
+    -350px -200px 3px 1px rgba(122,162,255,0.5),
+     200px  350px 3px 1px rgba(122,162,255,0.4);
+  animation: aiParticleSpin 180s linear infinite reverse;
 }

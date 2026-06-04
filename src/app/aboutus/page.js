@@ -1,7 +1,5 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 import Clients from "@/components/Client";
 import OurBlog from "@/components/OurBlog";
 import Header from "@/components/Header";
@@ -466,7 +464,6 @@ export default function aboutus() {
 
       <Contactform />
 
-      <Footer />
     </>
   );
 }

@@ -8,7 +8,6 @@ import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 import Testimonial from "@/components/testimonial";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
@@ -172,6 +171,9 @@ const toolsData = {
 export default function MobileAppDevelopmentClient() {
   const [activeTab, setActiveTab] = useState("NATIVE MOBILE ARCHITECTURES");
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const tabActiveClass = "pb-2 text-md md:text-md font-medium transition-all duration-300 border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold";
+  const tabInactiveClass = "pb-2 text-md md:text-md font-medium transition-all duration-300 border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent";
 
   const toggleDropdown = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -628,13 +630,7 @@ export default function MobileAppDevelopmentClient() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`pb-2 text-md md:text-md font-medium transition-all duration-300
-          ${
-            activeTab === tab
-              ? "border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold"
-              : "border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent"
-          }
-        `}
+                  className={activeTab === tab ? tabActiveClass : tabInactiveClass}
                 >
                   {tab}
                 </button>
@@ -650,6 +646,7 @@ export default function MobileAppDevelopmentClient() {
                       src={tool.icon}
                       alt={tool.name}
                       fill
+                      sizes="48px"
                       className="object-contain"
                     />
                   </div>
@@ -687,7 +684,6 @@ export default function MobileAppDevelopmentClient() {
         <Contactform />
         <OurBlog {...blogData.mobile} />
         <Faq />
-        <Footer />
       </main>
     </>
   );

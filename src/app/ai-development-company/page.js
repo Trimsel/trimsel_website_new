@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -8,7 +7,6 @@ import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
 const features = [
@@ -488,7 +486,6 @@ export default function AI() {
       <Contactform />
       <OurBlog {...blogData.ai} />
       <Faq />
-      <Footer />
     </main>
   );
 }

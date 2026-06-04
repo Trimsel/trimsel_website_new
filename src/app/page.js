@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Client from "@/components/Client";
 import Whatwedo from "@/components/Whatwedo";
@@ -857,8 +856,6 @@ export default function Home() {
       {/* FaqSection */}
       <FaqSection />
 
-      {/* Footer */}
-      <Footer />
     </main>
   );
 }

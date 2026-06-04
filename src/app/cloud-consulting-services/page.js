@@ -8,7 +8,6 @@ import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
 const services = [
@@ -656,7 +655,6 @@ export default function CloudConsulting() {
 
       <Faq />
 
-      <Footer />
     </main>
   );
 }

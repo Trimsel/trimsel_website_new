@@ -7,7 +7,6 @@ import { projects } from "@/data/projects";
 import Header from "@/components/Header";
 import Clients from "@/components/Client";
 import Contactform from "@/components/Contactform";
-import Footer from "@/components/Footer";
 
 export default function PortfolioPage() {
   const [active, setActive] = useState("ALL");
@@ -197,7 +196,6 @@ export default function PortfolioPage() {
 
       <Clients />
       <Contactform />
-      <Footer />
     </div>
   );
 }

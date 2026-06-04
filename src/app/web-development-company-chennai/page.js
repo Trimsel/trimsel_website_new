@@ -8,7 +8,6 @@ import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 import Testimonial from "@/components/testimonial";
 
@@ -223,6 +222,9 @@ export default function WebDevelopment() {
   const [active, setActive] = useState(0);
   const [activeTab, setActiveTab] = useState("FRONTEND");
 
+  const tabActiveClass = "pb-2 text-lg md:text-xl font-medium transition-all duration-300 border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold";
+  const tabInactiveClass = "pb-2 text-lg md:text-xl font-medium transition-all duration-300 border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent";
+
   return (
     <main>
       <Header />
@@ -293,6 +295,7 @@ export default function WebDevelopment() {
                     src="/Web1.svg"
                     alt="Web development company in Chennai — custom websites and web applications built with React, Next.js, and Node.js"
                     fill
+                    sizes="(max-width: 768px) 95vw, 513px"
                     className="object-contain opacity-90 drop-shadow-lg"
                     priority
                   />
@@ -304,6 +307,7 @@ export default function WebDevelopment() {
                     src="/Web2.svg"
                     alt="Web development company in Chennai — custom websites and web applications built with React, Next.js, and Node.js"
                     fill
+                    sizes="(max-width: 768px) 70vw, 378px"
                     className="object-contain drop-shadow-2xl animate-shake"
                     priority
                   />
@@ -429,6 +433,7 @@ export default function WebDevelopment() {
                     src={item.icon}
                     alt={item.title}
                     fill
+                    sizes="48px"
                     className="object-contain"
                   />
                 </div>
@@ -497,6 +502,7 @@ export default function WebDevelopment() {
                     src={item.icon}
                     alt={item.title}
                     fill
+                    sizes="40px"
                     className="object-contain"
                   />
                 </div>
@@ -772,13 +778,7 @@ export default function WebDevelopment() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`pb-2 text-lg md:text-xl font-medium transition-all duration-300
-    ${
-      activeTab === tab
-        ? "border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold"
-        : "border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent"
-    }
-  `}
+                className={activeTab === tab ? tabActiveClass : tabInactiveClass}
               >
                 {tab}
               </button>
@@ -800,6 +800,7 @@ export default function WebDevelopment() {
                       src={tool.icon}
                       alt={tool.name}
                       fill
+                      sizes="48px"
                       className="object-contain"
                     />
                   </div>
@@ -892,7 +893,6 @@ export default function WebDevelopment() {
 
       <OurBlog {...blogData.web} />
 
-      <Footer />
     </main>
   );
 }

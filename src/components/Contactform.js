@@ -313,6 +313,7 @@ export default function Contactform() {
               width={150}
               height={80}
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Image
               src="/partner/award3.svg"
@@ -328,6 +329,7 @@ export default function Contactform() {
               width={150}
               height={80}
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Image
               src="/partner/award5.svg"

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
 export default function ContactUs() {
@@ -64,6 +63,7 @@ export default function ContactUs() {
             src="/contactusbg.svg"
             alt="Background"
             fill
+            sizes="100vw"
             priority
             className="object-cover scale-150"
           />
@@ -131,7 +131,7 @@ export default function ContactUs() {
       </section>
 
       <section>
-        <div className="grid grid-cols-2 gap-6 p-6 bg-[#f4f6f8] min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6 bg-[#f4f6f8] min-h-screen">
           {/* ================= LEFT SIDE ================= */}
           <div className="space-y-6">
             {/* QUICK CONTACT */}
@@ -140,7 +140,7 @@ export default function ContactUs() {
                 QUICK CONTACT
               </h3>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-4">
                 {/* ITEM */}
                 <Link
                   href="https://wa.me/917200841581?text=Hi%20Trimsel%20team!%20I'd%20like%20to%20chat%20about%20a%20project."
@@ -237,7 +237,7 @@ export default function ContactUs() {
                 SOCIAL PROOF
               </h5>
 
-              <div className="flex justify-center items-center text-center gap-14 mb-4">
+              <div className="flex justify-center items-center text-center gap-6 sm:gap-14 mb-4">
                 <div className="px-4">
                   <p className="text-lg font-semibold">50+</p>
                   <p className="text-md text-white font-medium">PROJECTS</p>
@@ -291,6 +291,7 @@ export default function ContactUs() {
                   width={20}
                   height={20}
                   className="opacity-80"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
                 Our response promise
               </h5>
@@ -381,6 +382,7 @@ export default function ContactUs() {
                         width={15}
                         height={15}
                         alt="Select service"
+                        style={{ width: 'auto', height: 'auto' }}
                       />
                       {s.name}
                     </button>
@@ -455,6 +457,7 @@ export default function ContactUs() {
                   height={10}
                   alt="Lock"
                   className="transition-transform duration-200 group-hover:translate-x-1"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
                 <span className="text-sm text-gray-400 font-medium">
                   Your data is safe. We never share it.
@@ -500,6 +503,7 @@ export default function ContactUs() {
                   alt="Location icon"
                   width={16}
                   height={16}
+                  style={{ width: 'auto', height: 'auto' }}
                 />
                 <span>Our Office</span>
               </div>
@@ -541,7 +545,6 @@ export default function ContactUs() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

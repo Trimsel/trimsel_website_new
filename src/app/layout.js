@@ -1,5 +1,6 @@
 import "./globals.css";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Software Development Company in India | Trimsel",
@@ -34,9 +35,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         {children}
+        <Footer />
         <a
           href="https://wa.me/917200841581"
           target="_blank"

@@ -3,7 +3,6 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Clients from "@/components/Client";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
@@ -570,7 +569,6 @@ export default function Digitalmarketing() {
 
       <Faq />
 
-      <Footer />
     </main>
   );
 }

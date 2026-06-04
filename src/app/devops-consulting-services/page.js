@@ -5,7 +5,6 @@ import Contactform from "@/components/Contactform";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
@@ -448,7 +447,6 @@ export default function DevOpsConsulting() {
 
       <Faq />
 
-      <Footer />
     </main>
   );
 }
