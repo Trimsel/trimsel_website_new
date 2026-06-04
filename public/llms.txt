@@ -1,0 +1,48 @@
+# Trimsel
+
+> AI-Powered Software Development Company in Chennai, India.
+> We build mobile apps, web platforms, cloud solutions, and
+> AI-powered software for startups and enterprises.
+
+## Main Pages
+
+- [Home](https://trimsel.com): Custom software development company offering AI-powered solutions from Chennai, India
+- [About Us](https://trimsel.com/aboutus): Our story, team, values, and 6+ years of delivering 200+ projects across 12 countries
+- [Contact](https://trimsel.com/contact-us): Get a free project consultation — we respond within 24 hours
+- [Portfolio](https://trimsel.com/portfolio): Case studies and projects showcasing mobile apps, web platforms, and AI solutions
+
+## Services
+
+- [Mobile App Development](https://trimsel.com/mobile-app-development-chennai): Native iOS, Android, React Native, and Flutter app development
+- [Web Development](https://trimsel.com/web-development-company-chennai): React, Next.js, Node.js web applications and e-commerce platforms
+- [Cloud Consulting](https://trimsel.com/cloud-consulting-services): AWS, Azure, GCP cloud migration and infrastructure modernization
+- [DevOps Consulting](https://trimsel.com/devops-consulting-services): CI/CD pipelines, Kubernetes, Docker, infrastructure automation
+- [AI Development](https://trimsel.com/ai-development-company): Custom AI/ML solutions, chatbots, computer vision, NLP
+- [Digital Marketing](https://trimsel.com/digital-marketing-company-chennai): SEO, social media marketing, PPC, content marketing
+
+## Case Studies
+
+- [EzyHelpers](https://trimsel.com/portfolio/ezyhelpers-case-study): On-demand home services marketplace app
+- [KarIoT](https://trimsel.com/portfolio/kariot-case-study): IoT-based fleet management platform
+- [Xaber](https://trimsel.com/portfolio/xaber-case-study): Uber-style taxi booking application
+- [Mocial](https://trimsel.com/portfolio/mocial-case-study): Social commerce mobile platform
+
+## Blog
+
+- [5 Easy Ways a Mobile App Can Grow Your Business](https://trimsel.com/blog/how-mobile-apps-grow-business): How a mobile app helps businesses stand out, win more customers, and grow revenue
+- [7 Costly Mistakes Businesses Make When Hiring a Mobile App Development Company in Chennai](https://trimsel.com/blog/7-costly-mistakes-businesses-make-when-hiring-a-mobile-app-development-company-in-chennai): Common hiring mistakes and how to avoid them when choosing a mobile app partner in Chennai
+- [Monolithic vs Modern Architecture: Why Your Growing App Might Be Silently Breaking](https://trimsel.com/blog/monolithic-vs-modern-architecture-why-your-growing-app-might-be-silently-breaking): Why monolithic apps fail under growth and how modern microservices architecture solves it
+- [Complete Guide to DevOps Implementation: From Setup to Mastery](https://trimsel.com/blog/complete-guide-to-devops-implementation-from-setup-to-mastery): Step-by-step guide to implementing DevOps pipelines, culture, and tooling from scratch
+- [Top DevOps Tools and Stack Used by Leading Companies in Chennai](https://trimsel.com/blog/top-devops-tools-and-stack-used-by-leading-companies-in-chennai): The DevOps tools and technology stack top Chennai engineering teams rely on
+- [Essential Website Features Chennai Development Companies Recommend for Higher Conversions](https://trimsel.com/blog/essential-website-features-chennai-development-companies-recommend-for-higher-conversions): Critical website features that improve user experience and drive more conversions
+- [How SEO Drives Qualified Lead Generation for Real Estate and IT Companies in Chennai](https://trimsel.com/blog/how-seo-drives-qualified-lead-generation-for-real-estate-and-it-companies-in-chennai): How Chennai real estate and IT companies use SEO to attract high-intent leads
+- [How to Conduct Semantic Keyword Research: A Step-by-Step Guide for SEO Experts](https://trimsel.com/blog/how-to-conduct-semantic-keyword-research-a-step-by-step-guide-for-seo-experts): Find related keywords, build topic clusters, and rank with semantic search intent
+- [Mastering Semantic SEO: The Ultimate Digital Marketing Strategy for 2025](https://trimsel.com/blog/mastering-semantic-seo-the-ultimate-digital-marketing-strategy-for-2025): Complete 2025 guide to replacing keyword-only tactics with semantic SEO
+- [Top 10 Mobile App Development Companies in Tirunelveli](https://trimsel.com/blog/top-10-mobile-app-development-company-in-tirunelveli): Overview of the leading mobile app development firms in Tirunelveli, Tamil Nadu
+- [Top 10 SEO Companies in Tirunelveli: Find Your Perfect Digital Growth Partner](https://trimsel.com/blog/top-10-seo-companies-in-tirunelveli-find-your-perfect-digital-growth-partner): Top SEO agencies in Tirunelveli for businesses looking to grow their online presence
+
+## Contact
+
+- Email: contact@trimsel.com
+- Phone: +91 7200841581
+- Location: Chennai, Tamil Nadu, India
