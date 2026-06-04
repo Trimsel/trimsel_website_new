@@ -6,6 +6,37 @@ import Header from "@/components/Header";
 import Whatwedo from "@/components/Whatwedo";
 import Contactform from "@/components/Contactform";
 
+export const metadata = {
+  title: "About Trimsel | Software Development Team in Chennai",
+  description:
+    "Trimsel is a Chennai-based software development company founded in 2020. Meet our team of developers, designers, and engineers who've delivered 200+ projects across mobile, web, AI, and cloud.",
+  alternates: {
+    canonical: "https://www.trimsel.com/aboutus",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.trimsel.com/aboutus",
+    title: "About Trimsel | Software Development Team in Chennai",
+    description:
+      "Trimsel is a Chennai-based software development company founded in 2020. Meet our team of developers, designers, and engineers who've delivered 200+ projects across mobile, web, AI, and cloud.",
+    locale: "en_IN",
+    siteName: "Trimsel",
+    images: [
+      {
+        url: "https://www.trimsel.com/images/myherocloud.png",
+        width: 1200,
+        height: 630,
+        alt: "Trimsel software development team in Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TrimselSoftwares",
+    creator: "@TrimselSoftwares",
+  },
+};
+
 const cards = [
   {
     title: "Future Proof Solutions",

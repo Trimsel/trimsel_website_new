@@ -9,7 +9,36 @@ import SolutionSection from "@/components/SolutionSection";
 import CTASection from "@/components/CTA";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
-
+export const metadata = {
+  title: "KarIOT Case Study | IoT Platform Development | Trimsel",
+  description:
+    "How Trimsel built KarIOT's IoT platform — real-time vehicle tracking, sensor data processing, and fleet management software. Read the full case study.",
+  alternates: {
+    canonical: "https://www.trimsel.com/portfolio/kariot-case-study",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.trimsel.com/portfolio/kariot-case-study",
+    title: "KarIOT Case Study | IoT Platform Development | Trimsel",
+    description:
+      "How Trimsel built KarIOT's IoT platform — real-time vehicle tracking, sensor data processing, and fleet management software. Read the full case study.",
+    locale: "en_IN",
+    siteName: "Trimsel",
+    images: [
+      {
+        url: "https://www.trimsel.com/images/myherocloud.png",
+        width: 1200,
+        height: 630,
+        alt: "KarIOT IoT platform case study by Trimsel",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TrimselSoftwares",
+    creator: "@TrimselSoftwares",
+  },
+};
 
 export default function XaberCaseStudy() {
     return (

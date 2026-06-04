@@ -9,7 +9,36 @@ import SolutionSection from "@/components/SolutionSection";
 import CTASection from "@/components/CTA";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
-
+export const metadata = {
+  title: "Xaber Case Study | Custom Software Platform | Trimsel",
+  description:
+    "How Trimsel built Xaber's custom software platform. Read the full project case study from design through to deployment.",
+  alternates: {
+    canonical: "https://www.trimsel.com/portfolio/xaber-case-study",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.trimsel.com/portfolio/xaber-case-study",
+    title: "Xaber Case Study | Custom Software Platform | Trimsel",
+    description:
+      "How Trimsel built Xaber's custom software platform. Read the full project case study from design through to deployment.",
+    locale: "en_IN",
+    siteName: "Trimsel",
+    images: [
+      {
+        url: "https://www.trimsel.com/images/myherocloud.png",
+        width: 1200,
+        height: 630,
+        alt: "Xaber custom software case study by Trimsel",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TrimselSoftwares",
+    creator: "@TrimselSoftwares",
+  },
+};
 
 export default function XaberCaseStudy() {
     return (

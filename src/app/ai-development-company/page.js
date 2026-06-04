@@ -9,6 +9,37 @@ import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
+export const metadata = {
+  title: "AI Development Company Chennai | Machine Learning Solutions | Trimsel",
+  description:
+    "Build intelligent AI/ML applications with Trimsel's AI development team in Chennai. NLP, computer vision, predictive analytics, LLM integrations, and generative AI for businesses in India and globally.",
+  alternates: {
+    canonical: "https://www.trimsel.com/ai-development-company",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.trimsel.com/ai-development-company",
+    title: "AI Development Company Chennai | Machine Learning Solutions | Trimsel",
+    description:
+      "Build intelligent AI/ML applications with Trimsel's AI development team in Chennai. NLP, computer vision, predictive analytics, LLM integrations, and generative AI for businesses in India and globally.",
+    locale: "en_IN",
+    siteName: "Trimsel",
+    images: [
+      {
+        url: "https://www.trimsel.com/images/myherocloud.png",
+        width: 1200,
+        height: 630,
+        alt: "AI development services by Trimsel Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TrimselSoftwares",
+    creator: "@TrimselSoftwares",
+  },
+};
+
 const features = [
   {
     icon: "/icons/AI-solution1.svg",
@@ -93,9 +124,29 @@ const services = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI/ML Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Trimsel",
+    "url": "https://trimsel.com",
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Chennai",
+  },
+  "description": "Build intelligent AI/ML applications with Trimsel's AI development team in Chennai. NLP, computer vision, predictive analytics, LLM integrations, and generative AI for businesses in India and globally.",
+};
+
 export default function AI() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Header transparent />
       <AiHero />
 

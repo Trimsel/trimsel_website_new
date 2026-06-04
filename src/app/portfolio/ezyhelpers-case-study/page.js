@@ -9,7 +9,36 @@ import SolutionSection from "@/components/SolutionSection";
 import CTASection from "@/components/CTA";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
-
+export const metadata = {
+  title: "EzyHelpers Case Study | Service Marketplace Platform | Trimsel",
+  description:
+    "How Trimsel built EzyHelpers' home services marketplace — connecting customers with verified service providers via a mobile app and web platform. Read the full case study.",
+  alternates: {
+    canonical: "https://www.trimsel.com/portfolio/ezyhelpers-case-study",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.trimsel.com/portfolio/ezyhelpers-case-study",
+    title: "EzyHelpers Case Study | Service Marketplace Platform | Trimsel",
+    description:
+      "How Trimsel built EzyHelpers' home services marketplace — connecting customers with verified service providers via a mobile app and web platform. Read the full case study.",
+    locale: "en_IN",
+    siteName: "Trimsel",
+    images: [
+      {
+        url: "https://www.trimsel.com/images/myherocloud.png",
+        width: 1200,
+        height: 630,
+        alt: "EzyHelpers service marketplace case study by Trimsel",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TrimselSoftwares",
+    creator: "@TrimselSoftwares",
+  },
+};
 
 export default function XaberCaseStudy() {
     return (

@@ -29,6 +29,30 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Mobile App Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Trimsel",
+    "url": "https://trimsel.com",
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Chennai",
+  },
+  "description": "Top mobile app development company in Chennai, India. We build secure, scalable iOS, Android, Flutter & cross platform apps with exceptional UX. From MVP to enterprise apps. 200+ successful projects delivered.",
+};
+
 export default function MobileAppDevelopmentPage() {
-  return <MobileAppDevelopmentClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <MobileAppDevelopmentClient />
+    </>
+  );
 }

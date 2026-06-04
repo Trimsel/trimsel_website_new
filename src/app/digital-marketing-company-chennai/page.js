@@ -8,6 +8,37 @@ import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 
+export const metadata = {
+  title: "Digital Marketing Company Chennai | SEO, PPC & Social Media | Trimsel",
+  description:
+    "Data-driven digital marketing services in Chennai. SEO, PPC advertising, social media marketing, and content strategy to grow your business online and capture more customers.",
+  alternates: {
+    canonical: "https://www.trimsel.com/digital-marketing-company-chennai",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.trimsel.com/digital-marketing-company-chennai",
+    title: "Digital Marketing Company Chennai | SEO, PPC & Social Media | Trimsel",
+    description:
+      "Data-driven digital marketing services in Chennai. SEO, PPC advertising, social media marketing, and content strategy to grow your business online and capture more customers.",
+    locale: "en_IN",
+    siteName: "Trimsel",
+    images: [
+      {
+        url: "https://www.trimsel.com/images/myherocloud.png",
+        width: 1200,
+        height: 630,
+        alt: "Digital marketing services by Trimsel Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TrimselSoftwares",
+    creator: "@TrimselSoftwares",
+  },
+};
+
 const services = [
   {
     title: "SEO Optimization",
@@ -56,9 +87,29 @@ const services = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Digital Marketing",
+  "provider": {
+    "@type": "Organization",
+    "name": "Trimsel",
+    "url": "https://trimsel.com",
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Chennai",
+  },
+  "description": "Data-driven digital marketing services in Chennai. SEO, PPC advertising, social media marketing, and content strategy to grow your business online and capture more customers.",
+};
+
 export default function Digitalmarketing() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Header />
 
       <section className="relative flex min-h-screen lg:min-h-[100dvh] items-center overflow-hidden bg-white">

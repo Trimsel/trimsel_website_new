@@ -33,10 +33,45 @@ export const metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Trimsel",
+  "url": "https://trimsel.com",
+  "logo": "https://trimsel.com/logo.svg",
+  "description": "AI-Powered Software Development Company in Chennai",
+  "foundingDate": "2019",
+  "founders": [{ "@type": "Person", "name": "Balaji" }],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.21-B 5th Cross Street, South Phase Thiru Vi Ka Industrial Estate, Indira Nagar, Guindy",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "600032",
+    "addressCountry": "IN",
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-7200841581",
+    "contactType": "sales",
+    "email": "contact@trimsel.com",
+    "availableLanguage": ["English", "Tamil"],
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/trimsel",
+    "https://www.instagram.com/trimsel",
+    "https://twitter.com/trimsel",
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         {children}
         <Footer />
         <a
