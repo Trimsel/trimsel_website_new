@@ -9,7 +9,22 @@ import { OurPartner2 } from "@/data/OurPartner";
 
 const Marquee = dynamic(() => import("react-fast-marquee"));
 
-export default function Contactform() {
+const services = [
+  "Mobile App",
+  "Web Dev",
+  "Cloud",
+  "DevOps",
+  "AI / ML",
+  "Digital Marketing",
+];
+
+export default function Contactform({
+  eyebrow = "GET INTO TOUCH",
+  heading = "Got an Idea? Let's Make It Real.",
+  subheading = "Whether you're starting from scratch or scaling an existing product, tell us what you're working on and our software development team in Chennai will figure out the best way to build it together.",
+  formTitle = "Start Your Project Discussion",
+  defaultService = "",
+}) {
   const countries = [
     { name: "India", code: "IN", flag: "🇮🇳" },
     { name: "United States", code: "US", flag: "🇺🇸" },
@@ -40,17 +55,15 @@ export default function Contactform() {
         {/* TOP HEADING SECTION */}
         <div className="text-center">
           <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-            GET INTO TOUCH
+            {eyebrow}
           </h3>
 
           <h2 className="mt-4 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Got an Idea? Let's Make It Real.
+            {heading}
           </h2>
 
           <p className="mt-4 max-w-3xl mx-auto text-black font-medium">
-            Whether you're starting from scratch or scaling an existing product,
-            tell us what you're working on and our software development team in
-            Chennai will figure out the best way to build it together.
+            {subheading}
           </p>
         </div>
 
@@ -134,7 +147,7 @@ export default function Contactform() {
           <div>
             <div className="w-full bg-white rounded-2xl shadow-xl p-8 md:p-10">
               <h4 className="text-center text-xl font-semibold tracking-[0.12em] text-black sm:text-2xl">
-                Start Your Project Discussion
+                {formTitle}
               </h4>
 
               {/* Form */}
@@ -167,6 +180,19 @@ export default function Contactform() {
                     placeholder="Company"
                     className="w-full border-b border-black bg-transparent pb-2 font-medium text-black placeholder:text-gray-500 focus:border-[#1C75BC] focus:outline-none"
                   />
+                </div>
+
+                {/* Service select */}
+                <div>
+                  <select
+                    defaultValue={defaultService}
+                    className="w-full border-b border-black bg-transparent pb-2 font-medium text-black focus:border-[#1C75BC] focus:outline-none"
+                  >
+                    <option value="" disabled>Service you&apos;re interested in</option>
+                    {services.map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
+                  </select>
                 </div>
 
                 {/* Row 3 */}

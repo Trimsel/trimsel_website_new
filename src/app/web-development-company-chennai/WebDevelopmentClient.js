@@ -5,79 +5,84 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import CaseStudiesSection from "@/components/relatedcasestudy";
+import { caseStudies } from "@/data/caseStudies";
+import FeaturesGrid from "@/components/FeaturesGrid";
+import ServiceCardsGrid from "@/components/ServiceCardsGrid";
+import TechStackTabs from "@/components/TechStackTabs";
 import Testimonial from "@/components/testimonial";
 
 const services = [
   {
     title: "UI/UX Design for Web",
     icon: "/web-whatwedo1.svg",
-    desc: "We design interfaces that make sense to real users clear navigation, logical flows, and mobile-first layouts tested against real user behaviour. Every design decision targets conversion and usability reducing drop-off and increasing the time visitors spend engaging with your product",
+    description: "We design interfaces that make sense to real users clear navigation, logical flows, and mobile-first layouts tested against real user behaviour. Every design decision targets conversion and usability reducing drop-off and increasing the time visitors spend engaging with your product",
   },
   {
     title: "Front-End Development",
     icon: "/web-whatwedo2.svg",
-    desc: "We build fast, responsive frontends using React, Next.js, Vue.js, and Angular optimised for Core Web Vitals, SEO performance, and WCAG accessibility standards. Every interface is tested across devices and browsers before a single page goes live.",
+    description: "We build fast, responsive frontends using React, Next.js, Vue.js, and Angular optimised for Core Web Vitals, SEO performance, and WCAG accessibility standards. Every interface is tested across devices and browsers before a single page goes live.",
   },
   {
     title: "Backend Web Development",
     icon: "/web-whatwedo3.svg",
-    desc: "We build secure, scalable backend systems using Node.js, Python, and PHP — handling authentication, business logic, database management, and third-party integrations reliably, whether you're serving 100 users or 100,000",
+    description: "We build secure, scalable backend systems using Node.js, Python, and PHP — handling authentication, business logic, database management, and third-party integrations reliably, whether you're serving 100 users or 100,000",
   },
   {
     title: "API Development & Integration",
     icon: "/web-whatwedo4.svg",
-    desc: "We design and build RESTful and GraphQL APIs that connect your web platform to third-party tools, mobile apps, payment gateways, and CRMs enabling clean, consistent data flow across your entire stack. Every API is documented, versioned, and secured.",
+    description: "We design and build RESTful and GraphQL APIs that connect your web platform to third-party tools, mobile apps, payment gateways, and CRMs enabling clean, consistent data flow across your entire stack. Every API is documented, versioned, and secured.",
   },
   {
     title: "CMS Web Development",
     icon: "/web-whatwedo5.svg",
-    desc: "We build and configure CMS platforms WordPress, Headless CMS solutions like Contentful and Sanity, and custom builds so your team can update pages, publish content, and manage media without raising a development ticket every time.",
+    description: "We build and configure CMS platforms WordPress, Headless CMS solutions like Contentful and Sanity, and custom builds so your team can update pages, publish content, and manage media without raising a development ticket every time.",
   },
   {
     title: "Ecommerce Web Development",
     icon: "/web-whatwedo6.svg",
-    desc: "We deliver complete e-commerce solutions WooCommerce, Shopify, and custom platforms covering product catalogue setup, payment gateway integration, cart logic, order management, and conversion-optimised checkout. Every build is tested under peak traffic conditions before launch.",
+    description: "We deliver complete e-commerce solutions WooCommerce, Shopify, and custom platforms covering product catalogue setup, payment gateway integration, cart logic, order management, and conversion-optimised checkout. Every build is tested under peak traffic conditions before launch.",
   },
   {
     title: "DevOps for Web Projects",
     icon: "/web-whatwedo7.svg",
-    desc: "We set up CI/CD pipelines, staging and production environments, automated testing workflows, and cloud hosting on AWS or GCP so deployments are reliable, rollbacks are safe, and your development cycle keeps moving without your production environment becoming a risk.",
+    description: "We set up CI/CD pipelines, staging and production environments, automated testing workflows, and cloud hosting on AWS or GCP so deployments are reliable, rollbacks are safe, and your development cycle keeps moving without your production environment becoming a risk.",
   },
   {
     title: "Website Testing & QA",
     icon: "/web-whatwedo8.svg",
-    desc: "We run functional testing, cross-browser checks, mobile compatibility, performance audits under load, security vulnerability scanning, and regression testing before every launch so what goes live is exactly what you approved in review.",
+    description: "We run functional testing, cross-browser checks, mobile compatibility, performance audits under load, security vulnerability scanning, and regression testing before every launch so what goes live is exactly what you approved in review.",
   },
   {
     title: "24/7 Maintenance & Support",
     icon: "/web-whatwedo9.svg",
-    desc: "After launch, we monitor uptime, apply security patches, update plugins and dependencies, manage hosting renewals, and respond to performance issues around the clock so your website never goes unmanaged. You get a dedicated support contact and agreed response SLAs, not a shared inbox.",
+    description: "After launch, we monitor uptime, apply security patches, update plugins and dependencies, manage hosting renewals, and respond to performance issues around the clock so your website never goes unmanaged. You get a dedicated support contact and agreed response SLAs, not a shared inbox.",
   },
 ];
 
 const features = [
   {
     title: "Skip Recruitment - Get a Full Team Immediately",
-    desc: "Hiring and training an in-house team of frontend, backend, UI/UX, and QA professionals takes 3–6 months and significant overhead. With Trimsel you skip the recruitment cycle entirely our team of experienced React, Next.js, Node.js, and WordPress developers is ready to start on your project within days, not months.",
+    description: "Hiring and training an in-house team of frontend, backend, UI/UX, and QA professionals takes 3–6 months and significant overhead. With Trimsel you skip the recruitment cycle entirely our team of experienced React, Next.js, Node.js, and WordPress developers is ready to start on your project within days, not months.",
     icon: "/webservice1.svg",
   },
   {
     title: "Faster Time to Market",
-    desc: "Our agile delivery process, pre-built component libraries, and structured development workflows cut typical web project timelines by 40–60% compared to an in-house team building from scratch. A basic business website takes 2–4 weeks. A complex web application takes 8–16 weeks. You get working demos every two weeks throughout.",
+    description: "Our agile delivery process, pre-built component libraries, and structured development workflows cut typical web project timelines by 40–60% compared to an in-house team building from scratch. A basic business website takes 2–4 weeks. A complex web application takes 8–16 weeks. You get working demos every two weeks throughout.",
     icon: "/webservice2.svg",
   },
   {
     title: "Experienced Professionals on Every Project",
-    desc: "You get senior developers and designers who have shipped real products across multiple industries not juniors practising on your budget. Every specialist is applied only when your project needs their skills, so you're never paying for idle capacity.",
+    description: "You get senior developers and designers who have shipped real products across multiple industries not juniors practising on your budget. Every specialist is applied only when your project needs their skills, so you're never paying for idle capacity.",
     icon: "/webservice3.svg",
   },
   {
     title: "Lower Cost Than Hiring In-House",
-    desc: "Working with a professional web development company in Chennai means you avoid the overhead of salaries, infrastructure, and software licenses  while getting output that meets enterprise-grade standards.",
+    description: "Working with a professional web development company in Chennai means you avoid the overhead of salaries, infrastructure, and software licenses  while getting output that meets enterprise-grade standards.",
     icon: "/webservice4.svg",
   },
 ];
@@ -181,49 +186,54 @@ const items = [
   },
 ];
 
-const tabs = ["FRONTEND", "BACKEND", "PLATFORMS", "DATABASE", "UI/UX"];
-
-const toolsData = {
-  FRONTEND: [
-    { name: "HTML", icon: "/icons/html.png" },
-    { name: "CSS", icon: "/icons/css.png" },
-    { name: "JavaScript", icon: "/icons/js.png" },
-    { name: "React", icon: "/icons/react.png" },
-    { name: "Angular", icon: "/icons/angular.png" },
-  ],
-
-  BACKEND: [
-    { name: "Node.js", icon: "/icons/node.png" },
-    { name: "Express", icon: "/icons/express.png" },
-    { name: "Python", icon: "/icons/python.png" },
-    { name: "Java", icon: "/icons/java.png" },
-  ],
-
-  PLATFORMS: [
-    { name: "AWS", icon: "/icons/aws.png" },
-    { name: "Azure", icon: "/icons/azure.png" },
-    { name: "Docker", icon: "/icons/docker.png" },
-  ],
-
-  DATABASE: [
-    { name: "MongoDB", icon: "/icons/mongodb.png" },
-    { name: "MySQL", icon: "/icons/mysql.png" },
-    { name: "PostgreSQL", icon: "/icons/postgres.png" },
-  ],
-
-  "UI/UX": [
-    { name: "Figma", icon: "/icons/figma.png" },
-    { name: "Adobe XD", icon: "/icons/xd.png" },
-    { name: "Sketch", icon: "/icons/sketch.png" },
-  ],
-};
+const techTabs = [
+  {
+    name: "FRONTEND",
+    tools: [
+      { name: "HTML", icon: "/icons/html.png" },
+      { name: "CSS", icon: "/icons/css.png" },
+      { name: "JavaScript", icon: "/icons/js.png" },
+      { name: "React", icon: "/icons/react.png" },
+      { name: "Angular", icon: "/icons/angular.png" },
+    ],
+  },
+  {
+    name: "BACKEND",
+    tools: [
+      { name: "Node.js", icon: "/icons/node.png" },
+      { name: "Express", icon: "/icons/express.png" },
+      { name: "Python", icon: "/icons/python.png" },
+      { name: "Java", icon: "/icons/java.png" },
+    ],
+  },
+  {
+    name: "PLATFORMS",
+    tools: [
+      { name: "AWS", icon: "/icons/aws.png" },
+      { name: "Azure", icon: "/icons/azure.png" },
+      { name: "Docker", icon: "/icons/docker.png" },
+    ],
+  },
+  {
+    name: "DATABASE",
+    tools: [
+      { name: "MongoDB", icon: "/icons/mongodb.png" },
+      { name: "MySQL", icon: "/icons/mysql.png" },
+      { name: "PostgreSQL", icon: "/icons/postgres.png" },
+    ],
+  },
+  {
+    name: "UI/UX",
+    tools: [
+      { name: "Figma", icon: "/icons/figma.png" },
+      { name: "Adobe XD", icon: "/icons/xd.png" },
+      { name: "Sketch", icon: "/icons/sketch.png" },
+    ],
+  },
+];
 
 export default function WebDevelopment() {
   const [active, setActive] = useState(0);
-  const [activeTab, setActiveTab] = useState("FRONTEND");
-
-  const tabActiveClass = "pb-2 text-lg md:text-xl font-medium transition-all duration-300 border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold";
-  const tabInactiveClass = "pb-2 text-lg md:text-xl font-medium transition-all duration-300 border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent";
 
   return (
     <main>
@@ -398,129 +408,22 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-      <section className="bg-balck py-16 px-4 md:px-10">
-        <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#0b0b14] to-[#120a1f] rounded-3xl p-8 md:p-12 text-white">
-          {/* HEADER */}
-          <div>
-            {/* Heading */}
-            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-              WHAT WE DO
-            </h3>
+      <ServiceCardsGrid
+        eyebrow="WHAT WE DO"
+        heading="Full-Stack Web Design and Development Services"
+        description="Trimsel offers end-to-end web development services from early-stage planning and UI design through to backend engineering, integrations, and post-launch support. Whether you need a customer-facing website or a complex internal platform, our team handles the complete build without outsourcing any part of it."
+        services={services}
+        dark={true}
+      />
 
-            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-              Full-Stack Web Design and Development Services
-            </h2>
-
-            <p className="mt-4 px-0 md:px-10 text-center text-white font-medium leading-relaxed">
-              Trimsel offers end-to-end web development services from
-              early-stage planning and UI design through to backend engineering,
-              integrations, and post-launch support. Whether you need a
-              customer-facing website or a complex internal platform, our team
-              handles the complete build without outsourcing any part of it.
-            </p>
-          </div>
-
-          {/* GRID */}
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#141421] rounded-2xl p-6 shadow-lg hover:shadow-xl transition"
-              >
-                {/* ICON */}
-                <div className="w-12 h-12 mb-4 relative">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    fill
-                    sizes="48px"
-                    className="object-contain"
-                  />
-                </div>
-
-                {/* TITLE */}
-                <h4 className="text-xl text-[#1ea7d7] font-semibold">
-                  {item.title}
-                </h4>
-
-                {/* DESC */}
-                <p className="mt-3 font-medium max-w-3xl leading-relaxed">
-                  {item.desc}
-                </p>
-
-                {/* ARROW BUTTON */}
-                {/* <div className="mt-5">
-                  <Link
-                    href="/"
-                    className="w-8 h-8 rounded-full bg-gradient-to-r from-[#05A1E5] via-[#5346E5] to-[#9005E5] inline-flex items-center justify-center"
-                  >
-                    <Image
-                      src="/right-arrow-whatwedo.svg"
-                      alt="arrow"
-                      width={8}
-                      height={8}
-                    />
-                  </Link>
-                </div> */}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 md:px-10 bg-gradient-to-br from-[#eef3f8] to-[#f7f4ef]">
-        <div className="max-w-6xl mx-auto">
-          {/* HEADER */}
-          <div>
-            {/* Heading */}
-            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-              WHY OUTSOURCE WEB DEVELOPMENT
-            </h3>
-
-            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-              Why Businesses Outsource Web Development to Trimsel
-            </h2>
-
-            <p className="mt-4 px-0 md:px-10 text-center text-black font-medium leading-relaxed">
-              Building and maintaining a web development team in-house is
-              expensive, slow to scale, and hard to keep current with changing
-              technology. Here's why businesses choose to work with Trimsel
-              instead.
-            </p>
-          </div>
-
-          {/* CARDS */}
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow-sm hover:shadow-md transition"
-              >
-                {/* ICON */}
-                <div className="w-10 h-10 mb-4 relative">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    fill
-                    sizes="40px"
-                    className="object-contain"
-                  />
-                </div>
-
-                {/* TITLE */}
-                <h4 className="text-md font-semibold text-[#1f2a37] leading-snug">
-                  {item.title}
-                </h4>
-
-                {/* DESCRIPTION */}
-                <p className="mt-3 text-md font-medium text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturesGrid
+        eyebrow="WHY OUTSOURCE WEB DEVELOPMENT"
+        heading="Why Businesses Outsource Web Development to Trimsel"
+        description="Building and maintaining a web development team in-house is expensive, slow to scale, and hard to keep current with changing technology. Here's why businesses choose to work with Trimsel instead."
+        features={features}
+        columns={4}
+        sectionClass="bg-gradient-to-br from-[#eef3f8] to-[#f7f4ef]"
+      />
 
       <section className="px-4 md:px-10 py-16 bg-white">
         <div className="max-w-6xl mx-auto bg-[#dbe6ee] rounded-3xl p-8 md:p-12 space-y-6">
@@ -705,187 +608,51 @@ export default function WebDevelopment() {
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF] shadow-md flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div>
-              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                GET IN TOUCH
-              </h3>
+      <GetInTouchBanner
+        eyebrow="WEB SOLUTIONS"
+        heading="Need a Website That Converts?"
+        description="From landing pages to complex web applications, our React and Next.js experts build fast, scalable solutions. Let's talk about your project."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/getintouchweb.svg"
+        imageAlt="Web development contact"
+        bgClass="bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF]"
+      />
 
-              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Ready to Build a Website That Works for Your Business?
-              </h2>
-
-              <p className="mt-4 text-black font-medium">
-                Tell our web development team what you need — whether it's a
-                business website, a complex web application, or an e-commerce
-                platform — and we'll give you a realistic scope, honest
-                timeline, and clear plan to build it right.
-              </p>
-
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <Image
-                  src="/icons/mailbox.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-                Talk to Our Web Team
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/getintouchweb.svg"
-                alt="Contact illustration"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#f3f3f3] py-24 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Heading */}
-          <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-            Tools and Technology
-          </h3>
-
-          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            The Web Development Stack We Use Chosen for Your Project, Not Just
-            Ours
-          </h2>
-
-          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We choose tools based on what genuinely fits your project's scale,
-            performance needs, and long-term maintainability not what's trending
-            or easiest to bill. Here's the stack our web development team works
-            with.
-          </p>
-
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-36 mt-10">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={activeTab === tab ? tabActiveClass : tabInactiveClass}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          {/* Icons — all tab contents always in DOM, active one shown via CSS */}
-          {tabs.map((tab) => (
-            <div
-              key={tab}
-              className={`flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16 lg:gap-48 mt-12 ml-0 sm:ml-4 lg:ml-20 ${
-                activeTab === tab ? "" : "hidden"
-              }`}
-            >
-              {toolsData[tab]?.map((tool, index) => (
-                <div key={index} className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 relative">
-                    <Image
-                      src={tool.icon}
-                      alt={tool.name}
-                      fill
-                      sizes="48px"
-                      className="object-contain"
-                    />
-                  </div>
-
-                  <p className="text-md font-medium text-black">{tool.name}</p>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
+      <TechStackTabs
+        eyebrow="Tools and Technology"
+        heading="The Web Development Stack We Use Chosen for Your Project, Not Just Ours"
+        description="We choose tools based on what genuinely fits your project's scale, performance needs, and long-term maintainability not what's trending or easiest to bill. Here's the stack our web development team works with."
+        tabs={techTabs}
+      />
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF] shadow-md flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div>
-              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                GET IN TOUCH
-              </h3>
-
-              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Ready to Build a Website That Works for Your Business?
-              </h2>
-
-              <p className="mt-4 text-black font-medium">
-                Tell our web development team what you need — whether it's a
-                business website, a complex web application, or an e-commerce
-                platform — and we'll give you a realistic scope, honest
-                timeline, and clear plan to build it right.
-              </p>
-
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <Image
-                  src="/icons/mailbox.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-                Talk to Our Web Team
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/getintouchweb.svg"
-                alt="Contact illustration"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchBanner
+        eyebrow="WEB SOLUTIONS"
+        heading="Ready to Build a Website That Works for Your Business?"
+        description="Tell our web development team what you need — whether it's a business website, a complex web application, or an e-commerce platform — and we'll give you a realistic scope, honest timeline, and clear plan to build it right."
+        ctaText="Talk to Our Web Team"
+        ctaLink="/contact-us"
+        image="/getintouchweb.svg"
+        imageAlt="Web development contact"
+        bgClass="bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF]"
+      />
 
       <CaseStudiesSection
         tag="RELATED CASE STUDIES"
         heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[
-          {
-            title: "EzyHelpers",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/ezyhelpers.png",
-            link: "/case-study/ezyhelpers",
-          },
-          {
-            title: "KarIOT",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/kariot.png",
-            link: "/case-study/kariot",
-          },
-        ]}
+        studies={[caseStudies.mocial, caseStudies.ezyhelpers]}
       />
 
       <Client />
 
-      <Contactform />
+      <Contactform
+        eyebrow="START YOUR WEB PROJECT"
+        heading="Need a Web Application That Performs?"
+        subheading="Tell us about your web project. Our team builds fast, scalable web applications using React, Next.js, and Node.js — from simple websites to complex enterprise platforms."
+        formTitle="Discuss Your Web Project"
+        defaultService="Web Dev"
+      />
 
       <Testimonial />
 

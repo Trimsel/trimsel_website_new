@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Testimonial from "@/components/testimonial";
 
 export default function ContactUs() {
   const [active, setActive] = useState("Mobile App");
@@ -15,42 +16,6 @@ export default function ContactUs() {
     { name: "Cloud", icon: "/contactus12.svg" },
     { name: "Consulting", icon: "/contactus13.svg" },
   ];
-
-  const testimonials = [
-    {
-      text: "Firmsite delivered our app 2 weeks ahead of schedule. Communication was excellent throughout the project.",
-      name: "Ravi Kumar",
-      role: "FinTech Startup, Bangalore",
-      initials: "RK",
-    },
-    {
-      text: "Amazing experience! The UI design was modern and performance is top-notch.",
-      name: "Anjali Sharma",
-      role: "E-commerce Founder, Mumbai",
-      initials: "AS",
-    },
-    {
-      text: "Highly professional team. They understood our requirements perfectly.",
-      name: "Karthik R",
-      role: "SaaS Product Owner, Chennai",
-      initials: "KR",
-    },
-  ];
-
-  const [index, setIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    if (isHovered) return;
-
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  const t = testimonials[index];
 
   return (
     <main>
@@ -178,7 +143,7 @@ export default function ContactUs() {
                     <div>
                       <p className="text-md font-medium">Call Us</p>
                       <p className="text-sm text-gray-600 font-medium">
-                        +91 98765 43210
+                        +91 72008 41581
                       </p>
                     </div>
                   </div>
@@ -200,7 +165,7 @@ export default function ContactUs() {
                     <div>
                       <p className="text-md font-medium">Email</p>
                       <p className="text-sm text-gray-600 font-medium">
-                        hello@firmsite.com
+                        contact@trimsel.com
                       </p>
                     </div>
                   </div>
@@ -258,28 +223,6 @@ export default function ContactUs() {
                 </div>
               </div>
 
-              <div
-                key={index}
-                className="relative perspective"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <div className="bg-[#1e293b] p-4 rounded-lg space-y-6 transition-all duration-500 transform rotate-animation">
-                  <p className="text-md text-white font-medium mb-3">
-                    “{t.text}”
-                  </p>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-md font-semibold">
-                      {t.initials}
-                    </div>
-                    <div>
-                      <p className="text-md font-medium">{t.name}</p>
-                      <p className="text-sm text-white font-medium">{t.role}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* PROMISE */}
@@ -545,6 +488,7 @@ export default function ContactUs() {
         </div>
       </section>
 
+      <Testimonial />
     </main>
   );
 }

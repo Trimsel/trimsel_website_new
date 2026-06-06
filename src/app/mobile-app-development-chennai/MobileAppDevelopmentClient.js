@@ -3,13 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Header from "@/components/Header";
-import Clients from "@/components/Client";
+import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import Testimonial from "@/components/testimonial";
 import CaseStudiesSection from "@/components/relatedcasestudy";
+import { caseStudies } from "@/data/caseStudies";
+import FeaturesGrid from "@/components/FeaturesGrid";
+import ServiceCardsGrid from "@/components/ServiceCardsGrid";
+import TechStackTabs from "@/components/TechStackTabs";
 
 const features = [
   {
@@ -139,41 +144,38 @@ const services = [
   },
 ];
 
-const tabs = [
-  "NATIVE MOBILE ARCHITECTURES",
-  "CROSS-PLATFORM AND HYBRID ENGINES",
-  "BACKEND AND MICROSERVICES",
+const mobileTabs = [
+  {
+    name: "NATIVE MOBILE ARCHITECTURES",
+    tools: [
+      { name: "HTML", icon: "/icons/html.png" },
+      { name: "CSS", icon: "/icons/css.png" },
+      { name: "JavaScript", icon: "/icons/js.png" },
+      { name: "React", icon: "/icons/react.png" },
+      { name: "Angular", icon: "/icons/angular.png" },
+    ],
+  },
+  {
+    name: "CROSS-PLATFORM AND HYBRID ENGINES",
+    tools: [
+      { name: "Node.js", icon: "/icons/node.png" },
+      { name: "Express", icon: "/icons/express.png" },
+      { name: "Python", icon: "/icons/python.png" },
+      { name: "Java", icon: "/icons/java.png" },
+    ],
+  },
+  {
+    name: "BACKEND AND MICROSERVICES",
+    tools: [
+      { name: "AWS", icon: "/icons/aws.png" },
+      { name: "Azure", icon: "/icons/azure.png" },
+      { name: "Docker", icon: "/icons/docker.png" },
+    ],
+  },
 ];
 
-const toolsData = {
-  "NATIVE MOBILE ARCHITECTURES": [
-    { name: "HTML", icon: "/icons/html.png" },
-    { name: "CSS", icon: "/icons/css.png" },
-    { name: "JavaScript", icon: "/icons/js.png" },
-    { name: "React", icon: "/icons/react.png" },
-    { name: "Angular", icon: "/icons/angular.png" },
-  ],
-
-  "CROSS-PLATFORM AND HYBRID ENGINES": [
-    { name: "Node.js", icon: "/icons/node.png" },
-    { name: "Express", icon: "/icons/express.png" },
-    { name: "Python", icon: "/icons/python.png" },
-    { name: "Java", icon: "/icons/java.png" },
-  ],
-
-  "BACKEND AND MICROSERVICES": [
-    { name: "AWS", icon: "/icons/aws.png" },
-    { name: "Azure", icon: "/icons/azure.png" },
-    { name: "Docker", icon: "/icons/docker.png" },
-  ],
-};
-
 export default function MobileAppDevelopmentClient() {
-  const [activeTab, setActiveTab] = useState("NATIVE MOBILE ARCHITECTURES");
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const tabActiveClass = "pb-2 text-md md:text-md font-medium transition-all duration-300 border-b-2 border-[#1C76BD] bg-gradient-to-r from-[#1C76BD] to-[#02A89B] bg-clip-text text-transparent font-semibold";
-  const tabInactiveClass = "pb-2 text-md md:text-md font-medium transition-all duration-300 border-b-2 border-transparent text-black hover:bg-gradient-to-r hover:from-[#1C76BD] hover:to-[#02A89B] hover:bg-clip-text hover:text-transparent";
 
   const toggleDropdown = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -336,55 +338,13 @@ export default function MobileAppDevelopmentClient() {
         </section>
 
         {/* WHY CHOOSE TRIMSEL*/}
-        <section className="bg-white py-16">
-          <div className="flex justify-center px-4 sm:px-6">
-            <div className="mb-12">
-              <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                WHY CHOOSE TRIMSEL
-              </h3>
-              <h2 className="mt-2 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Six Reasons Our Clients Trust Us to Build Their Mobile Apps
-              </h2>
-              <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-                From first prototype to App Store launch here's what makes
-                working with Trimsel different from hiring just another
-                development agency.
-              </p>
-            </div>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="px-3 py-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-blue-100 rounded-lg p-4 hover:shadow-md hover:shadow-blue-100 transition-shadow duration-200 cursor-default"
-                >
-                  {/* Icon + Heading */}
-                  <div className="flex items-center gap-3 mb-2">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={40}
-                      height={40}
-                      className="object-contain"
-                    />
-
-                    <h4 className="text-xl font-semibold text-gray-900">
-                      {feature.title}
-                    </h4>
-                  </div>
-
-                  {/* Description */}
-                  <p className="mt-4 text-md text-gray-700 font-medium leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FeaturesGrid
+          eyebrow="WHY CHOOSE TRIMSEL"
+          heading="Six Reasons Our Clients Trust Us to Build Their Mobile Apps"
+          description="From first prototype to App Store launch here's what makes working with Trimsel different from hiring just another development agency."
+          features={features}
+          columns={3}
+        />
 
         {/* HOW WE HELP SECTION */}
         <section className="bg-[#EEF5F8] px-10 py-16">
@@ -459,73 +419,13 @@ export default function MobileAppDevelopmentClient() {
           </div>
         </section>
 
-        <section className="bg-[#f0efeb] px-10 py-16">
-          <div className="mb-8">
-            <h3 className="mt-4 text-2xl font-semibold text-center leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-              Our Mobile App Development Services
-            </h3>
-            <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-              The Full Spectrum of Mobile App Development Services We Offer
-            </h2>
-
-            <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-              Whether you need a native iOS app, an Android app, a
-              cross-platform solution, an enterprise mobile tool, or support for
-              an existing product our team has the capability and experience to
-              deliver it.
-            </p>
-          </div>
-          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                {/* Top: Icon */}
-                <div>
-                  <div className="mb-5">
-                    <div className="relative w-14 h-14">
-                      {/* Blue highlight background */}
-                      <div className="absolute right-0 top-0 w-8 h-full rounded-md z-0" />
-                      <Image
-                        src={service.icon}
-                        alt={service.title}
-                        width={48}
-                        height={48}
-                        className="relative z-10 object-contain w-12 h-12"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg font-bold text-black mb-3">
-                    {service.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-md font-medium text-black leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-
-                {/* Bottom: Arrow Button */}
-                {/* <div className="mt-6">
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center justify-center">
-                  <Image
-                    src="/icons/mobile-stage-arrow.svg"
-                    alt="arrow"
-                    width={40}
-                    height={40}
-                    className="object-contain"
-                  />
-                </Link>
-              </div> */}
-              </div>
-            ))}
-          </div>
-        </section>
+        <ServiceCardsGrid
+          eyebrow="Our Mobile App Development Services"
+          heading="The Full Spectrum of Mobile App Development Services We Offer"
+          description="Whether you need a native iOS app, an Android app, a cross-platform solution, an enterprise mobile tool, or support for an existing product our team has the capability and experience to deliver it."
+          services={services}
+          bgColor="bg-[#f0efeb]"
+        />
         {/* Development Process*/}
         <section className="bg-white px-10 py-16">
           <div className="mb-8">
@@ -560,128 +460,38 @@ export default function MobileAppDevelopmentClient() {
         </section>
 
         {/* Getintouch */}
-        <section className="bg-white py-12 md:py-20">
-          <div className="flex justify-center px-4 sm:px-6">
-            <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC] shadow-md flex flex-col md:flex-row items-center justify-between">
-              {/* LEFT CONTENT */}
-              <div>
-                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                  SPEAK WITH OUR EXPERTS
-                </h3>
-
-                <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                  Planning to Build a Mobile App for Your Business? Let’s
-                  Discuss Your Idea.
-                </h2>
-
-                <p className="mt-4 text-black font-medium">
-                  Start your project today with the best mobile app development
-                  company in Chennai and turn your app idea into a practical
-                  digital solution.
-                </p>
-
-                <Link
-                  href="/contact-us"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                >
-                  <Image
-                    src="/icons/mailbox.svg"
-                    width={20}
-                    height={20}
-                    alt="RightArrow"
-                  />
-                  Get in Touch
-                </Link>
-              </div>
-
-              {/* RIGHT IMAGE */}
-              <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-                <Image
-                  src="/getintouchmobile.svg"
-                  alt="Contact illustration"
-                  width={700}
-                  height={700}
-                  className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="bg-[#f3f3f3] py-24 px-6">
-          <div className="max-w-6xl mx-auto text-center">
-            {/* Heading */}
-            <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-              Tools and Technology
-            </h3>
-
-            <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-              We pride ourselves on being the one stop shop for all your needs
-            </h2>
-
-            <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-              Tools and technology help make work easier and faster. They play
-              an important role in improving efficiency and innovation in
-              everyday life.
-            </p>
-
-            {/* Tabs */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-36 mt-10">
-              {tabs.map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={activeTab === tab ? tabActiveClass : tabInactiveClass}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
-
-            {/* Icons */}
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16 lg:gap-48 mt-12 ml-0 sm:ml-4 lg:ml-20">
-              {toolsData[activeTab]?.map((tool, index) => (
-                <div key={index} className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 relative">
-                    <Image
-                      src={tool.icon}
-                      alt={tool.name}
-                      fill
-                      sizes="48px"
-                      className="object-contain"
-                    />
-                  </div>
-
-                  <p className="text-md font-medium text-black">{tool.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <GetInTouchBanner
+          eyebrow="BUILD YOUR APP"
+          heading="Turn Your App Idea Into Reality"
+          description="Our mobile development team has shipped 100+ apps across iOS, Android, and cross-platform. Let’s discuss your app requirements."
+          ctaText="Talk to Our Experts"
+          ctaLink="/contact-us"
+          image="/getintouchmobile.svg"
+          imageAlt="Mobile app development contact"
+          bgClass="bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC]"
+        />
+        <TechStackTabs
+          eyebrow="Tools and Technology"
+          heading="We pride ourselves on being the one stop shop for all your needs"
+          description="Tools and technology help make work easier and faster. They play an important role in improving efficiency and innovation in everyday life."
+          tabs={mobileTabs}
+        />
 
         <CaseStudiesSection
           tag="RELATED CASE STUDIES"
           heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-          studies={[
-            {
-              title: "EzyHelpers",
-              description:
-                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-              image: "/images/ezyhelpers.png",
-              link: "/case-study/ezyhelpers",
-            },
-            {
-              title: "KarIOT",
-              description:
-                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-              image: "/images/kariot.png",
-              link: "/case-study/kariot",
-            },
-          ]}
+          studies={[caseStudies.xaber, caseStudies.ezyhelpers]}
         />
 
         <Testimonial />
-        <Clients />
-        <Contactform />
+        <Client />
+        <Contactform
+          eyebrow="BUILD YOUR APP"
+          heading="Ready to Launch Your Mobile App?"
+          subheading="Share your app idea with our mobile development experts. From native iOS and Android to cross-platform with React Native and Flutter — we'll help you choose the right approach and deliver a production-ready app."
+          formTitle="Discuss Your App Project"
+          defaultService="Mobile App"
+        />
         <OurBlog {...blogData.mobile} />
         <Faq />
       </main>

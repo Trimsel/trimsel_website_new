@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import Clients from "@/components/Client";
+import Client from "@/components/Client";
 import OurBlog from "@/components/OurBlog";
 import Header from "@/components/Header";
 import Whatwedo from "@/components/Whatwedo";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 
 export const metadata = {
   title: "About Trimsel | Software Development Team in Chennai",
@@ -304,20 +305,11 @@ export default function aboutus() {
             </h2>
 
             <p className="mt-6 text-gray-600 leading-relaxed max-w-5xl mx-auto font-medium">
-              Minitzon delivers nothing but the best digital solutions to our
-              clients with a customer-centric approach. We are determined to
-              elevate your business to global competitors by using cutting-edge
-              technology implemented by masterminds in the digital world. Our
-              experts address complex business challenges with forwarding and
-              scalable solutions that hold steady for long-term goals and bring
-              holistic change to your business.
+              Trimsel delivers end-to-end digital solutions built around your business goals. With a customer-first approach, we combine deep technical expertise with strategic thinking to help you outpace the competition. Our engineers tackle complex challenges with scalable, future-ready solutions that create lasting value for your business.
             </p>
 
             <p className="mt-4 text-gray-600 leading-relaxed max-w-5xl mx-auto font-medium">
-              Minitzon delivers nothing but the best digital solutions to our
-              clients with a customer-centric approach. We are determined to
-              elevate your business to global competitors by using cutting-edge
-              technology implemented by masterminds in the digital world.
+              We don't just build software — we build partnerships. Our team invests time to understand your domain, your constraints, and your ambitions, then delivers solutions that scale with you over the long term.
             </p>
 
             {/* BUTTON */}
@@ -358,10 +350,7 @@ export default function aboutus() {
 
                 {/* CONTENT */}
                 <p className="text-gray-600 font-medium leading-relaxed">
-                  At Minitzon, we focus on offering digital solutions developed
-                  with cutting-edge technology, so our clients always stay ahead
-                  of the curve. With mission-critical solutions, we hold a
-                  comprehensive approach to the requirement at hand.
+                  At Trimsel, we build with purpose — every solution is crafted with precision, grounded in proven technology, and aligned to your long-term goals. We believe great software should work flawlessly today and scale confidently tomorrow.
                 </p>
               </div>
             </div>
@@ -387,10 +376,7 @@ export default function aboutus() {
 
                 {/* CONTENT */}
                 <p className="text-gray-600 font-medium leading-relaxed">
-                  At Minitzon, we focus on offering digital solutions developed
-                  with cutting-edge technology, so our clients always stay ahead
-                  of the curve. With mission-critical solutions, we hold a
-                  comprehensive approach to the requirement at hand.
+                  At Trimsel, we build with purpose — every solution is crafted with precision, grounded in proven technology, and aligned to your long-term goals. We believe great software should work flawlessly today and scale confidently tomorrow.
                 </p>
               </div>
             </div>
@@ -449,51 +435,26 @@ export default function aboutus() {
       <Whatwedo />
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[#DEFFCE] px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] shadow-md flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                GET IN TOUCH
-              </h3>
+      <GetInTouchBanner
+        eyebrow="JOIN US"
+        heading="Let's Build Something Meaningful"
+        description="We're always looking for ambitious projects and great people. Whether you want to work with us or join us — reach out."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/aboutus-getintouch.svg"
+        imageAlt="About Trimsel contact"
+        bgClass="bg-[#DEFFCE]"
+      />
 
-              <h2 className="mt-2 text-2xl font-semibold leading-tight text-black sm:text-3xl md:text-4xl">
-                Reach out to us to identify business challenges and get
-                efficient digital solutions.
-              </h2>
+      <Client />
 
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-              >
-                Get Started
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/aboutus-getintouch.svg"
-                alt="Contact illustration"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Clients />
-
-      <Contactform />
+      <Contactform
+        eyebrow="WORK WITH US"
+        heading="Let's Build Something Great Together"
+        subheading="We're a team of 50+ engineers, designers, and strategists based in Chennai. Whether you need a dedicated team or a project partner, we'd love to hear about what you're building."
+        formTitle="Start a Conversation"
+        defaultService=""
+      />
 
     </>
   );

@@ -3,12 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Header from "@/components/Header";
-import Clients from "@/components/Client";
+import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
+import ServiceCardsGrid from "@/components/ServiceCardsGrid";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
 import CaseStudiesSection from "@/components/relatedcasestudy";
+import { caseStudies } from "@/data/caseStudies";
 
 const services = [
   {
@@ -236,76 +239,13 @@ export default function CloudConsulting() {
         </div>
       </section>
 
-      <section className="bg-[#f0efeb] px-4 md:px-10 py-16">
-        <div className="mb-8">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
-            WHAT WE DO
-          </h3>
-          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            All-inclusive cloud computing consulting and implementation services
-          </h2>
-
-          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We embrace an end-to-end approach — from thinking over the strategic
-            aspects of cloud adoption and migration to cloud, security
-            consulting and cloud infrastructure management. Our team of cloud
-            consultants, business analysts, developers, and DevOps engineers
-            will ensure that your cloud environment is efficient, safe, and
-            high-performing.
-          </p>
-        </div>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
-              {/* Top: Icon */}
-              <div>
-                <div className="mb-5">
-                  <div className="relative w-14 h-14">
-                    {/* Blue highlight background */}
-                    <div className="absolute right-0 top-0 w-8 h-full rounded-md z-0" />
-                    <Image
-                      src={service.icon}
-                      alt={service.title}
-                      width={48}
-                      height={48}
-                      className="relative z-10 object-contain w-12 h-12"
-                    />
-                  </div>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-base font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-md text-gray-500 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-
-              {/* Bottom: Arrow Button */}
-              <div className="mt-6">
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center justify-center"
-                >
-                  <Image
-                    src="/icons/mobile-stage-arrow.svg"
-                    alt="arrow"
-                    width={40}
-                    height={40}
-                    className="object-contain"
-                  />
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServiceCardsGrid
+        eyebrow="WHAT WE DO"
+        heading="All-inclusive cloud computing consulting and implementation services"
+        description="We embrace an end-to-end approach — from thinking over the strategic aspects of cloud adoption and migration to cloud, security consulting and cloud infrastructure management. Our team of cloud consultants, business analysts, developers, and DevOps engineers will ensure that your cloud environment is efficient, safe, and high-performing."
+        services={services}
+        bgColor="bg-[#f0efeb]"
+      />
 
       <section className="bg-white flex items-center justify-center px-4 py-12 sm:px-6 md:px-12 md:py-16 font-sans">
         <div>
@@ -486,7 +426,7 @@ export default function CloudConsulting() {
           </h3>
 
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Cloud computing consulting with Minitzon :
+            Cloud computing consulting with Trimsel:
           </h2>
 
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
@@ -544,7 +484,7 @@ export default function CloudConsulting() {
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-            Why work with Minitzon?
+            Why work with Trimsel?
           </h2>
 
           <p className="mt-4 text-gray-600 max-w-3xl leading-relaxed">
@@ -591,65 +531,32 @@ export default function CloudConsulting() {
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[url('/getintouch2.svg')] bg-cover bg-center bg-no-repeat px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] shadow-md">
-            <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
-
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              {/* LEFT CONTENT */}
-              <div>
-                <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                  GET IN TOUCH
-                </h3>
-
-                <h2 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-4xl">
-                  You want to improve your business processes using the cloud,
-                  but you’re not sure how to handle it right?
-                </h2>
-
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-                >
-                  Contact Us
-                  <Image
-                    src="/Home/right-arrow.svg"
-                    width={20}
-                    height={20}
-                    alt="RightArrow"
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchBanner
+        eyebrow="CLOUD STRATEGY"
+        heading="Optimize Your Cloud Infrastructure"
+        description="Whether you’re migrating to AWS, Azure, or GCP — our certified cloud architects will design the right solution for your business."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/getintouch1.svg"
+        imageAlt="Cloud consulting contact"
+        bgClass="bg-gradient-to-r from-[#d9e6f2] to-[#cfd8e6]"
+      />
 
       <CaseStudiesSection
         tag="RELATED CASE STUDIES"
         heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[
-          {
-            title: "EzyHelpers",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/ezyhelpers.png",
-            link: "/case-study/ezyhelpers",
-          },
-          {
-            title: "KarIOT",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/kariot.png",
-            link: "/case-study/kariot",
-          },
-        ]}
+        studies={[caseStudies.kariot, caseStudies.xaber]}
       />
 
-      <Clients />
+      <Client />
 
-      <Contactform />
+      <Contactform
+        eyebrow="MIGRATE TO CLOUD"
+        heading="Ready to Move to the Cloud?"
+        subheading="Whether you're planning your first cloud migration or optimizing an existing infrastructure, our AWS, Azure, and GCP certified consultants will design the right architecture for your needs."
+        formTitle="Get Your Cloud Strategy"
+        defaultService="Cloud"
+      />
 
       <OurBlog {...blogData.cloud} />
 

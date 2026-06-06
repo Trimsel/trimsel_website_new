@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import Clients from "@/components/Client";
+import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import Faq from "@/components/Faq";
@@ -10,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import CaseStudiesSection from "@/components/relatedcasestudy";
+import { caseStudies } from "@/data/caseStudies";
+import FeaturesGrid from "@/components/FeaturesGrid";
 
 const services = [
   {
@@ -116,18 +119,22 @@ const features = [
   {
     icon: "/icons/Devops-what-we-do1.svg",
     title: "Complex Delivery Experience",
+    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
   },
   {
     icon: "/icons/Devops-what-we-do2.svg",
     title: "Skilled And Talented Engineers",
+    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
   },
   {
     icon: "/icons/Devops-what-we-do3.svg",
     title: "Best Security Integration",
+    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
   },
   {
     icon: "/icons/Devops-what-we-do4.svg",
     title: "Dedicated DevOps Team",
+    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
   },
 ];
 
@@ -319,129 +326,43 @@ export default function DevOpsConsulting() {
         </div>
       </section>
 
-      <section className="relative py-24 px-6 bg-white overflow-hidden">
-        {/* Main Container */}
-        <div className="relative max-w-6xl mx-auto bg-black rounded-3xl p-8 shadow-2xl border border-white/10">
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div
-              className="w-[900px] h-[200px] 
-    bg-[linear-gradient(90deg,#4686FF,#9005E5,#1D55C7)] 
-    rounded-2xl opacity-60 blur-[280px]"
-            ></div>
-          </div>
-
-          {/* Header */}
-          <div className="mb-8">
-            <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
-              WHY CHOOSE US
-            </h3>
-            <h2 className="mt-4 text-center text-2xl text-white md:text-4xl font-semibold">
-              Why choose Trimsel for your DevOps services?
-            </h2>
-
-            <p className="mt-4 max-w-5xl mx-auto text-center text-white font-medium">
-              Clients choose us because of our ability to improve business
-              agility, increase efficiency, and reduce costs. We are
-              differentiated by our.
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="grid md:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition duration-300"
-              >
-                {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg mb-5">
-                  <Image src={feature.icon} alt={`${feature.title} icon`} width={40} height={40} />
-                </div>
-
-                <h3 className="text-white font-semibold mb-3">
-                  {feature.title}
-                </h3>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  We have years of experience in helping organizations
-                  streamline the release cycles of different applications, from
-                  legacy to agile and beyond. Our experts ensure that the best
-                  CI/CD practices are implemented.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturesGrid
+        eyebrow="WHY CHOOSE US"
+        heading="Why choose Trimsel for your DevOps services?"
+        description="Clients choose us because of our ability to improve business agility, increase efficiency, and reduce costs. We are differentiated by our."
+        features={features}
+        columns={4}
+        dark={true}
+      />
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[#552A8B] min-h-[280px] md:min-h-[320px] shadow-lg flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div className="relative z-10 px-8 py-10 sm:px-12 md:py-16 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h3 className="text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-3xl lg:text-4xl">
-                GET IN TOUCH
-              </h3>
-              <h2 className="mt-2 text-2xl text-white font-semibold leading-tight sm:text-3xl md:text-3xl lg:text-4xl">
-                Need a DevOps consultants? Contact us Now!
-              </h2>
-              <p className="mt-4 text-white font-medium text-sm sm:text-base max-w-lg">
-                Reach out to us to identify business challenges and get
-                efficient digital solutions.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                Get Started
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/Devops-getintouch.svg"
-                alt="Devops-get-in-touch"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchBanner
+        eyebrow="STREAMLINE OPS"
+        heading="Deploy Faster With Confidence"
+        description="Our DevOps engineers build CI/CD pipelines, automate infrastructure, and set up monitoring — so your team ships code faster with fewer failures."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/Devops-getintouch.svg"
+        imageAlt="DevOps consulting contact"
+        bgClass="bg-[#552A8B]"
+        darkBg={true}
+      />
 
       <CaseStudiesSection
         tag="RELATED CASE STUDIES"
         heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[
-          {
-            title: "EzyHelpers",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/ezyhelpers.png",
-            link: "/case-study/ezyhelpers",
-          },
-          {
-            title: "KarIOT",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/kariot.png",
-            link: "/case-study/kariot",
-          },
-        ]}
+        studies={[caseStudies.kariot, caseStudies.mocial]}
       />
 
-      <Clients />
+      <Client />
 
-      <Contactform />
+      <Contactform
+        eyebrow="AUTOMATE & SCALE"
+        heading="Want Faster, More Reliable Deployments?"
+        subheading="Tell us about your infrastructure challenges. From CI/CD pipelines and Kubernetes orchestration to monitoring and incident response — we'll build a DevOps practice that actually works."
+        formTitle="Discuss Your DevOps Needs"
+        defaultService="DevOps"
+      />
 
       <OurBlog {...blogData.devops} />
 

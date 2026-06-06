@@ -45,7 +45,7 @@ export default function CaseStudiesSection({ tag, heading, studies = [] }) {
 
                             {/* LINK */}
                             <Link
-                                href={item.link}
+                                href={item.slug}
                                 className="text-blue-500 text-lg font-medium inline-flex items-center gap-1 ml-2"
                             >
                                 Read Case Study...

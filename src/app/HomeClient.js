@@ -8,8 +8,10 @@ import Whatwedo from "@/components/Whatwedo";
 import Ourprocess from "@/app/Home/Ourprocess";
 import Testimonial from "@/components/testimonial";
 import OurBlog from "@/components/OurBlog";
+import FeaturesGrid from "@/components/FeaturesGrid";
 import { blogData } from "@/data/blogData";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 import FaqSection from "@/components/Faq";
 import { ToolsSection } from "./Home/ToolsSection";
 import { useState } from "react";
@@ -269,52 +271,16 @@ export default function Home() {
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-6 md:py-10">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-[#F2DFFF] shadow-md flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h2 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                GET IN TOUCH
-              </h2>
-
-              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Prepared to build your application with the right development
-                partner?
-              </h2>
-
-              <p className="mt-4 text-black font-medium">
-                Reach out to our team and get started with a strategy aligned to
-                your business goals.
-              </p>
-
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-              >
-                Get Started
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/Home/getintouchhomepage.svg"
-                alt="Contact illustration"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchBanner
+        eyebrow="GET INTO TOUCH"
+        heading="Got an Idea? Let's Make It Real."
+        description="Whether you're starting from scratch or scaling an existing product, tell us what you're working on and our software development team in Chennai will figure out the best way to build it together."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/Home/getintouchhomepage.svg"
+        imageAlt="Contact Trimsel"
+        bgClass="bg-[#F2DFFF]"
+      />
 
       {/* Whatwedo */}
       <Whatwedo />
@@ -481,158 +447,49 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-white text-black py-16">
-        <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-            WHY TRIMSEL
-          </h2>
-
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Empowering Businesses with 360° Digital Transformation
-          </h2>
-
-          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We don&apos;t just deliver projects and move on, we build relationships
-            that last. Based in Chennai, we start with your goals and build
-            everything around them, bringing the right people, thinking, and
-            technology to make it work every single time.
-          </p>
-
-          {/* Four Cards */}
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Card 1 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4 mb-4">
-                <Image
-                  src="/icons/whytrimsel1.svg"
-                  alt="Client"
-                  width={60}
-                  height={40}
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Diverse Global Clientele
-              </h4>
-              <p className="max-w-lg text-base text-black sm:text-lg">
-                From early-stage startups to large enterprises, we&apos;ve worked
-                with businesses of all sizes across multiple industries,
-                delivering solutions that fit their unique goals and challenges.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4 mb-4">
-                <Image
-                  src="/icons/whytrimsel2.svg"
-                  alt="Client"
-                  width={60}
-                  height={40}
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Domain & Tech Expertise
-              </h4>
-              <p className="max-w-xl text-base text-black sm:text-lg">
-                Our developers, DevOps engineers, and UI/UX designers bring
-                genuine depth to every project from cloud platforms and full
-                stack development to AI and automation.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4 mb-4">
-                <Image
-                  src="/icons/whytrimsel3.svg"
-                  alt="Client"
-                  width={60}
-                  height={40}
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Flexible Engagement Models
-              </h4>
-              <p className="max-w-xl text-base text-black sm:text-lg">
-                Whether you need a dedicated team, end-to-end delivery, or extra
-                hands on an existing project we adapt our approach to suit the
-                way you work best.
-              </p>
-            </div>
-
-            {/* Card 4 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-start text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4 mb-4">
-                <Image
-                  src="/icons/whytrimsel4.svg"
-                  alt="Client"
-                  width={60}
-                  height={40}
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                All-in-One IT Partner
-              </h4>
-              <p className="max-w-xl text-base text-black sm:text-lg">
-                Design, development, DevOps, QA, and support all under one roof,
-                keeping communication clear and giving you full control without
-                the hassle.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FeaturesGrid
+        eyebrow="WHY TRIMSEL"
+        heading="Empowering Businesses with 360° Digital Transformation"
+        description="We don't just deliver projects and move on, we build relationships that last. Based in Chennai, we start with your goals and build everything around them, bringing the right people, thinking, and technology to make it work every single time."
+        columns={4}
+        features={[
+          {
+            icon: "/icons/whytrimsel1.svg",
+            title: "Diverse Global Clientele",
+            description: "From early-stage startups to large enterprises, we've worked with businesses of all sizes across multiple industries, delivering solutions that fit their unique goals and challenges.",
+          },
+          {
+            icon: "/icons/whytrimsel2.svg",
+            title: "Domain & Tech Expertise",
+            description: "Our developers, DevOps engineers, and UI/UX designers bring genuine depth to every project from cloud platforms and full stack development to AI and automation.",
+          },
+          {
+            icon: "/icons/whytrimsel3.svg",
+            title: "Flexible Engagement Models",
+            description: "Whether you need a dedicated team, end-to-end delivery, or extra hands on an existing project we adapt our approach to suit the way you work best.",
+          },
+          {
+            icon: "/icons/whytrimsel4.svg",
+            title: "All-in-One IT Partner",
+            description: "Design, development, DevOps, QA, and support all under one roof, keeping communication clear and giving you full control without the hassle.",
+          },
+        ]}
+      />
 
       {/* Fivestage */}
       <Ourprocess />
 
       {/* Getintouch */}
-      <section className="bg-white py-6 md:py-10">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white shadow-md flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h2 className="mt-4 text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                GET IN TOUCH
-              </h2>
-
-              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Got a Project in Mind? Let&apos;s Have an Honest Conversation.
-              </h2>
-
-              <p className="mt-4 text-black font-medium">
-                Whether you&apos;re starting from scratch or fixing something that
-                isn&apos;t working tell us what you&apos;re trying to achieve and we&apos;ll
-                tell you exactly how we can help.
-              </p>
-
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-              >
-                Talk to Our Team
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/Home/getintouch.svg"
-                alt="Contact illustration"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchBanner
+        eyebrow="LET'S COLLABORATE"
+        heading="Start Your Digital Transformation Today"
+        description="From idea to launch, our team in Chennai handles every step — design, development, testing, and deployment. Tell us your vision."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/Home/getintouch.svg"
+        imageAlt="Contact Trimsel"
+        bgClass="bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white"
+      />
 
       {/* Industries */}
       <section className="bg-[#F5F6FF]">
@@ -848,7 +705,13 @@ export default function Home() {
       <Testimonial />
 
       {/* Contactform */}
-      <Contactform />
+      <Contactform
+        eyebrow="GET INTO TOUCH"
+        heading="Got an Idea? Let's Make It Real."
+        subheading="Whether you're starting from scratch or scaling an existing product, tell us what you're working on and our software development team in Chennai will figure out the best way to build it together."
+        formTitle="Start Your Project Discussion"
+        defaultService=""
+      />
 
       {/* OurBlog */}
       <OurBlog {...blogData.default} />

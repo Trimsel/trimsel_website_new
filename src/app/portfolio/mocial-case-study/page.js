@@ -8,6 +8,7 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import CTASection from "@/components/CTA";
 import CaseStudiesSection from "@/components/relatedcasestudy";
+import { caseStudies } from "@/data/caseStudies";
 
 export const metadata = {
   title: "Mocial Case Study | Social App Development | Trimsel",
@@ -219,22 +220,7 @@ export default function XaberCaseStudy() {
                 <CaseStudiesSection
                     tag="RELATED CASE STUDIES"
                     heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-                    studies={[
-                        {
-                            title: "EzyHelpers",
-                            description:
-                                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-                            image: "/images/ezyhelpers.png",
-                            link: "/case-study/ezyhelpers",
-                        },
-                        {
-                            title: "KarIOT",
-                            description:
-                                "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-                            image: "/images/kariot.png",
-                            link: "/case-study/kariot",
-                        },
-                    ]}
+                    studies={[caseStudies.kariot, caseStudies.ezyhelpers, caseStudies.xaber]}
                 />
             </section>
 

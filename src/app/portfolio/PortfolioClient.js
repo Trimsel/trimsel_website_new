@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import Header from "@/components/Header";
-import Clients from "@/components/Client";
+import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 
 export default function PortfolioPage() {
   const [active, setActive] = useState("ALL");
@@ -155,46 +156,18 @@ export default function PortfolioPage() {
       </section>
 
       {/* Get in Touch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 pt-6 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white px-6 py-10 sm:px-12 md:py-12 min-h-[280px] md:min-h-[320px] shadow-md flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h3 className="text-sm font-semibold tracking-[0.22em] text-[#1C75BC] sm:text-base">
-                GET IN TOUCH
-              </h3>
+      <GetInTouchBanner
+        eyebrow="YOUR PROJECT NEXT"
+        heading="Want Results Like These?"
+        description="Every project in our portfolio started with a conversation. Tell us about your idea and we'll show you what's possible."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/getintouch1.svg"
+        imageAlt="Start your project"
+        bgClass="bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white"
+      />
 
-              <h2 className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Have a project? We would love to help.
-              </h2>
-
-              <p className="mt-4 text-black font-medium">
-                Reach out to us to identify business challenges and get
-                efficient digital solutions.
-              </p>
-
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#27AAE1] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg">
-                Get Started →
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-end items-end self-stretch">
-              <Image
-                src="/getintouch1.svg"
-                alt="Contact illustration"
-                width={700}
-                height={700}
-                className="md:absolute md:bottom-0 md:right-0 w-full h-[280px] sm:h-[320px] md:h-[420px] object-contain object-right-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Clients />
+      <Client />
       <Contactform />
     </div>
   );

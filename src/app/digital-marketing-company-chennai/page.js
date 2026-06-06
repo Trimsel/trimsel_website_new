@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-import Clients from "@/components/Client";
+import Client from "@/components/Client";
 import Faq from "@/components/Faq";
 import Contactform from "@/components/Contactform";
+import GetInTouchBanner from "@/components/GetInTouchBanner";
 import OurBlog from "@/components/OurBlog";
 import { blogData } from "@/data/blogData";
 import CaseStudiesSection from "@/components/relatedcasestudy";
+import { caseStudies } from "@/data/caseStudies";
+import ServiceCardsGrid from "@/components/ServiceCardsGrid";
 
 export const metadata = {
   title: "Digital Marketing Company Chennai | SEO, PPC & Social Media | Trimsel",
@@ -42,47 +45,47 @@ export const metadata = {
 const services = [
   {
     title: "SEO Optimization",
-    desc: "One of our digital marketing services India is to ensure your brand is visible to the right audience at the right time. Our SEO services focus on on-page and off-page optimization.",
+    description: "One of our digital marketing services India is to ensure your brand is visible to the right audience at the right time. Our SEO services focus on on-page and off-page optimization.",
     icon: "/digital-whatwedo1.svg",
   },
   {
     title: "Search Engine Marketing",
-    desc: "We specialise in search engine marketing that helps brands get a wider reach through paid advertising. Our team identifies the appropriate keywords, audience demographics.",
+    description: "We specialise in search engine marketing that helps brands get a wider reach through paid advertising. Our team identifies the appropriate keywords, audience demographics.",
     icon: "/digital-whatwedo2.svg",
   },
   {
     title: "Social Media Marketing",
-    desc: "Social media has helped brands of all sizes reach their target audience and engage them through interactive content. At Minitzon, we provide customized social media services.",
+    description:"Social media has helped brands of all sizes reach and engage their audience. At Trimsel, we craft tailored social media strategies — from content calendars to paid campaigns — that build your community and drive measurable results.",
     icon: "/digital-whatwedo3.svg",
   },
   {
     title: "Content Marketing",
-    desc: "Content is essential to any business to help it communicate with its audience. As a digital marketing company in Chennai, we focus on creation, management and distribution of content.",
+    description:"Content is essential to any business to help it communicate with its audience. As a digital marketing company in Chennai, we focus on creation, management and distribution of content.",
     icon: "/digital-whatwedo4.svg",
   },
   {
     title: "B2B Marketing",
-    desc: "We at Minitzon help businesses adopt B2B marketing strategies that help them generate leads and expand their business and open opportunities for collaboration.",
+    description:"Trimsel helps B2B businesses build targeted marketing programmes that generate qualified leads and open doors to new partnerships. We align your messaging with buyer intent at every stage of the funnel.",
     icon: "/digital-whatwedo5.svg",
   },
   {
     title: "B2C Marketing",
-    desc: "We adopt several data-driven strategies to help brands reach the right customer and drive engagement. We help brands create interactive experiences.",
+    description:"We adopt several data-driven strategies to help brands reach the right customer and drive engagement. We help brands create interactive experiences.",
     icon: "/digital-whatwedo6.svg",
   },
   {
     title: "Pay Per Click",
-    desc: "Every click matters. That’s why we convert clicks to sales by creating powerful adverts and optimizing campaigns to their maximum potential.",
+    description:"Every click matters. That’s why we convert clicks to sales by creating powerful adverts and optimizing campaigns to their maximum potential.",
     icon: "/digital-whatwedo7.svg",
   },
   {
     title: "Marketing Automation",
-    desc: "We help brands set up end-to-end marketing automation services to streamline their marketing funnel and nurture leads.",
+    description:"We help brands set up end-to-end marketing automation services to streamline their marketing funnel and nurture leads.",
     icon: "/digital-whatwedo8.svg",
   },
   {
     title: "Initial Coin Offering Marketing",
-    desc: "We are one of the few digital marketing companies that specialise in ICO marketing. We help cryptocurrency startups promote their ICO.",
+    description:"We are one of the few digital marketing companies that specialise in ICO marketing. We help cryptocurrency startups promote their ICO.",
     icon: "/digital-whatwedo9.svg",
   },
 ];
@@ -208,10 +211,7 @@ export default function Digitalmarketing() {
             </p>
 
             <p className="mt-3 max-w-3xl mx-auto text-gray-600 font-medium">
-              At Minitzon, we foster a passionate team that loves building
-              brands and staying updated with the latest trends. We pride
-              ourselves on providing multi-channel digital marketing services in
-              Chennai at affordable rates.
+              At Trimsel, we bring together a passionate team of marketers and strategists who stay ahead of the latest trends. We deliver multi-channel digital marketing services in Chennai at rates that make sense for your growth stage.
             </p>
 
             {/* CTA */}
@@ -285,72 +285,14 @@ export default function Digitalmarketing() {
         </div>
       </section>
 
-      <section className="bg-white py-16 px-4 md:px-12 rounded-3xl">
-        {/* White Container with Cut */}
-        <div className="max-w-8xl mx-auto bg-gradient-to-br from-[#cfe3f1] via-[#c9d7ea] to-[#bfc7e6] rounded-3xl p-8 md:p-12 clip-cut-container shadow-sm  clip-cut-section">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="container mx-auto px-4 sm:px-6">
-              <h3 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
-                WHAT WE DO
-              </h3>
-
-              <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-                Our Specialized Services
-              </h2>
-
-              <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-                We are a digital marketing agency, provide a plethora of
-                services that help businesses grow their online presence.
-              </p>
-            </div>
-
-            {/* Cards */}
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
-              {services.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300"
-                  style={{
-                    clipPath:
-                      "polygon(0 0, 85% 0, 100% 20%, 100% 100%, 0 100%)",
-                    borderRadius: "16px",
-                  }}
-                >
-                  {/* Icon */}
-                  <div className="mb-3">
-                    <Image
-                      src={item.icon}
-                      alt={item.title}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="font-semibold text-gray-900 text-lg">
-                    {item.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="mt-2 text-md font-medium text-gray-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-
-                  {/* Link */}
-                  {/* <div className="mt-3">
-                    <Link
-                      href="#"
-                      className="text-[#1C9ACF] text-md font-medium inline-flex items-center gap-1">
-                      Learn More →
-                    </Link>
-                  </div> */}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCardsGrid
+        eyebrow="WHAT WE DO"
+        heading="Our Specialized Services"
+        description="We are a digital marketing agency, provide a plethora of services that help businesses grow their online presence."
+        services={services}
+        bgColor="bg-white"
+        containerClass="max-w-8xl mx-auto bg-gradient-to-br from-[#cfe3f1] via-[#c9d7ea] to-[#bfc7e6] rounded-3xl p-8 md:p-12 clip-cut-container shadow-sm clip-cut-section"
+      />
 
       <section className="bg-white py-16 px-4 md:px-12">
         <div>
@@ -361,7 +303,7 @@ export default function Digitalmarketing() {
 
           {/* Heading */}
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            Here&#39;s Why Minitzon Is The Best Digital Marketing Agency In
+            Here&#39;s Why Trimsel Is The Best Digital Marketing Agency In
             Chennai, India
           </h2>
         </div>
@@ -377,9 +319,7 @@ export default function Digitalmarketing() {
             </p>
 
             <p className="mt-4 max-w-3xl mx-auto text-left text-black font-medium">
-              Minitzon have a thorough understanding of the digital market as it
-              knows all those steps and activities that deliver online
-              visibility benefits to websites or businesses.
+              Trimsel has a thorough understanding of the digital landscape — from search algorithms and paid channels to social platforms and content distribution. We use that knowledge to build strategies that deliver consistent, measurable online growth.
             </p>
 
             <p className="mt-4 max-w-3xl mx-auto text-left text-black font-medium">
@@ -535,86 +475,39 @@ export default function Digitalmarketing() {
             </ul>
 
             <p>
-              If you've answered YES to even one of the above questions, then
-              you require a digital marketing agency in India. At Minitzon, we
-              use various technologies and online marketing strategies to help
-              your business achieve its marketing goals.
+              If you've answered YES to even one of the above questions, a digital marketing agency can help you move faster. At Trimsel, we use data-driven strategies and the right mix of channels to help your business achieve its marketing goals.
             </p>
           </div>
         </div>
       </section>
 
       {/* Getintouch */}
-      <section className="bg-white py-12 md:py-20">
-        <div className="flex justify-center px-4 sm:px-6">
-          <div className="relative w-full max-w-6xl rounded-xl bg-[#E1C8FF] min-h-[160px] md:min-h-[180px] shadow-lg flex flex-col md:flex-row items-center justify-between">
-            {/* LEFT CONTENT */}
-            <div className="relative z-10 px-8 py-6 sm:px-12 md:py-8 w-full md:w-[60%] lg:w-1/2 text-left">
-              <h3 className="text-xl font-semibold tracking-widest text-[#1C75BC] sm:text-2xl">
-                GET IN TOUCH
-              </h3>
-              <h2 className="mt-2 text-2xl text-black font-bold leading-tight sm:text-3xl md:text-3xl lg:text-4xl">
-                Not Sure How to Start with Digital Marketing? Let’s Build a
-                Strategy That Works for You.
-              </h2>
-              <p className="mt-4 text-black font-medium text-sm sm:text-base max-w-lg">
-                Whether you&apos;re a startup or scaling business,
-                Trimsel&apos;s digital marketing experts in Chennai are ready to
-                help. From SEO to social media and PPC, we’ll craft a custom
-                strategy to grow your brand online.
-              </p>
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FE4F6C] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-[#ff3b5b]"
-              >
-                Contact Us
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="relative w-full md:w-[40%] lg:w-1/2 flex justify-center items-end self-stretch">
-              <Image
-                src="/getintouchdigitalmarketing.svg"
-                alt="Contact illustration"
-                width={350}
-                height={350}
-                className="md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2 w-full h-[220px] sm:h-[260px] md:h-[340px] object-contain object-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchBanner
+        eyebrow="GROW ONLINE"
+        heading="Get More Leads and Sales"
+        description="Not sure how to start with digital marketing? Our Chennai-based experts will build a custom strategy — from SEO and PPC to social media — tailored to grow your brand online."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/getintouchdigitalmarketing.svg"
+        imageAlt="Digital marketing contact"
+        bgClass="bg-[#E1C8FF]"
+      />
 
       <CaseStudiesSection
         tag="RELATED CASE STUDIES"
         heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[
-          {
-            title: "EzyHelpers",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/ezyhelpers.png",
-            link: "/case-study/ezyhelpers",
-          },
-          {
-            title: "KarIOT",
-            description:
-              "Quisque a pretium nulla, at porttitor eros. Mauris pharetra nisl sit amet mauris efficitur malesuada.",
-            image: "/images/kariot.png",
-            link: "/case-study/kariot",
-          },
-        ]}
+        studies={[caseStudies.mocial, caseStudies.ezyhelpers]}
       />
 
-      <Clients />
+      <Client />
 
-      <Contactform />
+      <Contactform
+        eyebrow="GROW YOUR BRAND"
+        heading="Want More Leads and Conversions?"
+        subheading="Tell us about your marketing goals. Our data-driven team handles SEO, social media, PPC, and content marketing — with transparent reporting and measurable ROI."
+        formTitle="Get Your Marketing Strategy"
+        defaultService="Digital Marketing"
+      />
 
       <OurBlog {...blogData.marketing} />
 
