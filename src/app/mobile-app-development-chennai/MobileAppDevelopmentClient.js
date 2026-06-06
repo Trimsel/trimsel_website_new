@@ -6,8 +6,7 @@ import Header from "@/components/Header";
 import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
-import OurBlog from "@/components/OurBlog";
-import { blogData } from "@/data/blogData";
+import LatestInsights from "@/components/LatestInsights";
 import Faq from "@/components/Faq";
 import Testimonial from "@/components/testimonial";
 import CaseStudiesSection from "@/components/relatedcasestudy";
@@ -174,7 +173,7 @@ const mobileTabs = [
   },
 ];
 
-export default function MobileAppDevelopmentClient() {
+export default function MobileAppDevelopmentClient({ posts = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleDropdown = (index) => {
@@ -492,7 +491,7 @@ export default function MobileAppDevelopmentClient() {
           formTitle="Discuss Your App Project"
           defaultService="Mobile App"
         />
-        <OurBlog {...blogData.mobile} />
+        <LatestInsights posts={posts} />
         <Faq />
       </main>
     </>

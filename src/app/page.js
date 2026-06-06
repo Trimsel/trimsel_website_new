@@ -1,5 +1,6 @@
 import HomeClient from "./HomeClient";
 import { faqData } from "@/data/faqData";
+import { getFilteredPosts } from "@/lib/blog";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -46,13 +47,14 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const posts = getFilteredPosts([], 3);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <HomeClient />
+      <HomeClient posts={posts} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import MobileAppDevelopmentClient from "./MobileAppDevelopmentClient";
+import { getFilteredPosts } from "@/lib/blog";
 
 export const metadata = {
   title: "Mobile App Development Company Chennai, India | iOS, Android",
@@ -46,13 +47,14 @@ const serviceSchema = {
 };
 
 export default function MobileAppDevelopmentPage() {
+  const posts = getFilteredPosts(["Mobile App", "Mobile App Development"], 3);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <MobileAppDevelopmentClient />
+      <MobileAppDevelopmentClient posts={posts} />
     </>
   );
 }

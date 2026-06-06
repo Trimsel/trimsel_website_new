@@ -7,8 +7,8 @@ import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
 import ServiceCardsGrid from "@/components/ServiceCardsGrid";
-import OurBlog from "@/components/OurBlog";
-import { blogData } from "@/data/blogData";
+
+import LatestInsights from "@/components/LatestInsights";
 import Faq from "@/components/Faq";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 import { caseStudies } from "@/data/caseStudies";
@@ -179,7 +179,7 @@ const tabData = [
   },
 ];
 
-export default function CloudConsulting() {
+export default function CloudConsulting({ posts = [] }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -558,7 +558,7 @@ export default function CloudConsulting() {
         defaultService="Cloud"
       />
 
-      <OurBlog {...blogData.cloud} />
+      <LatestInsights posts={posts} />
 
       <Faq />
 

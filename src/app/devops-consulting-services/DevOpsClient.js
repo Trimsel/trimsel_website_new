@@ -3,8 +3,7 @@ import { useState } from "react";
 import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
-import OurBlog from "@/components/OurBlog";
-import { blogData } from "@/data/blogData";
+import LatestInsights from "@/components/LatestInsights";
 import Faq from "@/components/Faq";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -138,7 +137,7 @@ const features = [
   },
 ];
 
-export default function DevOpsConsulting() {
+export default function DevOpsConsulting({ posts = [] }) {
   const [active, setActive] = useState(0);
   const selected = services[active];
 
@@ -364,7 +363,7 @@ export default function DevOpsConsulting() {
         defaultService="DevOps"
       />
 
-      <OurBlog {...blogData.devops} />
+      <LatestInsights posts={posts} />
 
       <Faq />
 

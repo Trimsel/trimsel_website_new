@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import Client from "@/components/Client";
-import OurBlog from "@/components/OurBlog";
+import LatestInsights from "@/components/LatestInsights";
+import { getFilteredPosts } from "@/lib/blog";
 import Header from "@/components/Header";
 import Whatwedo from "@/components/Whatwedo";
 import Contactform from "@/components/Contactform";
@@ -117,6 +118,7 @@ const milestones = [
 ];
 
 export default function aboutus() {
+  const posts = getFilteredPosts([], 3);
   return (
     <>
       <Header />
@@ -445,6 +447,8 @@ export default function aboutus() {
         imageAlt="About Trimsel contact"
         bgClass="bg-[#DEFFCE]"
       />
+
+      <LatestInsights posts={posts} />
 
       <Client />
 

@@ -1,4 +1,5 @@
 import DevOpsClient from "./DevOpsClient";
+import { getFilteredPosts } from "@/lib/blog";
 
 export const metadata = {
   title: "DevOps Consulting Services Chennai | CI/CD & Automation | Trimsel",
@@ -48,13 +49,14 @@ const serviceSchema = {
 };
 
 export default function DevOpsConsultingPage() {
+  const posts = getFilteredPosts(["DevOps", "Cloud"], 3);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <DevOpsClient />
+      <DevOpsClient posts={posts} />
     </>
   );
 }

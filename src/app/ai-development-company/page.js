@@ -5,8 +5,8 @@ import AiHero from "@/app/ai-development-company/AiHero";
 import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
-import OurBlog from "@/components/OurBlog";
-import { blogData } from "@/data/blogData";
+import LatestInsights from "@/components/LatestInsights";
+import { getFilteredPosts } from "@/lib/blog";
 import Faq from "@/components/Faq";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 import { caseStudies } from "@/data/caseStudies";
@@ -145,6 +145,7 @@ const serviceSchema = {
 };
 
 export default function AI() {
+  const posts = getFilteredPosts(["AI", "Machine Learning"], 3);
   return (
     <main>
       <script
@@ -384,7 +385,7 @@ export default function AI() {
         formTitle="Discuss Your AI Project"
         defaultService="AI / ML"
       />
-      <OurBlog {...blogData.ai} />
+      <LatestInsights posts={posts} />
       <Faq />
     </main>
   );

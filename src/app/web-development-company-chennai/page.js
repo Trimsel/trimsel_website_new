@@ -1,4 +1,5 @@
 import WebDevelopmentClient from "./WebDevelopmentClient";
+import { getFilteredPosts } from "@/lib/blog";
 
 export const metadata = {
   title: "Web Development Company Chennai | React, Next.js & Node.js | Trimsel",
@@ -48,13 +49,14 @@ const serviceSchema = {
 };
 
 export default function WebDevelopmentPage() {
+  const posts = getFilteredPosts(["Web Development"], 3);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <WebDevelopmentClient />
+      <WebDevelopmentClient posts={posts} />
     </>
   );
 }

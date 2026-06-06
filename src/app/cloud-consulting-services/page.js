@@ -1,4 +1,5 @@
 import CloudConsultingClient from "./CloudConsultingClient";
+import { getFilteredPosts } from "@/lib/blog";
 
 export const metadata = {
   title: "Cloud Consulting Services Chennai | AWS, Azure, GCP | Trimsel",
@@ -48,13 +49,14 @@ const serviceSchema = {
 };
 
 export default function CloudConsultingPage() {
+  const posts = getFilteredPosts(["Cloud", "DevOps"], 3);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <CloudConsultingClient />
+      <CloudConsultingClient posts={posts} />
     </>
   );
 }

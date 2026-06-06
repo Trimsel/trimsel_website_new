@@ -25,7 +25,30 @@ export function getAllPosts() {
       return { slug, ...data, tags };
     });
 
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return posts
+    .filter((post) => post.seo?.indexing !== false)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+/**
+ * Returns up to `limit` posts filtered by tags (case-insensitive).
+ * Matching posts come first; remaining slots are filled with latest posts.
+ */
+export function getFilteredPosts(filterTags = [], limit = 3) {
+  const posts = getAllPosts();
+
+  if (!filterTags.length) return posts.slice(0, limit);
+
+  const lowerTags = filterTags.map((t) => t.toLowerCase());
+  const matching = posts.filter((p) =>
+    p.tags?.some((t) => lowerTags.includes(t.toLowerCase()))
+  );
+
+  if (matching.length >= limit) return matching.slice(0, limit);
+
+  const matchingSlugs = new Set(matching.map((p) => p.slug));
+  const rest = posts.filter((p) => !matchingSlugs.has(p.slug));
+  return [...matching, ...rest].slice(0, limit);
 }
 
 /**

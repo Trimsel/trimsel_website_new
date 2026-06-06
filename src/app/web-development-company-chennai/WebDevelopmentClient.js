@@ -6,8 +6,7 @@ import Header from "@/components/Header";
 import Client from "@/components/Client";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
-import OurBlog from "@/components/OurBlog";
-import { blogData } from "@/data/blogData";
+import LatestInsights from "@/components/LatestInsights";
 import Faq from "@/components/Faq";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 import { caseStudies } from "@/data/caseStudies";
@@ -232,7 +231,7 @@ const techTabs = [
   },
 ];
 
-export default function WebDevelopment() {
+export default function WebDevelopment({ posts = [] }) {
   const [active, setActive] = useState(0);
 
   return (
@@ -658,7 +657,7 @@ export default function WebDevelopment() {
 
       <Faq />
 
-      <OurBlog {...blogData.web} />
+      <LatestInsights posts={posts} />
 
     </main>
   );

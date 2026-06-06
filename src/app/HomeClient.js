@@ -7,9 +7,8 @@ import Client from "@/components/Client";
 import Whatwedo from "@/components/Whatwedo";
 import Ourprocess from "@/app/Home/Ourprocess";
 import Testimonial from "@/components/testimonial";
-import OurBlog from "@/components/OurBlog";
+import LatestInsights from "@/components/LatestInsights";
 import FeaturesGrid from "@/components/FeaturesGrid";
-import { blogData } from "@/data/blogData";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
 import FaqSection from "@/components/Faq";
@@ -25,7 +24,7 @@ const HERO_WORDS = [
   "Digital Marketing",
 ];
 
-export default function Home() {
+export default function Home({ posts = [] }) {
   const [index, setIndex] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
@@ -713,8 +712,7 @@ export default function Home() {
         defaultService=""
       />
 
-      {/* OurBlog */}
-      <OurBlog {...blogData.default} />
+      <LatestInsights posts={posts} />
 
       {/* FaqSection */}
       <FaqSection />

@@ -5,8 +5,8 @@ import Client from "@/components/Client";
 import Faq from "@/components/Faq";
 import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
-import OurBlog from "@/components/OurBlog";
-import { blogData } from "@/data/blogData";
+import LatestInsights from "@/components/LatestInsights";
+import { getFilteredPosts } from "@/lib/blog";
 import CaseStudiesSection from "@/components/relatedcasestudy";
 import { caseStudies } from "@/data/caseStudies";
 import ServiceCardsGrid from "@/components/ServiceCardsGrid";
@@ -107,6 +107,7 @@ const serviceSchema = {
 };
 
 export default function Digitalmarketing() {
+  const posts = getFilteredPosts(["Digital Marketing", "SEO"], 3);
   return (
     <main>
       <script
@@ -509,7 +510,7 @@ export default function Digitalmarketing() {
         defaultService="Digital Marketing"
       />
 
-      <OurBlog {...blogData.marketing} />
+      <LatestInsights posts={posts} />
 
       <Faq />
 
