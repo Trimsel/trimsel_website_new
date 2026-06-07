@@ -157,7 +157,7 @@ export default function Footer() {
               />
 
               <p className="max-w-xs text-md font-medium text-white/100 leading-relaxed">
-                Trimsel is a software development company in Chennai , building
+                Trimsel is a software development company in Chennai, building
                 mobile apps, AI solutions, web platforms, cloud infrastructure,
                 and DevOps pipelines for startups and enterprises since 2020.
               </p>

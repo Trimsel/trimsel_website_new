@@ -16,18 +16,18 @@ const faqSchema = {
 };
 
 export const metadata = {
-  title: "Custom Software Development Company Chennai | Trimsel",
+  title: "Trimsel — Software Development Company in India | Mobile, AI, Cloud & DevOps",
   description:
-    "Trimsel engineers custom software, mobile apps, AI solutions, web platforms, cloud infrastructure, and DevOps automation for startups and enterprises in Chennai. 200+ projects delivered.",
+    "Trimsel is a full-service software development company in Chennai, India. We build custom mobile apps, AI solutions, cloud infrastructure, and DevOps pipelines for startups and enterprises. Book a free strategy call.",
   alternates: {
     canonical: "https://www.trimsel.com/",
   },
   openGraph: {
     type: "website",
     url: "https://www.trimsel.com/",
-    title: "Custom Software Development Company Chennai | Trimsel",
+    title: "Trimsel — Software Development Company in India | Mobile, AI, Cloud & DevOps",
     description:
-      "Trimsel engineers custom software, mobile apps, AI solutions, web platforms, cloud infrastructure, and DevOps automation for startups and enterprises in Chennai. 200+ projects delivered.",
+      "Trimsel is a full-service software development company in Chennai, India. We build custom mobile apps, AI solutions, cloud infrastructure, and DevOps pipelines for startups and enterprises. Book a free strategy call.",
     locale: "en_IN",
     siteName: "Trimsel",
     images: [

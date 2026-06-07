@@ -71,7 +71,7 @@ export default function Home({ posts = [] }) {
       arrowColor: "#d95a4a",
       bodyColor: "#f28a7e",
       BestFor:
-        "Startups, evolving products, MVP development, and projects with changing requirements",
+        "evolving scope, iterative development, or ongoing product work.",
       items: [
         "You control priorities and resource allocation throughout the engagement",
         "Billed only for work actually completed, per sprint or hourly",
@@ -86,13 +86,13 @@ export default function Home({ posts = [] }) {
       arrowColor: "#4a3659",
       bodyColor: "#7f659d",
       BestFor:
-        "Startups, evolving products, MVP development, and projects with changing requirements",
+        "well-defined projects with clear deliverables, agreed timelines, and fixed budgets.",
       items: [
-        "Well-defined requirements and scope agreed upfront, no hidden surprises",
+        "Well-defined requirements and scope agreed upfront — no hidden surprises",
         "Suitable for MVPs, website builds, app launches, and defined feature releases",
         "Milestone-based delivery with sign-off at each stage",
         "Change requests handled transparently with clear impact on scope and timeline",
-        "Our team manages quality end to end, delivered on time, within agreed scope",
+        "Our team manages quality end to end — delivered on time, within agreed scope",
       ],
     },
     {
@@ -101,13 +101,13 @@ export default function Home({ posts = [] }) {
       arrowColor: "#e5a33d",
       bodyColor: "#fcc572",
       BestFor:
-        "Startups, evolving products, MVP development, and projects with changing requirements",
+        "ongoing product development, team augmentation, or long-term engineering partnerships.",
       items: [
-        "A dedicated pod of developers, designers, DevOps engineers, and QA  assigned to your product",
+        "A dedicated pod of developers, designers, DevOps engineers, and QA assigned to your product",
         "Fully embedded into your engineering workflow with shared tools and processes",
-        "Attends your sprints, standups, and planning sessions just like an in-house team",
+        "Attends your sprints, standups, and planning sessions — just like an in-house team",
         "Scales up or down based on delivery phase and business priorities",
-        "Full ownership of delivery and quality assurance, engagement continues post-launch",
+        "Full ownership of delivery and quality assurance — engagement continues post-launch",
       ],
     },
   ];
@@ -124,7 +124,7 @@ export default function Home({ posts = [] }) {
                 We Engineer Businesses
                 <br />
                 <span className="inline-flex items-baseline justify-center whitespace-nowrap gap-2 sm:justify-start">
-                  <span>That Scale With</span>
+                  <span>That Scale — with</span>
                   <span
                     key={index}
                     suppressHydrationWarning
@@ -140,24 +140,38 @@ export default function Home({ posts = [] }) {
 
               <p className="mb-8 max-w-xl text-base sm:text-lg">
                 Trimsel helps startups, growing businesses, and enterprise teams
-                build custom software and AI-driven digital products from
+                build custom software and AI-driven digital products — from
                 intelligent mobile apps and scalable web platforms to cloud
                 infrastructure and DevOps automation. We handle the full
                 engineering journey so your team stays focused on growth.
               </p>
 
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-              >
-                Book a Free Strategy Call{" "}
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+                >
+                  Book a Free Strategy Call{" "}
+                  <Image
+                    src="/Home/right-arrow.svg"
+                    width={20}
+                    height={20}
+                    alt="RightArrow"
+                  />
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="inline-flex items-center gap-3 rounded-lg border-2 border-gray-800 px-7 py-3.5 text-base font-semibold text-gray-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#1896cd] hover:text-[#1896cd] hover:shadow-lg"
+                >
+                  See Our Work{" "}
+                  <Image
+                    src="/Home/right-arrow.svg"
+                    width={20}
+                    height={20}
+                    alt="RightArrow"
+                  />
+                </Link>
+              </div>
             </div>
 
             <div className="relative mx-auto flex h-[340px] w-full max-w-[620px] items-center justify-center pt-8 sm:pt-0 sm:h-[440px] md:h-[72vh] md:max-h-[620px] md:-translate-x-2 lg:-translate-x-4 xl:-translate-x-8">
@@ -165,7 +179,7 @@ export default function Home({ posts = [] }) {
 
               <Image
                 src="/Home/HomeImage.svg"
-                alt="Trimsel software development"
+                alt="AI-powered software development services — mobile app, web, cloud, DevOps, and digital marketing"
                 width={400}
                 height={380}
                 className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[85%] lg:w-[80%] xl:w-[430px]"
@@ -196,17 +210,22 @@ export default function Home({ posts = [] }) {
             WHO WE ARE
           </h2>
 
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Built by Engineers. Trusted by Businesses. Delivered With
             Accountability.
-          </h2>
+          </h3>
 
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            We started Trimsel in 2020 in Chennai with one clear mission build
+            We started Trimsel in 2020 in Chennai with one clear mission — build
             software that solves real business problems, not just
-            impressive-looking demos. Our team spans AI development, mobile
-            apps, web platforms, cloud consulting, DevOps automation, and
-            digital marketing. We&apos;ve helped startups turn their ideas into real
+            impressive-looking demos. Our team spans{" "}
+            <Link href="/ai-development-company" className="underline hover:text-[#1C75BC]">AI development</Link>,{" "}
+            <Link href="/mobile-app-development-chennai" className="underline hover:text-[#1C75BC]">mobile apps</Link>,{" "}
+            <Link href="/web-development-company-chennai" className="underline hover:text-[#1C75BC]">web platforms</Link>,{" "}
+            <Link href="/cloud-consulting-services" className="underline hover:text-[#1C75BC]">cloud consulting</Link>,{" "}
+            <Link href="/devops-consulting-services" className="underline hover:text-[#1C75BC]">DevOps automation</Link>, and{" "}
+            <Link href="/digital-marketing-company-chennai" className="underline hover:text-[#1C75BC]">digital marketing</Link>.
+            {" "}We&apos;ve helped startups turn their ideas into real
             products and worked with established businesses replacing systems
             that had outgrown their purpose. Wherever our clients are in their
             journey, we take time to understand their goals, build the right
@@ -269,20 +288,38 @@ export default function Home({ posts = [] }) {
         </div>
       </section>
 
-      {/* Getintouch */}
-      <GetInTouchBanner
-        eyebrow="GET INTO TOUCH"
-        heading="Got an Idea? Let's Make It Real."
-        description="Whether you're starting from scratch or scaling an existing product, tell us what you're working on and our software development team in Chennai will figure out the best way to build it together."
-        ctaText="Talk to Our Experts"
-        ctaLink="/contact-us"
-        image="/Home/getintouchhomepage.svg"
-        imageAlt="Contact Trimsel"
-        bgClass="bg-[#F2DFFF]"
-      />
-
       {/* Whatwedo */}
       <Whatwedo />
+
+      {/* Why Choose Us */}
+      <FeaturesGrid
+        eyebrow="WHY TRIMSEL"
+        heading="The Difference Is in How We Work — Not Just What We Build"
+        description="Most agencies look similar on paper — similar services, similar claims, similar pricing decks. As a full-service software development company in Chennai, what separates Trimsel is how we engage: starting with the business problem, not the technology, and staying accountable through every phase until the outcome is right."
+        columns={4}
+        features={[
+          {
+            icon: "/icons/whytrimsel1.svg",
+            title: "Clients Across Industries & Geographies",
+            description: "We've worked with seed-stage startups validating their first product and established businesses replacing systems that no longer scaled. Across FinTech, HealthTech, logistics, SaaS, and home services — the common thread is teams who needed engineering they could trust.",
+          },
+          {
+            icon: "/icons/whytrimsel2.svg",
+            title: "Certified Developers & Cloud Architects",
+            description: "Our team includes certified AWS and GCP cloud architects, DevOps engineers who've run Kubernetes at scale, full-stack developers across React and Node.js, and AI engineers who've shipped production ML models — not just proof of concepts.",
+          },
+          {
+            icon: "/icons/whytrimsel3.svg",
+            title: "Hire Developers or Build a Full Team",
+            description: "Need a full product team from day one? A few specialists to extend your in-house engineers? Or ongoing support after launch? We structure every engagement around what the project actually needs — not a standard package.",
+          },
+          {
+            icon: "/icons/whytrimsel4.svg",
+            title: "End-to-End Software Delivery — In-House",
+            description: "Design, development, DevOps, QA, and post-launch support — all handled by the same in-house team that scoped your project. No account managers relaying messages. No third-party contractors. One point of contact, full accountability.",
+          },
+        ]}
+      />
 
       {/* Case Study */}
       <section className="bg-white py-8 md:min-h-screen md:flex md:flex-col md:justify-center md:py-16">
@@ -291,14 +328,20 @@ export default function Home({ posts = [] }) {
           <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
             CASE STUDIES
           </h2>
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Projects That Shipped. Results That Speak.
-          </h2>
+          </h3>
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-            Each project below shows the same pattern, a real problem, a
+            Each project below shows the same pattern — a real problem, a
             practical solution, and measurable outcomes. Browse the work and see
             how we approach different industries and challenges.
           </p>
+          <div className="mt-4 text-center">
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-[#1C75BC] font-semibold hover:underline">
+              View All Case Studies
+              <Image src="/Home/right-arrow.svg" width={16} height={16} alt="arrow" className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         {/* ── MOBILE CAROUSEL ──────────────────────────────────── */}
@@ -445,50 +488,20 @@ export default function Home({ posts = [] }) {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <FeaturesGrid
-        eyebrow="WHY TRIMSEL"
-        heading="Empowering Businesses with 360° Digital Transformation"
-        description="We don't just deliver projects and move on, we build relationships that last. Based in Chennai, we start with your goals and build everything around them, bringing the right people, thinking, and technology to make it work every single time."
-        columns={4}
-        features={[
-          {
-            icon: "/icons/whytrimsel1.svg",
-            title: "Diverse Global Clientele",
-            description: "From early-stage startups to large enterprises, we've worked with businesses of all sizes across multiple industries, delivering solutions that fit their unique goals and challenges.",
-          },
-          {
-            icon: "/icons/whytrimsel2.svg",
-            title: "Domain & Tech Expertise",
-            description: "Our developers, DevOps engineers, and UI/UX designers bring genuine depth to every project from cloud platforms and full stack development to AI and automation.",
-          },
-          {
-            icon: "/icons/whytrimsel3.svg",
-            title: "Flexible Engagement Models",
-            description: "Whether you need a dedicated team, end-to-end delivery, or extra hands on an existing project we adapt our approach to suit the way you work best.",
-          },
-          {
-            icon: "/icons/whytrimsel4.svg",
-            title: "All-in-One IT Partner",
-            description: "Design, development, DevOps, QA, and support all under one roof, keeping communication clear and giving you full control without the hassle.",
-          },
-        ]}
+      {/* Getintouch */}
+      <GetInTouchBanner
+        eyebrow="GET INTO TOUCH"
+        heading="Got an Idea? Let's Make It Real."
+        description="Whether you're starting from scratch or scaling an existing product, tell us what you're working on and our software development team in Chennai will figure out the best way to build it together."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/Home/getintouchhomepage.svg"
+        imageAlt="Contact Trimsel"
+        bgClass="bg-[#F2DFFF]"
       />
 
       {/* Fivestage */}
       <Ourprocess />
-
-      {/* Getintouch */}
-      <GetInTouchBanner
-        eyebrow="LET'S COLLABORATE"
-        heading="Start Your Digital Transformation Today"
-        description="From idea to launch, our team in Chennai handles every step — design, development, testing, and deployment. Tell us your vision."
-        ctaText="Talk to Our Experts"
-        ctaLink="/contact-us"
-        image="/Home/getintouch.svg"
-        imageAlt="Contact Trimsel"
-        bgClass="bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white"
-      />
 
       {/* Industries */}
       <section className="bg-[#F5F6FF]">
@@ -499,9 +512,9 @@ export default function Home({ posts = [] }) {
               INDUSTRIES WE SERVE
             </h2>
 
-            <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            <h3 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
               Deep Experience Across the Sectors That Matter.
-            </h2>
+            </h3>
 
             <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
               From healthcare and on-demand platforms to logistics, e-commerce,
@@ -620,9 +633,9 @@ export default function Home({ posts = [] }) {
             OUR DELIVERY MODELS
           </h2>
 
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
             Flexible Engagement. Built Around You.
-          </h2>
+          </h3>
 
           <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
             We understand that every business works differently. That&apos;s why we
@@ -696,6 +709,18 @@ export default function Home({ posts = [] }) {
           </div>
         </div>
       </section>
+
+      {/* Getintouch */}
+      <GetInTouchBanner
+        eyebrow="LET'S COLLABORATE"
+        heading="Start Your Digital Transformation Today"
+        description="From idea to launch, our team in Chennai handles every step — design, development, testing, and deployment. Tell us your vision."
+        ctaText="Talk to Our Experts"
+        ctaLink="/contact-us"
+        image="/Home/getintouch.svg"
+        imageAlt="Contact Trimsel"
+        bgClass="bg-gradient-to-r from-blue-200 via-[#d4e9fd] to-white"
+      />
 
       {/* Tools and Technologies */}
       <ToolsSection />

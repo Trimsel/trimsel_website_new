@@ -7,37 +7,30 @@ export default function Whatwedo() {
     {
       title: "Mobile App Development",
       description:
-        "Custom Android, iOS, and cross-platform apps built with Flutter and React Native  designed for real-world performance, intuitive UX, and long-term scalability.",
+        "Custom Android, iOS, and cross-platform apps built with Flutter and React Native — designed for real-world performance, intuitive UX, and long-term scalability.",
       icon: "/icons/Mobileapp.svg",
       href: "/mobile-app-development-chennai",
     },
     {
-      title: "Web Application Development",
+      title: "Web Development",
       description:
-        "From fast-loading business websites to complex enterprise web platforms built with React, Next.js, and Node.js with performance, security, and SEO baked in from day one.",
+        "From fast-loading business websites to complex enterprise web platforms — built with React, Next.js, and Node.js with performance, security, and SEO baked in from day one.",
       icon: "/icons/Website.svg",
       href: "/web-development-company-chennai",
     },
     {
-      title: "AI Development",
+      title: "Cloud Computing",
       description:
-        "AI works best when it solves a real problem. We help businesses bring intelligence into their operations from chatbots, copilots, and intelligent search to computer vision and workflow automation that integrates with your existing systems.",
-      icon: "/icons/AIML.svg",
-      href: "/ai-development-company",
+        "Cloud migration, architecture design, and cost optimisation across AWS, Azure, and GCP — our certified cloud consultants have delivered 40% average cost savings for clients.",
+      icon: "/icons/Cloudcomputing.svg",
+      href: "/cloud-consulting-services",
     },
     {
       title: "DevOps Consulting Services",
       description:
-        "We help development teams move faster without breaking things, CI/CD pipelines, Kubernetes orchestration, Infrastructure as Code, and DevSecOps automation that keeps your platform running at 99.9%+ uptime.",
+        "We help development teams move faster without breaking things — CI/CD pipelines, Kubernetes orchestration, Infrastructure as Code, and DevSecOps automation that keeps your platform running at 99.9%+ uptime.",
       icon: "/icons/devops.svg",
       href: "/devops-consulting-services",
-    },
-    {
-      title: "Cloud Computing ",
-      description:
-        "Cloud migration, architecture design, and cost optimisation across AWS, Azure, and GCP, our certified/expert cloud consultants have delivered 40% average cost savings for clients.",
-      icon: "/icons/Cloudcomputing.svg",
-      href: "/cloud-consulting-services",
     },
     {
       title: "Digital Marketing",
@@ -45,6 +38,13 @@ export default function Whatwedo() {
         "Our performance-focused team handles SEO, paid ads, social campaigns, and content strategies that bring the right people to your business and turn them into real customers.",
       icon: "/icons/digitalmarketing.svg",
       href: "/digital-marketing-company-chennai",
+    },
+    {
+      title: "AI Development",
+      description:
+        "AI works best when it solves a real problem. We help businesses bring intelligence into their operations — from chatbots, copilots, and intelligent search to computer vision and workflow automation that integrates with your existing systems.",
+      icon: "/icons/AIML.svg",
+      href: "/ai-development-company",
     },
   ];
 

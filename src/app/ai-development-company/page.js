@@ -49,13 +49,13 @@ const features = [
     icon: "/icons/AI-solution1.svg",
     title: "Tailored AI Solutions, Not Templates",
     description:
-      "Every business has unique challenges. We build AI solutions designed around your specific workflows, data, and goals — not off-the-shelf models retrofitted to your problem.",
+      "We build AI systems around your data, your workflows, and your users. Nothing off-the-shelf, nothing that needs to be forced to fit your business.",
   },
   {
     icon: "/icons/AI-solution2.svg",
-    title: "Strong Technical Expertise",
+    title: "Strong Technical Foundation",
     description:
-      "Our team has hands-on experience with leading AI frameworks, cloud ML platforms, and production deployments — bringing deep engineering rigour to every AI project we take on.",
+      "Our AI engineers work across machine learning, deep learning, NLP, computer vision, and generative AI giving us the depth to take on complex, real-world AI challenges across industries.",
   },
   {
     icon: "/icons/AI-solution3.svg",
@@ -157,7 +157,7 @@ export default function AI() {
 
       <FeaturesGrid
         heading="Why Choose Trimsel for AI Development?"
-        description="Take your business to the next level with the leading Software testing company in Chennai."
+        description="What Makes Us a Trusted AI Development Company in India"
         features={features}
         columns={3}
       />

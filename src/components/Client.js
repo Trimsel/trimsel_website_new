@@ -20,11 +20,11 @@ export default function Clients() {
         </h2>
 
         <p className="mt-4 max-w-3xl mx-auto text-center text-black font-medium">
-          Behind every logo is a challenge we solved from building AI-powered
+          Behind every logo is a challenge we solved — from building AI-powered
           platforms and IoT systems to launching mobile apps and scaling digital
           marketing campaigns. 200+ projects delivered across FinTech,
           HealthTech, logistics, and SaaS for clients in India, UAE, and the US.
-          We don't just build for clients, we build with them.
+          We don&apos;t just build for clients, we build with them.
         </p>
       </div>
 

@@ -50,15 +50,15 @@ export default function AIDevelopmentPage() {
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold text-white">
-                        Artificial Intelligence
+                        AI Development Company in Chennai, India 
                     </h1>
 
                     <h2 className="mt-2 text-white text-center text-2xl md:text-4xl font-semibold">
-                        Development Platform
+                        We Build AI That Solves Real Problems for Real Businesses
                     </h2>
 
                     <p className="mt-4 max-w-5xl mx-auto text-center text-white font-medium">
-                        Harness the power of neural networks and machine learning to build the future of intelligent applications
+                        Most businesses know AI can help them. The hard part is figuring out where to start and who to trust to build it properly. We're a Chennai-based team that builds practical AI solutions that actually get used, save time, and make your business run better.
                     </p>
 
                     <div className="flex gap-8 mt-8">
@@ -66,7 +66,7 @@ export default function AIDevelopmentPage() {
                             href="/"
                             className="px-6 py-3 rounded-lg bg-gradient-to-r from-[#8F24FA] to-[#285BFB] text-white font-medium"
                         >
-                            Get Started
+                            Start Your AI Project
                         </Link>
 
                         <Link
@@ -75,7 +75,7 @@ export default function AIDevelopmentPage() {
          hover:bg-[#7049B1] blur/10
            transition-all duration-300 ease-in-out"
                         >
-                            Learn More
+                            See Our Work
                         </Link>
                     </div>
                 </div>
