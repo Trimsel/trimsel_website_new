@@ -7,9 +7,11 @@ import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
 import LatestInsights from "@/components/LatestInsights";
 import { getFilteredPosts } from "@/lib/blog";
-import CaseStudiesSection from "@/components/relatedcasestudy";
+import CaseStudyCarousel from "@/components/CaseStudyCarousel";
 import { caseStudies } from "@/data/caseStudies";
 import ServiceCardsGrid from "@/components/ServiceCardsGrid";
+import IndustriesWeServe from "@/components/IndustriesWeServe";
+import Testimonial from "@/components/testimonial";
 
 export const metadata = {
   title: "Digital Marketing Company Chennai | SEO, PPC & Social Media | Trimsel",
@@ -494,13 +496,15 @@ export default function Digitalmarketing() {
         bgClass="bg-[#E1C8FF]"
       />
 
-      <CaseStudiesSection
-        tag="RELATED CASE STUDIES"
-        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[caseStudies.mocial, caseStudies.ezyhelpers]}
+      <CaseStudyCarousel
+        studies={[caseStudies.mocial, caseStudies.ezyhelpers, caseStudies.kariot]}
       />
 
+      <Testimonial />
+
       <Client />
+
+      <IndustriesWeServe />
 
       <Contactform
         eyebrow="GROW YOUR BRAND"

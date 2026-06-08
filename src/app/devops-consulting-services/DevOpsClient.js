@@ -9,9 +9,11 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import CaseStudiesSection from "@/components/relatedcasestudy";
+import CaseStudyCarousel from "@/components/CaseStudyCarousel";
 import { caseStudies } from "@/data/caseStudies";
 import FeaturesGrid from "@/components/FeaturesGrid";
+import IndustriesWeServe from "@/components/IndustriesWeServe";
+import Testimonial from "@/components/testimonial";
 
 const services = [
   {
@@ -347,13 +349,15 @@ export default function DevOpsConsulting({ posts = [] }) {
         darkBg={true}
       />
 
-      <CaseStudiesSection
-        tag="RELATED CASE STUDIES"
-        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[caseStudies.kariot, caseStudies.mocial]}
+      <CaseStudyCarousel
+        studies={[caseStudies.kariot, caseStudies.mocial, caseStudies.ezyhelpers]}
       />
 
+      <Testimonial />
+
       <Client />
+
+      <IndustriesWeServe />
 
       <Contactform
         eyebrow="AUTOMATE & SCALE"

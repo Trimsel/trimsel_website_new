@@ -2,16 +2,16 @@ import MobileAppDevelopmentClient from "./MobileAppDevelopmentClient";
 import { getFilteredPosts } from "@/lib/blog";
 
 export const metadata = {
-  title: "Mobile App Development Company Chennai, India | iOS, Android",
-  description: "Top mobile app development company in Chennai, India. We build secure, scalable iOS, Android, Flutter & cross platform apps with exceptional UX. From MVP to enterprise apps. 200+ successful projects delivered.",
+  title: "Mobile App Development Company in Chennai | Trimsel",
+  description: "Trimsel is a mobile app development company in Chennai. We build iOS, Android, Flutter, and React Native apps for startups and enterprises — from MVP to enterprise-grade. 200+ apps delivered. Book a free consultation.",
   alternates: {
     canonical: "https://www.trimsel.com/mobile-app-development-chennai",
   },
   openGraph: {
     type: "website",
     url: "https://www.trimsel.com/mobile-app-development-chennai",
-    title: "Mobile App Development Company Chennai, India | iOS, Android",
-    description: "Top mobile app development company in Chennai, India. We build secure, scalable iOS, Android, Flutter & cross platform apps with exceptional UX. From MVP to enterprise apps. 200+ successful projects delivered.",
+    title: "Mobile App Development Company in Chennai | Trimsel",
+    description: "Trimsel is a mobile app development company in Chennai. We build iOS, Android, Flutter, and React Native apps for startups and enterprises — from MVP to enterprise-grade. 200+ apps delivered. Book a free consultation.",
     locale: "en_IN",
     siteName: "Trimsel",
     images: [

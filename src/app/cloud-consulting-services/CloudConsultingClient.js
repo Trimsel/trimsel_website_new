@@ -10,8 +10,10 @@ import ServiceCardsGrid from "@/components/ServiceCardsGrid";
 
 import LatestInsights from "@/components/LatestInsights";
 import Faq from "@/components/Faq";
-import CaseStudiesSection from "@/components/relatedcasestudy";
+import CaseStudyCarousel from "@/components/CaseStudyCarousel";
 import { caseStudies } from "@/data/caseStudies";
+import IndustriesWeServe from "@/components/IndustriesWeServe";
+import Testimonial from "@/components/testimonial";
 
 const services = [
   {
@@ -542,13 +544,15 @@ export default function CloudConsulting({ posts = [] }) {
         bgClass="bg-gradient-to-r from-[#d9e6f2] to-[#cfd8e6]"
       />
 
-      <CaseStudiesSection
-        tag="RELATED CASE STUDIES"
-        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[caseStudies.kariot, caseStudies.xaber]}
+      <CaseStudyCarousel
+        studies={[caseStudies.kariot, caseStudies.xaber, caseStudies.ezyhelpers]}
       />
 
+      <Testimonial />
+
       <Client />
+
+      <IndustriesWeServe />
 
       <Contactform
         eyebrow="MIGRATE TO CLOUD"

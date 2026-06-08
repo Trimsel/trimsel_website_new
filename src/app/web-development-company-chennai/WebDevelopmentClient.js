@@ -8,12 +8,13 @@ import Contactform from "@/components/Contactform";
 import GetInTouchBanner from "@/components/GetInTouchBanner";
 import LatestInsights from "@/components/LatestInsights";
 import Faq from "@/components/Faq";
-import CaseStudiesSection from "@/components/relatedcasestudy";
+import CaseStudyCarousel from "@/components/CaseStudyCarousel";
 import { caseStudies } from "@/data/caseStudies";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import ServiceCardsGrid from "@/components/ServiceCardsGrid";
 import TechStackTabs from "@/components/TechStackTabs";
 import Testimonial from "@/components/testimonial";
+import IndustriesWeServe from "@/components/IndustriesWeServe";
 
 const services = [
   {
@@ -637,10 +638,8 @@ export default function WebDevelopment({ posts = [] }) {
         bgClass="bg-gradient-to-r from-[#ECE1FF] to-[#E6D5FF]"
       />
 
-      <CaseStudiesSection
-        tag="RELATED CASE STUDIES"
-        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[caseStudies.mocial, caseStudies.ezyhelpers]}
+      <CaseStudyCarousel
+        studies={[caseStudies.mocial, caseStudies.ezyhelpers, caseStudies.kariot]}
       />
 
       <Client />
@@ -654,6 +653,8 @@ export default function WebDevelopment({ posts = [] }) {
       />
 
       <Testimonial />
+
+      <IndustriesWeServe />
 
       <Faq />
 

@@ -8,10 +8,12 @@ import GetInTouchBanner from "@/components/GetInTouchBanner";
 import LatestInsights from "@/components/LatestInsights";
 import { getFilteredPosts } from "@/lib/blog";
 import Faq from "@/components/Faq";
-import CaseStudiesSection from "@/components/relatedcasestudy";
+import CaseStudyCarousel from "@/components/CaseStudyCarousel";
 import { caseStudies } from "@/data/caseStudies";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import ServiceCardsGrid from "@/components/ServiceCardsGrid";
+import IndustriesWeServe from "@/components/IndustriesWeServe";
+import Testimonial from "@/components/testimonial";
 
 export const metadata = {
   title: "AI Development Company Chennai | Machine Learning Solutions | Trimsel",
@@ -371,13 +373,14 @@ export default function AI() {
         darkBg={true}
       />
 
-      <CaseStudiesSection
-        tag="RELATED CASE STUDIES"
-        heading="Read About The Challenges We Faced And How We Helped Our Clients Achieve Their Goals."
-        studies={[caseStudies.kariot, caseStudies.ezyhelpers]}
+      <CaseStudyCarousel
+        studies={[caseStudies.kariot, caseStudies.ezyhelpers, caseStudies.xaber]}
       />
 
+      <Testimonial />
+
       <Client />
+      <IndustriesWeServe />
       <Contactform
         eyebrow="BUILD WITH AI"
         heading="Ready to Add Intelligence to Your Product?"

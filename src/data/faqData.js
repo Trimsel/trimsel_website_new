@@ -54,54 +54,54 @@ export const faqData = {
       question:
         "How do I choose the best mobile app development company in Chennai?",
       answer:
-        "Look for three things, a portfolio of shipped apps with real store ratings, technical depth in your required platform (iOS, Android, or Flutter), and a team that stays accountable after launch. At Trimsel, our 200+ launched apps, 4.8★ average store rating, and 92% client retention reflect exactly that. We start every project by understanding your business not by recommending the most expensive solution.",
+        "Look for three things — a portfolio of shipped apps with real store ratings, technical depth in your required platform (iOS, Android, or Flutter), and a team that stays accountable after launch. At Trimsel, our 200+ launched apps, 4.8★ average store rating, and 92% client retention reflect exactly that. We start every project by understanding your business — not by recommending the most expensive solution.",
     },
     {
-      question: " How much does mobile app development cost in Chennai?",
+      question: "How much does mobile app development cost in Chennai?",
       answer:
-        "Cost depends on platform, features, integrations, and complexity. A basic single-platform MVP typically starts from ₹5–10 lakhs. A cross-platform app with backend integrations ranges from ₹10–25 lakhs. Complex enterprise apps with AI features, custom APIs, or multi-role systems vary significantly beyond that. We provide a detailed scope and cost estimate after a free consultation no generic quotes, no hidden extras.",
+        "Cost depends on platform, features, integrations, and complexity. A basic single-platform MVP typically starts from ₹5–10 lakhs. A cross-platform app with backend integrations ranges from ₹10–25 lakhs. Complex enterprise apps with AI features, custom APIs, or multi-role systems vary significantly beyond that. We provide a detailed scope and cost estimate after a free consultation — no generic quotes, no hidden extras.",
     },
     {
       question: "How long does it take to develop a mobile app?",
       answer:
-        "A simple MVP on a single platform typically takes 6–10 weeks. A cross-platform app with more features takes 10–16 weeks. Complex enterprise mobile apps with multiple integrations and custom backend systems can take 4–6 months. We use two-week agile sprints so you see working progress throughout, not just a final handover at the end.",
+        "A simple MVP on a single platform typically takes 6–10 weeks. A cross-platform app with more features takes 10–16 weeks. Complex enterprise mobile apps with multiple integrations and custom backend systems can take 4–6 months. We use two-week agile sprints so you see working progress throughout — not just a final handover at the end.",
     },
     {
       question: "Do you develop apps for both Android and iOS?",
       answer:
-        "Yes, we build native Android apps using Kotlin, native iOS apps using Swift, and cross-platform apps using Flutter or React Native. For cross-platform development, a single Flutter or React Native codebase delivers native-like performance on both platforms simultaneously, reducing development time and cost without compromising user experience.",
+        "Yes, we build native Android apps using Kotlin, native iOS apps using Swift, and cross-platform apps using Flutter or React Native. For cross-platform development, a single Flutter or React Native codebase delivers native-like performance on both platforms simultaneously — reducing development time and cost without compromising user experience.",
     },
     {
       question: "What is the difference between Flutter and React Native?",
       answer:
-        "Both are cross-platform frameworks that build iOS and Android apps from a single codebase. Flutter built by Google using the Dart language compiles to native code, offering slightly better performance and more consistent UI across platforms. React Native, built by Meta using JavaScript has a larger developer ecosystem and easier integration with existing JavaScript codebases. For most new projects we recommend Flutter. For teams with existing JavaScript knowledge, React Native is often the faster choice.",
+        "Both are cross-platform frameworks that build iOS and Android apps from a single codebase. Flutter — built by Google using the Dart language — compiles to native code, offering slightly better performance and more consistent UI across platforms. React Native — built by Meta using JavaScript — has a larger developer ecosystem and easier integration with existing JavaScript codebases. For most new projects we recommend Flutter. For teams with existing JavaScript knowledge, React Native is often the faster choice.",
     },
     {
       question: "Can you upgrade or rebuild my existing mobile application?",
       answer:
-        "Yes, app modernisation is a significant part of what we do. Whether your app has performance issues, an outdated interface, compatibility problems with newer iOS or Android versions, or simply needs new features our team can audit your existing codebase and recommend the most cost-effective path forward. Sometimes that's targeted improvements. Sometimes a rebuild from scratch is faster and cheaper long-term. We'll give you an honest assessment either way.",
+        "Yes, app modernisation is a significant part of what we do. Whether your app has performance issues, an outdated interface, compatibility problems with newer iOS or Android versions, or simply needs new features — our team can audit your existing codebase and recommend the most cost-effective path forward. Sometimes that’s targeted improvements. Sometimes a rebuild from scratch is faster and cheaper long-term. We’ll give you an honest assessment either way.",
     },
     {
       question: "Should I build a native app or a cross-platform app?",
       answer:
-        "Native apps built specifically for iOS using Swift or Android using Kotlin, offer maximum performance and full access to platform-specific features like Face ID, Apple Pay, and Android widgets. Choose native when your app requires complex animations, device hardware access, or the absolute best performance. Cross-platform apps built with Flutter or React Native are faster to build, more cost-effective, and reach both platforms simultaneously, ideal for MVPs, startups with budget constraints, or apps where performance differences won't be noticeable. We help you choose based on your actual requirements and timeline.",
+        "Native apps — built specifically for iOS using Swift or Android using Kotlin — offer maximum performance and full access to platform-specific features like Face ID, Apple Pay, and Android widgets. Choose native when your app requires complex animations, device hardware access, or the absolute best performance. Cross-platform apps built with Flutter or React Native are faster to build, more cost-effective, and reach both platforms simultaneously — ideal for MVPs, startups with budget constraints, or apps where performance differences won’t be noticeable. We help you choose based on your actual requirements and timeline.",
     },
     {
       question: "Do you provide app maintenance after launch?",
       answer:
-        "Yes, post-launch support is included in every project. We provide bug fixes, OS compatibility updates when new iOS or Android versions release, performance monitoring, feature enhancements, and App Store and Google Play re-submissions. You get a dedicated support contact not a ticket queue, and we operate on agreed response SLAs so you always know when to expect a resolution.",
+        "Yes, post-launch support is included in every project. We provide bug fixes, OS compatibility updates when new iOS or Android versions release, performance monitoring, feature enhancements, and App Store and Google Play re-submissions. You get a dedicated support contact — not a ticket queue — and we operate on agreed response SLAs so you always know when to expect a resolution.",
     },
     {
       question:
         "Will you help publish my mobile app on the App Store and Google Play?",
       answer:
-        "Yes, we handle the complete app submission process for both platforms, including preparing store listings, screenshots, descriptions, compliance checks, and release approvals. This ensures your application is launched correctly and meets platform requirements without delays.",
+        "Yes, we handle the complete app submission process for both platforms — including preparing store listings, screenshots, descriptions, compliance checks, and release approvals. This ensures your application is launched correctly and meets platform requirements without delays.",
     },
     {
       question:
         "Can you integrate third-party services into my mobile application?",
       answer:
-        "Yes, we integrate payment gateways, maps, analytics tools, CRMs, chat systems, APIs, and cloud services based on your business needs. These integrations help extend your app’s functionality and improve the overall user experience.",
+        "Yes, we integrate payment gateways, maps, analytics tools, CRMs, chat systems, APIs, and cloud services based on your business needs. These integrations help extend your app’s functionality and improve the overall user experience. Book a free consultation to discuss your specific integration requirements.",
     },
   ],
   web: [

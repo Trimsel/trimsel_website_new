@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Client from "@/components/Client";
 import LatestInsights from "@/components/LatestInsights";
+import CaseStudyCarousel from "@/components/CaseStudyCarousel";
+import { caseStudies } from "@/data/caseStudies";
+import IndustriesWeServe from "@/components/IndustriesWeServe";
+import Testimonial from "@/components/testimonial";
 import { getFilteredPosts } from "@/lib/blog";
 import Header from "@/components/Header";
 import Whatwedo from "@/components/Whatwedo";
@@ -447,6 +451,16 @@ export default function aboutus() {
         imageAlt="About Trimsel contact"
         bgClass="bg-[#DEFFCE]"
       />
+
+      <CaseStudyCarousel
+        studies={[caseStudies.xaber, caseStudies.mocial, caseStudies.kariot, caseStudies.ezyhelpers]}
+        heading="Work That Defines Us."
+        description="A selection of projects that reflect how we approach complex problems — with practical thinking, reliable execution, and measurable outcomes."
+      />
+
+      <Testimonial />
+
+      <IndustriesWeServe />
 
       <LatestInsights posts={posts} />
 
