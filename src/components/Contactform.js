@@ -107,6 +107,7 @@ export default function Contactform({
                         width={80}
                         height={80}
                         className="object-contain"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     </div>
                   ))}
@@ -135,6 +136,7 @@ export default function Contactform({
                         width={80}
                         height={80}
                         className="object-contain"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     </div>
                   ))}
