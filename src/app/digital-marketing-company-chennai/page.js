@@ -174,8 +174,7 @@ export default function Digitalmarketing() {
               width={340}
               height={340}
               className="relative z-10 h-auto w-[220px] sm:w-[280px] md:w-[340px]"
-              priority
-            />
+              priority/>
 
             {/* Floating Image */}
 
@@ -185,8 +184,7 @@ export default function Digitalmarketing() {
               width={550}
               height={550}
               className="absolute left-1/6 top-1/6 z-10 h-auto w-[280px] -translate-x-1/2 -translate-y-1/2 animate-shake sm:w-[360px] md:w-[460px]"
-              priority
-            />
+              priority/>
           </div>
         </div>
       </section>
@@ -243,7 +241,8 @@ export default function Digitalmarketing() {
                 alt="growth"
                 width={80}
                 height={80}
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
             </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 sm:text-xl md:text-xl leading-snug">

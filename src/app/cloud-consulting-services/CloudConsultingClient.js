@@ -321,7 +321,8 @@ export default function CloudConsulting({ posts = [] }) {
                       width={600}
                       height={180}
                       className="object-contain opacity-90 mt-4"
-                    />
+                    
+                  style={{ width: "auto", height: "auto" }}/>
                   </div>
                 </div>
               </div>
@@ -336,8 +337,7 @@ export default function CloudConsulting({ posts = [] }) {
                   alt="Cloud Shape"
                   width={200}
                   height={240}
-                  className="object-contain w-[160px] sm:w-[200px]"
-                />
+                  className="object-contain w-[160px] sm:w-[200px]"/>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 relative z-10">

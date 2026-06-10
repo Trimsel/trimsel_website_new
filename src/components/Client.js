@@ -47,6 +47,7 @@ export default function Clients() {
                 width={110}
                 height={66}
                 className="h-auto object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </div>
           ))}
@@ -72,6 +73,7 @@ export default function Clients() {
                 width={110}
                 height={66}
                 className="h-auto object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </div>
           ))}

@@ -214,8 +214,7 @@ export default function aboutus() {
             alt="team"
             width={80}
             height={80}
-            className="w-full h-[500px] object-cover"
-          />
+            className="w-full h-[500px] object-cover"/>
 
           <div className="absolute inset-0 flex items-center justify-between px-10">
             <h1 className="text-[200px] font-bold text-white/20">M</h1>

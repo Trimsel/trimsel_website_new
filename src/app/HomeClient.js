@@ -152,8 +152,7 @@ export default function Home({ posts = [] }) {
                 width={400}
                 height={380}
                 className="relative z-10 w-[280px] animate-shake sm:w-[360px] md:w-[85%] lg:w-[80%] xl:w-[430px]"
-                priority
-              />
+                priority/>
 
               <Image
                 src="/Home/Robot.svg"
@@ -161,8 +160,7 @@ export default function Home({ posts = [] }) {
                 width={200}
                 height={200}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-auto w-[150px] sm:w-[190px] md:w-[45%] lg:w-[45%] xl:w-[225px]"
-                priority
-              />
+                priority/>
             </div>
           </div>
         </div>

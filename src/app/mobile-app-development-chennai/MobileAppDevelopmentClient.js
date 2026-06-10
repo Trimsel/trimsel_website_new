@@ -317,24 +317,21 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
                     width={520}
                     height={520}
                     className="relative z-10 h-auto w-[340px] sm:w-[430px] md:w-[520px]"
-                    priority
-                  />
+                    priority/>
                   <Image
                     src="/Mobile3.svg"
                     alt="Mobile app UI design — intuitive interface built by Trimsel Chennai"
                     width={280}
                     height={320}
                     className="absolute left-1/2 top-1/2 z-20 h-auto w-[230px] -translate-x-1/2 -translate-y-[46%] zoom-animation sm:w-[290px] md:w-[350px]"
-                    priority
-                  />
+                    priority/>
                   <Image
                     src="/Mobile2.svg"
                     alt="Cross-platform mobile app — Flutter and React Native development by Trimsel"
                     width={280}
                     height={340}
                     className="absolute z-30 h-auto w-[240px] sm:w-[300px] md:w-[360px]"
-                    priority
-                  />
+                    priority/>
                 </div>
               </div>
             </div>

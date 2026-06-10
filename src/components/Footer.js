@@ -30,8 +30,7 @@ export default function Footer() {
               width={77}
               height={40}
               alt="India flag"
-              className="h-10 w-auto"
-            />
+              className="h-10 w-auto"/>
             <p className="text-2xl font-semibold sm:text-3xl lg:text-4xl">
               INDIA
             </p>
@@ -153,8 +152,7 @@ export default function Footer() {
                 width={283}
                 height={96}
                 alt="Trimsel Softwares"
-                className="h-16 w-auto"
-              />
+                className="h-16 w-auto"/>
 
               <p className="max-w-xs text-md font-medium text-white/100 leading-relaxed">
                 Trimsel is a software development company in Chennai, building

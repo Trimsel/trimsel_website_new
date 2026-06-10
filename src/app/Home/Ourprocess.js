@@ -30,7 +30,8 @@ export default function Fivestage() {
                 alt="Ideation"
                 width={100}
                 height={100}
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
             </div>
             <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
               01
@@ -56,7 +57,8 @@ export default function Fivestage() {
                 alt="Design"
                 width={100}
                 height={100}
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
             </div>
             <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
               02
@@ -80,7 +82,8 @@ export default function Fivestage() {
                 alt="Architecture"
                 width={100}
                 height={100}
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
             </div>
             <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
               03
@@ -105,7 +108,8 @@ export default function Fivestage() {
                 alt="Development"
                 width={100}
                 height={100}
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
             </div>
             <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
               04
@@ -134,7 +138,8 @@ export default function Fivestage() {
                 alt="Support"
                 width={100}
                 height={100}
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
             </div>
             <span className="absolute top-4 right-6 text-6xl font-bold opacity-30">
               05
@@ -171,7 +176,8 @@ export default function Fivestage() {
                   width={120}
                   height={120}
                   className="relative -top-6 -left-6"
-                />
+                
+                  style={{ width: "auto", height: "auto" }}/>
               </div>
               <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
                 01
@@ -200,7 +206,8 @@ export default function Fivestage() {
                 width={80}
                 height={40}
                 className="absolute -right-24 top-1/2 -translate-y-1/2 opacity-60"
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
               <div className="absolute -top-8 left-10">
                 <Image
                   src="/icons/stage2.svg"
@@ -208,7 +215,8 @@ export default function Fivestage() {
                   width={120}
                   height={120}
                   className="relative -top-6 -left-6"
-                />
+                
+                  style={{ width: "auto", height: "auto" }}/>
               </div>
               <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
                 02
@@ -232,7 +240,8 @@ export default function Fivestage() {
                 width={120}
                 height={160}
                 className="absolute left-1/2 -bottom-32 -translate-x-1/2 opacity-60"
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
               <div className="absolute -top-8 left-10">
                 <Image
                   src="/icons/stage3.svg"
@@ -240,7 +249,8 @@ export default function Fivestage() {
                   width={120}
                   height={120}
                   className="relative -top-6 -left-6"
-                />
+                
+                  style={{ width: "auto", height: "auto" }}/>
               </div>
               <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
                 03
@@ -273,7 +283,8 @@ export default function Fivestage() {
                   width={120}
                   height={120}
                   className="relative -top-6 -left-6"
-                />
+                
+                  style={{ width: "auto", height: "auto" }}/>
               </div>
               <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
                 05
@@ -298,7 +309,8 @@ export default function Fivestage() {
                 width={120}
                 height={60}
                 className="absolute -left-36 top-1/2 -translate-y-1/2 opacity-60"
-              />
+              
+                  style={{ width: "auto", height: "auto" }}/>
               <div className="absolute -top-8 left-10">
                 <Image
                   src="/icons/stage4.svg"
@@ -306,7 +318,8 @@ export default function Fivestage() {
                   width={120}
                   height={120}
                   className="relative -top-6 -left-6"
-                />
+                
+                  style={{ width: "auto", height: "auto" }}/>
               </div>
               <span className="absolute top-4 right-8 text-7xl font-bold opacity-30">
                 04

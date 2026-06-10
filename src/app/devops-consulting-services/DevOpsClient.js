@@ -204,8 +204,7 @@ export default function DevOpsConsulting({ posts = [] }) {
                 width={750}
                 height={750}
                 className="h-auto w-full max-w-[300px] sm:max-w-md md:max-w-xl"
-                priority
-              />
+                priority/>
             </div>
           </div>
         </div>
@@ -322,8 +321,7 @@ export default function DevOpsConsulting({ posts = [] }) {
             alt="What we do"
             width={1200}
             height={600}
-            className="w-[100%] md:w-[100%]"
-          />
+            className="w-[100%] md:w-[100%]"/>
         </div>
       </section>
 
