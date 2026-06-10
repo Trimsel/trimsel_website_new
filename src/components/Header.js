@@ -69,7 +69,6 @@ export default function Header({ transparent = false }) {
                             width={140}
                             height={35}
                             priority
-                            style={{ width: "auto", height: "auto" }}
                         />
 
                     </Link>
