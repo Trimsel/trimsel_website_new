@@ -51,6 +51,7 @@ const services = [
     title: "DevOps for Web Projects",
     icon: "/web-whatwedo7.svg",
     description: "We set up CI/CD pipelines, staging and production environments, automated testing workflows, and cloud hosting on AWS or GCP so deployments are reliable, rollbacks are safe, and your development cycle keeps moving without your production environment becoming a risk.",
+    href: "/devops-consulting-services",
   },
   {
     title: "Website Testing & QA",
@@ -117,7 +118,7 @@ const servicesprovider = [
       "You need a working product fast validated, functional, and ready for real users. We help startups go from idea to live web product in 4–8 weeks with agile sprints and lean architecture that doesn't lock you into decisions you'll regret at scale.",
   },
   {
-    title: "Growing SMEss",
+    title: "Growing SMEs",
     description:
       "Your website or web application needs to keep up with your business more traffic, more products, more users, more integrations. We build web platforms designed for growth so you're not facing a full rebuild every 18 months as your business evolves.",
   },
@@ -190,44 +191,48 @@ const techTabs = [
   {
     name: "FRONTEND",
     tools: [
-      { name: "HTML", icon: "/icons/html.png" },
-      { name: "CSS", icon: "/icons/css.png" },
-      { name: "JavaScript", icon: "/icons/js.png" },
-      { name: "React", icon: "/icons/react.png" },
-      { name: "Angular", icon: "/icons/angular.png" },
+      { name: "React", icon: "/icons/Tools/react.svg" },
+      { name: "Next.js", icon: "/icons/Tools/nextjs.svg" },
+      { name: "Vue.js", icon: "/icons/Tools/vuejs.svg" },
+      { name: "Angular", icon: "/icons/Tools/angular.svg" },
+      { name: "TypeScript", icon: "/icons/Tools/typescript.svg" },
+      { name: "Tailwind CSS", icon: "/icons/Tools/tailwindcss.svg" },
     ],
   },
   {
     name: "BACKEND",
     tools: [
-      { name: "Node.js", icon: "/icons/node.png" },
-      { name: "Express", icon: "/icons/express.png" },
-      { name: "Python", icon: "/icons/python.png" },
-      { name: "Java", icon: "/icons/java.png" },
-    ],
-  },
-  {
-    name: "PLATFORMS",
-    tools: [
-      { name: "AWS", icon: "/icons/aws.png" },
-      { name: "Azure", icon: "/icons/azure.png" },
-      { name: "Docker", icon: "/icons/docker.png" },
+      { name: "Node.js", icon: "/icons/Tools/nodejs.svg" },
+      { name: "Python", icon: "/icons/Tools/python.svg" },
+      { name: "PHP", icon: "/icons/Tools/php.svg" },
+      { name: "Express.js", icon: "/icons/Tools/expressjs.svg" },
+      { name: "FastAPI", icon: "/icons/Tools/fastapi.svg" },
+      { name: ".NET", icon: "/icons/Tools/dotnet.svg" },
     ],
   },
   {
     name: "DATABASE",
     tools: [
-      { name: "MongoDB", icon: "/icons/mongodb.png" },
-      { name: "MySQL", icon: "/icons/mysql.png" },
-      { name: "PostgreSQL", icon: "/icons/postgres.png" },
+      { name: "PostgreSQL", icon: "/icons/Tools/postgresql.svg" },
+      { name: "MongoDB", icon: "/icons/Tools/mongodb.svg" },
+      { name: "MySQL", icon: "/icons/Tools/mysql.svg" },
+      { name: "Redis", icon: "/icons/Tools/redis.svg" },
+      { name: "Firebase", icon: "/icons/Tools/firebase.svg" },
+      { name: "Supabase", icon: "/icons/Tools/supabase.svg" },
+    ],
+  },
+  {
+    name: "APIs & INTEGRATION",
+    tools: [
+      { name: "REST API", icon: "/icons/Tools/restapi.svg" },
+      { name: "Elasticsearch", icon: "/icons/Tools/elasticsearch.svg" },
+      { name: "DynamoDB", icon: "/icons/Tools/dynamodb.svg" },
     ],
   },
   {
     name: "UI/UX",
     tools: [
-      { name: "Figma", icon: "/icons/figma.png" },
-      { name: "Adobe XD", icon: "/icons/xd.png" },
-      { name: "Sketch", icon: "/icons/sketch.png" },
+      { name: "Figma", icon: "/icons/Tools/figma.svg" },
     ],
   },
 ];
@@ -398,7 +403,7 @@ export default function WebDevelopment({ posts = [] }) {
 
               {/* Button */}
               <Link
-                href="/"
+                href="/contact-us"
                 className="mt-5 w-full bg-white text-[#3b3be0] py-2.5 rounded-md text-md font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition"
               >
                 Book A Free Consultation
@@ -444,7 +449,7 @@ export default function WebDevelopment({ posts = [] }) {
 
               {/* BUTTON */}
               <Link
-                href="/"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 mb-4 md:mb-4 bg-[#1ea7d7] hover:bg-[#1696c4] text-white px-6 py-3 rounded-md text-md font-medium transition w-fit whitespace-nowrap"
               >
                 Talk to Our Web Team
@@ -644,6 +649,10 @@ export default function WebDevelopment({ posts = [] }) {
 
       <Client />
 
+      <Testimonial />
+
+      <IndustriesWeServe />
+
       <Contactform
         eyebrow="START YOUR WEB PROJECT"
         heading="Need a Web Application That Performs?"
@@ -652,13 +661,9 @@ export default function WebDevelopment({ posts = [] }) {
         defaultService="Web Dev"
       />
 
-      <Testimonial />
-
-      <IndustriesWeServe />
+      <LatestInsights posts={posts} />
 
       <Faq />
-
-      <LatestInsights posts={posts} />
 
     </main>
   );

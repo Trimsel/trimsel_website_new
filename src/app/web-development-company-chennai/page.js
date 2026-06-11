@@ -2,18 +2,18 @@ import WebDevelopmentClient from "./WebDevelopmentClient";
 import { getFilteredPosts } from "@/lib/blog";
 
 export const metadata = {
-  title: "Web Development Company Chennai | React, Next.js & Node.js | Trimsel",
+  title: "Web Development Company in Chennai | Trimsel",
   description:
-    "Custom web development services in Chennai. React, Next.js, Node.js, WordPress, and full-stack web applications for startups, SMEs, and enterprises. 180+ web projects delivered.",
+    "Trimsel builds custom websites and web applications for startups, SMEs, and enterprises — using React, Next.js, Node.js, and WordPress. 180+ web projects delivered with 95% on-time delivery.",
   alternates: {
     canonical: "https://www.trimsel.com/web-development-company-chennai",
   },
   openGraph: {
     type: "website",
     url: "https://www.trimsel.com/web-development-company-chennai",
-    title: "Web Development Company Chennai | React, Next.js & Node.js | Trimsel",
+    title: "Web Development Company in Chennai | Trimsel",
     description:
-      "Custom web development services in Chennai. React, Next.js, Node.js, WordPress, and full-stack web applications for startups, SMEs, and enterprises. 180+ web projects delivered.",
+      "Trimsel builds custom websites and web applications for startups, SMEs, and enterprises — using React, Next.js, Node.js, and WordPress. 180+ web projects delivered with 95% on-time delivery.",
     locale: "en_IN",
     siteName: "Trimsel",
     images: [
@@ -45,7 +45,7 @@ const serviceSchema = {
     "@type": "City",
     "name": "Chennai",
   },
-  "description": "Custom web development services in Chennai. React, Next.js, Node.js, WordPress, and full-stack web applications for startups, SMEs, and enterprises. 180+ web projects delivered.",
+  "description": "Trimsel builds custom websites and web applications for startups, SMEs, and enterprises — using React, Next.js, Node.js, and WordPress. 180+ web projects delivered with 95% on-time delivery.",
 };
 
 export default function WebDevelopmentPage() {
