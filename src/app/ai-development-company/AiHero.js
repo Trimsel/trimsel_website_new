@@ -63,14 +63,14 @@ export default function AIDevelopmentPage() {
 
                     <div className="flex gap-8 mt-8">
                         <Link
-                            href="/"
+                            href="/contact-us"
                             className="px-6 py-3 rounded-lg bg-gradient-to-r from-[#8F24FA] to-[#285BFB] text-white font-medium"
                         >
                             Start Your AI Project
                         </Link>
 
                         <Link
-                            href="/"
+                            href="/portfolio"
                             className="px-6 py-3 rounded-lg bg-[#48327A] text-white border border-white/40
          hover:bg-[#7049B1] blur/10
            transition-all duration-300 ease-in-out"

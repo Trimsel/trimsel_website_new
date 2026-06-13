@@ -196,6 +196,7 @@ const techTabs = [
       { name: "Vue.js", icon: "/icons/Tools/vuejs.svg" },
       { name: "Angular", icon: "/icons/Tools/angular.svg" },
       { name: "TypeScript", icon: "/icons/Tools/typescript.svg" },
+      { name: "JavaScript", icon: "/icons/Tools/javascript.svg" },
       { name: "Tailwind CSS", icon: "/icons/Tools/tailwindcss.svg" },
     ],
   },
@@ -207,7 +208,20 @@ const techTabs = [
       { name: "PHP", icon: "/icons/Tools/php.svg" },
       { name: "Express.js", icon: "/icons/Tools/expressjs.svg" },
       { name: "FastAPI", icon: "/icons/Tools/fastapi.svg" },
+      { name: "GraphQL", icon: "/icons/Tools/graphql.svg" },
+      { name: "REST API", icon: "/icons/Tools/restapi.svg" },
+      { name: "Java", icon: "/icons/Tools/java.svg" },
       { name: ".NET", icon: "/icons/Tools/dotnet.svg" },
+    ],
+  },
+  {
+    name: "CLOUD & INFRA",
+    tools: [
+      { name: "AWS", icon: "/icons/Tools/aws.svg" },
+      { name: "GCP", icon: "/icons/Tools/gcp.svg" },
+      { name: "Azure", icon: "/icons/Tools/azure.svg" },
+      { name: "Docker", icon: "/icons/Tools/docker.svg" },
+      { name: "Kubernetes", icon: "/icons/Tools/kubernetes.svg" },
     ],
   },
   {
@@ -219,18 +233,12 @@ const techTabs = [
       { name: "Redis", icon: "/icons/Tools/redis.svg" },
       { name: "Firebase", icon: "/icons/Tools/firebase.svg" },
       { name: "Supabase", icon: "/icons/Tools/supabase.svg" },
-    ],
-  },
-  {
-    name: "APIs & INTEGRATION",
-    tools: [
-      { name: "REST API", icon: "/icons/Tools/restapi.svg" },
       { name: "Elasticsearch", icon: "/icons/Tools/elasticsearch.svg" },
       { name: "DynamoDB", icon: "/icons/Tools/dynamodb.svg" },
     ],
   },
   {
-    name: "UI/UX",
+    name: "DESIGN",
     tools: [
       { name: "Figma", icon: "/icons/Tools/figma.svg" },
     ],
@@ -336,7 +344,7 @@ export default function WebDevelopment({ posts = [] }) {
       <section className="bg-white py-16 px-4 md:px-10">
         <div>
           <h2 className="mb-8 text-2xl text-center font-semibold leading-tight sm:text-3xl md:text-4xl">
-            What We Build And Why It Works For Your Business
+            Web Development Company in Chennai
           </h2>
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -435,7 +443,7 @@ export default function WebDevelopment({ posts = [] }) {
           {/* LEFT SIDE */}
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-              Why Your Business Needs a Web Application?
+              Why Does Your Business Need Web App Services?
             </h2>
 
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -614,10 +622,10 @@ export default function WebDevelopment({ posts = [] }) {
 
       {/* Getintouch */}
       <GetInTouchBanner
-        eyebrow="WEB SOLUTIONS"
-        heading="Need a Website That Converts?"
-        description="From landing pages to complex web applications, our React and Next.js experts build fast, scalable solutions. Let's talk about your project."
-        ctaText="Talk to Our Experts"
+        eyebrow="GET IN TOUCH"
+        heading="Ready to Build a Website That Works for Your Business?"
+        description="Tell our web development team what you need — whether it's a business website, a complex web application, or an e-commerce platform — and we'll give you a realistic scope, honest timeline, and clear plan."
+        ctaText="Talk to Our Web Team"
         ctaLink="/contact-us"
         image="/getintouchweb.svg"
         imageAlt="Web development contact"
@@ -625,17 +633,17 @@ export default function WebDevelopment({ posts = [] }) {
       />
 
       <TechStackTabs
-        eyebrow="Tools and Technology"
-        heading="The Web Development Stack We Use Chosen for Your Project, Not Just Ours"
-        description="We choose tools based on what genuinely fits your project's scale, performance needs, and long-term maintainability not what's trending or easiest to bill. Here's the stack our web development team works with."
+        eyebrow="TOOLS AND TECHNOLOGIES"
+        heading="The Web Development Stack We Use — Chosen for Your Project, Not Just Ours"
+        description="We choose tools based on what genuinely fits your project's scale, performance needs, and long-term maintainability — not what's trending or easiest to bill. Here's the stack our web development team works with."
         tabs={techTabs}
       />
 
       {/* Getintouch */}
       <GetInTouchBanner
-        eyebrow="WEB SOLUTIONS"
-        heading="Ready to Build a Website That Works for Your Business?"
-        description="Tell our web development team what you need — whether it's a business website, a complex web application, or an e-commerce platform — and we'll give you a realistic scope, honest timeline, and clear plan to build it right."
+        eyebrow="START YOUR PROJECT"
+        heading="Let's Build Your Web Platform Together"
+        description="Whether you need a business website, a web application, or an e-commerce platform — our team is ready to scope your project and start building."
         ctaText="Talk to Our Web Team"
         ctaLink="/contact-us"
         image="/getintouchweb.svg"

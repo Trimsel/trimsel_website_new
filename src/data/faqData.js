@@ -248,44 +248,54 @@ export const faqData = {
 
   ai: [
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How do I choose the best AI development company in India?",
+      answer:
+        "Look for a team with real AI deployments in production — not just POCs that never shipped. At Trimsel, our AI systems run in production across FinTech, IoT, and healthcare — including KarIOT which achieved 12-18% non-revenue water reduction using our AI-driven forecasting models.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "How much does building an AI system cost in India?",
+      answer:
+        "A focused chatbot or automation tool typically starts from ₹3–5 lakhs. A custom ML model with data pipeline and integration ranges from ₹8–20 lakhs. Enterprise-grade AI platforms vary beyond that. We give a clear estimate after a short discovery call — no vague 'it depends' answers.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How long does an AI development project take?",
+      answer:
+        "A proof of concept can typically be delivered in 4–8 weeks. A full production-ready AI system takes 3–6 months depending on data availability, integration complexity, and models involved. We give a realistic timeline upfront.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Do I need a lot of data to use AI?",
+      answer:
+        "Not always. Some models can be fine-tuned from pre-trained foundations with relatively small datasets. Others need substantial domain-specific data. We assess your data situation early and advise honestly before you commit.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Can you integrate AI into our existing systems?",
+      answer:
+        "Yes — we specialise in integrating AI into existing CRM, ERP, mobile apps, web platforms, and internal tools — no full system rebuild required. Your team keeps using the tools they know, now with intelligence built in.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "What industries do you build AI for?",
+      answer:
+        "Healthcare, FinTech, retail, logistics, IoT, manufacturing, and education. The common thread is a real business problem — not the industry itself.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "What is the difference between machine learning and generative AI?",
+      answer:
+        "Machine learning models learn patterns from data to make predictions — like fraud detection or demand forecasting. Generative AI creates new content — text, images, code — based on prompts. We build both, depending on what your problem requires.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Do you offer AI consulting before development begins?",
+      answer:
+        "Yes — we offer a discovery session where we assess your data, identify the highest-value AI opportunities, and create a practical roadmap before development starts.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Will you maintain and update the AI model after launch?",
+      answer:
+        "Yes — AI models need ongoing monitoring and periodic retraining. We offer post-launch support including performance monitoring, accuracy tracking, model retraining, and infrastructure maintenance.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Why work with a Chennai-based AI company rather than a larger firm?",
+      answer:
+        "With larger firms, AI projects often get staffed with junior engineers after the pitch. With us, you work directly with the engineers building your system. Our Chennai base means competitive pricing without compromising technical depth.",
     },
   ],
 
