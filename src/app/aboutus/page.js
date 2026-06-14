@@ -2,29 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 import Client from "@/components/Client";
 import LatestInsights from "@/components/LatestInsights";
-import CaseStudyCarousel from "@/components/CaseStudyCarousel";
-import { caseStudies } from "@/data/caseStudies";
-import IndustriesWeServe from "@/components/IndustriesWeServe";
 import Testimonial from "@/components/testimonial";
 import { getFilteredPosts } from "@/lib/blog";
 import Header from "@/components/Header";
-import Whatwedo from "@/components/Whatwedo";
 import Contactform from "@/components/Contactform";
-import GetInTouchBanner from "@/components/GetInTouchBanner";
+import FeaturesGrid from "@/components/FeaturesGrid";
 
 export const metadata = {
-  title: "About Trimsel | Software Development Team in Chennai",
+  title: "About Trimsel | Software Development Company in Chennai, India",
   description:
-    "Trimsel is a Chennai-based software development company founded in 2020. Meet our team of developers, designers, and engineers who've delivered 200+ projects across mobile, web, AI, and cloud.",
+    "Trimsel is a software development company in Chennai — building mobile apps, AI, web platforms, and cloud infrastructure since 2020. 200+ projects. 92% retention.",
   alternates: {
     canonical: "https://www.trimsel.com/aboutus",
   },
   openGraph: {
     type: "website",
     url: "https://www.trimsel.com/aboutus",
-    title: "About Trimsel | Software Development Team in Chennai",
+    title: "About Trimsel | Software Development Company in Chennai, India",
     description:
-      "Trimsel is a Chennai-based software development company founded in 2020. Meet our team of developers, designers, and engineers who've delivered 200+ projects across mobile, web, AI, and cloud.",
+      "Trimsel is a software development company in Chennai — building mobile apps, AI, web platforms, and cloud infrastructure since 2020. 200+ projects. 92% retention.",
     locale: "en_IN",
     siteName: "Trimsel",
     images: [
@@ -32,7 +28,7 @@ export const metadata = {
         url: "https://www.trimsel.com/images/myherocloud.png",
         width: 1200,
         height: 630,
-        alt: "Trimsel software development team in Chennai",
+        alt: "Trimsel software development company in Chennai",
       },
     ],
   },
@@ -43,436 +39,854 @@ export const metadata = {
   },
 };
 
-const cards = [
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Trimsel",
+  alternateName: "Trimsel Softwares",
+  url: "https://www.trimsel.com",
+  logo: "https://www.trimsel.com/trimsel-logo.svg",
+  description:
+    "Trimsel is a software development company in Chennai building mobile apps, AI systems, web platforms, cloud infrastructure, and running digital marketing campaigns since 2020.",
+  foundingDate: "2020",
+  foundingLocation: {
+    "@type": "Place",
+    name: "Chennai, Tamil Nadu, India",
+  },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 15,
+  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress:
+        "No.21-B 5th Cross Street, South Phase Thiru VI KA Industrial Estate, Indira Nagar, Guindy",
+      addressLocality: "Chennai",
+      addressRegion: "Tamil Nadu",
+      postalCode: "600032",
+      addressCountry: "IN",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress:
+        "1st Floor, Crystal Plaza State Bank, 138/2, NGO B Colony, New Colony",
+      addressLocality: "Tirunelveli",
+      addressRegion: "Tamil Nadu",
+      postalCode: "627007",
+      addressCountry: "IN",
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    telephone: "+91-72008-41581",
+    email: "contact@trimsel.com",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/trimsel",
+    "https://www.instagram.com/trimselsoftwares",
+  ],
+  knowsAbout: [
+    "Mobile App Development",
+    "Web Application Development",
+    "AI Development",
+    "Machine Learning",
+    "DevOps Consulting",
+    "Cloud Consulting",
+    "Digital Marketing",
+    "SEO",
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.trimsel.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About Us",
+      item: "https://www.trimsel.com/aboutus",
+    },
+  ],
+};
+
+const whatDrivesUs = [
   {
-    title: "Future Proof Solutions",
-    description:
-      "Our expert teams rely on modern tools and technology that provides a wide range of opportunities to build products and solutions that are scalable",
     icon: "/icons/aboutus-process1.svg",
-    color: "from-cyan-400 to-blue-500",
+    title: "Built to Last, Not to Rebuild",
+    description:
+      "Every app, platform, and system we deliver is built on a solid technical foundation — clean architecture, proper documentation, and scalable infrastructure that grows with your business.",
   },
   {
-    title: "Appealing UI/UX",
-    description:
-      "Our expert teams rely on modern tools and technology that provides a wide range of opportunities to build products and solutions that are scalable",
     icon: "/icons/aboutus-process2.svg",
-    color: "from-pink-500 to-purple-500",
+    title: "Interfaces Designed for Real Users",
+    description:
+      "Our designers build interfaces that are clean, easy to use, and designed around how your users actually think and behave — not around what looks impressive in a Figma mockup.",
   },
   {
-    title: "Agile Operation",
-    description:
-      "Our expert teams rely on modern tools and technology that provides a wide range of opportunities to build products and solutions that are scalable",
     icon: "/icons/aboutus-process3.svg",
-    color: "from-purple-500 to-indigo-500",
+    title: "Agile Without the Buzzwords",
+    description:
+      "We work in short, focused sprints. You see progress every two weeks, give feedback early, and always know exactly where your project stands.",
   },
   {
-    title: "Versatile Tech Stark",
-    description:
-      "Our expert teams rely on modern tools and technology that provides a wide range of opportunities to build products and solutions that are scalable",
     icon: "/icons/aboutus-process4.svg",
-    color: "from-pink-500 to-red-500",
+    title: "Engineers Who've Done It Before",
+    description:
+      "Our team covers mobile, web, AI, cloud, and DevOps — and we don't rotate junior developers onto your project after the kickoff call. The engineers who scope your project build it.",
   },
   {
-    title: "Responsive Design",
-    description:
-      "Our expert teams rely on modern tools and technology that provides a wide range of opportunities to build products and solutions that are scalable",
     icon: "/icons/aboutus-process5.svg",
-    color: "from-indigo-500 to-blue-500",
-  },
-  {
-    title: "Client-Centric Approach",
+    title: "Responsive Across Every Screen",
     description:
-      "Our expert teams rely on modern tools and technology that provides a wide range of opportunities to build products and solutions that are scalable",
+      "Every product is tested across real devices and screen sizes — not just resized in Chrome DevTools. Mobile-first design is the default.",
+  },
+  {
     icon: "/icons/aboutus-process6.svg",
-    color: "from-cyan-400 to-blue-400",
+    title: "Your Goals Come First",
+    description:
+      "We don't push unnecessary features, inflate timelines, or recommend tools that don't fit. What we recommend is always in the interest of your business — even when that means a smaller scope.",
   },
 ];
 
-const milestones = [
+const services = [
   {
-    title: "Project Kickoff",
-    percent: "20% Payment",
-    color: "bg-[#4B407D]",
-    icon: "/icons/payment1.svg",
+    title: "Mobile App Development",
+    description:
+      "Android, iOS, and cross-platform apps using Flutter and React Native — fast, scalable, and built for real-world traffic.",
+    icon: "/icons/about-whatwedo1.svg",
+    href: "/mobile-app-development-chennai",
   },
   {
-    title: "PRD and Design Sign Off",
-    percent: "20% Payment",
-    color: "bg-[#2A5C9A]",
-    icon: "/icons/payment2.svg",
+    title: "Web Application Development",
+    description:
+      "From business websites to large-scale web platforms — built on React, Next.js, and Node.js with performance, security, and SEO.",
+    icon: "/icons/about-whatwedo2.svg",
+    href: "/web-development-company-chennai",
   },
   {
-    title: "Release 1",
-    percent: "20% Payment",
-    color: "bg-[#09A69A]",
-    icon: "/icons/payment3.svg",
+    title: "AI Development",
+    description:
+      "Custom ML models, generative AI products, AI agents, chatbots, computer vision, and predictive analytics — built to integrate with your existing systems.",
+    icon: "/icons/about-whatwedo3.svg",
+    href: "/ai-development-company",
   },
   {
-    title: "Release 2",
-    percent: "20% Payment",
-    color: "bg-[#0ED47D]",
-    icon: "/icons/payment4.svg",
+    title: "DevOps Consulting",
+    description:
+      "CI/CD pipelines, Kubernetes orchestration, Infrastructure as Code, and DevSecOps — helping teams ship faster with 99.95% uptime targets.",
+    icon: "/icons/about-whatwedo4.svg",
+    href: "/devops-consulting-services",
   },
   {
-    title: "Live",
-    percent: "20% Payment",
-    color: "bg-[#59E472]",
-    icon: "/icons/payment5.svg",
+    title: "Cloud Consulting",
+    description:
+      "Migration, architecture, security, and cost optimisation across AWS, Azure, and GCP — with 40% average cloud cost savings.",
+    icon: "/icons/aboutus-process1.svg",
+    href: "/cloud-consulting-services",
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "SEO, Google Ads, Meta Ads, social media, content strategy, and AI search optimisation (AEO/GEO) — focused on leads, not impressions.",
+    icon: "/icons/aboutus-process2.svg",
+    href: "/digital-marketing-company-chennai",
   },
 ];
 
-export default function aboutus() {
+const timeline = [
+  {
+    year: "2020",
+    title: "Founded in Chennai",
+    body: "Trimsel was founded with a small team of engineers in Chennai — focused on mobile app development and web platforms for local businesses and early-stage startups.",
+    link: null,
+  },
+  {
+    year: "2021",
+    title: "First Major Client Projects",
+    body: "Delivered EzyHelpers (home services app) and began work with early clients across Chennai. Built our first CI/CD pipelines and moved into DevOps consulting.",
+    link: { label: "EzyHelpers", href: "/portfolio/ezyhelpers-case-study" },
+  },
+  {
+    year: "2022",
+    title: "Expanded Into AI & Cloud",
+    body: "Added AI development and cloud consulting. Started the KarIOT smart water management project — our first AI + IoT engagement. Opened a second office in Tirunelveli.",
+    link: { label: "KarIOT", href: "/portfolio/kariot-case-study" },
+  },
+  {
+    year: "2023",
+    title: "100+ Projects Milestone",
+    body: "Crossed 100 delivered projects. Completed the Mocial platform migration (EC2 → EKS microservices). Built our digital marketing practice.",
+    link: { label: "Mocial", href: "/portfolio/mocial-case-study" },
+  },
+  {
+    year: "2024",
+    title: "Enterprise & International Growth",
+    body: "Started working with clients in the US and Middle East. Expanded into generative AI and AI agent development. Achieved 92% client retention rate.",
+    link: null,
+  },
+  {
+    year: "2025–2026",
+    title: "200+ Projects & Growing",
+    body: "Crossed 200 delivered projects. Added AEO/GEO (AI search optimisation) to digital marketing services. Continued scaling the team.",
+    link: null,
+  },
+];
+
+export default function AboutUs() {
   const posts = getFilteredPosts([], 3);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
 
-      <section className="w-full relative">
-        {/* TOP SECTION */}
-        <div className="relative bg-gradient-to-r from-[#dbeafe] via-[#e0f2fe] to-[#fef3c7] px-6 py-12">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center mr-8 mt-10 md:mt-12 md:px-12 lg:px-20">
-            <div className="-ml-8">
-              {/* BREADCRUMB */}
-              <p className="text-md md:text-base font-medium text-black mt-2">
-                <Link
-                  href="/"
-                  className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
-                >
-                  Home
-                </Link>
-
-                {" • "}
-
-                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
-                  About Us
-                </span>
-              </p>
-              <h1 className="mt-2 text-5xl font-bold text-gray-800 leading-tight">
-                Who are{" "}
-                <span className="bg-blue-500 text-white px-3 py-1 rounded-lg">
-                  We
-                </span>{" "}
-                ?
-              </h1>
-
-              <p className="mt-4 text-gray-700 font-medium text-sm sm:text-base flex items-center whitespace-nowrap">
-                <span className="bg-blue-500 text-white px-4 py-1 rounded-md mr-2 font-medium text-sm sm:text-base max-w-lg">
-                  Mission
-                </span>
-                Critical Digital Solutions for Complete Business Transformations
-              </p>
-            </div>
-
-            <div>
-              <p className="text-gray-800 font-medium text-sm sm:text-base max-w-lg">
-                Transform your business processes by migrating from legacy
-                solutions to modern technology and developments that guarantee
-                growth, optimization, and ROI for your business.
-              </p>
-            </div>
-          </div>
-
-          {/* Let's Talk BUTTON — straddles content/image boundary */}
-          <div className="hidden sm:block absolute right-4 bottom-0 translate-y-1/2 z-10 w-44 h-44">
-            <svg
-              viewBox="0 0 160 160"
-              className="w-full h-full animate-spin"
-              style={{ animationDuration: "12s" }}
-            >
-              <defs>
-                <path
-                  id="circle"
-                  d="M 80,80 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
-                />
-              </defs>
-              <text
-                fontSize="11.5"
-                fill="#9CA3AF"
-                letterSpacing="2.5"
-                fontFamily="sans-serif"
+      {/* ── 1. HERO ── */}
+      <section className="relative flex min-h-screen lg:min-h-[100dvh] items-center overflow-hidden bg-gradient-to-br from-[#dbeafe] via-[#e0f2fe] to-[#f0f9ff]">
+        <div className="container mx-auto grid max-w-7xl gap-10 px-4 pt-24 pb-12 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12 lg:pt-10 lg:pb-0">
+          {/* LEFT */}
+          <div className="relative z-20 text-center text-black md:text-left">
+            <p className="text-md font-medium text-black mt-2 mb-4">
+              <Link
+                href="/"
+                className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]"
               >
-                <textPath href="#circle">
-                  . Discuss your project idea . Discuss your project idea
-                </textPath>
-              </text>
-            </svg>
+                Home
+              </Link>
+              {" • "}
+              <span className="px-2 py-1 rounded-md">About Us</span>
+            </p>
 
-            {/* Center Link Button */}
-            <Link
-              href="/contact-us"
-              className="absolute inset-0 m-auto w-16 h-16 bg-blue-500 hover:bg-blue-600 transition-colors rounded-full flex items-center justify-center text-white text-xs font-semibold text-center leading-tight shadow-md"
-            >
-              Let&apos;s talk
-            </Link>
+            <h1 className="mt-4 mb-6 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
+              About Trimsel — Software Development Company in Chennai, India
+            </h1>
+
+            <p className="mb-4 max-w-xl text-lg font-semibold text-[#1C75BC]">
+              Building Products That Work. For Businesses That Can&apos;t Afford
+              Ones That Don&apos;t.
+            </p>
+
+            <p className="mb-8 max-w-xl text-base text-gray-700 leading-relaxed">
+              We started in Chennai in 2020 with one goal — help businesses stop
+              struggling with outdated technology and start building digital
+              products that actually perform. Six years, 200+ projects, and a 92%
+              client retention rate later, we&apos;re still run by the same team,
+              still based in Chennai, and still focused on the same thing —
+              building technology that works in production, not just in
+              presentations.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+              >
+                Talk to Our Team
+                <Image
+                  src="/Home/right-arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="arrow"
+                />
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-3 rounded-lg border-2 border-[#27AAE1] px-7 py-3.5 text-base font-semibold text-[#27AAE1] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#27AAE1] hover:text-white"
+              >
+                See Our Work
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* IMAGE SECTION */}
-        <div className="relative">
-          <Image
-            src="/aboutus-Heroimage.svg"
-            alt="team"
-            width={80}
-            height={80}
-            className="w-full h-[500px] object-cover"/>
-
-          <div className="absolute inset-0 flex items-center justify-between px-10">
-            <h1 className="text-[200px] font-bold text-white/20">M</h1>
-            <h1 className="text-[200px] font-bold text-white/20">M</h1>
+          {/* RIGHT */}
+          <div className="relative mx-auto flex w-full max-w-[520px] items-center justify-center">
+            <Image
+              src="/aboutus-Heroimage.svg"
+              alt="Trimsel engineering team in Chennai"
+              width={520}
+              height={400}
+              className="relative z-10 h-auto w-full"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      {/* Works */}
-      <section className="bg-white text-black py-16">
-        <div className="container mx-auto px-4 sm:px-6">
-          {/* Heading */}
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+      {/* ── 2. WHO WE ARE + STATS ── */}
+      <section className="bg-white py-16 md:py-24 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#1C75BC] text-center mb-3">
             WHO WE ARE
-          </h2>
-
-          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
-            We&apos;re Experts At Helping Businesses Reach Their True Potential
-          </h2>
-
-          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Transform your business processes by migrating from legacy solutions
-            to modern technology and developments that guarantee growth,
-            optimization, and ROI for your business. Trimsel was founded at the
-            right moment to meet the challenges faced by businesses and enable
-            them to meet their digital transformation goals. Established in 2020
-            in Chennai, Trimsel and its robust team of developers and
-            consultants have provided Product Engineering and Digital
-            Transformation services to Fortune 500 companies and start-up
-            enterprises globally.
           </p>
+          <h2 className="text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl mb-6">
+            A Chennai-Based Engineering Team That Turns Ideas Into Products That
+            Perform
+          </h2>
 
-          {/* Stats */}
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          <div className="max-w-4xl mx-auto space-y-4 text-gray-700 font-medium leading-relaxed text-center">
+            <p>
+              We started in 2020 with a small team in Chennai and a simple
+              observation — most businesses don&apos;t have a technology problem.
+              They have a partner problem. They&apos;ve worked with agencies that
+              overpromised and underdelivered, freelancers who disappeared
+              mid-project, or offshore teams that built exactly what was
+              specified but missed what was actually needed.
+            </p>
+            <p>
+              Trimsel was built to be the alternative. We&apos;re an
+              engineering-first company — our founders are developers, not
+              salespeople. We&apos;ve grown to a team of 15+ across Chennai and
+              Tirunelveli, working with startups finding product-market fit and
+              established businesses rebuilding legacy systems. We&apos;ve
+              delivered mobile apps, AI systems, web platforms, cloud
+              infrastructure, and marketing campaigns for clients across India,
+              the US, and the Middle East. We don&apos;t just build and leave —
+              we stay involved, ask the hard questions, and make sure what we
+              deliver actually works for your business and your users.
+            </p>
+          </div>
+
+          {/* STATS */}
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
               <Image
                 src="/icons/about-whatwedo1.svg"
-                alt="Projects"
+                alt="Projects Delivered"
                 width={50}
                 height={50}
               />
-              <div className="text-3xl sm:text-4xl font-bold">150+</div>
-              <p className="mt-2 text-sm font-medium text-black">
-                Products launched
+              <div className="text-3xl sm:text-4xl font-bold text-gray-900">
+                200+
+              </div>
+              <p className="text-sm font-medium text-gray-600">
+                Projects Delivered
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Image
                 src="/icons/about-whatwedo2.svg"
-                alt="Projects"
+                alt="Client Retention"
                 width={50}
                 height={50}
               />
-              <div className="text-3xl sm:text-4xl font-bold">$200M</div>
-              <p className="mt-2 text-sm font-medium text-black">
-                Raised by our clients
+              <div className="text-3xl sm:text-4xl font-bold text-gray-900">
+                92%
+              </div>
+              <p className="text-sm font-medium text-gray-600">
+                Client Retention Rate
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Image
                 src="/icons/about-whatwedo3.svg"
-                alt="Projects"
+                alt="Founded"
                 width={50}
                 height={50}
               />
-              <div className="text-3xl sm:text-4xl font-bold">1000+</div>
-              <p className="mt-2 text-sm font-medium text-black">
-                Tech experts On-board
+              <div className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Since 2020
+              </div>
+              <p className="text-sm font-medium text-gray-600">
+                Building From Chennai
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Image
                 src="/icons/about-whatwedo4.svg"
-                alt="Projects"
+                alt="In-House Team"
                 width={50}
                 height={50}
               />
-              <div className="text-3xl sm:text-4xl font-bold">100%</div>
-              <p className="mt-2 text-sm font-medium text-black">
-                Bootstrapped
+              <div className="text-3xl sm:text-4xl font-bold text-gray-900">
+                100%
+              </div>
+              <p className="text-sm font-medium text-gray-600">
+                In-House Team
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#f5f7fb] py-20 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start lg:ml-8">
-          {/* LEFT CONTENT */}
-          <div>
-            <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl text-gray-800 leading-snug">
-              Reinventing Business Environments with the Power of Technology.
-            </h2>
+      {/* ── 3. MISSION, VALUES & APPROACH ── */}
+      <section className="bg-[#f5f7fb] py-16 md:py-24 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl text-gray-900 mb-4">
+            What We Stand For — And How We Actually Work
+          </h2>
+          <p className="text-gray-600 font-medium max-w-3xl mb-12 leading-relaxed">
+            Technology should make running your business easier, not harder.
+            That&apos;s the principle behind everything we build at Trimsel.
+          </p>
 
-            <p className="mt-6 text-gray-600 leading-relaxed max-w-5xl mx-auto font-medium">
-              Trimsel delivers end-to-end digital solutions built around your business goals. With a customer-first approach, we combine deep technical expertise with strategic thinking to help you outpace the competition. Our engineers tackle complex challenges with scalable, future-ready solutions that create lasting value for your business.
-            </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Mission */}
+            <div className="relative bg-blue-100 rounded-2xl p-8 shadow-sm">
+              <div className="absolute top-0 right-0 w-16 h-12 bg-[#f5f7fb] clip-cut" />
+              <Image
+                src="/icons/our-value.svg"
+                alt="Mission"
+                width={44}
+                height={44}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Our Mission
+              </h3>
+              <p className="text-gray-700 font-medium leading-relaxed">
+                Build technology that helps businesses operate better, reach more
+                customers, and grow without being held back by the tools they
+                depend on. Every project we take on is measured by one question
+                — did it make the client&apos;s business genuinely better than it
+                was before we started?
+              </p>
+            </div>
 
-            <p className="mt-4 text-gray-600 leading-relaxed max-w-5xl mx-auto font-medium">
-              We don't just build software — we build partnerships. Our team invests time to understand your domain, your constraints, and your ambitions, then delivers solutions that scale with you over the long term.
-            </p>
+            {/* Values */}
+            <div className="relative bg-blue-100 rounded-2xl p-8 shadow-sm">
+              <div className="absolute top-0 right-0 w-16 h-12 bg-[#f5f7fb] clip-cut" />
+              <Image
+                src="/icons/our-value.svg"
+                alt="Values"
+                width={44}
+                height={44}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Our Values
+              </h3>
+              <p className="text-gray-700 font-medium leading-relaxed">
+                We believe good work starts with honesty. We tell you what&apos;s
+                actually possible, give you realistic timelines, and never
+                overpromise to win a project. If something isn&apos;t worth
+                building, we&apos;ll tell you. If a cheaper approach works just
+                as well, we&apos;ll recommend it. That&apos;s how we&apos;ve
+                maintained a 92% client retention rate — by earning trust, not
+                by locking clients into contracts.
+              </p>
+            </div>
 
-            {/* BUTTON */}
+            {/* Approach */}
+            <div className="relative bg-blue-100 rounded-2xl p-8 shadow-sm">
+              <div className="absolute top-0 right-0 w-16 h-12 bg-[#f5f7fb] clip-cut" />
+              <Image
+                src="/icons/our-approach.svg"
+                alt="Approach"
+                width={44}
+                height={44}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Our Approach
+              </h3>
+              <p className="text-gray-700 font-medium leading-relaxed">
+                We don&apos;t follow a fixed process because no two businesses are
+                the same. We listen first, plan carefully, and build in stages —
+                keeping you involved at every step so the end product matches
+                what you actually need. Every project gets a dedicated team lead
+                who stays your single point of contact from kickoff to launch and
+                beyond.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10">
             <Link
               href="/contact-us"
-              className="mt-8 inline-flex bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg items-center gap-2 shadow-md font-medium transition"
+              className="inline-flex items-center gap-2 bg-[#1C9ACF] text-white font-medium px-6 py-3 rounded-md hover:bg-[#168bb9] transition"
             >
-              Talk To Our Expert
+              Talk to Our Team
               <Image
                 src="/Home/right-arrow.svg"
-                width={20}
-                height={20}
-                alt="RightArrow"
+                alt="arrow"
+                width={16}
+                height={16}
               />
             </Link>
           </div>
+        </div>
+      </section>
 
-          {/* RIGHT CARDS */}
-          <div className="space-y-6">
-            {/* CARD 1 */}
-            <div className="relative bg-blue-200 rounded-2xl p-6 shadow-sm">
-              {/* Corner Cut */}
-              <div className="absolute top-0 right-0 w-16 h-12 bg-[#f5f7fb] clip-cut"></div>
+      {/* ── 4. WHAT DRIVES US — FeaturesGrid ── */}
+      <FeaturesGrid
+        eyebrow="WHAT DRIVES US"
+        heading="What Keeps Us Doing Our Best Work"
+        description="We use modern tools and proven methods — not because they're trendy, but because they deliver better results."
+        features={whatDrivesUs}
+        columns={3}
+        sectionClass="bg-white"
+      />
 
-              <div className="flex flex-col items-start gap-3">
-                {/* ICON */}
+      {/* ── 5. WHAT WE DO — Service cards with links ── */}
+      <section className="bg-[#f5f7fb] py-16 md:py-24 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#1C75BC] text-center mb-3">
+            WHAT WE DO
+          </p>
+          <h2 className="text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl mb-3">
+            Everything Your Business Needs to Build, Launch, and Grow Digitally
+          </h2>
+          <p className="text-center text-gray-600 font-medium max-w-2xl mx-auto mb-12">
+            Every business has a different challenge. We have the engineering
+            depth and marketing expertise to help with all of it.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                href={service.href}
+                className="group bg-white rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4"
+              >
                 <Image
-                  src="/icons/our-value.svg"
-                  alt="values"
-                  width={40}
-                  height={40}
+                  src={service.icon}
+                  alt={service.title}
+                  width={48}
+                  height={48}
                 />
-
-                {/* TITLE */}
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Our Values
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#1C75BC] transition-colors">
+                  {service.title}
                 </h3>
-
-                {/* CONTENT */}
-                <p className="text-gray-600 font-medium leading-relaxed">
-                  At Trimsel, we build with purpose — every solution is crafted with precision, grounded in proven technology, and aligned to your long-term goals. We believe great software should work flawlessly today and scale confidently tomorrow.
+                <p className="text-gray-600 font-medium leading-relaxed text-sm flex-1">
+                  {service.description}
                 </p>
-              </div>
-            </div>
+                <span className="text-[#1C9ACF] text-sm font-semibold inline-flex items-center gap-1">
+                  Learn more
+                  <Image
+                    src="/Home/right-arrow.svg"
+                    alt="arrow"
+                    width={14}
+                    height={14}
+                  />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* CARD 2 */}
-            <div className="relative bg-blue-200 rounded-2xl p-6 shadow-sm">
-              {/* Corner Cut */}
-              <div className="absolute top-0 right-0 w-16 h-12 bg-[#f5f7fb] clip-cut"></div>
+      {/* ── 6. OUR JOURNEY — Timeline ── */}
+      <section className="bg-white py-16 md:py-24 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl mb-12">
+            From Two Founders to a Full-Service Engineering Team
+          </h2>
 
-              <div className="flex flex-col items-start gap-3">
-                {/* ICON */}
-                <Image
-                  src="/icons/our-approach.svg"
-                  alt="values"
-                  width={40}
-                  height={40}
-                />
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-[#1C75BC]/20 hidden sm:block" />
 
-                {/* TITLE */}
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Our Approach
-                </h3>
+            <div className="space-y-10">
+              {timeline.map((item, index) => (
+                <div key={index} className="relative sm:pl-16">
+                  {/* Year circle */}
+                  <div className="hidden sm:flex absolute left-0 top-1 w-12 h-12 rounded-full bg-[#1C75BC] text-white text-xs font-bold items-center justify-center text-center leading-tight shrink-0">
+                    {item.year.includes("–") ? (
+                      <span className="text-[9px]">{item.year}</span>
+                    ) : (
+                      item.year
+                    )}
+                  </div>
 
-                {/* CONTENT */}
-                <p className="text-gray-600 font-medium leading-relaxed">
-                  At Trimsel, we build with purpose — every solution is crafted with precision, grounded in proven technology, and aligned to your long-term goals. We believe great software should work flawlessly today and scale confidently tomorrow.
-                </p>
-              </div>
+                  <div className="bg-[#f5f7fb] rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="sm:hidden inline-block bg-[#1C75BC] text-white text-xs font-bold px-2 py-1 rounded-full">
+                        {item.year}
+                      </span>
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 font-medium leading-relaxed">
+                      {item.link ? (
+                        <>
+                          {item.body.split(item.link.label)[0]}
+                          <Link
+                            href={item.link.href}
+                            className="text-[#1896cd] underline underline-offset-2 font-semibold"
+                          >
+                            {item.link.label}
+                          </Link>
+                          {item.body.split(item.link.label)[1]}
+                        </>
+                      ) : (
+                        item.body
+                      )}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-24 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto bg-[#0a0a0af2] rounded-[40px] px-8 py-14 md:px-16 md:py-20 shadow-2xl">
-          {/* HEADER */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-14 mb-16 items-start">
-            <h2 className="text-3xl md:text-[42px] font-bold text-white leading-[1.15]">
-              What drives Us On To The Excellence Path
-            </h2>
+      {/* ── 7. OUR OFFICES ── */}
+      <section className="bg-[#f5f7fb] py-16 md:py-24 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl mb-12">
+            Where We Work
+          </h2>
 
-            <p className="text-white/80 text-md font-medium md:text-base leading-relaxed md:pt-3">
-              Our expert teams rely on modern tools and technology that provides
-              a wide range of opportunities to build products and solutions that
-              are scalable.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            {/* Chennai */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-[#1C75BC] flex items-center justify-center shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#1C75BC]">
+                    Headquarters
+                  </p>
+                  <h3 className="font-semibold text-gray-900">
+                    Chennai Office
+                  </h3>
+                </div>
+              </div>
+              <p className="text-gray-600 font-medium leading-relaxed text-sm mb-2">
+                No.21-B 5th Cross Street, South Phase Thiru VI KA Industrial
+                Estate, Indira Nagar, Guindy, Chennai, Tamil Nadu — 600032
+              </p>
+              <p className="text-gray-500 text-sm mb-4">
+                Our primary engineering and delivery office.
+              </p>
+              <a
+                href="https://maps.google.com/?q=Trimsel+Softwares+Guindy+Chennai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#1C9ACF] text-sm font-semibold hover:underline"
+              >
+                Get Directions
+                <Image
+                  src="/Home/right-arrow.svg"
+                  alt="arrow"
+                  width={14}
+                  height={14}
+                />
+              </a>
+            </div>
+
+            {/* Tirunelveli */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-[#27AAE1] flex items-center justify-center shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#27AAE1]">
+                    Branch Office
+                  </p>
+                  <h3 className="font-semibold text-gray-900">
+                    Tirunelveli Office
+                  </h3>
+                </div>
+              </div>
+              <p className="text-gray-600 font-medium leading-relaxed text-sm mb-2">
+                1st Floor, Crystal Plaza State Bank, 138/2, NGO B Colony, New
+                Colony, Tirunelveli, Tamil Nadu — 627007
+              </p>
+              <p className="text-gray-500 text-sm mb-4">
+                Supports development and QA operations.
+              </p>
+              <a
+                href="https://maps.google.com/?q=Crystal+Plaza+Tirunelveli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#1C9ACF] text-sm font-semibold hover:underline"
+              >
+                Get Directions
+                <Image
+                  src="/Home/right-arrow.svg"
+                  alt="arrow"
+                  width={14}
+                  height={14}
+                />
+              </a>
+            </div>
           </div>
 
-          {/* CARDS */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-[#1c1d21] p-8 md:p-10 rounded-[28px] hover:-translate-y-2 transition duration-300"
+          {/* Contact info */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-gray-700 font-medium">
+            <a
+              href="mailto:contact@trimsel.com"
+              className="flex items-center gap-2 hover:text-[#1C9ACF] transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 text-[#1C75BC]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
               >
-                {/* ICON */}
-                <div className="mb-8 w-20 h-20 relative -ml-2">
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={100}
-                    height={100}
-                    className="object-contain"
-                  />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              contact@trimsel.com
+            </a>
+            <a
+              href="tel:+917200841581"
+              className="flex items-center gap-2 hover:text-[#1C9ACF] transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 text-[#1C75BC]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              +91 72008 41581
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. MEET THE TEAM ── */}
+      <section className="bg-white py-16 md:py-24 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#1C75BC] text-center mb-3">
+            OUR TEAM
+          </p>
+          <h2 className="text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl mb-3">
+            The People Behind Your Product
+          </h2>
+          <p className="text-center text-gray-600 font-medium max-w-2xl mx-auto mb-12">
+            Every project at Trimsel is led by the same engineers and
+            strategists who scope it. No bait-and-switch. No rotating junior
+            developers after the kickoff call.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              {
+                initials: "BT",
+                name: "Balaji T K",
+                title: "Founder & Director",
+                description:
+                  "15+ years of industry experience across development, DevOps, infrastructure, and AI/ML — setting the technical direction and staying involved in architecture decisions across every major project.",
+              },
+              {
+                initials: "SP",
+                name: "Selva Prakash G",
+                title: "Full Stack Developer",
+                description:
+                  "Leads frontend and backend development across React, Next.js, and Node.js — building the web platforms and applications our clients depend on daily.",
+              },
+              {
+                initials: "RM",
+                name: "RajaMani",
+                title: "Mobile App Developer",
+                description:
+                  "Builds native and cross-platform mobile apps using Flutter and React Native — from UI implementation to App Store deployment and performance optimisation.",
+              },
+              {
+                initials: "V",
+                name: "Vincent",
+                title: "SEO Analyst",
+                description:
+                  "Drives organic search visibility through technical SEO audits, keyword strategy, content optimisation, and performance tracking across Google Search Console and analytics platforms.",
+              },
+            ].map((member) => (
+              <div
+                key={member.name}
+                className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex gap-5 items-start"
+              >
+                <div className="shrink-0 w-16 h-16 rounded-full bg-[#1C75BC] text-white flex items-center justify-center text-lg font-bold">
+                  {member.initials}
                 </div>
-
-                {/* TITLE */}
-                <h3 className="text-white text-xl md:text-2xl font-semibold mb-4">
-                  {card.title}
-                </h3>
-
-                {/* DESCRIPTION */}
-                <p className="text-[#a1a1aa] text-md font-medium md:text-[15px] leading-relaxed">
-                  {card.description}
-                </p>
+                <div>
+                  <p className="font-bold text-gray-900">{member.name}</p>
+                  <p className="text-blue-600 text-sm font-semibold mb-2">
+                    {member.title}
+                  </p>
+                  <p className="text-gray-600 text-sm font-medium leading-relaxed">
+                    {member.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <Whatwedo />
-
-      {/* Getintouch */}
-      <GetInTouchBanner
-        eyebrow="JOIN US"
-        heading="Let's Build Something Meaningful"
-        description="We're always looking for ambitious projects and great people. Whether you want to work with us or join us — reach out."
-        ctaText="Talk to Our Experts"
-        ctaLink="/contact-us"
-        image="/aboutus-getintouch.svg"
-        imageAlt="About Trimsel contact"
-        bgClass="bg-[#DEFFCE]"
-      />
-
-      <CaseStudyCarousel
-        studies={[caseStudies.xaber, caseStudies.mocial, caseStudies.kariot, caseStudies.ezyhelpers]}
-        heading="Work That Defines Us."
-        description="A selection of projects that reflect how we approach complex problems — with practical thinking, reliable execution, and measurable outcomes."
-      />
-
-      <Testimonial />
-
-      <IndustriesWeServe />
-
-      <LatestInsights posts={posts} />
-
+      {/* ── 9. CLIENT LOGOS ── */}
       <Client />
 
+      {/* ── 9. TESTIMONIALS ── */}
+      <Testimonial />
+
+      {/* ── 10. CONTACT FORM ── */}
       <Contactform
         eyebrow="WORK WITH US"
-        heading="Let's Build Something Great Together"
-        subheading="We're a team of 50+ engineers, designers, and strategists based in Chennai. Whether you need a dedicated team or a project partner, we'd love to hear about what you're building."
+        heading="Ready to Build Something That Actually Works?"
+        subheading="Whether you need a product built from scratch, an existing system improved, or a marketing strategy that brings in real customers — tell our team what you're working with."
         formTitle="Start a Conversation"
         defaultService=""
       />
 
+      {/* ── 11. BLOG ── */}
+      <LatestInsights posts={posts} />
     </>
   );
 }

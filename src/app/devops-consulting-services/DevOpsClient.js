@@ -8,134 +8,189 @@ import Faq from "@/components/Faq";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import CaseStudyCarousel from "@/components/CaseStudyCarousel";
 import { caseStudies } from "@/data/caseStudies";
 import FeaturesGrid from "@/components/FeaturesGrid";
+import TechStackTabs from "@/components/TechStackTabs";
+import DevOpsProcessAccordion from "@/app/devops-consulting-services/DevOpsProcessAccordion";
 import IndustriesWeServe from "@/components/IndustriesWeServe";
 import Testimonial from "@/components/testimonial";
 
 const services = [
   {
     id: 1,
-    title: "Continuous Integration",
+    title: "CI/CD Pipeline Automation",
     icon: "/icons/devopsservices1.svg",
     description:
-      "CI is an industry standard to detect problems early. Our experts use tools like Jenkins, Docker, and Kubernetes to improve collaboration and save time.",
+      "We design and implement automated build, test, and deployment pipelines using Jenkins, GitHub Actions, GitLab CI, Azure DevOps, and AWS CodePipeline. Every pipeline includes automated testing gates, artifact management, environment promotion workflows, and rollback mechanisms.",
     points: [
-      "Better Time Management",
-      "Instant Feedback",
-      "Early Problem Detection",
-      "Productive Development",
-      "No Last-minute Issues",
+      "Jenkins & GitHub Actions",
+      "Automated Testing Gates",
+      "Artifact Management",
+      "Environment Promotion",
+      "Rollback Mechanisms",
     ],
   },
   {
     id: 2,
-    title: "Continuous Delivery",
+    title: "Infrastructure as Code (IaC)",
     icon: "/icons/devopsservices2.svg",
     description:
-      "Continuous Delivery ensures your software is always deployable with automated release pipelines for faster and reliable updates.",
+      "We manage your infrastructure through code — using Terraform, Ansible, CloudFormation, and Pulumi to provision, modify, and version-control servers, networks, databases, and security groups programmatically. No more manual SSH sessions. Every environment is reproducible, auditable, and can be recreated in minutes.",
     points: [
-      "Faster Releases",
-      "Reduced Risk",
-      "Automated Pipelines",
-      "Consistent Deployments",
-      "Improved Collaboration",
+      "Terraform & Ansible",
+      "Version-Controlled Infra",
+      "Reproducible Environments",
+      "CloudFormation & Pulumi",
+      "Audit Trails",
     ],
   },
   {
     id: 3,
-    title: "Infrastructure Management",
+    title: "Kubernetes & Container Management",
     icon: "/icons/devopsservices3.svg",
     description:
-      "We automate and manage infrastructure to ensure scalability, reliability, and security across all environments.",
+      "We deploy and manage containerized applications on Kubernetes — including EKS, AKS, and GKE clusters — with Docker containerization, Helm chart management, horizontal pod autoscaling, pod disruption budgets, and namespace isolation. We build orchestration environments that scale automatically and recover from failures.",
     points: [
-      "Auto Scaling",
-      "Cost Optimization",
-      "High Availability",
-      "Security Compliance",
-      "24/7 Monitoring",
+      "EKS, AKS & GKE",
+      "Helm Chart Management",
+      "Horizontal Pod Autoscaling",
+      "Namespace Isolation",
+      "Self-Healing Clusters",
     ],
   },
   {
     id: 4,
-    title: "Configuration Management",
+    title: "DevSecOps Integration",
     icon: "/icons/devopsservices4.svg",
     description:
-      "Ensure consistency across systems using tools like Ansible, Puppet, and Chef with automated configuration management.",
+      "We embed security into every stage of your delivery pipeline — SAST/DAST scanning in CI pipelines, container image vulnerability scanning with Trivy, secrets management with HashiCorp Vault, network policies in Kubernetes, and compliance monitoring aligned with SOC 2, HIPAA, and PCI-DSS.",
     points: [
-      "Environment Consistency",
-      "Reduced Errors",
-      "Version Control",
-      "Automated Rollbacks",
-      "Faster Provisioning",
+      "SAST/DAST in CI Pipelines",
+      "Container Image Scanning",
+      "Secrets Management (Vault)",
+      "Kubernetes Network Policies",
+      "SOC 2 & HIPAA Alignment",
     ],
   },
   {
     id: 5,
-    title: "Continuous Testing",
+    title: "Monitoring & Observability",
     icon: "/icons/devopsservices5.svg",
     description:
-      "Automated testing integrated into every stage helps detect bugs early and maintain high software quality.",
+      "We implement full-stack observability — infrastructure metrics with Prometheus and Grafana, centralised logging with ELK Stack or Loki, distributed tracing with Jaeger or OpenTelemetry, and alerting with PagerDuty or Opsgenie. Dashboards that show what's happening in production right now.",
     points: [
-      "Automated Test Suites",
-      "Early Bug Detection",
-      "Faster Feedback",
-      "Improved Code Quality",
-      "Reduced QA Costs",
+      "Prometheus & Grafana",
+      "ELK Stack / Loki Logging",
+      "OpenTelemetry Tracing",
+      "PagerDuty Alerting",
+      "Custom Dashboards",
     ],
   },
   {
     id: 6,
-    title: "Continuous Monitoring",
+    title: "Cloud Infrastructure Automation",
     icon: "/icons/devopsservices6.svg",
     description:
-      "Real-time monitoring ensures maximum uptime, performance tracking, and quick incident resolution.",
+      "We automate cloud provisioning, scaling, and lifecycle management across AWS, Azure, and GCP — setting up auto-scaling groups, load balancers, CDN layers, backup policies, and cost governance rules. Our cloud automation typically reduces infrastructure costs by 30–40%.",
     points: [
-      "Real-time Alerts",
-      "Performance Insights",
-      "Log Management",
-      "Incident Response",
-      "Uptime Guarantee",
+      "Auto-Scaling Groups",
+      "Load Balancer Config",
+      "CDN & Caching Layers",
+      "Backup Policies",
+      "Cost Governance Rules",
     ],
   },
   {
     id: 7,
-    title: "Microservices",
+    title: "Microservices Architecture & Migration",
     icon: "/icons/devopsservices7.svg",
     description:
-      "We build scalable microservices architectures for flexibility, faster deployment, and easy maintenance.",
+      "We help teams decompose monolithic applications into independently deployable microservices — defining service boundaries, designing inter-service communication (REST, gRPC, message queues), implementing API gateways, and setting up service mesh infrastructure with Istio or Linkerd.",
     points: [
-      "Independent Scaling",
-      "Fault Isolation",
-      "Technology Flexibility",
-      "Faster Development",
-      "Easy Maintenance",
+      "Service Boundary Design",
+      "REST & gRPC Comms",
+      "API Gateway Setup",
+      "Service Mesh (Istio)",
+      "Canary Deployments",
     ],
   },
 ];
 
-const features = [
+const whyTrimsel = [
   {
     icon: "/icons/Devops-what-we-do1.svg",
-    title: "Complex Delivery Experience",
-    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
+    title: "60+ Pipelines in Production",
+    description:
+      "We've built and maintained CI/CD pipelines for 60+ projects — SaaS platforms, FinTech products, e-commerce systems, and enterprise applications. These are production systems running deployments every day with 99.95% uptime targets.",
   },
   {
     icon: "/icons/Devops-what-we-do2.svg",
-    title: "Skilled And Talented Engineers",
-    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
+    title: "Certified DevOps Engineers",
+    description:
+      "Our team works daily with Kubernetes, Docker, Jenkins, GitHub Actions, Terraform, Ansible, Prometheus, and Grafana. Engineers who have managed production infrastructure under real traffic — not consultants who set up tools once.",
   },
   {
     icon: "/icons/Devops-what-we-do3.svg",
-    title: "Best Security Integration",
-    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
+    title: "Security-First Pipeline Design",
+    description:
+      "Every pipeline includes automated security scanning — SAST, DAST, container image scanning, secrets management, and compliance gates. DevSecOps from the start, not as an afterthought.",
   },
   {
     icon: "/icons/Devops-what-we-do4.svg",
-    title: "Dedicated DevOps Team",
-    description: "We have years of experience in helping organizations streamline the release cycles of different applications, from legacy to agile and beyond. Our experts ensure that the best CI/CD practices are implemented.",
+    title: "Vendor-Neutral Tooling Recommendations",
+    description:
+      "We recommend Jenkins, GitHub Actions, GitLab CI, ArgoCD, or CircleCI based on your team's workflow and infrastructure needs — not based on partnership deals.",
+  },
+  {
+    icon: "/icons/devopsservices5.svg",
+    title: "We Stay Until Your Team Can Run It",
+    description:
+      "We implement the pipeline, monitor it in production, train your engineers, and stay involved until your team can operate independently. Or we offer dedicated managed DevOps support with 24/7 monitoring.",
+  },
+  {
+    icon: "/icons/devopsservices6.svg",
+    title: "Mocial Is What We Actually Deliver",
+    description:
+      "Our migration of Mocial from EC2 monolith to EKS microservices with Codefresh CI/CD, canary deployments, and full observability is documented in a public case study — showing exactly how we work.",
+  },
+];
+
+const techTabs = [
+  {
+    name: "CI/CD & SOURCE CONTROL",
+    tools: [
+      { name: "Jenkins", icon: "/icons/Tools/jenkins.svg" },
+      { name: "GitHub Actions", icon: "/icons/Tools/githubactions.svg" },
+      { name: "GitLab CI", icon: "/icons/Tools/gitlabci.svg" },
+      { name: "Codefresh", icon: "/icons/Tools/codefresh.svg" },
+      { name: "Docker", icon: "/icons/Tools/docker.svg" },
+      { name: "Kubernetes", icon: "/icons/Tools/kubernetes.svg" },
+      { name: "Terraform", icon: "/icons/Tools/terraform.svg" },
+      { name: "Ansible", icon: "/icons/Tools/ansible.svg" },
+    ],
+  },
+  {
+    name: "INFRASTRUCTURE & CONTAINERS",
+    tools: [
+      { name: "Terraform", icon: "/icons/Tools/terraform.svg" },
+      { name: "Ansible", icon: "/icons/Tools/ansible.svg" },
+      { name: "Docker", icon: "/icons/Tools/docker.svg" },
+      { name: "Kubernetes", icon: "/icons/Tools/kubernetes.svg" },
+      { name: "AWS EKS", icon: "/icons/Tools/awseks.svg" },
+      { name: "Prometheus", icon: "/icons/Tools/prometheus.svg" },
+      { name: "Grafana", icon: "/icons/Tools/grafana.svg" },
+    ],
+  },
+  {
+    name: "MONITORING & SECURITY",
+    tools: [
+      { name: "Prometheus", icon: "/icons/Tools/prometheus.svg" },
+      { name: "Grafana", icon: "/icons/Tools/grafana.svg" },
+      { name: "Docker", icon: "/icons/Tools/docker.svg" },
+      { name: "Kubernetes", icon: "/icons/Tools/kubernetes.svg" },
+      { name: "GitHub Actions", icon: "/icons/Tools/githubactions.svg" },
+    ],
   },
 ];
 
@@ -146,15 +201,17 @@ export default function DevOpsConsulting({ posts = [] }) {
   return (
     <main>
       <Header transparent />
+
+      {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#003b5c_0%,_transparent_30%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#003b5c_0%,_transparent_30%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#003b5c_0%,_transparent_30%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#003b5c_0%,_transparent_30%)]" />
 
         <div className="container mx-auto mt-6 md:mt-10 px-4 py-8 text-white sm:py-12">
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 md:px-12 lg:px-20">
             {/* LEFT CONTENT */}
             <div className="relative z-20 text-center md:text-left">
-              {/* BREADCRUMB */}
+              {/* Breadcrumb */}
               <p className="text-md md:text-base font-medium text-white mb-4">
                 <Link
                   href="/"
@@ -162,68 +219,147 @@ export default function DevOpsConsulting({ posts = [] }) {
                 >
                   Home
                 </Link>
-
                 {" • "}
-
-                <span className="px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:text-[#1896cd]">
-                  Devops Consulting Services
-                </span>
+                <span className="px-2 py-1 rounded-md">DevOps Consulting Services</span>
               </p>
 
-              <h1 className="mb-8 text-4xl font-bold leading-tight sm:text-5xl">
-                Leading DevOps Consulting Services
+              <h1 className="mb-4 text-4xl font-bold leading-tight sm:text-5xl">
+                DevOps Consulting Services in India
               </h1>
 
-              <p className="mb-8 max-w-xl text-base sm:text-lg">
-                Trimsel is a top-rated DevOps company in India offering
-                expert DevOps consulting services to businesses worldwide. We
-                help teams build scalable CI/CD pipelines, leverage Kubernetes,
-                and automate infrastructure for high-speed, secure, and reliable
-                deployments.
+              <h2 className="mb-6 text-xl font-semibold text-[#27AAE1] sm:text-2xl">
+                Ship Faster. Break Less. Scale Without the Fire Drills.
+              </h2>
+
+              <p className="mb-8 max-w-xl text-base sm:text-lg text-white/90 font-medium">
+                Trimsel provides DevOps consulting services built around one goal — helping your
+                engineering team deploy reliably, recover quickly, and scale infrastructure without
+                adding operational overhead. Our DevOps engineers implement CI/CD pipelines,
+                Kubernetes orchestration, Terraform-based infrastructure as code, and DevSecOps
+                practices that turn fragile manual deployments into repeatable, automated, and
+                secure delivery workflows.
               </p>
 
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
-              >
-                Contact Our Cloud Expert{" "}
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="RightArrow"
-                />
-              </Link>
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center gap-3 rounded-lg bg-[#27AAE1] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1896cd] hover:shadow-lg"
+                >
+                  Schedule a DevOps Consultation
+                  <Image src="/Home/right-arrow.svg" width={20} height={20} alt="" />
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="inline-flex items-center gap-3 rounded-lg border border-white/30 bg-white/10 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20"
+                >
+                  See Our DevOps Work
+                </Link>
+              </div>
             </div>
 
             {/* RIGHT IMAGE */}
             <div className="relative z-10 flex justify-center md:justify-end">
               <Image
                 src="/devops-hero.svg"
-                alt="DevOps Illustration"
+                alt="DevOps consulting services in India — CI/CD pipelines, Kubernetes, and infrastructure automation"
                 width={750}
                 height={750}
                 className="h-auto w-full max-w-[300px] sm:max-w-md md:max-w-xl"
-                priority/>
+                priority
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-10 py-16">
-        <div className="mb-8">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
-            WHAT WE DO
-          </h3>
-          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            Our DevOps Service Offerings
-          </h2>
+      {/* Proof Strip */}
+      <section className="bg-[#0d1b2a] border-t border-white/10 py-6 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+          <div>
+            <p className="text-xl font-bold text-[#27AAE1]">60+</p>
+            <p className="text-sm font-medium mt-1 text-gray-300">CI/CD Pipelines Built</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#27AAE1]">99.95%</p>
+            <p className="text-sm font-medium mt-1 text-gray-300">Uptime SLA</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#27AAE1]">Mocial</p>
+            <p className="text-sm font-medium mt-1 text-gray-300">EC2 → EKS Migration</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#27AAE1]">Jenkins, Terraform</p>
+            <p className="text-sm font-medium mt-1 text-gray-300">& Kubernetes</p>
+          </div>
+        </div>
+      </section>
 
+      {/* What We Do — Service Overview */}
+      <section className="bg-white py-16 px-4 md:px-10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            WHAT WE DO
+          </h2>
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            DevOps Services Built for Teams That Ship to Production Every Day
+          </h3>
+
+          <div className="mt-8 space-y-5 max-w-4xl mx-auto text-gray-800 font-medium leading-relaxed">
+            <p>
+              Most teams we work with come to us with the same problem — deployments are slow,
+              risky, or both. Their engineers spend hours babysitting releases, infrastructure
+              changes require manual SSH sessions, and when something breaks in production,
+              nobody&apos;s sure what changed or when. DevOps isn&apos;t about adopting tools —
+              it&apos;s about building systems that make shipping safe, fast, and boring.
+            </p>
+            <p>
+              At Trimsel, we&apos;ve built and maintained 60+ CI/CD pipelines for SaaS platforms,
+              FinTech products, e-commerce systems, and enterprise applications — using Jenkins,
+              GitHub Actions, GitLab CI, Terraform, Ansible, Docker, and Kubernetes. We
+              don&apos;t just set up tools and hand over a wiki — we implement the full delivery
+              pipeline, monitor it in production, and stay involved until your team can run it
+              independently. We pair every DevOps engagement with the right{" "}
+              <Link
+                href="/cloud-consulting-services"
+                className="text-[#1C75BC] underline hover:text-[#1568a0]"
+              >
+                cloud infrastructure
+              </Link>{" "}
+              to support it.
+            </p>
+            <p>
+              Our DevOps work on the{" "}
+              <Link
+                href="/portfolio"
+                className="text-[#1C75BC] underline hover:text-[#1568a0]"
+              >
+                Mocial platform
+              </Link>{" "}
+              is the clearest example of what we do. Mocial started as a single EC2 monolith. We
+              migrated it to a microservices architecture on Amazon EKS with Codefresh CI/CD,
+              canary deployments, OpenTelemetry observability, and horizontal pod autoscaling.
+              The team went from dreading deployments to shipping multiple times a week with
+              confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* DevOps Services — 7 cards, left-nav layout */}
+      <section className="bg-white px-4 md:px-10 py-16">
+        <div className="mb-8 max-w-6xl mx-auto">
+          <h2 className="mt-4 text-center text-2xl font-semibold leading-tight text-[#1C75BC] sm:text-3xl md:text-4xl">
+            OUR DEVOPS SERVICES
+          </h2>
+          <h3 className="mt-4 text-center text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl">
+            End-to-End DevOps Services — From Pipeline Setup to Production Operations
+          </h3>
           <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Different phases of Devops process integrated into any business
-            model seamlessly. Businesses to modernize their technologies.
+            Every DevOps engagement starts with understanding how your team ships code today —
+            and what&apos;s breaking or slowing you down.
           </p>
         </div>
+
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-16">
             {/* LEFT — Tab List */}
@@ -238,7 +374,6 @@ export default function DevOpsConsulting({ posts = [] }) {
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >
-                  {/* ICON */}
                   <Image
                     src={s.icon}
                     alt={s.title}
@@ -246,8 +381,6 @@ export default function DevOpsConsulting({ posts = [] }) {
                     height={35}
                     className={`${active === i ? "brightness-0 invert" : ""}`}
                   />
-
-                  {/* TITLE */}
                   <span>{s.title}</span>
                 </button>
               ))}
@@ -255,32 +388,18 @@ export default function DevOpsConsulting({ posts = [] }) {
 
             {/* RIGHT — Content Card */}
             <div className="relative rounded-xl bg-[#EBF4FF] p-6 sm:p-8 max-w-2xl ml-0 md:ml-32">
-              {/* Large number watermark */}
               <span className="absolute top-4 right-6 text-6xl font-bold text-white select-none">
                 {selected.id}.
               </span>
-
-              {/* Icon */}
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-white/700 shadow-sm">
-                <Image
-                  src={selected.icon}
-                  alt={selected.title}
-                  width={40}
-                  height={40}
-                />
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-white/70 shadow-sm">
+                <Image src={selected.icon} alt={selected.title} width={40} height={40} />
               </div>
-
-              {/* Title */}
               <h3 className="mb-3 text-xl font-bold text-gray-900 sm:text-2xl">
-                {selected.title} :
+                {selected.title}
               </h3>
-
-              {/* Description */}
               <p className="mb-5 text-md leading-relaxed text-gray-600 sm:text-base max-w-lg font-medium">
                 {selected.description}
               </p>
-
-              {/* Points — 2 column grid */}
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
                 {selected.points.map((point) => (
                   <li
@@ -297,49 +416,25 @@ export default function DevOpsConsulting({ posts = [] }) {
         </div>
       </section>
 
-      <section className="bg-white px-10 py-16">
-        <div className="mb-8">
-          <h3 className="text-[#1C75BC] text-center text-2xl font-semibold tracking-widest">
-            IMPLEMENTATION PROCESS
-          </h3>
-
-          <h2 className="mt-4 text-center text-2xl md:text-4xl font-semibold">
-            Step By Step Devops Implementation Process
-          </h2>
-
-          <p className="mt-4 max-w-5xl mx-auto text-center text-black font-medium">
-            Different phases of Devops process integrated into any business
-            model seamlessly. Modern technology and cloud computing have opened
-            new avenues for businesses to modernize.
-          </p>
-        </div>
-
-        {/* IMAGE BELOW CONTENT */}
-        <div className="flex justify-center mt-10">
-          <Image
-            src="/ImplementationProcess.svg" // put your image in public folder
-            alt="What we do"
-            width={1200}
-            height={600}
-            className="w-[100%] md:w-[100%]"/>
-        </div>
-      </section>
-
+      {/* Why Trimsel — 6 cards */}
       <FeaturesGrid
-        eyebrow="WHY CHOOSE US"
-        heading="Why choose Trimsel for your DevOps services?"
-        description="Clients choose us because of our ability to improve business agility, increase efficiency, and reduce costs. We are differentiated by our."
-        features={features}
-        columns={4}
-        dark={true}
+        eyebrow="WHY TRIMSEL"
+        heading="Why Engineering Teams Choose Trimsel for DevOps Consulting"
+        description="We've built DevOps foundations for startups shipping their first release and enterprises untangling years of deployment debt."
+        features={whyTrimsel}
+        columns={3}
+        sectionClass="bg-gradient-to-br from-[#eef3f8] to-[#f7f4ef]"
       />
 
-      {/* Getintouch */}
+      {/* DevOps Implementation Process — 5 steps */}
+      <DevOpsProcessAccordion />
+
+      {/* Mid-page CTA */}
       <GetInTouchBanner
-        eyebrow="STREAMLINE OPS"
-        heading="Deploy Faster With Confidence"
-        description="Our DevOps engineers build CI/CD pipelines, automate infrastructure, and set up monitoring — so your team ships code faster with fewer failures."
-        ctaText="Talk to Our Experts"
+        eyebrow="GET IN TOUCH"
+        heading="Build Faster and More Stable Deployment Environments"
+        description="Whether you're setting up your first CI/CD pipeline or migrating from a monolith to microservices — tell our DevOps engineers what you're working with."
+        ctaText="Schedule a DevOps Consultation"
         ctaLink="/contact-us"
         image="/Devops-getintouch.svg"
         imageAlt="DevOps consulting contact"
@@ -347,28 +442,38 @@ export default function DevOpsConsulting({ posts = [] }) {
         darkBg={true}
       />
 
-      <CaseStudyCarousel
-        studies={[caseStudies.kariot, caseStudies.mocial, caseStudies.ezyhelpers]}
+      {/* Tools & Technologies */}
+      <TechStackTabs
+        eyebrow="TOOLS AND TECHNOLOGIES"
+        heading="The DevOps Stack We Build and Manage"
+        description="We choose tools based on what each project actually needs — not what's popular on conference talks."
+        tabs={techTabs}
       />
 
-      <Testimonial />
+      {/* Case Studies — Mocial first */}
+      <CaseStudyCarousel
+        studies={[caseStudies.mocial, caseStudies.kariot, caseStudies.ezyhelpers]}
+      />
 
       <Client />
 
-      <IndustriesWeServe />
+      <Testimonial />
+
+      <IndustriesWeServe
+        description="We've built and managed DevOps infrastructure for SaaS platforms, FinTech products, healthcare applications, e-commerce systems, IoT platforms, and enterprise operations — each with its own compliance requirements, uptime expectations, and release frequency demands."
+      />
 
       <Contactform
-        eyebrow="AUTOMATE & SCALE"
-        heading="Want Faster, More Reliable Deployments?"
-        subheading="Tell us about your infrastructure challenges. From CI/CD pipelines and Kubernetes orchestration to monitoring and incident response — we'll build a DevOps practice that actually works."
-        formTitle="Discuss Your DevOps Needs"
+        eyebrow="GET IN TOUCH"
+        heading="Struggling with Slow or Risky Deployments? Let's Fix That."
+        subheading="Tell our DevOps engineers what you're working with — current stack, deployment frequency, pain points — and we'll assess your pipeline and give you a clear plan."
+        formTitle="Start Your DevOps Project"
         defaultService="DevOps"
       />
 
       <LatestInsights posts={posts} />
 
       <Faq />
-
     </main>
   );
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import { useState } from "react";
 import Testimonial from "@/components/testimonial";
+import Faq from "@/components/Faq";
 
 export default function ContactUs() {
   const [active, setActive] = useState("Mobile App");
@@ -14,7 +15,7 @@ export default function ContactUs() {
     { name: "DevOps", icon: "/contactus10.svg" },
     { name: "Web Dev", icon: "/contactus11.svg" },
     { name: "Cloud", icon: "/contactus12.svg" },
-    { name: "Consulting", icon: "/contactus13.svg" },
+    { name: "Digital Marketing", icon: "/contactus13.svg" },
   ];
 
   return (
@@ -40,8 +41,9 @@ export default function ContactUs() {
         {/* Content */}
         <div className="relative flex flex-col items-center justify-center min-h-[500px] text-center px-4 pt-10">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-            Get in touch with{" "}
-            <span className="text-blue-600 font-bold">Trimsel</span>
+            Get in Touch with{" "}
+            <span className="text-blue-600 font-bold">Trimsel</span>{" "}
+            — Let&apos;s Build Something That Works
           </h1>
 
           <p className="mt-3 text-gray-600 text-md font-medium md:text-lg">
@@ -69,8 +71,8 @@ export default function ContactUs() {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-6 mt-8">
             {[
-              { icon: "/contactus1.svg", text: "50+ Projects" },
-              { icon: "/contactus2.svg", text: "4.9 Rating" },
+              { icon: "/contactus1.svg", text: "200+ Projects" },
+              { icon: "/contactus2.svg", text: "4.8★ Rating" },
               { icon: "/contactus3.svg", text: "NDA Protected" },
               { icon: "/contactus4.svg", text: "Fast Delivery" },
             ].map((item, i) => (
@@ -204,21 +206,21 @@ export default function ContactUs() {
 
               <div className="flex justify-center items-center text-center gap-6 sm:gap-14 mb-4">
                 <div className="px-4">
-                  <p className="text-lg font-semibold">50+</p>
+                  <p className="text-lg font-semibold">200+</p>
                   <p className="text-md text-white font-medium">PROJECTS</p>
                 </div>
 
                 <div className="h-8 w-px bg-gray-500"></div>
 
                 <div className="px-4">
-                  <p className="text-lg font-semibold">4.9</p>
+                  <p className="text-lg font-semibold">4.8★</p>
                   <p className="text-md text-white font-medium">RATING</p>
                 </div>
 
                 <div className="h-8 w-px bg-gray-500"></div>
 
                 <div className="px-4">
-                  <p className="text-lg font-semibold">8yr</p>
+                  <p className="text-lg font-semibold">Since 2020</p>
                   <p className="text-md text-white font-medium">EXPERIENCE</p>
                 </div>
               </div>
@@ -241,7 +243,7 @@ export default function ContactUs() {
 
               <div className="space-y-6 text-md">
                 <div className="flex gap-3">
-                  <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-sm text-white font-semibold">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-sm text-white font-semibold shrink-0">
                     1
                   </span>
 
@@ -250,13 +252,13 @@ export default function ContactUs() {
                       Submit your form or WhatsApp us
                     </h6>
                     <p className="text-gray-500 text-sm font-medium">
-                      We confirm receipt immediately
+                      We confirm receipt immediately — you&apos;ll know we got your message.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-3">
-                  <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-sm text-white font-semibold">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-sm text-white font-semibold shrink-0">
                     2
                   </span>
 
@@ -265,13 +267,13 @@ export default function ContactUs() {
                       Our team reviews your requirements
                     </h6>
                     <p className="text-gray-500 text-sm font-medium">
-                      We confirm receipt immediately
+                      A relevant engineer or strategist reviews your brief and prepares questions or a preliminary assessment — typically within a few hours.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-3">
-                  <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-sm text-white font-semibold">
+                  <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-sm text-white font-semibold shrink-0">
                     3
                   </span>
 
@@ -280,7 +282,7 @@ export default function ContactUs() {
                       You receive a detailed quote
                     </h6>
                     <p className="text-gray-500 text-sm font-medium">
-                      We confirm receipt immediately
+                      Within 24 hours, you get a clear proposal with scope, timeline, team structure, and pricing — no vague &ldquo;it depends&rdquo; estimates.
                     </p>
                   </div>
                 </div>
@@ -435,60 +437,101 @@ export default function ContactUs() {
         </div>
       </section>
 
-      <section className="bg-white py-6">
-        <div className="max-w-8xl mx-auto px-6">
-          <div className="bg-white rounded-xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            {/* LEFT SIDE */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-black text-lg font-bold">
-                <Image
-                  src="/locationcontactus.svg"
-                  alt="Location icon"
-                  width={16}
-                  height={16}
-                  style={{ width: 'auto', height: 'auto' }}
-                />
-                <span>Our Office</span>
-              </div>
+      {/* ── OUR OFFICES ── */}
+      <section className="bg-white py-12 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-2 text-black text-lg font-bold mb-6">
+            <Image
+              src="/locationcontactus.svg"
+              alt="Location icon"
+              width={16}
+              height={16}
+              style={{ width: "auto", height: "auto" }}
+            />
+            <span>Our Offices</span>
+          </div>
 
-              <h5 className="font-semibold text-black text-lg">
-                Trimsel Software
-              </h5>
-
-              <div className="mt-4 text-base font-medium sm:text-lg">
-                <a
-                  href="https://maps.app.goo.gl/nX3ZD9gEBCxwdTPg7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer"
-                >
-                  No.21-B 5th Cross Street, South Phase Thiru VI <br />
-                  KA Industrial Estate, Indira Nagar, Guindy, Chennai, Tamil
-                  Nadu - 600032.
-                </a>
-              </div>
-
-              <p className="mt-4 text-md text-green-600 font-medium">
-                Mon–Fri 9:00 AM – 6:00 PM
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Chennai */}
+            <div className="bg-[#f4f6f8] rounded-xl p-6 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#1C75BC]">
+                Headquarters
               </p>
+              <h5 className="font-semibold text-black text-lg">
+                Chennai Office
+              </h5>
+              <p className="text-base font-medium text-gray-700 leading-relaxed">
+                No.21-B 5th Cross Street, South Phase Thiru VI KA Industrial
+                Estate, Indira Nagar, Guindy, Chennai, Tamil Nadu — 600032
+              </p>
+              <p className="text-sm text-green-600 font-medium">
+                Mon–Sat 9:00 AM – 6:00 PM
+              </p>
+              <a
+                href="https://maps.app.goo.gl/nX3ZD9gEBCxwdTPg7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#1C9ACF] text-sm font-semibold hover:underline mt-1"
+              >
+                Get Directions
+                <Image
+                  src="/Home/right-arrow.svg"
+                  alt="arrow"
+                  width={14}
+                  height={14}
+                />
+              </a>
             </div>
 
-            {/* RIGHT SIDE LOGO */}
-            <div className="w-full md:w-[600px] h-[350px] rounded-xl overflow-hidden border shadow-sm">
-              <iframe
-                src="https://maps.google.com/maps?q=13.0125615,80.2014525&z=15&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
+            {/* Tirunelveli */}
+            <div className="bg-[#f4f6f8] rounded-xl p-6 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#27AAE1]">
+                Branch Office
+              </p>
+              <h5 className="font-semibold text-black text-lg">
+                Tirunelveli Office
+              </h5>
+              <p className="text-base font-medium text-gray-700 leading-relaxed">
+                1st Floor, Crystal Plaza State Bank, 138/2, NGO B Colony, New
+                Colony, Tirunelveli, Tamil Nadu — 627007
+              </p>
+              <p className="text-sm text-green-600 font-medium">
+                Mon–Sat 9:00 AM – 6:00 PM
+              </p>
+              <a
+                href="https://maps.google.com/?q=Crystal+Plaza+Tirunelveli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#1C9ACF] text-sm font-semibold hover:underline mt-1"
+              >
+                Get Directions
+                <Image
+                  src="/Home/right-arrow.svg"
+                  alt="arrow"
+                  width={14}
+                  height={14}
+                />
+              </a>
             </div>
+          </div>
+
+          {/* Map — Chennai */}
+          <div className="w-full h-[350px] rounded-xl overflow-hidden border shadow-sm">
+            <iframe
+              src="https://maps.google.com/maps?q=13.0125615,80.2014525&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </section>
 
       <Testimonial />
+
+      <Faq />
     </main>
   );
 }

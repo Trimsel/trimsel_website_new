@@ -2,50 +2,54 @@
 export const faqData = {
   devops: [
     {
-      question: "What is DevOps?",
+      question: "How do I choose the best DevOps consulting company in India?",
       answer:
-        "DevOps is a set of practices that combines development and IT operations.",
+        "Look for a team with real production deployments — not just tool certifications. At Trimsel, we've built 60+ CI/CD pipelines with 99.95% uptime targets — including the Mocial EC2-to-EKS migration documented in a public case study. Our 92% client retention rate reflects how that approach works.",
     },
     {
-      question: "Do you provide CI/CD?",
-      answer: "Yes, we implement CI/CD pipelines using modern tools.",
-    },
-    {
-      question: "What is DevOps?",
+      question: "How much do DevOps consulting services cost in India?",
       answer:
-        "DevOps is a set of practices that combines development and IT operations.",
+        "A focused CI/CD pipeline setup typically ranges from ₹3–8 lakhs. Full DevOps transformation including IaC, Kubernetes, monitoring, and DevSecOps ranges from ₹10–30 lakhs. Enterprise-scale implementations vary beyond that. We give a clear estimate after an infrastructure audit.",
     },
     {
-      question: "Do you provide CI/CD?",
-      answer: "Yes, we implement CI/CD pipelines using modern tools.",
-    },
-    {
-      question: "What is DevOps?",
+      question: "How long does DevOps implementation take?",
       answer:
-        "DevOps is a set of practices that combines development and IT operations.",
+        "A CI/CD pipeline for a single application can be implemented in 2–4 weeks. A full DevOps foundation typically takes 6–12 weeks. Enterprise transformations with microservices migration are implemented in phases over 3–6 months.",
     },
     {
-      question: "Do you provide CI/CD?",
-      answer: "Yes, we implement CI/CD pipelines using modern tools.",
-    },
-    {
-      question: "What is DevOps?",
+      question: "What's the difference between CI/CD and DevOps?",
       answer:
-        "DevOps is a set of practices that combines development and IT operations.",
+        "CI/CD automates the build, test, and deployment process — one component of DevOps. DevOps is broader — including CI/CD plus infrastructure as code, monitoring, security automation, incident response, and the engineering practices that make teams ship reliably.",
     },
     {
-      question: "Do you provide CI/CD?",
-      answer: "Yes, we implement CI/CD pipelines using modern tools.",
-    },
-    {
-      question: "What is DevOps?",
+      question: "Should we use Kubernetes or is it overkill for our application?",
       answer:
-        "DevOps is a set of practices that combines development and IT operations.",
+        "Kubernetes makes sense when you're running multiple services needing independent scaling, automated recovery, and rolling deployments. If you have a single monolithic application with steady traffic, simpler deployment on EC2 or ECS might be more appropriate. We assess your actual workload patterns before recommending.",
     },
     {
-      question: "Do you provide CI/CD?",
+      question: "What is Infrastructure as Code and do we need it?",
       answer:
-        "Our client-first approach, commitment to innovation, and cross-functional expertise make us a reliable digital transformation partner. We deliver scalable, and future-ready tech solution, not just code.",
+        "Infrastructure as Code means managing servers, networks, and cloud resources through code (Terraform, CloudFormation, Ansible) instead of manual console clicks. If your team is still provisioning infrastructure manually, IaC is the single highest-impact DevOps improvement you can make.",
+    },
+    {
+      question: "What is DevSecOps and how does it differ from traditional security?",
+      answer:
+        "Traditional security reviews happen after code is built. DevSecOps integrates security checks directly into the CI/CD pipeline — automated vulnerability scanning, container image checks, secrets detection, and compliance validation run on every commit. Issues caught in minutes, not weeks.",
+    },
+    {
+      question: "Can you set up monitoring and observability for our existing infrastructure?",
+      answer:
+        "Yes — we implement Prometheus and Grafana for metrics, ELK Stack or Loki for logs, OpenTelemetry for distributed tracing, and PagerDuty for alerting — integrated with your existing infrastructure. Most teams see 40–60% reduction in mean time to detection within the first month.",
+    },
+    {
+      question: "Do you provide ongoing managed DevOps support?",
+      answer:
+        "Yes — every engagement includes post-implementation support. For long-term managed operations, we provide 24/7 monitoring, incident response, security patching, pipeline maintenance, and cost optimisation on agreed SLAs. Dedicated DevOps contact, not a ticket queue.",
+    },
+    {
+      question: "Why choose Trimsel for DevOps consulting services?",
+      answer:
+        "Three things: 60+ production pipelines with 99.95% uptime targets including the documented Mocial migration. Vendor-neutral tooling recommendations based on your needs. And we stay involved after implementation with managed support and training. 92% client retention rate.",
     },
   ],
 
@@ -162,87 +166,107 @@ export const faqData = {
 
   cloud: [
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How do I choose the best cloud consulting company in Chennai?",
+      answer:
+        "Look for a team that is vendor-neutral — meaning they recommend AWS, Azure, or GCP based on your actual workload needs, not their partnership incentives. At Trimsel, our cloud projects have delivered an average of 40% cost savings with 99.95% uptime across production environments — and we stay involved long after the migration is complete.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "How much does cloud migration cost in India?",
+      answer:
+        "Cost depends on infrastructure complexity, number of workloads, compliance requirements, and target platform. A focused migration of 2–5 applications typically ranges from ₹5–15 lakhs. Enterprise migrations can range from ₹15–50 lakhs or more. We provide a clear estimate after an infrastructure assessment.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How long does cloud migration take?",
+      answer:
+        "A straightforward migration of a few applications typically takes 4–8 weeks. Complex enterprise migrations with multiple environments and compliance requirements can take 3–6 months. We use a phased approach with rollback plans — so your operations continue running throughout.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Which cloud platform should I choose — AWS, Azure, or GCP?",
+      answer:
+        "Each platform has genuine strengths. AWS has the broadest service catalogue. Azure integrates deeply with Microsoft enterprise tools. GCP excels in data analytics, machine learning, and Kubernetes-native workloads. We assess your workloads, team skills, and budget before recommending — and we support all three.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "What is the difference between cloud migration and cloud-native development?",
+      answer:
+        "Cloud migration moves existing applications from on-premise to cloud — often with minimal code changes or moderate restructuring. Cloud-native builds new applications specifically for cloud using containers, microservices, and serverless architecture. We do both.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Can you reduce our current cloud costs without affecting performance?",
+      answer:
+        "Yes — most businesses are overspending on cloud by 30–50% due to over-provisioned instances and unused resources. We run a cloud cost audit that identifies specific savings. Our clients see an average of 40% cost reduction within the first 90 days.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Do you provide managed cloud support after migration?",
+      answer:
+        "Yes — every cloud project includes post-migration support. We provide 24/7 monitoring, security patching, performance optimisation, incident response, and cost management on agreed SLAs. You get a dedicated cloud operations contact.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Is our data secure during and after cloud migration?",
+      answer:
+        "Security is built into every stage — encrypted data transfer, access controls, network isolation, and security validation before production cutover. Post-migration, we implement IAM policies, encryption, automated backups, and compliance monitoring for HIPAA, SOC 2, PCI-DSS, or GDPR.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Can cloud infrastructure support AI and automation workloads?",
+      answer:
+        "Yes — modern cloud platforms are specifically designed for AI model training, data pipeline orchestration, and automation workflows. AWS SageMaker, Google Vertex AI, and Azure ML provide managed environments. We design cloud infrastructure that supports AI workloads from day one.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Why choose Trimsel for cloud consulting services in Chennai?",
+      answer:
+        "Three things set us apart. We're vendor-neutral — recommending based on your needs, not partner margins. We've delivered 40% average cost savings with 99.95% uptime, including the Mocial EC2-to-EKS migration. And we stay involved after migration with dedicated cloud operations support. Our 92% client retention rate reflects how that approach works.",
     },
   ],
 
   digital: [
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How do I choose the best digital marketing company in Chennai?",
+      answer:
+        "Look for transparent reporting, proven results across multiple channels, and a team that understands attribution — not just social followers or impressions. Trimsel delivers 180% average traffic growth and 4.5x ROAS with full conversion tracking on every campaign.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "How much does digital marketing cost in India?",
+      answer:
+        "SEO retainers typically start from ₹25,000–60,000/month. Google Ads management starts from ₹15,000/month plus ad spend. Full-service digital marketing — SEO, paid, social, and content — ranges from ₹50,000–2,00,000/month depending on channels and scale. We give a clear breakdown after understanding your goals.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "How long does SEO take to show results?",
+      answer:
+        "Technical SEO fixes show measurable impact in 4–8 weeks. Competitive keyword ranking improvements typically take 3–6 months. Paid channels like Google Ads and Meta Ads can generate leads within the first week of launch.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Should I run Google Ads or focus on SEO first?",
+      answer:
+        "It depends on your timeline and budget. Google Ads generates immediate traffic and qualified leads. SEO builds long-term organic visibility at lower cost per click. Most businesses benefit from running both in parallel — paid for immediate leads, SEO for long-term compounding growth. We assess your situation and recommend the right mix.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "What is AEO and GEO and why does it matter?",
+      answer:
+        "AEO (Answer Engine Optimisation) targets featured snippets and voice search answers. GEO (Generative Engine Optimisation) ensures your brand appears in AI-generated answers from ChatGPT, Gemini, and Perplexity. As AI search grows, these are becoming as important as traditional SEO for brand visibility.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Can you manage our social media accounts?",
+      answer:
+        "Yes — we handle strategy, content creation, scheduling, community management, and paid social across Instagram, LinkedIn, Facebook, and X (Twitter). Monthly reports show reach, engagement, and direct lead generation — not just vanity metrics.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "What is performance marketing and how is it different from digital marketing?",
+      answer:
+        "Digital marketing covers all online channels including SEO, content, social, and email. Performance marketing specifically refers to paid campaigns — Google Ads, Meta Ads, LinkedIn Ads — where you pay per click or conversion and results are directly measurable against ROI. We do both.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Do you run Meta Ads (Facebook and Instagram) campaigns?",
+      answer:
+        "Yes — we run prospecting, retargeting, and lead generation campaigns across Facebook and Instagram. We use conversion-optimised creative, audience segmentation, lookalike audiences, and A/B testing to maximise ROAS and reduce cost per lead.",
     },
     {
-      question: "Do you build mobile apps?",
-      answer: "Yes, we develop Android and iOS apps.",
+      question: "Can digital marketing work for B2B businesses?",
+      answer:
+        "Yes — B2B digital marketing uses LinkedIn Ads, SEO for high-intent keywords, content marketing, and email nurturing to generate qualified leads. We align messaging with your sales funnel — top-of-funnel awareness through to bottom-of-funnel decision content.",
     },
     {
-      question: "What tech stack do you use?",
-      answer: "We use Flutter, React Native, and native technologies.",
+      question: "Why choose Trimsel for digital marketing services in Chennai?",
+      answer:
+        "We combine data-first strategy with full-channel execution — SEO, paid media, social, and content as one integrated team, not separate silos. Our engineering background means we understand the technical side of digital marketing that most agencies miss: Core Web Vitals, JavaScript rendering, and conversion tracking infrastructure. 180% traffic growth. 4.5x ROAS. 55% CPL reduction.",
     },
   ],
 
@@ -351,6 +375,39 @@ export const faqData = {
       question: "Which industries does Trimsel serve?",
       answer:
         "We've delivered projects across FinTech, HealthTech, on-demand services, IoT and smart systems, logistics, SaaS, e-commerce, real estate, and media. Our clients range from seed-stage startups to established enterprises — and our cross-industry experience means we bring relevant technical patterns and compliance awareness to each engagement.",
+    },
+  ],
+
+  contact: [
+    {
+      question: "What happens after I submit the contact form?",
+      answer:
+        "We confirm receipt immediately. A relevant engineer or strategist reviews your brief — typically within a few hours — and you receive a detailed proposal with scope, timeline, team structure, and pricing within 24 hours. No generic auto-response — you hear from the team that would actually work on your project.",
+    },
+    {
+      question: "Is there a minimum project size to work with Trimsel?",
+      answer:
+        "We work with projects ranging from focused MVPs and single-feature builds (starting from ₹2-3 lakhs) to large-scale enterprise platforms. If your project scope is very small, we'll tell you honestly whether we're the right fit — and recommend alternatives if we're not.",
+    },
+    {
+      question: "Do you sign NDAs before discussing project details?",
+      answer:
+        "Yes — we sign NDAs before any detailed discussion. Your ideas, data, and business information are protected from the first conversation. Every project we take on is NDA-protected by default.",
+    },
+    {
+      question: "Can I schedule a call before submitting a full project brief?",
+      answer:
+        "Yes — use the 'Schedule a Call' option to book a free 30-minute consultation. We use this to understand your project at a high level and assess whether we're the right team — before you invest time writing a detailed brief.",
+    },
+    {
+      question: "What services does Trimsel provide?",
+      answer:
+        "We provide mobile app development, web development, AI development (ML, NLP, computer vision, generative AI), DevOps consulting (CI/CD, Kubernetes, Terraform), cloud consulting (AWS, Azure, GCP), and digital marketing (SEO, Google Ads, Meta Ads, AEO/GEO). Every service is delivered by our 100% in-house team from Chennai.",
+    },
+    {
+      question: "How quickly can you start on a new project?",
+      answer:
+        "For most projects, we can begin within 1-2 weeks of signing the agreement. If you need faster turnaround, let us know during the consultation — we'll tell you honestly what's feasible.",
     },
   ],
 };
