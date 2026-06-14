@@ -4,6 +4,7 @@ import Link from "next/link";
 export default function CTASection({
     title,
     subtitle,
+    description,
     buttonText = "Get Started →",
     bgGradient = "from-orange-400 to-orange-600",
     image,
@@ -15,8 +16,8 @@ export default function CTASection({
     return (
         <section className="w-full px-6 py-16">
             <div
-                className={`max-w-7xl mx-auto rounded-2xl px-8 py-10 md:px-12 md:py-12 
-        flex flex-col md:flex-row items-center justify-between 
+                className={`max-w-7xl mx-auto rounded-2xl px-8 py-10 md:px-12 md:py-12
+        flex flex-col md:flex-row items-center justify-between
         bg-gradient-to-r ${bgGradient} relative overflow-hidden`}
             >
                 {/* LEFT CONTENT */}
@@ -28,6 +29,12 @@ export default function CTASection({
                     <h2 className="mt-2 text-2xl text-white font-semibold leading-tight sm:text-3xl md:text-3xl lg:text-4xl">
                         {title}
                     </h2>
+
+                    {description && (
+                        <p className="mt-3 text-white/80 text-base font-medium leading-relaxed">
+                            {description}
+                        </p>
+                    )}
 
                     {/* ✅ Dynamic Button */}
                     <Link
