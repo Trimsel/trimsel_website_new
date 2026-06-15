@@ -1,6 +1,9 @@
 import "./globals.css";
-import Image from "next/image";
+import Script from "next/script";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Software Development Company in India | Trimsel",
@@ -30,6 +33,9 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: "cB62A54YcMiiZWlDW516EC2D3SzSH7sqpHQ7xFoz4Bc",
   },
 };
 
@@ -74,21 +80,24 @@ export default function RootLayout({ children }) {
         />
         {children}
         <Footer />
-        <a
-          href="https://wa.me/917200841581"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat on WhatsApp"
-          className="fixed bottom-8 right-8 z-[9999] transition-transform duration-200 hover:scale-105"
-        >
-          <Image
-            src="/icons/whatsappicon.svg"
-            alt="WhatsApp"
-            width={60}
-            height={60}
-            priority
-          />
-        </a>
+        <WhatsAppButton />
+        <Analytics />
+        <SpeedInsights />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8PHY8FQ1CW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-8PHY8FQ1CW');
+          `}
+        </Script>
       </body>
     </html>
   );
