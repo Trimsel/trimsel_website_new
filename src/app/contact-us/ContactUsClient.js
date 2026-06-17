@@ -5,9 +5,46 @@ import Header from "@/components/Header";
 import { useState } from "react";
 import Testimonial from "@/components/testimonial";
 import Faq from "@/components/Faq";
+import { trackEvent } from "@/lib/analytics";
 
 export default function ContactUs() {
   const [active, setActive] = useState("Mobile App");
+
+  // Form field state
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Submission state
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, company, service: active, message }),
+      });
+      if (res.ok) {
+        setSuccess(true);
+        trackEvent("form_submit", { service: active });
+        setName(""); setEmail(""); setPhone(""); setCompany(""); setMessage("");
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    }
+    setLoading(false);
+  };
 
   const services = [
     { name: "Mobile App", icon: "/contactus8.svg" },
@@ -304,7 +341,7 @@ export default function ContactUs() {
             </div>
 
             {/* FORM */}
-            <div className="p-5 space-y-4">
+            <form onSubmit={handleSubmit} className="p-5 space-y-4" noValidate>
               {/* SERVICE SELECT */}
               <div>
                 <h5 className="text-lg font-semibold mb-2">Select service</h5>
@@ -339,91 +376,136 @@ export default function ContactUs() {
               <input
                 value={active}
                 readOnly
-                className="border  border-gray-200 p-2 rounded-md text-md font-medium w-full bg-gray-50"
+                className="border border-gray-200 p-2 rounded-md text-md font-medium w-full bg-gray-50"
               />
 
-              {/* INPUTS */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="flex flex-col">
-                  <label className="text-md font-semibold text-gray-800 mb-1">
-                    Full Name
-                  </label>
-                  <input
-                    placeholder="Enter your name"
-                    className="border border-gray-200 p-2 rounded-md text-md font-medium"
-                  />
+              {/* Success state */}
+              {success ? (
+                <div className="py-8 text-center space-y-3">
+                  <div className="flex justify-center">
+                    <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center">
+                      <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="font-semibold text-gray-900">Message sent successfully!</p>
+                  <p className="text-sm text-gray-500 font-medium">We&apos;ll get back to you within 24 hours.</p>
+                  <button
+                    type="button"
+                    onClick={() => setSuccess(false)}
+                    className="text-sm text-[#27AAE1] underline underline-offset-2"
+                  >
+                    Send another message
+                  </button>
                 </div>
+              ) : (
+                <>
+                  {/* INPUTS */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="flex flex-col">
+                      <label className="text-md font-semibold text-gray-800 mb-1">
+                        Full Name
+                      </label>
+                      <input
+                        required
+                        placeholder="Enter your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="border border-gray-200 p-2 rounded-md text-md font-medium"
+                      />
+                    </div>
 
-                <div className="flex flex-col">
-                  <label className="text-md font-semibold text-gray-800 mb-1">
-                    Email
-                  </label>
-                  <input
-                    placeholder="you@company.com"
-                    className="border border-gray-200 p-2 rounded-md text-md font-medium"
-                  />
-                </div>
+                    <div className="flex flex-col">
+                      <label className="text-md font-semibold text-gray-800 mb-1">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        placeholder="you@company.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="border border-gray-200 p-2 rounded-md text-md font-medium"
+                      />
+                    </div>
 
-                <div className="flex flex-col">
-                  <label className="text-md font-semibold text-gray-800 mb-1">
-                    Phone
-                  </label>
-                  <input
-                    placeholder="Phone No"
-                    className="border border-gray-200 p-2 rounded-md text-md font-medium"
-                  />
-                </div>
+                    <div className="flex flex-col">
+                      <label className="text-md font-semibold text-gray-800 mb-1">
+                        Phone
+                      </label>
+                      <input
+                        placeholder="Phone No"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="border border-gray-200 p-2 rounded-md text-md font-medium"
+                      />
+                    </div>
 
-                <div className="flex flex-col">
-                  <label className="text-md font-semibold text-gray-800 mb-1">
-                    Company
-                  </label>
-                  <input
-                    placeholder="Startup / Corp"
-                    className="border border-gray-200 p-2 rounded-md text-md font-medium"
-                  />
-                </div>
-              </div>
+                    <div className="flex flex-col">
+                      <label className="text-md font-semibold text-gray-800 mb-1">
+                        Company
+                      </label>
+                      <input
+                        placeholder="Startup / Corp"
+                        value={company}
+                        onChange={(e) => setCompany(e.target.value)}
+                        className="border border-gray-200 p-2 rounded-md text-md font-medium"
+                      />
+                    </div>
+                  </div>
 
-              <div className="flex flex-col">
-                <label className="text-md font-semibold text-gray-800 mb-1">
-                  Project Details
-                </label>
-                <textarea
-                  placeholder="Describe your project, goals, timeline..."
-                  className="w-full border border-gray-200 p-3 rounded-md text-md font-medium h-24"
-                />
-              </div>
+                  <div className="flex flex-col">
+                    <label className="text-md font-semibold text-gray-800 mb-1">
+                      Project Details
+                    </label>
+                    <textarea
+                      required
+                      placeholder="Describe your project, goals, timeline..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="w-full border border-gray-200 p-3 rounded-md text-md font-medium h-24"
+                    />
+                  </div>
 
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/contactus-message.svg"
-                  width={10}
-                  height={10}
-                  alt="Lock"
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                  style={{ width: 'auto', height: 'auto' }}
-                />
-                <span className="text-sm text-gray-400 font-medium">
-                  Your data is safe. We never share it.
-                </span>
-              </div>
+                  {/* Error message */}
+                  {error && (
+                    <p className="text-red-600 text-sm font-medium">{error}</p>
+                  )}
 
-              {/* BUTTON */}
-              <Link
-                href="/contact-us#contact-form"
-                className="w-full flex items-center justify-center gap-2 bg-[#27AAE1] text-white py-3 rounded-lg text-md font-medium hover:bg-[#27AAE1] transition-all duration-200"
-              >
-                <span>Send My Request</span>
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/contactus-message.svg"
+                      width={10}
+                      height={10}
+                      alt="Lock"
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                      style={{ width: 'auto', height: 'auto' }}
+                    />
+                    <span className="text-sm text-gray-400 font-medium">
+                      Your data is safe. We never share it.
+                    </span>
+                  </div>
 
-                <Image
-                  src="/Home/right-arrow.svg"
-                  width={18}
-                  height={18}
-                  alt="RightArrow"
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                />
-              </Link>
+                  {/* SUBMIT BUTTON */}
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2 bg-[#27AAE1] text-white py-3 rounded-lg text-md font-medium hover:bg-[#1d96c8] transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    <span>{loading ? "Sending…" : "Send My Request"}</span>
+                    {!loading && (
+                      <Image
+                        src="/Home/right-arrow.svg"
+                        width={18}
+                        height={18}
+                        alt="RightArrow"
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                      />
+                    )}
+                  </button>
+                </>
+              )}
 
               <Link
                 href="https://wa.me/917200841581?text=Hi%20Trimsel%20team!%20I'd%20like%20to%20chat%20about%20a%20project."
@@ -432,7 +514,7 @@ export default function ContactUs() {
                 <Image src="/lock.svg" alt="whatsapp" width={18} height={18} />
                 Or message us on WhatsApp
               </Link>
-            </div>
+            </form>
           </div>
         </div>
       </section>
