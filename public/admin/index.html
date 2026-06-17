@@ -1,12 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trimsel CMS</title>
-    <!-- Explicitly tell Decap CMS where to find the config -->
-    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Trimsel CMS</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: "github",
+          repo: "Trimsel/trimsel_website_new",
+          branch: "main",
+          base_url: "https://www.trimsel.com",
+          auth_endpoint: "/api/auth"
+        },
+        media_folder: "public/images/blog",
+        public_folder: "/images/blog",
+        collections: [
+          {
+            name: "blog",
+            label: "Blog Posts",
+            folder: "content/blog",
+            create: true,
+            slug: "{{slug}}",
+            extension: "mdx",
+            format: "frontmatter",
+            fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "datetime" },
+              { label: "Author", name: "author", widget: "string", default: "Trimsel" },
+              { label: "Excerpt", name: "excerpt", widget: "text" },
+              { label: "Cover Image", name: "coverImage", widget: "image" },
+              { label: "Thumbnail", name: "thumbnailUrl", widget: "image" },
+              { label: "Tags", name: "tags", widget: "list" },
+              {
+                label: "SEO",
+                name: "seo",
+                widget: "object",
+                fields: [
+                  { label: "Index", name: "indexing", widget: "boolean", default: true },
+                  { label: "Meta Title", name: "metaTitle", widget: "string" },
+                  { label: "Meta Description", name: "metaDescription", widget: "text" },
+                  { label: "Canonical URL", name: "canonicalUrl", widget: "string", required: false },
+                  { label: "OG Image", name: "ogImage", widget: "image", required: false }
+                ]
+              },
+              { label: "Body", name: "body", widget: "markdown" }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
+</body>
 </html>
