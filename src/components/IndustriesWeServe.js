@@ -4,7 +4,7 @@ const industries = [
   {
     name: "Healthcare",
     bg: "#CBE6FC",
-    icon: "/icons/healthcare.svg",
+    icon: "/icons/Healthcare.svg",
     alt: "Healthcare software development and app solutions",
   },
   {
@@ -16,13 +16,13 @@ const industries = [
   {
     name: "Entertainment",
     bg: "#EDAFF7",
-    icon: "/icons/entertainment.svg",
+    icon: "/icons/Entertainment.svg",
     alt: "Entertainment platform development",
   },
   {
     name: "Logistics",
     bg: "#FAD4B6",
-    icon: "/icons/logistics.svg",
+    icon: "/icons/Logistics.svg",
     alt: "Logistics and supply chain app development",
   },
   {
