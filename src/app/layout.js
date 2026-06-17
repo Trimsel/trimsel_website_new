@@ -37,6 +37,11 @@ export const metadata = {
   verification: {
     google: "cB62A54YcMiiZWlDW516EC2D3SzSH7sqpHQ7xFoz4Bc",
   },
+  icons: {
+    icon: "/trimsel-logo-favicon.svg",
+    shortcut: "/trimsel-logo-favicon.svg",
+    apple: "/trimsel-logo-favicon.svg",
+  },
 };
 
 const organizationSchema = {
