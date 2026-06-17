@@ -294,6 +294,8 @@ export default function DevOpsConsulting({ posts = [] }) {
         </div>
       </section>
 
+      <Client />
+
       {/* What We Do — Service Overview */}
       <section className="bg-white py-16 px-4 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -454,8 +456,6 @@ export default function DevOpsConsulting({ posts = [] }) {
       <CaseStudyCarousel
         studies={[caseStudies.mocial, caseStudies.kariot, caseStudies.ezyhelpers]}
       />
-
-      <Client />
 
       <Testimonial />
 

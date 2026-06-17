@@ -422,6 +422,8 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <Client />
+
       {/* ── 3. MISSION, VALUES & APPROACH ── */}
       <section className="bg-[#f5f7fb] py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
@@ -869,9 +871,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
-      {/* ── 9. CLIENT LOGOS ── */}
-      <Client />
 
       {/* ── 9. TESTIMONIALS ── */}
       <Testimonial />

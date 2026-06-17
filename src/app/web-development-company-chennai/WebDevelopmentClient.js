@@ -363,6 +363,8 @@ export default function WebDevelopment({ posts = [] }) {
         </div>
       </section>
 
+      <Client />
+
       <section className="bg-white py-16 px-4 md:px-10">
         <div>
           <h2 className="mb-8 text-2xl text-center font-semibold leading-tight sm:text-3xl md:text-4xl">
@@ -676,8 +678,6 @@ export default function WebDevelopment({ posts = [] }) {
       <CaseStudyCarousel
         studies={[caseStudies.mocial, caseStudies.ezyhelpers, caseStudies.kariot]}
       />
-
-      <Client />
 
       <Testimonial />
 

@@ -456,6 +456,8 @@ export default function Digitalmarketing() {
         </div>
       </section>
 
+      <Client />
+
       {/* WHAT WE DO */}
       <section className="bg-gradient-to-r from-[#eef3f8] to-[#dde6ef] py-16 px-4 md:px-12">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -650,8 +652,6 @@ export default function Digitalmarketing() {
       <CaseStudyCarousel
         studies={[caseStudies.ezyhelpers, caseStudies.mocial, caseStudies.kariot]}
       />
-
-      <Client />
 
       <Testimonial />
 
