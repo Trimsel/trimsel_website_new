@@ -341,6 +341,28 @@ export default function WebDevelopment({ posts = [] }) {
         </div>
       </section>
 
+      {/* Proof Strip */}
+      <section className="bg-white border-b border-gray-100 py-6 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">180+</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">Web Projects Delivered</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">95%</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">On-Time Delivery</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">React &amp; Next.js</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">Modern Stack</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">24/7</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">Post-Launch Support</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white py-16 px-4 md:px-10">
         <div>
           <h2 className="mb-8 text-2xl text-center font-semibold leading-tight sm:text-3xl md:text-4xl">

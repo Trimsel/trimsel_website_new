@@ -166,6 +166,28 @@ export default function Home({ posts = [] }) {
         </div>
       </section>
 
+      {/* Proof Strip */}
+      <section className="bg-white border-b border-gray-100 py-6 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">200+</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">Projects Delivered</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">92%</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">Client Retention</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">6+</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">Years in Business</p>
+          </div>
+          <div>
+            <p className="text-xl font-bold text-[#1C75BC]">100%</p>
+            <p className="text-sm font-medium mt-1 text-gray-500">In-House Team</p>
+          </div>
+        </div>
+      </section>
+
       {/* client */}
       <Client />
 
