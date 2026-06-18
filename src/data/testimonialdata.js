@@ -6,7 +6,7 @@ const testimonialData = [
     company: "KarIOT (ConvergirSystems)",
     initials: "KD",
     message:
-      "We came to Trimsel with a complex challenge — building a real-time water management platform with IoT sensors, AI demand forecasting, and leak detection. Their team understood the engineering problem deeply. The platform has reduced non-revenue water by 15% across pilot sites. Trimsel is the kind of engineering partner that's hard to find and harder to replace.",
+      "We came to Trimsel with a complex challenge — building a real-time water management platform with IoT sensors, AI demand forecasting, and leak detection. Their team understood the engineering problem deeply. The platform has reduced non-revenue water by 15% across pilot sites.",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const testimonialData = [
     company: "Nanbas Travels",
     initials: "S",
     message:
-      "We wanted a taxi booking app that could compete with the big players but serve our local market properly. Trimsel built us a complete solution — passenger app, driver app, and an admin panel — with real-time tracking, fare calculation, and in-app payments. The app runs smoothly even during peak hours, and the driver onboarding flow made it easy to scale our fleet quickly. What set Trimsel apart was that they understood the taxi business — they didn't just build features, they built the right features for how our operations actually work.",
+      "We wanted a taxi booking app that could compete with the big players but serve our local market properly. Trimsel built us a complete solution — passenger app, driver app, and an admin panel — with real-time tracking, fare calculation, and in-app payments. What set them apart was that they understood the taxi business — they didn't just build features, they built the right features for how our operations actually work.",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const testimonialData = [
     company: "AtoZ E-commerce",
     initials: "D",
     message:
-      "Trimsel delivered a full-stack e-commerce solution with product management, payment integration, logistics tracking, and a mobile app. The platform handles peak-season traffic without breaking, and the admin panel saves our operations team hours every day. On the marketing side, their SEO and social media campaigns brought us consistent organic traffic from day one. It's rare to find a company that does both engineering and marketing well — Trimsel does.",
+      "Trimsel delivered a full-stack e-commerce solution with product management, payment integration, logistics tracking, and a mobile app. The platform handles peak-season traffic without breaking, and the admin panel saves our operations team hours every day. It's rare to find a company that does both engineering and marketing well — Trimsel does.",
   },
 ];
 

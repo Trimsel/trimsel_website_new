@@ -30,7 +30,7 @@ export default function Testimonial() {
           {testimonialData?.map((item) => (
             <div
               key={item.id}
-              className="relative mx-3 w-[280px] min-h-[280px] flex flex-col rounded-lg bg-gray-100 px-5 py-7 shadow-lg overflow-hidden sm:mx-6 sm:w-[340px] md:w-[420px]"
+              className="relative mx-3 w-[280px] h-[320px] flex flex-col rounded-lg bg-gray-100 px-5 py-7 shadow-lg overflow-hidden sm:mx-6 sm:w-[340px] md:w-[420px]"
             >
               {/* LinkedIn Icon */}
               <Image
@@ -64,8 +64,8 @@ export default function Testimonial() {
               </span>
 
               {/* Message */}
-              <div className="mt-12 left-2 relative z-10">
-                <p className="text-black font-medium">{item.message}</p>
+              <div className="mt-12 left-2 relative z-10 overflow-hidden">
+                <p className="text-black font-medium line-clamp-7">{item.message}</p>
               </div>
             </div>
           ))}
