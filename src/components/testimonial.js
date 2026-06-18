@@ -30,7 +30,7 @@ export default function Testimonial() {
           {testimonialData?.map((item) => (
             <div
               key={item.id}
-              className="relative mx-3 w-[280px] h-[480px] flex flex-col rounded-lg bg-gray-100 px-5 py-7 shadow-lg sm:mx-6 sm:w-[340px] md:w-[420px]"
+              className="relative mx-3 w-[280px] h-[540px] flex flex-col rounded-lg bg-gray-100 px-5 pt-7 pb-8 shadow-lg sm:mx-6 sm:w-[340px] md:w-[420px]"
             >
               {/* LinkedIn Icon */}
               <Image
