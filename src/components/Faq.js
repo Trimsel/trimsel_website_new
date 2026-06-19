@@ -12,6 +12,7 @@ export default function FaqSection() {
   const routeMap = {
     devops: "devops",
     mobile: "mobile",
+    ecommerce: "ecommerce",
     web: "web",
     cloud: "cloud",
     digital: "digital",

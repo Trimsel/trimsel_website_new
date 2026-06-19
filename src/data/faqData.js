@@ -443,4 +443,47 @@ export const faqData = {
         "For most projects, we can begin within 1-2 weeks of signing the agreement. If you need faster turnaround, let us know during the consultation — we'll tell you honestly what's feasible.",
     },
   ],
+
+  ecommerce: [
+    {
+      question: "How much does e-commerce website development cost in India?",
+      answer:
+        "A standard e-commerce website (catalogue, cart, payments, admin panel) typically ranges from ₹3–8 lakhs. Feature-rich platforms with custom checkout flows, loyalty programs, and multi-vendor support range from ₹10–25 lakhs. Enterprise implementations with ERP integrations vary beyond that. We give a fixed-price quote after a requirements session — no hourly billing surprises.",
+    },
+    {
+      question: "How long does it take to build an e-commerce website?",
+      answer:
+        "A production-ready e-commerce site takes 6–12 weeks depending on catalogue size, integrations, and custom features. Shopify-based projects with standard themes can go live in 3–4 weeks. Custom React/Next.js storefronts with headless commerce architecture take 10–16 weeks. We give you a realistic timeline upfront — not an optimistic one.",
+    },
+    {
+      question: "Shopify, WooCommerce, or custom — which platform is best?",
+      answer:
+        "Shopify suits brands that want a fast launch, minimal technical overhead, and a proven ecosystem of apps — ideal for D2C brands under ₹10 Cr annual GMV. WooCommerce fits WordPress-based businesses needing flexibility without SaaS lock-in. Custom React/Next.js headless commerce is best for high-volume storefronts needing maximum performance, unique UX, and deep backend integrations. We recommend based on your traffic projections and team's technical capacity, not on which stack we prefer.",
+    },
+    {
+      question: "Do you also build e-commerce mobile apps?",
+      answer:
+        "Yes — we build React Native e-commerce apps that share backend logic with your web store. This includes product browsing, cart, checkout, push notification campaigns, and real-time order tracking. A combined web + app project typically costs 40–60% less than building each platform separately, because of shared APIs and design systems.",
+    },
+    {
+      question: "Which payment gateways do you integrate?",
+      answer:
+        "We integrate Razorpay, PayU, CCAvenue, Stripe, and PhonePe for Indian merchants. For international stores, Stripe and PayPal. We also implement EMI options (Razorpay BNPL), buy-now-pay-later flows, e-wallet support (Paytm, Amazon Pay), and UPI collect. All integrations are PCI-DSS compliant and include webhook-based order confirmation.",
+    },
+    {
+      question: "What is included in post-launch e-commerce support?",
+      answer:
+        "Our standard support plan covers bug fixes, security patches, payment gateway updates, and performance monitoring. Extended plans include catalogue management assistance, SEO reporting, conversion rate analysis, and feature additions on a retainer basis. We don't disappear after launch — 92% of our clients continue with us beyond the initial project.",
+    },
+    {
+      question: "Can you migrate my existing store to a new platform?",
+      answer:
+        "Yes — we've migrated Magento → Shopify, WooCommerce → headless Next.js, and custom PHP stores → modern stacks. Migration includes product data, customer records, order history, SEO redirects (301 rules to preserve rankings), and payment gateway reconfiguration. We run old and new platforms in parallel before cutover so there's zero downtime.",
+    },
+    {
+      question: "How do you ensure my e-commerce site ranks on Google?",
+      answer:
+        "We build with Core Web Vitals from day one — server-side rendering, image optimisation, and Largest Contentful Paint under 2.5 seconds. Every product and category page gets unique meta titles, structured data (Product, BreadcrumbList, FAQPage schemas), and canonical tags. Our digital marketing team handles ongoing SEO including keyword-targeted category pages, link building, and Google Shopping feed optimisation.",
+    },
+  ],
 };
