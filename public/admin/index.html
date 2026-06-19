@@ -57,6 +57,18 @@
                   { label: "OG Image", name: "ogImage", widget: "image", required: false }
                 ]
               },
+              {
+                label: "FAQ",
+                name: "faq",
+                widget: "list",
+                required: false,
+                collapsed: true,
+                summary: "{{fields.question}}",
+                fields: [
+                  { label: "Question", name: "question", widget: "string" },
+                  { label: "Answer", name: "answer", widget: "text" }
+                ]
+              },
               { label: "Body", name: "body", widget: "markdown" }
             ]
           }

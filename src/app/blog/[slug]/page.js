@@ -118,6 +118,13 @@ export default async function BlogPostPage({ params }) {
   const headings = extractHeadings(rawContent);
   const postUrl = `https://www.trimsel.com/blog/${slug}`;
 
+  // Support top-level faq (written by CMS) and legacy seo.faq
+  const postFaq = frontmatter.faq?.length > 0
+    ? frontmatter.faq
+    : seo.faq?.length > 0
+    ? seo.faq
+    : null;
+
   // Article JSON-LD
   const articleSchema = {
     "@context": "https://schema.org",
@@ -144,18 +151,17 @@ export default async function BlogPostPage({ params }) {
   };
 
   // FAQ JSON-LD (only if post has FAQ data)
-  const faqSchema =
-    seo.faq?.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: seo.faq.map((item) => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: { "@type": "Answer", text: item.answer },
-          })),
-        }
-      : null;
+  const faqSchema = postFaq
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: postFaq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }
+    : null;
 
   // Mobile share URLs (server-side, no encoding needed for <a href>)
   const encodedUrl = encodeURIComponent(postUrl);
@@ -292,8 +298,8 @@ export default async function BlogPostPage({ params }) {
                   {content}
                 </article>
 
-                {/* ── ISSUE 3: FAQ accordion (client component) ── */}
-                {seo.faq?.length > 0 && <BlogFaq faq={seo.faq} />}
+                {/* FAQ accordion — top-level faq (CMS) or legacy seo.faq */}
+                {postFaq && <BlogFaq faq={postFaq} />}
 
                 {/* Back to blog */}
                 <div className="mt-10 pt-6 border-t border-gray-100">

@@ -17,6 +17,7 @@ export default function FaqSection() {
     digital: "digital",
     ai: "ai",
     contact: "contact",
+    blog: "blog",
   };
 
   const matchedKey = Object.keys(routeMap).find((key) =>

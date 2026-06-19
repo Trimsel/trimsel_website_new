@@ -378,6 +378,39 @@ export const faqData = {
     },
   ],
 
+  blog: [
+    {
+      question: "What topics does the Trimsel blog cover?",
+      answer:
+        "Our blog covers practical guides on mobile app development, web development, AI and machine learning, cloud computing, DevOps automation, digital marketing, and SEO — written by the engineers and strategists who build these systems for clients.",
+    },
+    {
+      question: "How often do you publish new blog posts?",
+      answer:
+        "We publish 2-4 posts per month, focusing on quality over quantity. Every article is based on real project experience — not recycled content.",
+    },
+    {
+      question: "Can I suggest a topic for the Trimsel blog?",
+      answer:
+        "Yes — reach out via our contact page with your suggestion and we'll consider it for an upcoming post.",
+    },
+    {
+      question: "Are your blog posts written by AI or by your team?",
+      answer:
+        "Every post is written by our team — developers, architects, and strategists working on real client projects. We use AI tools for research and editing, but insights come from hands-on experience.",
+    },
+    {
+      question: "Do you offer custom content or guest posts?",
+      answer:
+        "We occasionally collaborate on guest posts with industry partners. Reach out through our contact page if interested.",
+    },
+    {
+      question: "Can I use your blog content for reference?",
+      answer:
+        "Yes — reference and cite with proper attribution and a link back to the original. Don't reproduce full articles without permission.",
+    },
+  ],
+
   contact: [
     {
       question: "What happens after I submit the contact form?",
