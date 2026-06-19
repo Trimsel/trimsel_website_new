@@ -1,5 +1,6 @@
 import CloudConsultingClient from "./CloudConsultingClient";
 import { getFilteredPosts } from "@/lib/blog";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "Cloud Consulting & Migration Services in Chennai | AWS, Azure & GCP | Trimsel",
@@ -100,88 +101,14 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I choose the best cloud consulting company in Chennai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Look for vendor-neutral teams that recommend based on workload needs, not partnerships. Trimsel delivers 40% average cost savings with 99.95% uptime across production environments.",
-      },
+  mainEntity: faqData.cloud.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
-    {
-      "@type": "Question",
-      name: "How much does cloud migration cost in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A focused migration of 2-5 applications typically ranges from ₹5-15 lakhs. Enterprise migrations can range from ₹15-50 lakhs. We provide a clear estimate after infrastructure assessment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does cloud migration take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Straightforward migrations take 4-8 weeks. Complex enterprise migrations take 3-6 months with phased approach and rollback plans.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which cloud platform should I choose — AWS, Azure, or GCP?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "AWS has broadest services, Azure integrates with Microsoft tools, GCP excels in data analytics and Kubernetes. We assess your workloads and recommend based on actual needs.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between cloud migration and cloud-native development?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Migration moves existing apps to cloud. Cloud-native builds new apps specifically for cloud using containers, microservices, and serverless. We do both.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you reduce our current cloud costs without affecting performance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — most businesses overspend by 30-50%. We run cost audits identifying specific savings. Clients see 40% average reduction within 90 days.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide managed cloud support after migration?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — 24/7 monitoring, security patching, performance optimisation, and incident response on agreed SLAs with a dedicated cloud operations contact.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is our data secure during and after cloud migration?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Security is built into every migration stage — encrypted transfers, access controls, network isolation, and compliance with HIPAA, SOC 2, PCI-DSS, and GDPR.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can cloud infrastructure support AI and automation workloads?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — AWS SageMaker, Google Vertex AI, and Azure ML provide managed ML environments. We design infrastructure supporting GPU instances, data lakes, and model serving.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why choose Trimsel for cloud consulting services in Chennai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Vendor-neutral recommendations, 40% average cost savings, 99.95% uptime, and post-migration support with dedicated operations contact. 92% client retention rate.",
-      },
-    },
-  ],
+  })),
 };
 
 const breadcrumbSchema = {

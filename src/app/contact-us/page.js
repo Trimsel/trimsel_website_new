@@ -1,4 +1,5 @@
 import ContactUsClient from "./ContactUsClient";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "Contact Trimsel | Software Development Company in Chennai, India",
@@ -79,56 +80,14 @@ const localBusinessSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What happens after I submit the contact form?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We confirm receipt immediately. You receive a detailed proposal with scope, timeline, and pricing within 24 hours from the team that would actually work on your project.",
-      },
+  mainEntity: faqData.contact.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
-    {
-      "@type": "Question",
-      name: "Is there a minimum project size to work with Trimsel?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Projects range from focused MVPs starting from ₹2-3 lakhs to enterprise platforms. We'll tell you honestly if we're the right fit.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you sign NDAs before discussing project details?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — NDAs are signed before any detailed discussion. Every project is NDA-protected by default.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I schedule a call before submitting a project brief?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — book a free 30-minute consultation to discuss your project at a high level before writing a detailed brief.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What services does Trimsel provide?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Mobile app development, web development, AI development, DevOps consulting, cloud consulting, and digital marketing — all delivered by a 100% in-house team from Chennai.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How quickly can you start on a new project?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most projects begin within 1-2 weeks of signing. Faster turnaround is possible depending on team capacity.",
-      },
-    },
-  ],
+  })),
 };
 
 const breadcrumbSchema = {

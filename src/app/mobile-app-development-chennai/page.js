@@ -1,5 +1,6 @@
 import MobileAppDevelopmentClient from "./MobileAppDevelopmentClient";
 import { getFilteredPosts } from "@/lib/blog";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "Mobile App Development Company in Chennai | Trimsel",
@@ -30,6 +31,19 @@ export const metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.mobile.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -53,6 +67,10 @@ export default function MobileAppDevelopmentPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <MobileAppDevelopmentClient posts={posts} />
     </>

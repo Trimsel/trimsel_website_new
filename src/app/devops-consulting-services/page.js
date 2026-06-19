@@ -1,5 +1,6 @@
 import DevOpsClient from "./DevOpsClient";
 import { getFilteredPosts } from "@/lib/blog";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "DevOps Consulting Services in India | CI/CD, Kubernetes & Terraform | Trimsel",
@@ -86,88 +87,14 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I choose the best DevOps consulting company in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Look for real production deployments, not just certifications. Trimsel has built 60+ CI/CD pipelines with 99.95% uptime targets, including the documented Mocial EC2-to-EKS migration.",
-      },
+  mainEntity: faqData.devops.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
-    {
-      "@type": "Question",
-      name: "How much do DevOps consulting services cost in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CI/CD setup starts from ₹3-8 lakhs. Full DevOps transformation ranges from ₹10-30 lakhs. Enterprise implementations vary. Clear estimate provided after infrastructure audit.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does DevOps implementation take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Single-app CI/CD pipeline: 2-4 weeks. Full DevOps foundation: 6-12 weeks. Enterprise transformations with microservices migration: 3-6 months in phases.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What's the difference between CI/CD and DevOps?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CI/CD automates build, test, and deployment. DevOps is broader — including IaC, monitoring, security automation, incident response, and engineering culture.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should we use Kubernetes or is it overkill?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Kubernetes makes sense for multiple services needing independent scaling. For single monolithic apps with steady traffic, simpler deployment may be more appropriate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is Infrastructure as Code and do we need it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "IaC manages infrastructure through code (Terraform, CloudFormation) instead of manual setup. If your team provisions manually, IaC is the highest-impact DevOps improvement.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is DevSecOps and how does it differ from traditional security?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "DevSecOps integrates security checks into the CI/CD pipeline — automated scanning runs on every commit. Issues caught in minutes, not weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you set up monitoring for our existing infrastructure?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — Prometheus, Grafana, ELK Stack, OpenTelemetry, and PagerDuty integrated with existing infrastructure. 40-60% reduction in MTTD within the first month.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide ongoing managed DevOps support?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — 24/7 monitoring, incident response, security patching, and pipeline maintenance on agreed SLAs with dedicated DevOps contact.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why choose Trimsel for DevOps consulting services?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "60+ production pipelines, 99.95% uptime, vendor-neutral tooling, documented Mocial case study, and 92% client retention with ongoing managed support.",
-      },
-    },
-  ],
+  })),
 };
 
 const breadcrumbSchema = {

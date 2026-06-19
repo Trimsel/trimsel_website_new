@@ -1,5 +1,6 @@
 import WebDevelopmentClient from "./WebDevelopmentClient";
 import { getFilteredPosts } from "@/lib/blog";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "Web Development Company in Chennai | Trimsel",
@@ -32,6 +33,19 @@ export const metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.web.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -55,6 +69,10 @@ export default function WebDevelopmentPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <WebDevelopmentClient posts={posts} />
     </>

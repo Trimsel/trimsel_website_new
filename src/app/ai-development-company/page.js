@@ -16,6 +16,7 @@ import ServiceCardsGrid from "@/components/ServiceCardsGrid";
 import IndustriesWeServe from "@/components/IndustriesWeServe";
 import Testimonial from "@/components/testimonial";
 import TechStackTabs from "@/components/TechStackTabs";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "AI Development Company in Chennai, India | ML, NLP & Generative AI | Trimsel",
@@ -271,88 +272,14 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I choose the best AI development company in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Look for a team with real AI deployments in production. At Trimsel, our AI systems run in production across FinTech, IoT, and healthcare — including KarIOT which achieved 12-18% non-revenue water reduction.",
-      },
+  mainEntity: faqData.ai.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
-    {
-      "@type": "Question",
-      name: "How much does building an AI system cost in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A focused chatbot starts from ₹3-5 lakhs. Custom ML models range from ₹8-20 lakhs. Enterprise platforms vary beyond that. We give a clear estimate after a short discovery call.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does an AI development project take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A POC takes 4-8 weeks. A full production-ready system takes 3-6 months depending on data, integrations, and models involved.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a lot of data to use AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Not always. Some models can be fine-tuned from pre-trained foundations with small datasets. We assess your data situation early and advise honestly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you integrate AI into our existing systems?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — we integrate AI into existing CRM, ERP, mobile apps, and web platforms without requiring a full rebuild.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What industries do you build AI for?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Healthcare, FinTech, retail, logistics, IoT, manufacturing, and education.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between machine learning and generative AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "ML models learn patterns to make predictions. Generative AI creates new content from prompts. We build both.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer AI consulting before development begins?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — we assess your data, identify highest-value AI opportunities, and create a practical roadmap before development starts.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will you maintain and update the AI model after launch?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — performance monitoring, accuracy tracking, model retraining, and infrastructure maintenance are all part of our post-launch support.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why work with a Chennai-based AI company rather than a larger firm?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You work directly with the engineers building your system. Competitive Chennai pricing without compromising technical depth.",
-      },
-    },
-  ],
+  })),
 };
 
 const breadcrumbSchema = {

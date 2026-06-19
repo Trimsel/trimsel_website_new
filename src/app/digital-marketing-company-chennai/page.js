@@ -15,6 +15,7 @@ import Testimonial from "@/components/testimonial";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import TechStackTabs from "@/components/TechStackTabs";
 import DmProcessAccordion from "./DmProcessAccordion";
+import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "Digital Marketing Company in Chennai | SEO, Google Ads & Social Media | Trimsel",
@@ -101,88 +102,14 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I choose the best digital marketing company in Chennai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Look for transparent reporting, channel expertise across SEO and paid media, and proof of real results — not just follower counts. Trimsel delivers 180% average traffic growth and 4.5x ROAS with full attribution tracking.",
-      },
+  mainEntity: faqData.digital.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
-    {
-      "@type": "Question",
-      name: "How much does digital marketing cost in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SEO retainers typically start from ₹25,000–60,000/month. Google Ads management starts from ₹15,000/month plus ad spend. Full-service digital marketing ranges from ₹50,000–2,00,000/month depending on channels and scale.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does SEO take to show results?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Technical SEO fixes show results in 4–8 weeks. Ranking improvements for competitive keywords typically take 3–6 months. Paid channels (Google Ads, Meta Ads) can generate leads within the first week.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I run Google Ads or focus on SEO?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Both serve different purposes. Google Ads generates immediate traffic and leads. SEO builds long-term organic visibility at lower cost per click. The best strategy depends on your timeline and budget — we assess both and recommend the right mix.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is AEO and GEO in digital marketing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "AEO (Answer Engine Optimisation) targets featured snippets and voice search answers. GEO (Generative Engine Optimisation) ensures your brand appears in AI-generated answers from ChatGPT, Gemini, and Perplexity. Both are critical as AI search grows.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you manage our social media accounts?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — we handle strategy, content creation, scheduling, community management, and paid social campaigns across Instagram, LinkedIn, Facebook, and X (Twitter) — with monthly performance reports.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between digital marketing and performance marketing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Digital marketing covers all online channels including SEO, content, social, and email. Performance marketing specifically refers to paid campaigns (Google Ads, Meta Ads) where you pay per click or conversion — directly measurable against ROI.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you run Meta Ads campaigns?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — we run Facebook and Instagram Ads campaigns including prospecting, retargeting, and lead generation. We use conversion-optimised creative, audience segmentation, and A/B testing to maximise ROAS.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can digital marketing work for B2B businesses?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — B2B digital marketing uses LinkedIn Ads, SEO for intent-driven keywords, email nurturing, and content marketing to generate qualified leads. Our approach aligns messaging with your sales funnel stages.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why choose Trimsel for digital marketing services in Chennai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Data-first strategy, full attribution reporting, and a team that works across SEO, paid media, social, and content — not channel silos. 180% average traffic growth, 4.5x ROAS, 55% CPL reduction across client accounts.",
-      },
-    },
-  ],
+  })),
 };
 
 const breadcrumbSchema = {
