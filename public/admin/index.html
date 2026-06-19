@@ -8,7 +8,7 @@
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/decap-cms@3.1.10/dist/decap-cms.js"></script>
 </head>
 <body>
   <script>
@@ -21,6 +21,7 @@
           base_url: "https://www.trimsel.com",
           auth_endpoint: "/api/auth"
         },
+        publish_mode: "editorial_workflow",
         media_folder: "public/images/blog",
         public_folder: "/images/blog",
         collections: [
@@ -32,6 +33,9 @@
             slug: "{{slug}}",
             extension: "mdx",
             format: "frontmatter",
+            editor: {
+              preview: true
+            },
             fields: [
               { label: "Title", name: "title", widget: "string" },
               { label: "Date", name: "date", widget: "datetime" },
@@ -44,6 +48,7 @@
                 label: "SEO",
                 name: "seo",
                 widget: "object",
+                collapsed: true,
                 fields: [
                   { label: "Index", name: "indexing", widget: "boolean", default: true },
                   { label: "Meta Title", name: "metaTitle", widget: "string" },
