@@ -378,6 +378,49 @@ export const faqData = {
     },
   ],
 
+  ecommerce: [
+    {
+      question: "How much does e-commerce website development cost in Chennai?",
+      answer:
+        "A Shopify or WooCommerce store with standard features typically ranges from ₹1.5–4 lakhs. Custom e-commerce platforms range from ₹5–15 lakhs. Enterprise-grade platforms can exceed ₹15–30 lakhs. We give a clear proposal after understanding your requirements.",
+    },
+    {
+      question: "How long does it take to build an e-commerce website?",
+      answer:
+        "A Shopify or WooCommerce store can launch in 3–5 weeks. Custom-built platforms take 8–14 weeks. We provide a phased timeline — your store can start processing orders while we build advanced features in parallel.",
+    },
+    {
+      question: "Should I use Shopify, WooCommerce, or a custom-built platform?",
+      answer:
+        "Shopify for fast launch with under 1,000 SKUs. WooCommerce for WordPress flexibility with source code ownership. Custom React + Node.js for high-traffic stores, complex pricing, or multi-vendor marketplaces. We recommend based on your actual needs.",
+    },
+    {
+      question: "Do you build e-commerce mobile apps as well?",
+      answer:
+        "Yes — we build e-commerce mobile apps using Flutter that sync with your web store's catalogue, inventory, and orders in real time. Push notifications, saved carts, and one-tap payments included.",
+    },
+    {
+      question: "Which payment gateways do you integrate?",
+      answer:
+        "Razorpay, Stripe, PayU, CCAvenue, Cashfree, and UPI — supporting cards, net banking, wallets, UPI, EMI, and cash on delivery. For international stores, Stripe with multi-currency support. PCI-DSS compliant tokenised storage.",
+    },
+    {
+      question: "Can you migrate my existing store to a new platform?",
+      answer:
+        "Yes — product data, customer records, order history, SEO metadata, and design assets migrated with zero downtime and no ranking loss from broken URLs.",
+    },
+    {
+      question: "Do you provide SEO for e-commerce websites?",
+      answer:
+        "Every site includes technical SEO — product schema markup, optimised page speed, clean URLs, meta tags, and XML sitemaps. For ongoing SEO, our digital marketing team handles keyword research and content optimisation.",
+    },
+    {
+      question: "Do you offer post-launch support?",
+      answer:
+        "Yes — product catalogue updates, payment gateway issues, hosting, security patches, performance monitoring, and conversion optimisation with a dedicated contact.",
+    },
+  ],
+
   blog: [
     {
       question: "What topics does the Trimsel blog cover?",
