@@ -84,6 +84,25 @@ Each location page needs:
 * Structured data (Local Business schema) to signal intent clearly
 * Internal links connecting all location pages through a central "Service Areas" hub
 
+A simple LocalBusiness or Service schema block, like the example below, gives search engines (and AI summarizers) an unambiguous signal about what the page is for:
+
+```jsonld
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Trimsel - SEO Services in Guindy",
+  "areaServed": "Velachery, Chennai",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu"
+  },
+  "priceRange": "₹₹"
+}
+```
+
+
+
 ### 4. Keep Your NAP Consistent Everywhere
 
 Your business name, address, and phone number must match exactly across Justdial, Sulekha, IndiaMART, Apple Maps, Bing Places, and every relevant directory. Inconsistent NAP data quietly erodes Google's confidence in your business's legitimacy there's no obvious error, just a slow ranking decline
