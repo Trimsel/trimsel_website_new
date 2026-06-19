@@ -12,7 +12,6 @@ export default function FaqSection() {
   const routeMap = {
     devops: "devops",
     mobile: "mobile",
-    ecommerce: "ecommerce", // must be before "web" — ecommerce path also contains "web"
     web: "web",
     cloud: "cloud",
     digital: "digital",
