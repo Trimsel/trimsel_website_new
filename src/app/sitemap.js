@@ -45,10 +45,10 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/web-development-company-chennai/ecommerce-development-chennai`,
+      url: `${BASE_URL}/ecommerce-development-chennai`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.85,
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/ai-development-company`,

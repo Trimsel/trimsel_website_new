@@ -7,11 +7,11 @@ export const metadata = {
     "Trimsel builds high-converting e-commerce websites and apps — Shopify, WooCommerce, headless React/Next.js. Razorpay, UPI, EMI integrations. 200+ projects delivered from Chennai.",
   alternates: {
     canonical:
-      "https://www.trimsel.com/web-development-company-chennai/ecommerce-development-chennai",
+      "https://www.trimsel.com/ecommerce-development-chennai",
   },
   openGraph: {
     type: "website",
-    url: "https://www.trimsel.com/web-development-company-chennai/ecommerce-development-chennai",
+    url: "https://www.trimsel.com/ecommerce-development-chennai",
     title: "E-commerce Website Development in Chennai | Trimsel",
     description:
       "Trimsel builds high-converting e-commerce websites and apps — Shopify, WooCommerce, headless React/Next.js. Razorpay, UPI, EMI integrations. 200+ projects delivered from Chennai.",
@@ -46,14 +46,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Web Development",
-      item: "https://www.trimsel.com/web-development-company-chennai",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
       name: "E-commerce Development",
-      item: "https://www.trimsel.com/web-development-company-chennai/ecommerce-development-chennai",
+      item: "https://www.trimsel.com/ecommerce-development-chennai",
     },
   ],
 };
