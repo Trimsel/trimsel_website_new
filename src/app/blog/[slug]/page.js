@@ -186,6 +186,12 @@ export default async function BlogPostPage({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
+      {seo.jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: seo.jsonLd }}
+        />
+      )}
 
       {/* ── ISSUE 1: Banner — full-width, object-contain + dark bg ── */}
       {frontmatter.coverImage && (
