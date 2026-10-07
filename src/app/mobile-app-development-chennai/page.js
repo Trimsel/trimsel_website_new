@@ -4,7 +4,7 @@ import { faqData } from "@/data/faqData";
 
 export const metadata = {
   title: "Mobile App Development Company in Chennai | Trimsel",
-  description: "Trimsel is a mobile app development company in Chennai. We build iOS, Android, Flutter, and React Native apps for startups and enterprises — from MVP to enterprise-grade. 200+ apps delivered. Book a free consultation.",
+  description: "Trimsel is a mobile app development company in Chennai building iOS, Android, Flutter and React Native apps for startups and enterprises. Book a Free consultation.",
   alternates: {
     canonical: "https://www.trimsel.com/mobile-app-development-chennai",
   },
@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     url: "https://www.trimsel.com/mobile-app-development-chennai",
     title: "Mobile App Development Company in Chennai | Trimsel",
-    description: "Trimsel is a mobile app development company in Chennai. We build iOS, Android, Flutter, and React Native apps for startups and enterprises — from MVP to enterprise-grade. 200+ apps delivered. Book a free consultation.",
+    description: "Trimsel is a mobile app development company in Chennai. We build iOS, Android, Flutter and React Native apps for startups and enterprises, from MVP to enterprise-grade. 10+ apps delivered. Book a free consultation.",
     locale: "en_IN",
     siteName: "Trimsel",
     images: [
@@ -57,7 +57,7 @@ const serviceSchema = {
     "@type": "City",
     "name": "Chennai",
   },
-  "description": "Top mobile app development company in Chennai, India. We build secure, scalable iOS, Android, Flutter & cross platform apps with exceptional UX. From MVP to enterprise apps. 200+ successful projects delivered.",
+  "description": "Top mobile app development company in Chennai, India. We build secure, scalable iOS, Android, Flutter & cross platform apps with exceptional UX. From MVP to enterprise apps. 10+ successful projects delivered.",
 };
 
 export default function MobileAppDevelopmentPage() {
