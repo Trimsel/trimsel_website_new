@@ -342,7 +342,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
         <section className="bg-white border-b border-gray-100 py-6 px-4">
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="text-xl font-bold text-[#1C75BC]">100+</p>
+              <p className="text-xl font-bold text-[#1C75BC]">10+</p>
               <p className="text-sm font-medium mt-1 text-gray-500">Apps Launched</p>
             </div>
             <div>
@@ -350,7 +350,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
               <p className="text-sm font-medium mt-1 text-gray-500">Avg Store Rating</p>
             </div>
             <div>
-              <p className="text-xl font-bold text-[#1C75BC]">6–10 Weeks</p>
+              <p className="text-xl font-bold text-[#1C75BC]">4–6 Weeks</p>
               <p className="text-sm font-medium mt-1 text-gray-500">MVP Delivery</p>
             </div>
             <div>
