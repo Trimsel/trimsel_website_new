@@ -565,7 +565,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
           description="Tell us your idea. We'll validate it, scope it, and ship it — on time, on budget, and built to scale."
           ctaText="Book a Free Consultation"
           ctaLink="/contact-us"
-          image="/getintouchmobile.svg"
+          image="/getintouchmobile1.png"
           imageAlt="Start building your mobile app with Trimsel"
           bgClass="bg-gradient-to-r from-[#EEF5F8] to-[#DCEEFB]"
         />
