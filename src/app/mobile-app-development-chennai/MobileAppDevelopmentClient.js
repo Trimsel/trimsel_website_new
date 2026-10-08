@@ -434,7 +434,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
         <GetInTouchBanner
           eyebrow="BUILD YOUR APP"
           heading="Turn Your App Idea Into Reality"
-          description="Our mobile development team has shipped 100+ apps across iOS, Android, and cross-platform. Let's discuss your app requirements."
+          description="Our mobile development team has shipped 10+ apps across iOS, Android, and cross-platform. Let's discuss your app requirements."
           ctaText="Talk to Our Experts"
           ctaLink="/contact-us"
           image="/getintouchmobile.svg"
