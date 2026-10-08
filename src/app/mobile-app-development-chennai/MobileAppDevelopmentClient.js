@@ -437,7 +437,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
           description="Our mobile development team has shipped 10+ apps across iOS, Android, and cross-platform. Let's discuss your app requirements."
           ctaText="Talk to Our Experts"
           ctaLink="/contact-us"
-          image="/getintouchmobile.svg"
+          image="/getintouchmobile.png"
           imageAlt="Mobile app development contact"
           bgClass="bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC]"
         />
