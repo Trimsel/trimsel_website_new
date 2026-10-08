@@ -437,7 +437,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
           description="Our mobile development team has shipped 10+ apps across iOS, Android, and cross-platform. Let's discuss your app requirements."
           ctaText="Talk to Our Experts"
           ctaLink="/contact-us"
-          image="/getintouchmobile.png"
+          image="/getintouchmobile1.png"
           imageAlt="Mobile app development contact"
           bgClass="bg-gradient-to-r from-[#FFF5EA] to-[#FFECDC]"
         />
@@ -565,7 +565,7 @@ export default function MobileAppDevelopmentClient({ posts = [] }) {
           description="Tell us your idea. We'll validate it, scope it, and ship it — on time, on budget, and built to scale."
           ctaText="Book a Free Consultation"
           ctaLink="/contact-us"
-          image="/getintouchmobile1.png"
+          image="/getintouchmobile.png"
           imageAlt="Start building your mobile app with Trimsel"
           bgClass="bg-gradient-to-r from-[#EEF5F8] to-[#DCEEFB]"
         />
