@@ -93,7 +93,7 @@ export const faqData = {
     {
       question: "Do you provide maintenance after the mobile app is launched?",
       answer:
-        "Yes. We can support your application after release through services such as bug fixes, operating system compatibility updates, performance improvements and feature enhancements.Maintenance is important because mobile platforms change, dependencies need updates and users may report issues that were not apparent during initial testing.We can discuss an ongoing support arrangement that defines the covered services, response times and responsibilities, so your team knows how application issues and future improvements will be handled.",
+        "Yes. We can support your application after release through services such as bug fixes, operating system compatibility updates, performance improvements and feature enhancements. Maintenance is important because mobile platforms change, dependencies need updates and users may report issues that were not apparent during initial testing.We can discuss an ongoing support arrangement that defines the covered services, response times and responsibilities, so your team knows how application issues and future improvements will be handled.",
     },
     {
       question:
