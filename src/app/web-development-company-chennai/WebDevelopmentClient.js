@@ -345,7 +345,7 @@ export default function WebDevelopment({ posts = [] }) {
       <section className="bg-white border-b border-gray-100 py-6 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <p className="text-xl font-bold text-[#1C75BC]">180+</p>
+            <p className="text-xl font-bold text-[#1C75BC]">20+</p>
             <p className="text-sm font-medium mt-1 text-gray-500">Web Projects Delivered</p>
           </div>
           <div>
@@ -396,7 +396,7 @@ export default function WebDevelopment({ posts = [] }) {
               content-driven sites.
               <br />
               <br />
-              We've delivered 180+ web projects for clients across SaaS,
+              We've delivered 20+ web projects for clients across SaaS,
               FinTech, e-commerce, healthcare, and professional services with a
               95% on-time delivery rate. The businesses we work with don't just
               get a website,they get a web presence that works as hard as they
