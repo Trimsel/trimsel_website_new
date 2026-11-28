@@ -19,18 +19,18 @@ import TechStackTabs from "@/components/TechStackTabs";
 import { faqData } from "@/data/faqData";
 
 export const metadata = {
-  title: "AI Development Company in Chennai, India | ML, NLP & Generative AI | Trimsel",
+  title: "AI Development Company in Chennai, India | ML & Chatbots | Trimsel",
   description:
-    "Trimsel is an AI development company in Chennai building custom machine learning, NLP, computer vision, and generative AI systems. From POC to production. KarIOT: 12-18% NRW reduction. Free consultation.",
+    "Trimsel is an AI development company in Chennai building chatbots, automation and machine learning that save your team time. Talk to our engineers.",
   alternates: {
     canonical: "https://www.trimsel.com/ai-development-company",
   },
   openGraph: {
     type: "website",
     url: "https://www.trimsel.com/ai-development-company",
-    title: "AI Development Company in Chennai, India | ML, NLP & Generative AI | Trimsel",
+    title: "AI Development Company in Chennai, India | ML & Chatbots | Trimsel",
     description:
-      "Trimsel is an AI development company in Chennai building custom machine learning, NLP, computer vision, and generative AI systems. From POC to production. KarIOT: 12-18% NRW reduction. Free consultation.",
+      "Trimsel is an AI development company in Chennai building chatbots, automation and machine learning that save your team time. Talk to our engineers.",
     locale: "en_IN",
     siteName: "Trimsel",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
         url: "https://www.trimsel.com/images/myherocloud.png",
         width: 1200,
         height: 630,
-        alt: "AI development services by Trimsel Chennai",
+        alt: "AI development services by Trimsel,Chennai",
       },
     ],
   },
