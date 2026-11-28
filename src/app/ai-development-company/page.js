@@ -358,7 +358,7 @@ export default function AI() {
 
           <div className="mt-8 space-y-5 max-w-4xl mx-auto text-gray-800 font-medium leading-relaxed">
             <p>
-              AI has moved from experimental to essential — but most businesses still struggle to
+              AI has moved from experimental to essential but most businesses still struggle to
               find a development partner who can take them from &ldquo;we think AI could help&rdquo;
               to a working system in production. The gap between a demo and a deployed product is
               where most AI projects fail.
@@ -373,16 +373,7 @@ export default function AI() {
               preferences.
             </p>
             <p>
-              We&apos;ve delivered AI systems across FinTech, HealthTech, IoT, and SaaS —
-              including the{" "}
-              <Link
-                href="/portfolio"
-                className="text-[#1C75BC] underline hover:text-[#1568a0]"
-              >
-                KarIOT smart water management platform
-              </Link>{" "}
-              where our AI-driven forecasting models achieved 12–18% non-revenue water reduction
-              in pilot deployments.
+              We recommend starting small and clear. Begin with a fixed-scope pilot, usually 4–8 weeks, with success measures agreed up front. You see a working result before deciding on a larger build, and you work directly with the engineers building your system.
             </p>
           </div>
         </div>
